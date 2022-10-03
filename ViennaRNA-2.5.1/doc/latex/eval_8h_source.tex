@@ -1,0 +1,367 @@
+\hypertarget{eval_8h_source}{}\doxysection{eval.\+h}
+\label{eval_8h_source}\index{ViennaRNA/eval.h@{ViennaRNA/eval.h}}
+\mbox{\hyperlink{eval_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_EVAL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_EVAL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2char__stream_8h}{ViennaRNA/datastructures/char\_stream.h}}>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{move_8h}{ViennaRNA/landscape/move.h}}>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}   \textcolor{comment}{/* for deprecated functions */}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define VRNA\_VERBOSITY\_QUIET     -\/1}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define VRNA\_VERBOSITY\_DEFAULT    1}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{93 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{94 \mbox{\hyperlink{group__eval_ga06985672a4c73f0e56e1c5722e0aa88e}{vrna\_eval\_structure}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{95                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 }
+\DoxyCodeLine{118 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{119 \mbox{\hyperlink{group__eval_ga40ebcb27ac05241944b570bc7ffd8409}{vrna\_eval\_covar\_structure}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{120                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 }
+\DoxyCodeLine{136 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{137 \mbox{\hyperlink{group__eval_ga4078d8889e54c1f2e832f6c558399498}{vrna\_eval\_structure\_verbose}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{138                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure,}
+\DoxyCodeLine{139                             FILE                  *file);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 }
+\DoxyCodeLine{167 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{168 \mbox{\hyperlink{group__eval_gaf1fe5f30df6a7a9a1a6c137edcf173d2}{vrna\_eval\_structure\_v}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{169                       \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure,}
+\DoxyCodeLine{170                       \textcolor{keywordtype}{int}                   verbosity\_level,}
+\DoxyCodeLine{171                       FILE                  *file);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{175 vrna\_eval\_structure\_cstr(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{176                          \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,}
+\DoxyCodeLine{177                          \textcolor{keywordtype}{int}                  verbosity\_level,}
+\DoxyCodeLine{178                          vrna\_cstr\_t          output\_stream);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{comment}{/* End basic eval interface */}}
+\DoxyCodeLine{208 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{209 \mbox{\hyperlink{group__eval_gaf7227a536cfa4bfd35bf015c865863f6}{vrna\_eval\_structure\_pt}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{210                        \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt);}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 }
+\DoxyCodeLine{226 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{227 \mbox{\hyperlink{group__eval_ga9e8775770750783304d24fe0c4b15293}{vrna\_eval\_structure\_pt\_verbose}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{228                                \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt,}
+\DoxyCodeLine{229                                FILE                 *file);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 }
+\DoxyCodeLine{257 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{258 \mbox{\hyperlink{group__eval_ga2573093f1546389c1d56cf7ee9d206fb}{vrna\_eval\_structure\_pt\_v}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{259                          \textcolor{keyword}{const} \textcolor{keywordtype}{short}          *pt,}
+\DoxyCodeLine{260                          \textcolor{keywordtype}{int}                  verbosity\_level,}
+\DoxyCodeLine{261                          FILE                 *file);}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \textcolor{comment}{/* End basic eval interface with pair table */}}
+\DoxyCodeLine{288 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{289 \mbox{\hyperlink{group__eval_ga7e5273464b775d4130245681312c1369}{vrna\_eval\_structure\_simple}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{290                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292 }
+\DoxyCodeLine{303 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{304 \mbox{\hyperlink{group__eval_ga3e05a23ddf9b083f4e69881e440d4866}{vrna\_eval\_circ\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{305                          \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307 }
+\DoxyCodeLine{325 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{326 \mbox{\hyperlink{group__eval_ga3263504825ef4b523eba797c99921df4}{vrna\_eval\_gquad\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{327                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure);}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329 }
+\DoxyCodeLine{348 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{349 \mbox{\hyperlink{group__eval_ga9dba2fc5d7e6ad1359a7c2f350589c0e}{vrna\_eval\_circ\_gquad\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{350                                \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 }
+\DoxyCodeLine{367 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{368 \mbox{\hyperlink{group__eval_gaf928bfd96767e1b8033a95a4cc432e39}{vrna\_eval\_structure\_simple\_verbose}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{369                                    \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{370                                    FILE       *file);}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372 }
+\DoxyCodeLine{396 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{397 \mbox{\hyperlink{group__eval_gacd6278343e77d13f1d53588e50d303bc}{vrna\_eval\_structure\_simple\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{398                              \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{399                              \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{400                              FILE       *file);}
+\DoxyCodeLine{401 }
+\DoxyCodeLine{402 }
+\DoxyCodeLine{418 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{419 \mbox{\hyperlink{group__eval_gac3fb44e0773a51be8efc5f4f595a94a7}{vrna\_eval\_circ\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{420                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{421                            \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{422                            FILE       *file);}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{424 }
+\DoxyCodeLine{447 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{448 \mbox{\hyperlink{group__eval_gaeaa2bdbc1b5d78c667e735fbdff87fff}{vrna\_eval\_gquad\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{449                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,}
+\DoxyCodeLine{450                             \textcolor{keywordtype}{int}         verbosity\_level,}
+\DoxyCodeLine{451                             FILE        *file);}
+\DoxyCodeLine{452 }
+\DoxyCodeLine{453 }
+\DoxyCodeLine{474 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{475 \mbox{\hyperlink{group__eval_gab96a6c59923ff06c35f8c2fd2c239727}{vrna\_eval\_circ\_gquad\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{476                                  \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{477                                  \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{478                                  FILE       *file);}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481 \textcolor{comment}{/* End simplified eval interface */}}
+\DoxyCodeLine{511 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{512 \mbox{\hyperlink{group__eval_ga7762c3a7bdcbc3a14ef93259d322c7d6}{vrna\_eval\_consensus\_structure\_simple}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{513                                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{514 }
+\DoxyCodeLine{515 }
+\DoxyCodeLine{531 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{532 \mbox{\hyperlink{group__eval_gac96577cf232c71160f762737a994b7c6}{vrna\_eval\_circ\_consensus\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{533                                    \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{534 }
+\DoxyCodeLine{535 }
+\DoxyCodeLine{558 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{559 \mbox{\hyperlink{group__eval_gaf09a326b3d57a4b30c27bd0e216198ac}{vrna\_eval\_gquad\_consensus\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{560                                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure);}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562 }
+\DoxyCodeLine{585 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{586 \mbox{\hyperlink{group__eval_gac673ebb9ae2a29f54d201e2ac5b85540}{vrna\_eval\_circ\_gquad\_consensus\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{587                                          \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);}
+\DoxyCodeLine{588 }
+\DoxyCodeLine{589 }
+\DoxyCodeLine{609 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{610 \mbox{\hyperlink{group__eval_ga1c07851f6b665c3461a19e9e4eb33d26}{vrna\_eval\_consensus\_structure\_simple\_verbose}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{611                                              \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{612                                              FILE       *file);}
+\DoxyCodeLine{613 }
+\DoxyCodeLine{614 }
+\DoxyCodeLine{639 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{640 \mbox{\hyperlink{group__eval_gad88927c62ab0a8b534e078e44be1b36e}{vrna\_eval\_consensus\_structure\_simple\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{641                                        \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{642                                        \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{643                                        FILE       *file);}
+\DoxyCodeLine{644 }
+\DoxyCodeLine{645 }
+\DoxyCodeLine{665 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{666 \mbox{\hyperlink{group__eval_gae89240c230e4740b22a703ee953396b9}{vrna\_eval\_circ\_consensus\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{667                                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{668                                      \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{669                                      FILE       *file);}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{671 }
+\DoxyCodeLine{698 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{699 \mbox{\hyperlink{group__eval_ga8abc794fc48d43268ced5e8cde017baa}{vrna\_eval\_gquad\_consensus\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{700                                       \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,}
+\DoxyCodeLine{701                                       \textcolor{keywordtype}{int}         verbosity\_level,}
+\DoxyCodeLine{702                                       FILE        *file);}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{704 }
+\DoxyCodeLine{731 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{732 \mbox{\hyperlink{group__eval_gaecd3e17292a0b3927277434019a5e187}{vrna\_eval\_circ\_gquad\_consensus\_structure\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment,}
+\DoxyCodeLine{733                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{734                                            \textcolor{keywordtype}{int}        verbosity\_level,}
+\DoxyCodeLine{735                                            FILE       *file);}
+\DoxyCodeLine{736 }
+\DoxyCodeLine{737 }
+\DoxyCodeLine{738 \textcolor{comment}{/* End simplified comparative eval interface */}}
+\DoxyCodeLine{761 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{762 \mbox{\hyperlink{group__eval_ga0bba59b4d6e53461088666ff4aece7b0}{vrna\_eval\_structure\_pt\_simple}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{763                               \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt);}
+\DoxyCodeLine{764 }
+\DoxyCodeLine{765 }
+\DoxyCodeLine{779 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{780 \mbox{\hyperlink{group__eval_ga76e152ee9a02be23da14cdddf52b4e44}{vrna\_eval\_structure\_pt\_simple\_verbose}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{781                                       \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,}
+\DoxyCodeLine{782                                       FILE        *file);}
+\DoxyCodeLine{783 }
+\DoxyCodeLine{784 }
+\DoxyCodeLine{809 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{810 \mbox{\hyperlink{group__eval_gac40b813d35289da9816d0c1eec94faa5}{vrna\_eval\_structure\_pt\_simple\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{811                                 \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,}
+\DoxyCodeLine{812                                 \textcolor{keywordtype}{int}         verbosity\_level,}
+\DoxyCodeLine{813                                 FILE        *file);}
+\DoxyCodeLine{814 }
+\DoxyCodeLine{815 }
+\DoxyCodeLine{816 \textcolor{comment}{/* End simplified eval interface with pair table */}}
+\DoxyCodeLine{838 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{839 \mbox{\hyperlink{group__eval_gabbb4d2a7aa324ec9cce8f47ce61ab8af}{vrna\_eval\_consensus\_structure\_pt\_simple}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{840                                         \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt);}
+\DoxyCodeLine{841 }
+\DoxyCodeLine{842 }
+\DoxyCodeLine{843 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{844 \mbox{\hyperlink{group__eval_ga2769e4369d023ad2d5c5f4d2ee825c23}{vrna\_eval\_consensus\_structure\_pt\_simple\_verbose}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{845                                                 \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,}
+\DoxyCodeLine{846                                                 FILE        *file);}
+\DoxyCodeLine{847 }
+\DoxyCodeLine{848 }
+\DoxyCodeLine{849 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{850 \mbox{\hyperlink{group__eval_gaf2d227b3d54bf9b693a3df52faf5e2e4}{vrna\_eval\_consensus\_structure\_pt\_simple\_v}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{851                                           \textcolor{keyword}{const} \textcolor{keywordtype}{short} *pt,}
+\DoxyCodeLine{852                                           \textcolor{keywordtype}{int}         verbosity\_level,}
+\DoxyCodeLine{853                                           FILE        *file);}
+\DoxyCodeLine{854 }
+\DoxyCodeLine{855 }
+\DoxyCodeLine{856 \textcolor{comment}{/* End simplified eval interface with pair table */}}
+\DoxyCodeLine{887 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{888 \mbox{\hyperlink{group__eval__loops_ga5f9fe7c27d0b628a3efc2d725f52853e}{vrna\_eval\_loop\_pt}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{889                   \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{890                   \textcolor{keyword}{const} \textcolor{keywordtype}{short}           *pt);}
+\DoxyCodeLine{891 }
+\DoxyCodeLine{892 }
+\DoxyCodeLine{902 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{903 \mbox{\hyperlink{group__eval__loops_ga905758a7e1320638345f1ef793769f57}{vrna\_eval\_loop\_pt\_v}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{904                     \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{905                     \textcolor{keyword}{const} \textcolor{keywordtype}{short}           *pt,}
+\DoxyCodeLine{906                     \textcolor{keywordtype}{int}                   verbosity\_level);}
+\DoxyCodeLine{907 }
+\DoxyCodeLine{908 }
+\DoxyCodeLine{943 \textcolor{keywordtype}{float}}
+\DoxyCodeLine{944 \mbox{\hyperlink{group__eval__move_ga2e542ea644f28d33b05ec81b7cd60ae5}{vrna\_eval\_move}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{945                \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,}
+\DoxyCodeLine{946                \textcolor{keywordtype}{int}                  m1,}
+\DoxyCodeLine{947                \textcolor{keywordtype}{int}                  m2);}
+\DoxyCodeLine{948 }
+\DoxyCodeLine{949 }
+\DoxyCodeLine{964 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{965 \mbox{\hyperlink{group__eval__move_ga03995d1cd83b3881af7c89dd4ddbdefc}{vrna\_eval\_move\_pt}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{966                   \textcolor{keywordtype}{short}                 *pt,}
+\DoxyCodeLine{967                   \textcolor{keywordtype}{int}                   m1,}
+\DoxyCodeLine{968                   \textcolor{keywordtype}{int}                   m2);}
+\DoxyCodeLine{969 }
+\DoxyCodeLine{970 }
+\DoxyCodeLine{971 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{972 vrna\_eval\_move\_pt\_simple(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{973                          \textcolor{keywordtype}{short}      *pt,}
+\DoxyCodeLine{974                          \textcolor{keywordtype}{int}        m1,}
+\DoxyCodeLine{975                          \textcolor{keywordtype}{int}        m2);}
+\DoxyCodeLine{976 }
+\DoxyCodeLine{977 }
+\DoxyCodeLine{978 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{979 vrna\_eval\_move\_shift\_pt(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{980                         \mbox{\hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}}           *m,}
+\DoxyCodeLine{981                         \textcolor{keywordtype}{short}                 *structure);}
+\DoxyCodeLine{982 }
+\DoxyCodeLine{983 }
+\DoxyCodeLine{988 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{989 }
+\DoxyCodeLine{1003 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  \mbox{\hyperlink{group__eval__deprecated_gab9b2c3a37a5516614c06d0ab54b97cda}{cut\_point}};}
+\DoxyCodeLine{1004 }
+\DoxyCodeLine{1008 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  \mbox{\hyperlink{group__eval__deprecated_ga567530678f6260a1a649a5beca5da4c5}{eos\_debug}};}
+\DoxyCodeLine{1009 }
+\DoxyCodeLine{1028 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_gaf93986cb3cb29770ec9cca69c9fab8cf}{energy\_of\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1029                                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{1030                                      \textcolor{keywordtype}{int}        verbosity\_level),}
+\DoxyCodeLine{1031            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_simple() and vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1032 }
+\DoxyCodeLine{1048 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_gaf9d064d3c496de42eca6734a96fd2090}{energy\_of\_struct\_par}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1049                                       \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *structure,}
+\DoxyCodeLine{1050                                       \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}}  *parameters,}
+\DoxyCodeLine{1051                                       \textcolor{keywordtype}{int}           verbosity\_level),}
+\DoxyCodeLine{1052            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1053 }
+\DoxyCodeLine{1072 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_gaeb14f3664aec67fc03268ac75253f0f8}{energy\_of\_circ\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1073                                           \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,}
+\DoxyCodeLine{1074                                           \textcolor{keywordtype}{int}         verbosity\_level),}
+\DoxyCodeLine{1075            \textcolor{stringliteral}{"{}Use vrna\_eval\_circ\_structure\_simple() and vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1076 }
+\DoxyCodeLine{1092 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_ga3f01f9744ba6a40555eb4d81fc77f6df}{energy\_of\_circ\_struct\_par}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1093                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char}   *structure,}
+\DoxyCodeLine{1094                                            \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}} *parameters,}
+\DoxyCodeLine{1095                                            \textcolor{keywordtype}{int}          verbosity\_level),}
+\DoxyCodeLine{1096            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1097 }
+\DoxyCodeLine{1098 }
+\DoxyCodeLine{1099 DEPRECATED(\textcolor{keywordtype}{float} energy\_of\_gquad\_structure(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1100                                            \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure,}
+\DoxyCodeLine{1101                                            \textcolor{keywordtype}{int}        verbosity\_level),}
+\DoxyCodeLine{1102            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_simple() instead"{}});}
+\DoxyCodeLine{1103 }
+\DoxyCodeLine{1104 DEPRECATED(\textcolor{keywordtype}{float} energy\_of\_gquad\_struct\_par(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1105                                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *structure,}
+\DoxyCodeLine{1106                                             \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}}  *parameters,}
+\DoxyCodeLine{1107                                             \textcolor{keywordtype}{int}           verbosity\_level),}
+\DoxyCodeLine{1108            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1109 }
+\DoxyCodeLine{1110 }
+\DoxyCodeLine{1131 DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__eval__deprecated_ga8831445966b761417e713360791299d8}{energy\_of\_structure\_pt}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1132                                       \textcolor{keywordtype}{short}       *ptable,}
+\DoxyCodeLine{1133                                       \textcolor{keywordtype}{short}       *s,}
+\DoxyCodeLine{1134                                       \textcolor{keywordtype}{short}       *s1,}
+\DoxyCodeLine{1135                                       \textcolor{keywordtype}{int}         verbosity\_level),}
+\DoxyCodeLine{1136            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_pt\_simple() and vrna\_eval\_structure\_pt() instead"{}});}
+\DoxyCodeLine{1137 }
+\DoxyCodeLine{1155 DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__eval__deprecated_ga49acb3d5627dc6823a7ce12d116d4c69}{energy\_of\_struct\_pt\_par}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1156                                        \textcolor{keywordtype}{short}        *ptable,}
+\DoxyCodeLine{1157                                        \textcolor{keywordtype}{short}        *s,}
+\DoxyCodeLine{1158                                        \textcolor{keywordtype}{short}        *s1,}
+\DoxyCodeLine{1159                                        \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}} *parameters,}
+\DoxyCodeLine{1160                                        \textcolor{keywordtype}{int}          verbosity\_level),}
+\DoxyCodeLine{1161            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_pt() instead"{}});}
+\DoxyCodeLine{1162 }
+\DoxyCodeLine{1163 }
+\DoxyCodeLine{1180 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_ga539ecaed89730f7644c202f304d7529b}{energy\_of\_move}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1181                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure,}
+\DoxyCodeLine{1182                                 \textcolor{keywordtype}{int}         m1,}
+\DoxyCodeLine{1183                                 \textcolor{keywordtype}{int}         m2),}
+\DoxyCodeLine{1184            \textcolor{stringliteral}{"{}Use vrna\_eval\_move() instead"{}});}
+\DoxyCodeLine{1185 }
+\DoxyCodeLine{1186 }
+\DoxyCodeLine{1205 DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__eval__deprecated_ga49e0ee561be69faf0568213546f6a53f}{energy\_of\_move\_pt}}(\textcolor{keywordtype}{short}  *pt,}
+\DoxyCodeLine{1206                                  \textcolor{keywordtype}{short}  *s,}
+\DoxyCodeLine{1207                                  \textcolor{keywordtype}{short}  *s1,}
+\DoxyCodeLine{1208                                  \textcolor{keywordtype}{int}    m1,}
+\DoxyCodeLine{1209                                  \textcolor{keywordtype}{int}    m2),}
+\DoxyCodeLine{1210            \textcolor{stringliteral}{"{}Use vrna\_eval\_move\_pt\_simple() and vrna\_eval\_move\_pt() instead"{}});}
+\DoxyCodeLine{1211 }
+\DoxyCodeLine{1225 DEPRECATED(\textcolor{keywordtype}{int}   \mbox{\hyperlink{group__eval__deprecated_ga507d4fd93f4b398d793ba2402731388d}{loop\_energy}}(\textcolor{keywordtype}{short}  *ptable,}
+\DoxyCodeLine{1226                              \textcolor{keywordtype}{short}  *s,}
+\DoxyCodeLine{1227                              \textcolor{keywordtype}{short}  *s1,}
+\DoxyCodeLine{1228                              \textcolor{keywordtype}{int}    i),}
+\DoxyCodeLine{1229            \textcolor{stringliteral}{"{}Use vrna\_eval\_loop\_pt() instead"{}});}
+\DoxyCodeLine{1230 }
+\DoxyCodeLine{1245 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_gac2b37fea2145c94d925a3f33378ef87b}{energy\_of\_struct}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1246                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure),}
+\DoxyCodeLine{1247            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_simple() instead"{}});}
+\DoxyCodeLine{1248 }
+\DoxyCodeLine{1265 DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__eval__deprecated_ga27ce6f68512d43bf1fe14a06c9d76d5c}{energy\_of\_struct\_pt}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1266                                    \textcolor{keywordtype}{short}      *ptable,}
+\DoxyCodeLine{1267                                    \textcolor{keywordtype}{short}      *s,}
+\DoxyCodeLine{1268                                    \textcolor{keywordtype}{short}      *s1),}
+\DoxyCodeLine{1269            \textcolor{stringliteral}{"{}Use vrna\_eval\_structure\_pt\_simple() instead"{}});}
+\DoxyCodeLine{1270 }
+\DoxyCodeLine{1285 DEPRECATED(\textcolor{keywordtype}{float} \mbox{\hyperlink{group__eval__deprecated_ga657222e2758c46bf13b416ef3032e417}{energy\_of\_circ\_struct}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{1286                                        \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure),}
+\DoxyCodeLine{1287            \textcolor{stringliteral}{"{}Use vrna\_eval\_circ\_structure\_simple() and vrna\_eval\_structure() instead"{}});}
+\DoxyCodeLine{1288 }
+\DoxyCodeLine{1289 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1290 }
+\DoxyCodeLine{1295 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

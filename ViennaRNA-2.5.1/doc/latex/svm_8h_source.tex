@@ -1,0 +1,39 @@
+\hypertarget{svm_8h_source}{}\doxysection{svm.\+h}
+\label{svm_8h_source}\index{ViennaRNA/utils/svm.h@{ViennaRNA/utils/svm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_UTILS\_SVM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_UTILS\_SVM\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{extern}  \textcolor{keywordtype}{char} *avg\_model\_string;}
+\DoxyCodeLine{5 \textcolor{keyword}{extern}  \textcolor{keywordtype}{char} *sd\_model\_string;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keywordtype}{float}     get\_z(\textcolor{keywordtype}{char} *sequence,}
+\DoxyCodeLine{8                 \textcolor{keywordtype}{double} energy);}
+\DoxyCodeLine{9 \textcolor{keywordtype}{double}    avg\_regression (\textcolor{keywordtype}{int} N,}
+\DoxyCodeLine{10                           \textcolor{keywordtype}{int} A,}
+\DoxyCodeLine{11                           \textcolor{keywordtype}{int} C,}
+\DoxyCodeLine{12                           \textcolor{keywordtype}{int} G,}
+\DoxyCodeLine{13                           \textcolor{keywordtype}{int} T,}
+\DoxyCodeLine{14                           \textcolor{keyword}{struct} svm\_model *avg\_model,}
+\DoxyCodeLine{15                           \textcolor{keywordtype}{int} *info );}
+\DoxyCodeLine{16 \textcolor{keywordtype}{double}    sd\_regression  (\textcolor{keywordtype}{int} N,}
+\DoxyCodeLine{17                           \textcolor{keywordtype}{int} A,}
+\DoxyCodeLine{18                           \textcolor{keywordtype}{int} C,}
+\DoxyCodeLine{19                           \textcolor{keywordtype}{int} G,}
+\DoxyCodeLine{20                           \textcolor{keywordtype}{int} T,}
+\DoxyCodeLine{21                           \textcolor{keyword}{struct} svm\_model  *sd\_model);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{double}    minimal\_sd     (\textcolor{keywordtype}{int} N,}
+\DoxyCodeLine{23                           \textcolor{keywordtype}{int} A,}
+\DoxyCodeLine{24                           \textcolor{keywordtype}{int} C,}
+\DoxyCodeLine{25                           \textcolor{keywordtype}{int} G,}
+\DoxyCodeLine{26                           \textcolor{keywordtype}{int} T);}
+\DoxyCodeLine{27 \textcolor{keyword}{struct }svm\_model *svm\_load\_model\_string(\textcolor{keywordtype}{char} *modelString);}
+\DoxyCodeLine{28 \textcolor{keywordtype}{int}       *get\_seq\_composition( \textcolor{keywordtype}{short} *S,}
+\DoxyCodeLine{29                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} start,}
+\DoxyCodeLine{30                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} stop,}
+\DoxyCodeLine{31                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

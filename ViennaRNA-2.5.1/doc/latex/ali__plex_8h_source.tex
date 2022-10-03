@@ -1,0 +1,48 @@
+\hypertarget{ali__plex_8h_source}{}\doxysection{ali\+\_\+plex.\+h}
+\label{ali__plex_8h_source}\index{ViennaRNA/ali\_plex.h@{ViennaRNA/ali\_plex.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_ALI\_PLEX\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_ALI\_PLEX\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \mbox{\hyperlink{group__data__structures_structduplexT}{duplexT}} **aliLduplexfold(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1[],}
+\DoxyCodeLine{12                          \textcolor{keyword}{const} \textcolor{keywordtype}{char} *s2[],}
+\DoxyCodeLine{13                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  threshold,}
+\DoxyCodeLine{14                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  extension\_cost,}
+\DoxyCodeLine{15                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  alignment\_length,}
+\DoxyCodeLine{16                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  delta,}
+\DoxyCodeLine{17                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  fast,}
+\DoxyCodeLine{18                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  il\_a,}
+\DoxyCodeLine{19                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  il\_b,}
+\DoxyCodeLine{20                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  b\_a,}
+\DoxyCodeLine{21                          \textcolor{keyword}{const} \textcolor{keywordtype}{int}  b\_b);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27 \mbox{\hyperlink{group__data__structures_structduplexT}{duplexT}} **aliLduplexfold\_XS(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *s1[],}
+\DoxyCodeLine{28                             \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *s2[],}
+\DoxyCodeLine{29                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   **access\_s1,}
+\DoxyCodeLine{30                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   **access\_s2,}
+\DoxyCodeLine{31                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   threshold,}
+\DoxyCodeLine{32                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   alignment\_length,}
+\DoxyCodeLine{33                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   delta,}
+\DoxyCodeLine{34                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   fast,}
+\DoxyCodeLine{35                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   il\_a,}
+\DoxyCodeLine{36                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   il\_b,}
+\DoxyCodeLine{37                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   b\_a,}
+\DoxyCodeLine{38                             \textcolor{keyword}{const} \textcolor{keywordtype}{int}   b\_b);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{/*}}
+\DoxyCodeLine{42 \textcolor{comment}{ * extern duplexT aliduplexfold(const char *s1[], const char *s2[], const int extension\_cost);}}
+\DoxyCodeLine{43 \textcolor{comment}{ * extern duplexT aliduplexfold\_XS(const char *s1[], const char *s2[],const int **access\_s1,}}
+\DoxyCodeLine{44 \textcolor{comment}{ * const int **access\_s2, const int i\_pos, const int j\_pos, const int threshold);}}
+\DoxyCodeLine{45 \textcolor{comment}{ */}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,40 @@
+\hypertarget{datastructures_2stream__output_8h_source}{}\doxysection{stream\+\_\+output.\+h}
+\label{datastructures_2stream__output_8h_source}\index{ViennaRNA/datastructures/stream\_output.h@{ViennaRNA/datastructures/stream\_output.h}}
+\mbox{\hyperlink{datastructures_2stream__output_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_STREAM\_OUTPUT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_STREAM\_OUTPUT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }vrna\_ordered\_stream\_s *\mbox{\hyperlink{group__buffer__utils_ga8da189552af21ab6e4e88bdcc240870c}{vrna\_ostream\_t}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{34 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__buffer__utils_ga4adb94338a6f0a1a451e03c1bdac0d9d}{vrna\_callback\_stream\_output}})(\textcolor{keywordtype}{void}         *auxdata,}
+\DoxyCodeLine{35                                            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i,}
+\DoxyCodeLine{36                                            \textcolor{keywordtype}{void}         *data);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{47 \mbox{\hyperlink{group__buffer__utils_ga8da189552af21ab6e4e88bdcc240870c}{vrna\_ostream\_t}}}
+\DoxyCodeLine{48 \mbox{\hyperlink{group__buffer__utils_gad23113e66a0910ec2341856e2da56bf6}{vrna\_ostream\_init}}(\mbox{\hyperlink{group__buffer__utils_ga4adb94338a6f0a1a451e03c1bdac0d9d}{vrna\_callback\_stream\_output}} *output,}
+\DoxyCodeLine{49                   \textcolor{keywordtype}{void}                        *auxdata);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{60 \mbox{\hyperlink{group__buffer__utils_gaf813ec90e1446ba82c89f9a39688a3b3}{vrna\_ostream\_free}}(\mbox{\hyperlink{group__buffer__utils_ga8da189552af21ab6e4e88bdcc240870c}{vrna\_ostream\_t}} dat);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{64 vrna\_ostream\_threadsafe(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{79 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{80 \mbox{\hyperlink{group__buffer__utils_gaebca91932705d71bcbf00bd8d82bd7c8}{vrna\_ostream\_request}}(\mbox{\hyperlink{group__buffer__utils_ga8da189552af21ab6e4e88bdcc240870c}{vrna\_ostream\_t}} dat,}
+\DoxyCodeLine{81                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   num);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{96 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{97 \mbox{\hyperlink{group__buffer__utils_ga6253c42abdeaf3b41a38204865e1f0f7}{vrna\_ostream\_provide}}(\mbox{\hyperlink{group__buffer__utils_ga8da189552af21ab6e4e88bdcc240870c}{vrna\_ostream\_t}} dat,}
+\DoxyCodeLine{98                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   i,}
+\DoxyCodeLine{99                      \textcolor{keywordtype}{void}           *data);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

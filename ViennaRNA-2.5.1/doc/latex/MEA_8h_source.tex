@@ -1,0 +1,60 @@
+\hypertarget{MEA_8h_source}{}\doxysection{MEA.\+h}
+\label{MEA_8h_source}\index{ViennaRNA/MEA.h@{ViennaRNA/MEA.h}}
+\mbox{\hyperlink{MEA_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_MEA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_MEA\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{35 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{36 \mbox{\hyperlink{group__mea__fold_ga9b87b664ef014c1266aa50d5bc39f2ac}{vrna\_MEA}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{37          \textcolor{keywordtype}{double}               gamma,}
+\DoxyCodeLine{38          \textcolor{keywordtype}{float}                *mea);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{71 \mbox{\hyperlink{group__mea__fold_ga26afeef667f7013a743d1d1ebe42666a}{vrna\_MEA\_from\_plist}}(\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}}   *\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{plist}},}
+\DoxyCodeLine{72                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *sequence,}
+\DoxyCodeLine{73                     \textcolor{keywordtype}{double}      gamma,}
+\DoxyCodeLine{74                     \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}   *md,}
+\DoxyCodeLine{75                     \textcolor{keywordtype}{float}       *mea);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 }
+\DoxyCodeLine{108 DEPRECATED(\textcolor{keywordtype}{float}}
+\DoxyCodeLine{109            \mbox{\hyperlink{group__mea__fold_ga396ec6144c6a74fcbab4cea6b42d76c3}{MEA}}(\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{plist}}  *p,}
+\DoxyCodeLine{110                \textcolor{keywordtype}{char}   *structure,}
+\DoxyCodeLine{111                \textcolor{keywordtype}{double} gamma),}
+\DoxyCodeLine{112            \textcolor{stringliteral}{"{}Use vrna\_MEA() or vrna\_MEA\_from\_plist() instead!"{}});}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 DEPRECATED(\textcolor{keywordtype}{float}}
+\DoxyCodeLine{116            MEA\_seq(\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{plist}}            *p,}
+\DoxyCodeLine{117                    \textcolor{keyword}{const} \textcolor{keywordtype}{char}       *sequence,}
+\DoxyCodeLine{118                    \textcolor{keywordtype}{char}             *structure,}
+\DoxyCodeLine{119                    \textcolor{keywordtype}{double}           gamma,}
+\DoxyCodeLine{120                    \mbox{\hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}} *pf),}
+\DoxyCodeLine{121            \textcolor{stringliteral}{"{}Use vrna\_MEA() or vrna\_MEA\_from\_plist() instead!"{}});}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

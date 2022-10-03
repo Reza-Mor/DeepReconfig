@@ -1,0 +1,40 @@
+\hypertarget{ligand_8h_source}{}\doxysection{ligand.\+h}
+\label{ligand_8h_source}\index{ViennaRNA/constraints/ligand.h@{ViennaRNA/constraints/ligand.h}}
+\mbox{\hyperlink{ligand_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_LIGAND\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_LIGAND\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\_sc\_motif\_s}} \mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\_sc\_motif\_t}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\_sc\_motif\_s}} \{}
+\DoxyCodeLine{25   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{26   \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{27   \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{28   \textcolor{keywordtype}{int} l;}
+\DoxyCodeLine{29   \textcolor{keywordtype}{int} number;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{60 \mbox{\hyperlink{group__constraints__ligand_ga2bd49930c9695b2f4b85989d1daa62d3}{vrna\_sc\_add\_hi\_motif}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{61                      \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *seq,}
+\DoxyCodeLine{62                      \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,}
+\DoxyCodeLine{63                      \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}           energy,}
+\DoxyCodeLine{64                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         options);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\_sc\_motif\_t}} *}
+\DoxyCodeLine{68 vrna\_sc\_ligand\_detect\_motifs(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{69                              \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\_sc\_motif\_t}} *}
+\DoxyCodeLine{73 vrna\_sc\_ligand\_get\_all\_motifs(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

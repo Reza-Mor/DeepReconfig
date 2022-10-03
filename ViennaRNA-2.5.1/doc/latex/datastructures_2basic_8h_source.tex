@@ -1,0 +1,231 @@
+\hypertarget{datastructures_2basic_8h_source}{}\doxysection{basic.\+h}
+\label{datastructures_2basic_8h_source}\index{ViennaRNA/datastructures/basic.h@{ViennaRNA/datastructures/basic.h}}
+\mbox{\hyperlink{datastructures_2basic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_DATA\_STRUCTURES\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_DATA\_STRUCTURES\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{18 \textcolor{comment}{/* below are several convenience typedef's we use throughout the ViennaRNA library */}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__basepair__s}{vrna\_basepair\_s}} \mbox{\hyperlink{group__data__structures_structvrna__basepair__s}{vrna\_basepair\_t}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_elem\_prob\_s}} \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_plist\_t}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_s}} \mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__cpair__s}{vrna\_cpair\_s}} \mbox{\hyperlink{group__data__structures_structvrna__cpair__s}{vrna\_cpair\_t}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__sect__s}{vrna\_sect\_s}} \mbox{\hyperlink{group__data__structures_structvrna__sect__s}{vrna\_sect\_t}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_linear\_s}} \mbox{\hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_lin\_t}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__color__s}{vrna\_color\_s}} \mbox{\hyperlink{group__data__structures_structvrna__color__s}{vrna\_color\_t}};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifdef  USE\_FLOAT\_PF}}
+\DoxyCodeLine{41 \textcolor{keyword}{typedef} \textcolor{keywordtype}{float} \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}};}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{43 \textcolor{keyword}{typedef} \textcolor{keywordtype}{double} \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}};}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{/* the following typedefs are for backward compatibility only */}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__basepair__s}{vrna\_basepair\_s}} \mbox{\hyperlink{group__data__structures_structvrna__basepair__s}{PAIR}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_elem\_prob\_s}} \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{plist}};}
+\DoxyCodeLine{66 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__cpair__s}{vrna\_cpair\_s}} \mbox{\hyperlink{group__data__structures_structvrna__cpair__s}{cpair}};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__sect__s}{vrna\_sect\_s}} \mbox{\hyperlink{group__data__structures_structvrna__sect__s}{sect}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_s}} \mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{bondT}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{constants_8h}{ViennaRNA/params/constants.h}}>}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{model_8h}{ViennaRNA/model.h}}>}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{dp__matrices_8h}{ViennaRNA/dp\_matrices.h}}>}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{hard_8h}{ViennaRNA/constraints/hard.h}}>}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{soft_8h}{ViennaRNA/constraints/soft.h}}>}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{grammar_8h}{ViennaRNA/grammar.h}}>}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{structured__domains_8h}{ViennaRNA/structured\_domains.h}}"{}}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{unstructured__domains_8h}{ViennaRNA/unstructured\_domains.h}}"{}}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utils_2structures_8h}{ViennaRNA/utils/structures.h}}"{}}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{comment}{/*}}
+\DoxyCodeLine{95 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{96 \textcolor{comment}{ * Here are the type definitions of various datastructures}}
+\DoxyCodeLine{97 \textcolor{comment}{ * shared among the Vienna RNA Package}}
+\DoxyCodeLine{98 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{99 \textcolor{comment}{ */}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__basepair__s}{vrna\_basepair\_s}} \{}
+\DoxyCodeLine{105   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{106   \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{107 \};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__cpair__s}{vrna\_cpair\_s}} \{}
+\DoxyCodeLine{113   \textcolor{keywordtype}{int}   i, j, mfe;}
+\DoxyCodeLine{114   \textcolor{keywordtype}{float} p, hue, sat;}
+\DoxyCodeLine{115   \textcolor{keywordtype}{int}   type;}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__color__s}{vrna\_color\_s}} \{}
+\DoxyCodeLine{119   \textcolor{keywordtype}{float} hue;}
+\DoxyCodeLine{120   \textcolor{keywordtype}{float} sat;}
+\DoxyCodeLine{121   \textcolor{keywordtype}{float} bri;}
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__data__linear__s}{vrna\_data\_linear\_s}} \{}
+\DoxyCodeLine{125   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  position;}
+\DoxyCodeLine{126   \textcolor{keywordtype}{float}         value;}
+\DoxyCodeLine{127   \mbox{\hyperlink{group__data__structures_structvrna__color__s}{vrna\_color\_t}}  color;}
+\DoxyCodeLine{128 \};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{134 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__sect__s}{vrna\_sect\_s}} \{}
+\DoxyCodeLine{135   \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{136   \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{137   \textcolor{keywordtype}{int} ml;}
+\DoxyCodeLine{138 \};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{143 \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_s}} \{}
+\DoxyCodeLine{144   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  i;}
+\DoxyCodeLine{145   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  j;}
+\DoxyCodeLine{146 \};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{comment}{/*}}
+\DoxyCodeLine{150 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{151 \textcolor{comment}{ * RNAup data structures}}
+\DoxyCodeLine{152 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{153 \textcolor{comment}{ */}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{158 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structpu__contrib}{pu\_contrib}} \{}
+\DoxyCodeLine{159   \textcolor{keywordtype}{double}  **\mbox{\hyperlink{group__data__structures_ac9034ac9a84ed0647587659d6e9be1e8}{H}};    }
+\DoxyCodeLine{160   \textcolor{keywordtype}{double}  **\mbox{\hyperlink{group__data__structures_a8ca0da20536780589fb3e3472ca0581f}{I}};    }
+\DoxyCodeLine{161   \textcolor{keywordtype}{double}  **\mbox{\hyperlink{group__data__structures_a1222ebf74f426bbcd843dcc325da207b}{M}};    }
+\DoxyCodeLine{162   \textcolor{keywordtype}{double}  **\mbox{\hyperlink{group__data__structures_accb192ba6b4b91a1cb2f8080934fd428}{E}};    }
+\DoxyCodeLine{163   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a33d5ada6e861db0c81aa3d5b2989262e}{length}}; }
+\DoxyCodeLine{164   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a403c1c7f20beeeffba7632fac0cfcbff}{w}};      }
+\DoxyCodeLine{165 \} \mbox{\hyperlink{group__data__structures_ga8f28b2ff98fb3f7a139c50fda3d01a77}{pu\_contrib}};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{170 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structinteract}{interact}} \{}
+\DoxyCodeLine{171   \textcolor{keywordtype}{double}  *\mbox{\hyperlink{group__data__structures_a1fc8b3860c083f164daa9712690a3a56}{Pi}};      }
+\DoxyCodeLine{172   \textcolor{keywordtype}{double}  *\mbox{\hyperlink{group__data__structures_a54f8183542fff4c32ab7ace49a16c02c}{Gi}};      }
+\DoxyCodeLine{173   \textcolor{keywordtype}{double}  \mbox{\hyperlink{group__data__structures_ad58303190f9e085c3ab59890cbf61223}{Gikjl}};    }
+\DoxyCodeLine{175   \textcolor{keywordtype}{double}  \mbox{\hyperlink{group__data__structures_a41793812abae560805414761fec398fe}{Gikjl\_wo}}; }
+\DoxyCodeLine{176   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_ab6d031a21388be8763b75ea74c937f17}{i}};        }
+\DoxyCodeLine{177   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a61e457fbf943d57364be6ddf1b4e7b8a}{k}};        }
+\DoxyCodeLine{178   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a7555cb6363d1479341eb72b9c087aa34}{j}};        }
+\DoxyCodeLine{179   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a030ab45056342e12cb3955e4defd3904}{l}};        }
+\DoxyCodeLine{180   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_ac9fcb5dca54ec5faa76e02b6488b9524}{length}};   }
+\DoxyCodeLine{181 \} \mbox{\hyperlink{group__data__structures_ga2d25e7fc868ebb4fa8b5bfec1c5eb771}{interact}};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{186 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structpu__out}{pu\_out}} \{}
+\DoxyCodeLine{187   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a314b8f43c3ee0bf6060afbeced5dbe6c}{len}};        }
+\DoxyCodeLine{188   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a7697bc7a46cd1b8e37e337e708cb6023}{u\_vals}};     }
+\DoxyCodeLine{189   \textcolor{keywordtype}{int}     \mbox{\hyperlink{group__data__structures_a638b0de1837cfd441871d005d3ab2938}{contribs}};   }
+\DoxyCodeLine{190   \textcolor{keywordtype}{char}    **\mbox{\hyperlink{group__data__structures_ac9e9e30b16e7d04c770460b8487fb09d}{header}};   }
+\DoxyCodeLine{191   \textcolor{keywordtype}{double}  **\mbox{\hyperlink{group__data__structures_a366edbc4170d5c177908e178ff340828}{u\_values}}; }
+\DoxyCodeLine{192 \} \mbox{\hyperlink{group__data__structures_gabc7a2003605bb458e161a391be3f2cbd}{pu\_out}};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{197 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structconstrain}{constrain}} \{}
+\DoxyCodeLine{198   \textcolor{keywordtype}{int}   *indx;}
+\DoxyCodeLine{199   \textcolor{keywordtype}{char}  *ptype;}
+\DoxyCodeLine{200 \} \mbox{\hyperlink{group__data__structures_ga77624181a1c5caa27e9cf9f1da33604f}{constrain}};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 \textcolor{comment}{/*}}
+\DoxyCodeLine{203 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{204 \textcolor{comment}{ * RNAduplex data structures}}
+\DoxyCodeLine{205 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{206 \textcolor{comment}{ */}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{211 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{212   \textcolor{keywordtype}{int}     i;}
+\DoxyCodeLine{213   \textcolor{keywordtype}{int}     j;}
+\DoxyCodeLine{214   \textcolor{keywordtype}{int}     end;}
+\DoxyCodeLine{215   \textcolor{keywordtype}{char}    *structure;}
+\DoxyCodeLine{216   \textcolor{keywordtype}{double}  energy;}
+\DoxyCodeLine{217   \textcolor{keywordtype}{double}  energy\_backtrack;}
+\DoxyCodeLine{218   \textcolor{keywordtype}{double}  opening\_backtrack\_x;}
+\DoxyCodeLine{219   \textcolor{keywordtype}{double}  opening\_backtrack\_y;}
+\DoxyCodeLine{220   \textcolor{keywordtype}{int}     offset;}
+\DoxyCodeLine{221   \textcolor{keywordtype}{double}  dG1;}
+\DoxyCodeLine{222   \textcolor{keywordtype}{double}  dG2;}
+\DoxyCodeLine{223   \textcolor{keywordtype}{double}  ddG;}
+\DoxyCodeLine{224   \textcolor{keywordtype}{int}     tb;}
+\DoxyCodeLine{225   \textcolor{keywordtype}{int}     te;}
+\DoxyCodeLine{226   \textcolor{keywordtype}{int}     qb;}
+\DoxyCodeLine{227   \textcolor{keywordtype}{int}     qe;}
+\DoxyCodeLine{228 \} \mbox{\hyperlink{group__data__structures_structduplexT}{duplexT}};}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230 \textcolor{comment}{/*}}
+\DoxyCodeLine{231 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{232 \textcolor{comment}{ * RNAsnoop data structures}}
+\DoxyCodeLine{233 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{234 \textcolor{comment}{ */}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{239 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structnode}{node}} \{}
+\DoxyCodeLine{240   \textcolor{keywordtype}{int}         k;}
+\DoxyCodeLine{241   \textcolor{keywordtype}{int}         energy;}
+\DoxyCodeLine{242   \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structnode}{node}} *next;}
+\DoxyCodeLine{243 \} \mbox{\hyperlink{group__data__structures_ga520389d6980cd4ce9f2450e93e270944}{folden}};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{248 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{249   \textcolor{keywordtype}{int}   i;}
+\DoxyCodeLine{250   \textcolor{keywordtype}{int}   j;}
+\DoxyCodeLine{251   \textcolor{keywordtype}{int}   u;}
+\DoxyCodeLine{252   \textcolor{keywordtype}{char}  *structure;}
+\DoxyCodeLine{253   \textcolor{keywordtype}{float} energy;}
+\DoxyCodeLine{254   \textcolor{keywordtype}{float} Duplex\_El;}
+\DoxyCodeLine{255   \textcolor{keywordtype}{float} Duplex\_Er;}
+\DoxyCodeLine{256   \textcolor{keywordtype}{float} Loop\_E;}
+\DoxyCodeLine{257   \textcolor{keywordtype}{float} Loop\_D;}
+\DoxyCodeLine{258   \textcolor{keywordtype}{float} pscd;}
+\DoxyCodeLine{259   \textcolor{keywordtype}{float} psct;}
+\DoxyCodeLine{260   \textcolor{keywordtype}{float} pscg;}
+\DoxyCodeLine{261   \textcolor{keywordtype}{float} Duplex\_Ol;}
+\DoxyCodeLine{262   \textcolor{keywordtype}{float} Duplex\_Or;}
+\DoxyCodeLine{263   \textcolor{keywordtype}{float} Duplex\_Ot;}
+\DoxyCodeLine{264   \textcolor{keywordtype}{float} fullStemEnergy;}
+\DoxyCodeLine{265 \} \mbox{\hyperlink{group__data__structures_structsnoopT}{snoopT}};}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268 \textcolor{comment}{/*}}
+\DoxyCodeLine{269 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{270 \textcolor{comment}{ * PKplex data structures}}
+\DoxyCodeLine{271 \textcolor{comment}{ * \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{272 \textcolor{comment}{ */}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{277 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__data__structures_structdupVar}{dupVar}} \{}
+\DoxyCodeLine{278   \textcolor{keywordtype}{int}     i;}
+\DoxyCodeLine{279   \textcolor{keywordtype}{int}     j;}
+\DoxyCodeLine{280   \textcolor{keywordtype}{int}     end;}
+\DoxyCodeLine{281   \textcolor{keywordtype}{char}    *pk\_helix;}
+\DoxyCodeLine{282   \textcolor{keywordtype}{char}    *structure;}
+\DoxyCodeLine{283   \textcolor{keywordtype}{double}  energy;}
+\DoxyCodeLine{284   \textcolor{keywordtype}{int}     offset;}
+\DoxyCodeLine{285   \textcolor{keywordtype}{double}  dG1;}
+\DoxyCodeLine{286   \textcolor{keywordtype}{double}  dG2;}
+\DoxyCodeLine{287   \textcolor{keywordtype}{double}  ddG;}
+\DoxyCodeLine{288   \textcolor{keywordtype}{int}     tb;}
+\DoxyCodeLine{289   \textcolor{keywordtype}{int}     te;}
+\DoxyCodeLine{290   \textcolor{keywordtype}{int}     qb;}
+\DoxyCodeLine{291   \textcolor{keywordtype}{int}     qe;}
+\DoxyCodeLine{292   \textcolor{keywordtype}{int}     inactive;}
+\DoxyCodeLine{293   \textcolor{keywordtype}{int}     processed;}
+\DoxyCodeLine{294 \} \mbox{\hyperlink{group__data__structures_gaa527b6c15d607e89f7107bbb24e70c4c}{dupVar}};}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_C11\_FEATURES}}
+\DoxyCodeLine{327 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__data__structures_ga21744ae2d6a17309f9327d3547cef0cb}{vrna\_C11\_features}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

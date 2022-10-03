@@ -1,0 +1,11 @@
+digraph "Nucleic Acid Sequences and Structures"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Nucleic Acid Sequences\l and Structures",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions to read/write different file formats for nucleic acid sequences and secondary structures."];
+  Node2 [label="Files and I/O",height=0.2,width=0.4,color="black",URL="$group__file__utils.html",tooltip="Functions to parse, write, and convert various file formats and to deal with file system related issu..."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node2 [shape=plaintext, label="file_formats.h", color="darkgreen", dir="none", style="dashed"];
+}

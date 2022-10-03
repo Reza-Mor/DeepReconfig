@@ -1,0 +1,10 @@
+digraph "Fine-tuning of the Implemented Models"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="The RNA Folding Grammar",height=0.2,width=0.4,color="black",URL="$group__grammar.html",tooltip="The RNA folding grammar as implemented in RNAlib."];
+  Node1 [label="Fine-tuning of the\l Implemented Models",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions and data structures to fine-tune the implemented secondary structure evaluation model."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

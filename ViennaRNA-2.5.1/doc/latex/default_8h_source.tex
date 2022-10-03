@@ -1,0 +1,106 @@
+\hypertarget{default_8h_source}{}\doxysection{default.\+h}
+\label{default_8h_source}\index{ViennaRNA/params/default.h@{ViennaRNA/params/default.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{   prototypes for energy\_par.c}}
+\DoxyCodeLine{3 \textcolor{comment}{*/}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PARAMS\_DEFAULT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PARAMS\_DEFAULT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{constants_8h}{ViennaRNA/params/constants.h}}>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define PUBLIC}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} lxc37;   \textcolor{comment}{/* parameter for logarithmic loop}}
+\DoxyCodeLine{14 \textcolor{comment}{        energy extrapolation            */}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} stack37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1];}
+\DoxyCodeLine{17 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} stackdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1]; \textcolor{comment}{/* stack enthalpies */}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} hairpin37[31];}
+\DoxyCodeLine{20 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} hairpindH[31];}
+\DoxyCodeLine{21 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} bulge37[31];}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} bulgedH[31];}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} internal\_loop37[31];}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} internal\_loopdH[31];}
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchI37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{26 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchIdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{27 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatch1nI37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{28 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatch23I37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{29 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatch1nIdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{30 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatch23IdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* interior loop mismatches */}}
+\DoxyCodeLine{31 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchH37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* same for hairpins */}}
+\DoxyCodeLine{32 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchM37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* same for multiloops */}}
+\DoxyCodeLine{33 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchHdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* same for hairpins */}}
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchMdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];  \textcolor{comment}{/* same for multiloops */}}
+\DoxyCodeLine{35 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchExt37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];}
+\DoxyCodeLine{36 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} mismatchExtdH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} dangle5\_37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5];      \textcolor{comment}{/* 5' dangle exterior of pair */}}
+\DoxyCodeLine{39 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} dangle3\_37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5];      \textcolor{comment}{/* 3' dangle */}}
+\DoxyCodeLine{40 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} dangle3\_dH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5];       \textcolor{comment}{/* corresponding enthalpies */}}
+\DoxyCodeLine{41 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} dangle5\_dH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5];}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int11\_37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5]; \textcolor{comment}{/* 1x1 interior loops */}}
+\DoxyCodeLine{44 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int11\_dH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5];}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int21\_37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5][5]; \textcolor{comment}{/* 2x1 interior loops */}}
+\DoxyCodeLine{47 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int21\_dH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5][5];}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int22\_37[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5][5][5]; \textcolor{comment}{/* 2x2 interior loops */}}
+\DoxyCodeLine{50 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} int22\_dH[\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][\mbox{\hyperlink{constants_8h_a5e75221c779d618eab81e096f37e32ce}{NBPAIRS}}+1][5][5][5][5];}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{comment}{/* constants for linearly destabilizing contributions for multi-\/loops}}
+\DoxyCodeLine{53 \textcolor{comment}{   F = ML\_closing + ML\_intern*(k-\/1) + ML\_BASE*u  */}}
+\DoxyCodeLine{54 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_BASE37;}
+\DoxyCodeLine{55 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_BASEdH;}
+\DoxyCodeLine{56 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_closing37;}
+\DoxyCodeLine{57 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_closingdH;}
+\DoxyCodeLine{58 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_intern37;}
+\DoxyCodeLine{59 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ML\_interndH;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} TripleC37;}
+\DoxyCodeLine{62 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} TripleCdH;}
+\DoxyCodeLine{63 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} MultipleCA37;}
+\DoxyCodeLine{64 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} MultipleCAdH;}
+\DoxyCodeLine{65 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} MultipleCB37;}
+\DoxyCodeLine{66 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} MultipleCBdH;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{/* Ninio-\/correction for asymmetric internal loops with branches n1 and n2 */}}
+\DoxyCodeLine{69 \textcolor{comment}{/*    ninio\_energy = min\{max\_ninio, |n1-\/n2|*F\_ninio[min\{4.0, n1, n2\}] \} */}}
+\DoxyCodeLine{70 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  MAX\_NINIO;                   \textcolor{comment}{/* maximum correction */}}
+\DoxyCodeLine{71 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} ninio37;}
+\DoxyCodeLine{72 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} niniodH;}
+\DoxyCodeLine{73 \textcolor{comment}{/* penalty for helices terminated by AU (actually not GC) */}}
+\DoxyCodeLine{74 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} TerminalAU37;}
+\DoxyCodeLine{75 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} TerminalAUdH;}
+\DoxyCodeLine{76 \textcolor{comment}{/* penalty for forming bi-\/molecular duplex */}}
+\DoxyCodeLine{77 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} DuplexInit37;}
+\DoxyCodeLine{78 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} DuplexInitdH;}
+\DoxyCodeLine{79 \textcolor{comment}{/* stabilizing contribution due to special hairpins of size 4 (tetraloops) */}}
+\DoxyCodeLine{80 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} Tetraloops[281];  \textcolor{comment}{/* string containing the special tetraloops */}}
+\DoxyCodeLine{81 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  Tetraloop37[40];  \textcolor{comment}{/* Bonus energy for special tetraloops */}}
+\DoxyCodeLine{82 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  TetraloopdH[40];}
+\DoxyCodeLine{83 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} Triloops[241];    \textcolor{comment}{/* string containing the special triloops */}}
+\DoxyCodeLine{84 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  Triloop37[40]; \textcolor{comment}{/* Bonus energy for special Triloops */}}
+\DoxyCodeLine{85 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  TriloopdH[40]; \textcolor{comment}{/* Bonus energy for special Triloops */}}
+\DoxyCodeLine{86 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} Hexaloops[361];    \textcolor{comment}{/* string containing the special triloops */}}
+\DoxyCodeLine{87 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  Hexaloop37[40]; \textcolor{comment}{/* Bonus energy for special Triloops */}}
+\DoxyCodeLine{88 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}  HexaloopdH[40]; \textcolor{comment}{/* Bonus energy for special Triloops */}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadAlpha37;}
+\DoxyCodeLine{91 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadAlphadH;}
+\DoxyCodeLine{92 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadBeta37;}
+\DoxyCodeLine{93 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadBetadH;}
+\DoxyCodeLine{94 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadLayerMismatch37;  \textcolor{comment}{/* penalty per incompatible gquad layer in a sub-\/alignment (applied twice for inner layers) */}}
+\DoxyCodeLine{95 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadLayerMismatchH;}
+\DoxyCodeLine{96 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} GQuadLayerMismatchMax; \textcolor{comment}{/* maximum number of mismatching sequences in the alignment when gquad should be formed */}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} Tmeasure;       \textcolor{comment}{/* temperature of param measurements */}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,12 @@
+digraph "Buffers"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Buffers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions that provide dynamically buffered stream-like data structures."];
+  Node2 [label="(Abstract) Data Structures",height=0.2,width=0.4,color="black",URL="$group__data__structures.html",tooltip="All datastructures and typedefs shared among the ViennaRNA Package can be found here."];
+  Node3 [label="Utilities",height=0.2,width=0.4,color="black",URL="$group__utils.html",tooltip=" "];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, label="char_stream.h\nstream_output.h", color="darkgreen", dir="none", style="dashed"];
+}

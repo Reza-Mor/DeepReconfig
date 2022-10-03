@@ -1,0 +1,78 @@
+\hypertarget{paths_8h_source}{}\doxysection{paths.\+h}
+\label{paths_8h_source}\index{ViennaRNA/landscape/paths.h@{ViennaRNA/landscape/paths.h}}
+\mbox{\hyperlink{paths_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PATHS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PATHS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{42 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_s}} \mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_t}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }vrna\_path\_options\_s *\mbox{\hyperlink{group__paths_gaa99d8ec48f64de53eda0d51b1ed0d3d1}{vrna\_path\_options\_t}};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{59 DEPRECATED(\textcolor{keyword}{typedef} \textcolor{keyword}{struct} \mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_s}} \mbox{\hyperlink{group__paths_structvrna__path__s}{path\_t}},}
+\DoxyCodeLine{60              \textcolor{stringliteral}{"{}Use vrna\_path\_t instead!"{}});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{move_8h}{ViennaRNA/landscape/move.h}}>}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define   VRNA\_PATH\_TYPE\_DOT\_BRACKET    1U}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define   VRNA\_PATH\_TYPE\_MOVES          2U}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{108 \textcolor{keyword}{struct }\mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_s}} \{}
+\DoxyCodeLine{109   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__paths_a5fc9e0a7dc0e0f8ad67f24c18f2dc852}{type}};  }
+\DoxyCodeLine{119   \textcolor{keywordtype}{double}      \mbox{\hyperlink{group__paths_ac25160bf31d28097358278f367e41227}{en}};     }
+\DoxyCodeLine{120   \textcolor{keywordtype}{char}        *\mbox{\hyperlink{group__paths_a141b70a59cb81d10bc65bbb7a0f6db77}{s}};     }
+\DoxyCodeLine{121   \mbox{\hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}} \mbox{\hyperlink{group__paths_a13da6bb5167362199947765b06a84005}{move}};   }
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{131 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{132 \mbox{\hyperlink{group__paths_ga3763dc16760d09277a1b1c3f3061d0c7}{vrna\_path\_free}}(\mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_t}} *path);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 }
+\DoxyCodeLine{141 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{142 \mbox{\hyperlink{group__paths_gaa64a86b13cb165346a0d0c788781512a}{vrna\_path\_options\_free}}(\mbox{\hyperlink{group__paths_gaa99d8ec48f64de53eda0d51b1ed0d3d1}{vrna\_path\_options\_t}} options);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 }
+\DoxyCodeLine{173 \mbox{\hyperlink{group__paths_gaa99d8ec48f64de53eda0d51b1ed0d3d1}{vrna\_path\_options\_t}}}
+\DoxyCodeLine{174 \mbox{\hyperlink{group__paths__direct_ga3790a24ca64d68acfa6e67b525151a5f}{vrna\_path\_options\_findpath}}(\textcolor{keywordtype}{int}          width,}
+\DoxyCodeLine{175                            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 }
+\DoxyCodeLine{203 \mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_t}} *}
+\DoxyCodeLine{204 \mbox{\hyperlink{group__paths__direct_gacba096caf9a6fe134f33a5afcf2248d8}{vrna\_path\_direct}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{205                  \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *s1,}
+\DoxyCodeLine{206                  \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *s2,}
+\DoxyCodeLine{207                  \mbox{\hyperlink{group__paths_gaa99d8ec48f64de53eda0d51b1ed0d3d1}{vrna\_path\_options\_t}}  options);}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209 }
+\DoxyCodeLine{232 \mbox{\hyperlink{group__paths_structvrna__path__s}{vrna\_path\_t}} *}
+\DoxyCodeLine{233 \mbox{\hyperlink{group__paths__direct_ga51d9edaeb42d1d178ea8ba46ccd4c8c0}{vrna\_path\_direct\_ub}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{234                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *s1,}
+\DoxyCodeLine{235                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *s2,}
+\DoxyCodeLine{236                     \textcolor{keywordtype}{int}                   maxE,}
+\DoxyCodeLine{237                     \mbox{\hyperlink{group__paths_gaa99d8ec48f64de53eda0d51b1ed0d3d1}{vrna\_path\_options\_t}}   options);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

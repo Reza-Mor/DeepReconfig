@@ -1,0 +1,85 @@
+\hypertarget{hash__tables_8h_source}{}\doxysection{hash\+\_\+tables.\+h}
+\label{hash__tables_8h_source}\index{ViennaRNA/datastructures/hash\_tables.h@{ViennaRNA/datastructures/hash\_tables.h}}
+\mbox{\hyperlink{hash__tables_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_HASH\_UTIL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_HASH\_UTIL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/* Taken from the barriers tool and modified by GE. */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{35 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }vrna\_hash\_table\_s *\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} int (\mbox{\hyperlink{group__hash__table__utils_gace4adf608f9dc246f66f6264d30c0f8d}{vrna\_callback\_ht\_compare\_entries}})(\textcolor{keywordtype}{void} *x,}
+\DoxyCodeLine{46                                                \textcolor{keywordtype}{void} *y);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{56 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} int (\mbox{\hyperlink{group__hash__table__utils_ga8533dc0cb44035d5fdb05e3c28922d2b}{vrna\_callback\_ht\_hash\_function}})(\textcolor{keywordtype}{void}          *x,}
+\DoxyCodeLine{57                                                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} hashtable\_size);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{66 \textcolor{keyword}{typedef} int (\mbox{\hyperlink{group__hash__table__utils_ga3ff18cc70db8bb6f8cfee2c2b1542afc}{vrna\_callback\_ht\_free\_entry}})(\textcolor{keywordtype}{void} *x);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{94 \mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}}}
+\DoxyCodeLine{95 \mbox{\hyperlink{group__hash__table__utils_ga37d1c7e13087a2b7c1b87fda34577c29}{vrna\_ht\_init}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                     b,}
+\DoxyCodeLine{96              \mbox{\hyperlink{group__hash__table__utils_gace4adf608f9dc246f66f6264d30c0f8d}{vrna\_callback\_ht\_compare\_entries}} *compare\_function,}
+\DoxyCodeLine{97              \mbox{\hyperlink{group__hash__table__utils_ga8533dc0cb44035d5fdb05e3c28922d2b}{vrna\_callback\_ht\_hash\_function}}   *hash\_function,}
+\DoxyCodeLine{98              \mbox{\hyperlink{group__hash__table__utils_ga3ff18cc70db8bb6f8cfee2c2b1542afc}{vrna\_callback\_ht\_free\_entry}}      *free\_hash\_entry);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{107 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}}
+\DoxyCodeLine{108 \mbox{\hyperlink{group__hash__table__utils_ga1d7a50bb20b32275e742ec575966412b}{vrna\_ht\_size}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}} ht);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{117 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}}
+\DoxyCodeLine{118 \mbox{\hyperlink{group__hash__table__utils_ga928e7a27a9d34d254ce3855f1ab1d190}{vrna\_ht\_collisions}}(\textcolor{keyword}{struct} vrna\_hash\_table\_s *ht);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{135 \textcolor{keywordtype}{void} *}
+\DoxyCodeLine{136 \mbox{\hyperlink{group__hash__table__utils_gab26d769afd466d93e042fa9c29334edf}{vrna\_ht\_get}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}} ht,}
+\DoxyCodeLine{137             \textcolor{keywordtype}{void}              *x);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 }
+\DoxyCodeLine{155 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{156 \mbox{\hyperlink{group__hash__table__utils_ga4d2189ce8048f031a15ca5e4b290d494}{vrna\_ht\_insert}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}}  ht,}
+\DoxyCodeLine{157                \textcolor{keywordtype}{void}               *x);}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 }
+\DoxyCodeLine{171 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{172 \mbox{\hyperlink{group__hash__table__utils_ga1162aa0d1bd82af7420bb727a87d3e2f}{vrna\_ht\_remove}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}}  ht,}
+\DoxyCodeLine{173                \textcolor{keywordtype}{void}               *x);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 }
+\DoxyCodeLine{187 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{188 \mbox{\hyperlink{group__hash__table__utils_gab90583f8f7395e735c865ad2ebdb3c29}{vrna\_ht\_clear}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}} ht);}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 }
+\DoxyCodeLine{201 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{202 \mbox{\hyperlink{group__hash__table__utils_ga479db024c70437aa2576d60b373c5262}{vrna\_ht\_free}}(\mbox{\hyperlink{group__hash__table__utils_gabc7c6f41b718c8e23929e528891a89c4}{vrna\_hash\_table\_t}} ht);}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 \textcolor{comment}{/* End of abstract interface */}}
+\DoxyCodeLine{217 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{218   \textcolor{keywordtype}{char}  *\mbox{\hyperlink{group__hash__table__utils_a094ce43244eced065ea0e5fa50287a25}{structure}}; }
+\DoxyCodeLine{219   \textcolor{keywordtype}{float} \mbox{\hyperlink{group__hash__table__utils_afffab6040a5cfc3ac465d94d8538d88a}{energy}};     }
+\DoxyCodeLine{220 \} \mbox{\hyperlink{group__hash__table__utils_structvrna__ht__entry__db__t}{vrna\_ht\_entry\_db\_t}};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 }
+\DoxyCodeLine{236 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{237 \mbox{\hyperlink{group__hash__table__utils_gac4ec0b8372d50d7347a63f140f340962}{vrna\_ht\_db\_comp}}(\textcolor{keywordtype}{void}  *x,}
+\DoxyCodeLine{238                 \textcolor{keywordtype}{void}  *y);}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240 }
+\DoxyCodeLine{255 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}}
+\DoxyCodeLine{256 \mbox{\hyperlink{group__hash__table__utils_gad133721a3cd2f8ca259fe315d86035a7}{vrna\_ht\_db\_hash\_func}}(\textcolor{keywordtype}{void}           *x,}
+\DoxyCodeLine{257                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}  hashtable\_size);}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 }
+\DoxyCodeLine{271 \textcolor{keywordtype}{int} \mbox{\hyperlink{group__hash__table__utils_gabcdcd0d070b3dfd2634a09e7838acf66}{vrna\_ht\_db\_free\_entry}}(\textcolor{keywordtype}{void} *hash\_entry);}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274 \textcolor{comment}{/* End of dot-\/bracket interface */}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

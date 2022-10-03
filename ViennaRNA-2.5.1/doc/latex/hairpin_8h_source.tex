@@ -1,0 +1,201 @@
+\hypertarget{hairpin_8h_source}{}\doxysection{hairpin.\+h}
+\label{hairpin_8h_source}\index{ViennaRNA/loops/hairpin.h@{ViennaRNA/loops/hairpin.h}}
+\mbox{\hyperlink{hairpin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_LOOPS\_HAIRPIN\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_LOOPS\_HAIRPIN\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_2basic_8h}{ViennaRNA/utils/basic.h}}>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\# if defined(DEPRECATED)}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#   undef DEPRECATED}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifdef \_\_GNUC\_\_}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\# define INLINE inline}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\# define INLINE}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{71 \mbox{\hyperlink{group__eval__loops__hp_ga57179ea326cc5ed8dfe4d3962b233128}{vrna\_E\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{72                \textcolor{keywordtype}{int}                  i,}
+\DoxyCodeLine{73                \textcolor{keywordtype}{int}                  j);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{84 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{85 \mbox{\hyperlink{group__eval__loops__hp_ga7d358fa17aaf1cfc312a053accd10778}{vrna\_E\_ext\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{86                    \textcolor{keywordtype}{int}                  i,}
+\DoxyCodeLine{87                    \textcolor{keywordtype}{int}                  j);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{93 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{94 \mbox{\hyperlink{group__eval__loops__hp_gafd39e7355dcf36bf1517bafc1b49c2d2}{vrna\_eval\_ext\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{95                       \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{96                       \textcolor{keywordtype}{int}                   j);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{110 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{111 \mbox{\hyperlink{group__eval__loops__hp_gad0bb844f8dc704c71737ae1d7e32b975}{vrna\_eval\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{112                   \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{113                   \textcolor{keywordtype}{int}                   j);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{148 PRIVATE INLINE \textcolor{keywordtype}{int}}
+\DoxyCodeLine{149 \mbox{\hyperlink{group__eval__loops__hp_gadf943ee9a45b7f4cee9192c06210dace}{E\_Hairpin}}(\textcolor{keywordtype}{int}           size,}
+\DoxyCodeLine{150           \textcolor{keywordtype}{int}           type,}
+\DoxyCodeLine{151           \textcolor{keywordtype}{int}           si1,}
+\DoxyCodeLine{152           \textcolor{keywordtype}{int}           sj1,}
+\DoxyCodeLine{153           \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{154           \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}}  *P)}
+\DoxyCodeLine{155 \{}
+\DoxyCodeLine{156   \textcolor{keywordtype}{int} energy;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   \textcolor{keywordflow}{if} (size <= 30)}
+\DoxyCodeLine{159     energy = P-\/>hairpin[size];}
+\DoxyCodeLine{160   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{161     energy = P-\/>hairpin[30] + (int)(P-\/>lxc * log((size) / 30.));}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163   \textcolor{keywordflow}{if} (size < 3)}
+\DoxyCodeLine{164     \textcolor{keywordflow}{return} energy;            \textcolor{comment}{/* should only be the case when folding alignments */}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string}) \&\& (P-\/>\mbox{\hyperlink{group__energy__parameters_a7b84353eb9075c595bad4ceb871bcae7}{model\_details}}.\mbox{\hyperlink{group__model__details_add64a96d23e77ef1d0ddf8dfc5228143}{special\_hp}})) \{}
+\DoxyCodeLine{167     \textcolor{keywordflow}{if} (size == 4) \{}
+\DoxyCodeLine{168       \textcolor{comment}{/* check for tetraloop bonus */}}
+\DoxyCodeLine{169       \textcolor{keywordtype}{char} tl[7] = \{}
+\DoxyCodeLine{170         0}
+\DoxyCodeLine{171       \}, *ts;}
+\DoxyCodeLine{172       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 6);}
+\DoxyCodeLine{173       tl[6] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{174       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Tetraloops, tl)))}
+\DoxyCodeLine{175         \textcolor{keywordflow}{return} P-\/>Tetraloop\_E[(ts -\/ P-\/>Tetraloops) / 7];}
+\DoxyCodeLine{176     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (size == 6) \{}
+\DoxyCodeLine{177       \textcolor{keywordtype}{char} tl[9] = \{}
+\DoxyCodeLine{178         0}
+\DoxyCodeLine{179       \}, *ts;}
+\DoxyCodeLine{180       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 8);}
+\DoxyCodeLine{181       tl[8] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{182       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Hexaloops, tl)))}
+\DoxyCodeLine{183         \textcolor{keywordflow}{return} P-\/>Hexaloop\_E[(ts -\/ P-\/>Hexaloops) / 9];}
+\DoxyCodeLine{184     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (size == 3) \{}
+\DoxyCodeLine{185       \textcolor{keywordtype}{char} tl[6] = \{}
+\DoxyCodeLine{186         0}
+\DoxyCodeLine{187       \}, *ts;}
+\DoxyCodeLine{188       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 5);}
+\DoxyCodeLine{189       tl[5] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{190       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Triloops, tl)))}
+\DoxyCodeLine{191         \textcolor{keywordflow}{return} P-\/>Triloop\_E[(ts -\/ P-\/>Triloops) / 6];}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193       \textcolor{keywordflow}{return} energy + (type > 2 ? P-\/>TerminalAU : 0);}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195   \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197   energy += P-\/>mismatchH[type][si1][sj1];}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   \textcolor{keywordflow}{return} energy;}
+\DoxyCodeLine{200 \}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{comment}{/* End basic interface */}}
+\DoxyCodeLine{231 PRIVATE INLINE \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}}
+\DoxyCodeLine{232 \mbox{\hyperlink{group__eval__loops__hp_ga51fb555974f180b78d76142b2894851c}{exp\_E\_Hairpin}}(\textcolor{keywordtype}{int}               u,}
+\DoxyCodeLine{233               \textcolor{keywordtype}{int}               type,}
+\DoxyCodeLine{234               \textcolor{keywordtype}{short}             si1,}
+\DoxyCodeLine{235               \textcolor{keywordtype}{short}             sj1,}
+\DoxyCodeLine{236               \textcolor{keyword}{const} \textcolor{keywordtype}{char}        *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{237               \mbox{\hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}}  *P)}
+\DoxyCodeLine{238 \{}
+\DoxyCodeLine{239   \textcolor{keywordtype}{double} q, kT;}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241   kT = P-\/>kT;   \textcolor{comment}{/* kT in cal/mol  */}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243   \textcolor{keywordflow}{if} (u <= 30)}
+\DoxyCodeLine{244     q = P-\/>exphairpin[u];}
+\DoxyCodeLine{245   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{246     q = P-\/>exphairpin[30] * exp(-\/(P-\/>lxc * log(u / 30.)) * 10. / kT);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248   \textcolor{keywordflow}{if} (u < 3)}
+\DoxyCodeLine{249     \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})q;         \textcolor{comment}{/* should only be the case when folding alignments */}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251   \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string}) \&\& (P-\/>\mbox{\hyperlink{group__energy__parameters_ac18055127bccc27c1223f1d2f3b01b53}{model\_details}}.\mbox{\hyperlink{group__model__details_add64a96d23e77ef1d0ddf8dfc5228143}{special\_hp}})) \{}
+\DoxyCodeLine{252     \textcolor{keywordflow}{if} (u == 4) \{}
+\DoxyCodeLine{253       \textcolor{keywordtype}{char} tl[7] = \{}
+\DoxyCodeLine{254         0}
+\DoxyCodeLine{255       \}, *ts;}
+\DoxyCodeLine{256       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 6);}
+\DoxyCodeLine{257       tl[6] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{258       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Tetraloops, tl))) \{}
+\DoxyCodeLine{259         \textcolor{keywordflow}{if} (type != 7)}
+\DoxyCodeLine{260           \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})(P-\/>exptetra[(ts -\/ P-\/>Tetraloops) / 7]);}
+\DoxyCodeLine{261         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{262           q *= P-\/>exptetra[(ts -\/ P-\/>Tetraloops) / 7];}
+\DoxyCodeLine{263       \}}
+\DoxyCodeLine{264     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (u == 6) \{}
+\DoxyCodeLine{265       \textcolor{keywordtype}{char} tl[9] = \{}
+\DoxyCodeLine{266         0}
+\DoxyCodeLine{267       \}, *ts;}
+\DoxyCodeLine{268       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 8);}
+\DoxyCodeLine{269       tl[8] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{270       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Hexaloops, tl)))}
+\DoxyCodeLine{271         \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})(P-\/>exphex[(ts -\/ P-\/>Hexaloops) / 9]);}
+\DoxyCodeLine{272     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (u == 3) \{}
+\DoxyCodeLine{273       \textcolor{keywordtype}{char} tl[6] = \{}
+\DoxyCodeLine{274         0}
+\DoxyCodeLine{275       \}, *ts;}
+\DoxyCodeLine{276       memcpy(tl, \textcolor{keywordtype}{string}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * 5);}
+\DoxyCodeLine{277       tl[5] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{278       \textcolor{keywordflow}{if} ((ts = strstr(P-\/>Triloops, tl)))}
+\DoxyCodeLine{279         \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})(P-\/>exptri[(ts -\/ P-\/>Triloops) / 6]);}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281       \textcolor{keywordflow}{if} (type > 2)}
+\DoxyCodeLine{282         \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})(q * P-\/>expTermAU);}
+\DoxyCodeLine{283       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{284         \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})q;}
+\DoxyCodeLine{285     \}}
+\DoxyCodeLine{286   \}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288   q *= P-\/>expmismatchH[type][si1][sj1];}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290   \textcolor{keywordflow}{return} (\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}})q;}
+\DoxyCodeLine{291 \}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 }
+\DoxyCodeLine{303 \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}}
+\DoxyCodeLine{304 \mbox{\hyperlink{group__eval__loops__hp_gad62fe037be0a3fc6914676e5cb85be5e}{vrna\_exp\_E\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{305                    \textcolor{keywordtype}{int}                  i,}
+\DoxyCodeLine{306                    \textcolor{keywordtype}{int}                  j);}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309 \textcolor{comment}{/* End partition function interface */}}
+\DoxyCodeLine{330 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{331 \mbox{\hyperlink{group__mfe__backtracking_gae20d5805ddedc9b81d24735b11b6a9bf}{vrna\_BT\_hp\_loop}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{332                 \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{333                 \textcolor{keywordtype}{int}                   j,}
+\DoxyCodeLine{334                 \textcolor{keywordtype}{int}                   en,}
+\DoxyCodeLine{335                 \mbox{\hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t}}       *bp\_stack,}
+\DoxyCodeLine{336                 \textcolor{keywordtype}{int}                   *stack\_count);}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{338 }
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

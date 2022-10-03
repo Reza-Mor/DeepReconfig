@@ -1,0 +1,89 @@
+\hypertarget{group__constraints__ligand}{}\doxysection{Incorporating Ligands Binding to Specific Sequence/\+Structure Motifs using Soft Constraints}
+\label{group__constraints__ligand}\index{Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints@{Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints}}
+
+
+Ligand binding to specific hairpin/interior loop like motifs using the \mbox{\hyperlink{group__soft__constraints}{Soft Constraints}} feature.  
+
+
+
+
+\doxysubsection{Detailed Description}
+Ligand binding to specific hairpin/interior loop like motifs using the \mbox{\hyperlink{group__soft__constraints}{Soft Constraints}} feature. 
+
+Collaboration diagram for Incorporating Ligands Binding to Specific Sequence/\+Structure Motifs using Soft Constraints\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\+\_\+sc\+\_\+motif\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__constraints__ligand_ga56615bc45d2aa4d6d3326fb74183c9ac}\label{group__constraints__ligand_ga56615bc45d2aa4d6d3326fb74183c9ac}} 
+typedef struct \mbox{\hyperlink{group__constraints__ligand_structvrna__sc__motif__s}{vrna\+\_\+sc\+\_\+motif\+\_\+s}} {\bfseries vrna\+\_\+sc\+\_\+motif\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Type definition for soft constraint motif. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__constraints__ligand_ga2bd49930c9695b2f4b85989d1daa62d3}{vrna\+\_\+sc\+\_\+add\+\_\+hi\+\_\+motif}} (\mbox{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}} $\ast$fc, const char $\ast$seq, const char $\ast$structure, \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\+\_\+\+OR\+\_\+\+DBL}} energy, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Add soft constraints for hairpin or interior loop binding motif. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Data Structure Documentation}
+\index{vrna\_sc\_motif\_s@{vrna\_sc\_motif\_s}}\label{structvrna__sc__motif__s}
+\Hypertarget{group__constraints__ligand_structvrna__sc__motif__s}
+\doxysubsubsection{struct vrna\+\_\+sc\+\_\+motif\+\_\+s}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__constraints__ligand_ga2bd49930c9695b2f4b85989d1daa62d3}\label{group__constraints__ligand_ga2bd49930c9695b2f4b85989d1daa62d3}} 
+\index{Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints@{Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints}!vrna\_sc\_add\_hi\_motif@{vrna\_sc\_add\_hi\_motif}}
+\index{vrna\_sc\_add\_hi\_motif@{vrna\_sc\_add\_hi\_motif}!Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints@{Incorporating Ligands Binding to Specific Sequence/Structure Motifs using Soft Constraints}}
+\doxysubsubsection{\texorpdfstring{vrna\_sc\_add\_hi\_motif()}{vrna\_sc\_add\_hi\_motif()}}
+{\footnotesize\ttfamily int vrna\+\_\+sc\+\_\+add\+\_\+hi\+\_\+motif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}} $\ast$}]{fc,  }\item[{const char $\ast$}]{seq,  }\item[{const char $\ast$}]{structure,  }\item[{\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\+\_\+\+OR\+\_\+\+DBL}}}]{energy,  }\item[{unsigned int}]{options }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\mbox{\hyperlink{ligand_8h}{Vienna\+RNA/constraints/ligand.\+h}}$>$}
+
+
+
+Add soft constraints for hairpin or interior loop binding motif. 
+
+Here is an example that adds a theophylline binding motif. Free energy contribution is derived from $k_d = 0.1 \mu M$, taken from Jenison et al. 1994. At $1M$ concentration the corresponding binding free energy amounts to $-9.93~kcal/mol$.
+
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{theo_aptamer}}
+\end{DoxyImageNoCaption}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group__constraints__ligand_ga2bd49930c9695b2f4b85989d1daa62d3}{vrna\_sc\_add\_hi\_motif}}(fc,}
+\DoxyCodeLine{                     \textcolor{stringliteral}{"{}GAUACCAG\&CCCUUGGCAGC"{}},}
+\DoxyCodeLine{                     \textcolor{stringliteral}{"{}(...((((\&)...)))...)"{}},}
+\DoxyCodeLine{                     -\/9.93, \mbox{\hyperlink{group__fold__compound_gacea5b7ee6181c485f36e2afa0e9089e4}{VRNA\_OPTION\_DEFAULT}});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em fc} & The \mbox{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}} the motif is applied to \\
+\hline
+{\em seq} & The sequence motif (may be interspaced by \textquotesingle{}\&\textquotesingle{} character \\
+\hline
+{\em structure} & The structure motif (may be interspaced by \textquotesingle{}\&\textquotesingle{} character \\
+\hline
+{\em energy} & The free energy of the motif (e.\+g. binding free energy) \\
+\hline
+{\em options} & Options \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero value if application of the motif using soft constraints was successful
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{SWIG Wrapper Notes}
+\item[\mbox{\hyperlink{wrappers__wrappers000036}{SWIG Wrapper Notes}}]This function is attached as method {\bfseries{sc\+\_\+add\+\_\+hi\+\_\+motif()}} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}

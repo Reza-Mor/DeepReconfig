@@ -1,0 +1,16 @@
+digraph "Distance Based Partitioning of the Secondary Structure Space"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Classified Dynamic\l Programming Variants",height=0.2,width=0.4,color="black",URL="$group__class__fold.html",tooltip=" "];
+  Node1 [label="Distance Based Partitioning\l of the Secondary Structure Space",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node3 [label="Computing MFE representatives\l of a Distance Based Partitioning",height=0.2,width=0.4,color="black",URL="$group__kl__neighborhood__mfe.html",tooltip="Compute the minimum free energy (MFE) and secondary structures for a partitioning of the secondary st..."];
+  Node4 [label="Computing Partition\l Functions of a Distance\l Based Partitioning",height=0.2,width=0.4,color="black",URL="$group__kl__neighborhood__pf.html",tooltip="Compute the partition function and stochastically sample secondary structures for a partitioning of t..."];
+  Node5 [label="Stochastic Backtracking\l of Structures from Distance\l Based Partitioning",height=0.2,width=0.4,color="black",URL="$group__kl__neighborhood__stochbt.html",tooltip="Contains functions related to stochastic backtracking from a specified distance class."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node5 [shape=plaintext, dir="back", style="solid"];
+}

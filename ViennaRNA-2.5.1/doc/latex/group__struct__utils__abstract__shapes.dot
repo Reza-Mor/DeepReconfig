@@ -1,0 +1,10 @@
+digraph "Abstract Shapes Representation of Secondary Structures"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Secondary Structure\l Utilities",height=0.2,width=0.4,color="black",URL="$group__struct__utils.html",tooltip="Functions to create, parse, convert, manipulate, and compare secondary structure representations."];
+  Node1 [label="Abstract Shapes Representation\l of Secondary Structures",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract Shapes, introduced by Giegerich et al. in (2004) , collapse the secondary structure while re..."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

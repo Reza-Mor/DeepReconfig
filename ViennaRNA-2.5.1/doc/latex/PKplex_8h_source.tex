@@ -1,0 +1,42 @@
+\hypertarget{PKplex_8h_source}{}\doxysection{PKplex.\+h}
+\label{PKplex_8h_source}\index{ViennaRNA/PKplex.h@{ViennaRNA/PKplex.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PKPLEX\_DEPRECATED\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PKPLEX\_DEPRECATED\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#warning "{}Including deprecated header file <ViennaRNA/PKplex.h>! Use <ViennaRNA/pk\_plex.h> instead!"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 DEPRECATED(\mbox{\hyperlink{group__data__structures_structdupVar}{dupVar}} *}
+\DoxyCodeLine{31 PKLduplexfold\_XS(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1,}
+\DoxyCodeLine{32                  \textcolor{keyword}{const} \textcolor{keywordtype}{int}  **access\_s1,}
+\DoxyCodeLine{33                  \textcolor{keywordtype}{int}  penalty,}
+\DoxyCodeLine{34                  \textcolor{keywordtype}{int}  max\_interaction\_length,}
+\DoxyCodeLine{35                  \textcolor{keywordtype}{int}  delta),}
+\DoxyCodeLine{36           \textcolor{stringliteral}{"{}Use vrna\_pk\_plex() instead!"{}});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{pk__plex_8h}{ViennaRNA/pk\_plex.h}}>}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

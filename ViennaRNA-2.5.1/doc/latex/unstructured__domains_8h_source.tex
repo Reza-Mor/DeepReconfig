@@ -1,0 +1,166 @@
+\hypertarget{unstructured__domains_8h_source}{}\doxysection{unstructured\+\_\+domains.\+h}
+\label{unstructured__domains_8h_source}\index{ViennaRNA/unstructured\_domains.h@{ViennaRNA/unstructured\_domains.h}}
+\mbox{\hyperlink{unstructured__domains_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_UNSTRUCTURED\_DOMAIN\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_UNSTRUCTURED\_DOMAIN\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{69 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_unstructured\_domain\_s}} \mbox{\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_ud\_t}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_unstructured\_domain\_motif\_s}} \mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t}};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_2structures_8h}{ViennaRNA/utils/structures.h}}>}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{95 \textcolor{keyword}{typedef} int (\mbox{\hyperlink{group__domains__up_ga75825c57d0bfde4ae4f95c044260c5c3}{vrna\_callback\_ud\_energy}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{96                                       \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{97                                       \textcolor{keywordtype}{int}                   j,}
+\DoxyCodeLine{98                                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          loop\_type,}
+\DoxyCodeLine{99                                       \textcolor{keywordtype}{void}                  *data);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{119 \textcolor{keyword}{typedef} \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}} (\mbox{\hyperlink{group__domains__up_ga861706f257ba993753464b823e65b86e}{vrna\_callback\_ud\_exp\_energy}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{120                                                  \textcolor{keywordtype}{int}                  i,}
+\DoxyCodeLine{121                                                  \textcolor{keywordtype}{int}                  j,}
+\DoxyCodeLine{122                                                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         loop\_type,}
+\DoxyCodeLine{123                                                  \textcolor{keywordtype}{void}                 *data);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{135 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__domains__up_ga4fdfc02c1b660c07f2d887772f02a0a1}{vrna\_callback\_ud\_production}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{136                                            \textcolor{keywordtype}{void}                 *data);}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{148 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__domains__up_ga33d78327dcd04c1ca5ab2887edc18c7b}{vrna\_callback\_ud\_exp\_production}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{149                                                \textcolor{keywordtype}{void}                 *data);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 }
+\DoxyCodeLine{161 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__domains__up_gab10498abc84fcaf336aca8f8d7d42eb2}{vrna\_callback\_ud\_probs\_add}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{162                                           \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{163                                           \textcolor{keywordtype}{int}                   j,}
+\DoxyCodeLine{164                                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          loop\_type,}
+\DoxyCodeLine{165                                           \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}            exp\_energy,}
+\DoxyCodeLine{166                                           \textcolor{keywordtype}{void}                  *data);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{177 \textcolor{keyword}{typedef} \mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}} (\mbox{\hyperlink{group__domains__up_gaa10ba1b6f1e179ea84c5caca9cdaae67}{vrna\_callback\_ud\_probs\_get}})(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{178                                                 \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{179                                                 \textcolor{keywordtype}{int}                   j,}
+\DoxyCodeLine{180                                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          loop\_type,}
+\DoxyCodeLine{181                                                 \textcolor{keywordtype}{int}                   motif,}
+\DoxyCodeLine{182                                                 \textcolor{keywordtype}{void}                  *data);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 }
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_EXT\_LOOP    1U}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_HP\_LOOP     2U}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_INT\_LOOP    4U}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_MB\_LOOP     8U}}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_MOTIF       16U}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define VRNA\_UNSTRUCTURED\_DOMAIN\_ALL\_LOOPS   (VRNA\_UNSTRUCTURED\_DOMAIN\_EXT\_LOOP | \(\backslash\)}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{                                              VRNA\_UNSTRUCTURED\_DOMAIN\_HP\_LOOP | \(\backslash\)}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{                                              VRNA\_UNSTRUCTURED\_DOMAIN\_INT\_LOOP | \(\backslash\)}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{                                              VRNA\_UNSTRUCTURED\_DOMAIN\_MB\_LOOP)}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{228 \textcolor{keyword}{struct }\mbox{\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_unstructured\_domain\_s}} \{}
+\DoxyCodeLine{229   \textcolor{comment}{/*}}
+\DoxyCodeLine{230 \textcolor{comment}{   **********************************}}
+\DoxyCodeLine{231 \textcolor{comment}{   * Keep track of all motifs added}}
+\DoxyCodeLine{232 \textcolor{comment}{   **********************************}}
+\DoxyCodeLine{233 \textcolor{comment}{   */}}
+\DoxyCodeLine{234   \textcolor{keywordtype}{int}           \mbox{\hyperlink{group__domains__up_ae17005ef8043aca2fc3864804cd5def6}{uniq\_motif\_count}};                   }
+\DoxyCodeLine{235   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__domains__up_a2b484b0e19a47145db7055ada8b14159}{uniq\_motif\_size}};                   }
+\DoxyCodeLine{237   \textcolor{keywordtype}{int}           \mbox{\hyperlink{group__domains__up_a5ad34148ea1d2e501f3e02029449546e}{motif\_count}};                        }
+\DoxyCodeLine{238   \textcolor{keywordtype}{char}          **\mbox{\hyperlink{group__domains__up_af285436bbdea4436ad2cedec65d48c75}{motif}};                            }
+\DoxyCodeLine{239   \textcolor{keywordtype}{char}          **\mbox{\hyperlink{group__domains__up_ad061d55ef0b51d304c8dce88ebdbbf78}{motif\_name}};                       }
+\DoxyCodeLine{240   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__domains__up_a6a9f89ab7d147eb0ffd6cf8d77d178c0}{motif\_size}};                        }
+\DoxyCodeLine{241   \textcolor{keywordtype}{double}        *\mbox{\hyperlink{group__domains__up_aae4f0a45419784fb7c244bce2781403d}{motif\_en}};                          }
+\DoxyCodeLine{242   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__domains__up_a3f0c026cced369ff176a66b2820f2057}{motif\_type}};                        }
+\DoxyCodeLine{244   \textcolor{comment}{/*}}
+\DoxyCodeLine{245 \textcolor{comment}{   **********************************}}
+\DoxyCodeLine{246 \textcolor{comment}{   * Grammar extension for ligand}}
+\DoxyCodeLine{247 \textcolor{comment}{   * binding}}
+\DoxyCodeLine{248 \textcolor{comment}{   **********************************}}
+\DoxyCodeLine{249 \textcolor{comment}{   */}}
+\DoxyCodeLine{250   \mbox{\hyperlink{group__domains__up_ga4fdfc02c1b660c07f2d887772f02a0a1}{vrna\_callback\_ud\_production}}     *\mbox{\hyperlink{group__domains__up_ac2656d57130ac56e85212836482cbe80}{prod\_cb}};       }
+\DoxyCodeLine{254   \mbox{\hyperlink{group__domains__up_ga33d78327dcd04c1ca5ab2887edc18c7b}{vrna\_callback\_ud\_exp\_production}} *\mbox{\hyperlink{group__domains__up_a181ae6ec67f77e68899ec6a0780f3e01}{exp\_prod\_cb}};   }
+\DoxyCodeLine{255   \mbox{\hyperlink{group__domains__up_ga75825c57d0bfde4ae4f95c044260c5c3}{vrna\_callback\_ud\_energy}}         *\mbox{\hyperlink{group__domains__up_a1efba765dd4ea893dc8bd7362761f99b}{energy\_cb}};     }
+\DoxyCodeLine{256   \mbox{\hyperlink{group__domains__up_ga861706f257ba993753464b823e65b86e}{vrna\_callback\_ud\_exp\_energy}}     *\mbox{\hyperlink{group__domains__up_ad5aaa2530557880ae89e297f8f09aa55}{exp\_energy\_cb}}; }
+\DoxyCodeLine{257   \textcolor{keywordtype}{void}                            *\mbox{\hyperlink{group__domains__up_a8802b1b0512999a9f35202031811ce17}{data}};          }
+\DoxyCodeLine{258   \mbox{\hyperlink{group__fold__compound_ga7806651f51b195013839a218b3bbd5a3}{vrna\_callback\_free\_auxdata}}      *\mbox{\hyperlink{group__domains__up_a21b3084846902172858bc53f113d05a4}{free\_data}};     }
+\DoxyCodeLine{259   \mbox{\hyperlink{group__domains__up_gab10498abc84fcaf336aca8f8d7d42eb2}{vrna\_callback\_ud\_probs\_add}}      *\mbox{\hyperlink{group__domains__up_a457b43dfab7f4321b5d7a84e5deea5d7}{probs\_add}};     }
+\DoxyCodeLine{260   \mbox{\hyperlink{group__domains__up_gaa10ba1b6f1e179ea84c5caca9cdaae67}{vrna\_callback\_ud\_probs\_get}}      *\mbox{\hyperlink{group__domains__up_a0b155283bccf65c5253f31e0211ae8ff}{probs\_get}};     }
+\DoxyCodeLine{261 \};}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \textcolor{keyword}{struct }\mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_unstructured\_domain\_motif\_s}} \{}
+\DoxyCodeLine{265   \textcolor{keywordtype}{int} start;}
+\DoxyCodeLine{266   \textcolor{keywordtype}{int} number;}
+\DoxyCodeLine{267 \};}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269 }
+\DoxyCodeLine{289 \mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t}} *}
+\DoxyCodeLine{290 \mbox{\hyperlink{group__domains__up_ga89440fa4f7b951ad9dcd6da567f37ea2}{vrna\_ud\_motifs\_centroid}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{291                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 }
+\DoxyCodeLine{314 \mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t}} *}
+\DoxyCodeLine{315 \mbox{\hyperlink{group__domains__up_ga3694cf090ccb64f8398e0f4c786aad50}{vrna\_ud\_motifs\_MEA}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{316                    \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,}
+\DoxyCodeLine{317                    \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}}            *probability\_list);}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319 }
+\DoxyCodeLine{338 \mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t}} *}
+\DoxyCodeLine{339 \mbox{\hyperlink{group__domains__up_ga46d6cfffebf89032019004a026c8f63c}{vrna\_ud\_motifs\_MFE}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{340                    \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure);}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342 }
+\DoxyCodeLine{368 \textcolor{keywordtype}{void}  \mbox{\hyperlink{group__domains__up_ga55f7de5ef5b7472b0eeab9296b57f671}{vrna\_ud\_add\_motif}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{369                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *motif,}
+\DoxyCodeLine{370                         \textcolor{keywordtype}{double}                motif\_en,}
+\DoxyCodeLine{371                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *motif\_name,}
+\DoxyCodeLine{372                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          loop\_type);}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374 }
+\DoxyCodeLine{379 \textcolor{keywordtype}{int} *\mbox{\hyperlink{unstructured__domains_8h_a250f1542f6574ed33b114f3f41922c03}{vrna\_ud\_get\_motif\_size\_at}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{380                                \textcolor{keywordtype}{int}                  i,}
+\DoxyCodeLine{381                                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         loop\_type);}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 \textcolor{keywordtype}{int} *}
+\DoxyCodeLine{385 vrna\_ud\_get\_motifs\_at(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{386                       \textcolor{keywordtype}{int}                   i,}
+\DoxyCodeLine{387                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          loop\_type);}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390 \mbox{\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t}} *}
+\DoxyCodeLine{391 vrna\_ud\_detect\_motifs(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{392                       \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *structure);}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 }
+\DoxyCodeLine{405 \textcolor{keywordtype}{void}  \mbox{\hyperlink{group__domains__up_gada59cb0c498b812eadd010811af3f2d4}{vrna\_ud\_remove}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc);}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{407 }
+\DoxyCodeLine{424 \textcolor{keywordtype}{void}  \mbox{\hyperlink{group__domains__up_gac1f18c312b91d80089534a87d956e58b}{vrna\_ud\_set\_data}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}       *vc,}
+\DoxyCodeLine{425                        \textcolor{keywordtype}{void}                       *data,}
+\DoxyCodeLine{426                        \mbox{\hyperlink{group__fold__compound_ga7806651f51b195013839a218b3bbd5a3}{vrna\_callback\_free\_auxdata}} *free\_cb);}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{428 }
+\DoxyCodeLine{463 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__domains__up_ga745a99f0bc72898d54de16f6e538828a}{vrna\_ud\_set\_prod\_rule\_cb}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}        *vc,}
+\DoxyCodeLine{464                               \mbox{\hyperlink{group__domains__up_ga4fdfc02c1b660c07f2d887772f02a0a1}{vrna\_callback\_ud\_production}} *pre\_cb,}
+\DoxyCodeLine{465                               \mbox{\hyperlink{group__domains__up_ga75825c57d0bfde4ae4f95c044260c5c3}{vrna\_callback\_ud\_energy}}     *e\_cb);}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467 }
+\DoxyCodeLine{492 \textcolor{keywordtype}{void}  \mbox{\hyperlink{group__domains__up_ga2fb1db2099da26c76247e1209ad4aa09}{vrna\_ud\_set\_exp\_prod\_rule\_cb}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}             *vc,}
+\DoxyCodeLine{493                                    \mbox{\hyperlink{group__domains__up_ga33d78327dcd04c1ca5ab2887edc18c7b}{vrna\_callback\_ud\_exp\_production}}  *pre\_cb,}
+\DoxyCodeLine{494                                    \mbox{\hyperlink{group__domains__up_ga861706f257ba993753464b823e65b86e}{vrna\_callback\_ud\_exp\_energy}}      *exp\_e\_cb);}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497 \textcolor{keywordtype}{void}  \mbox{\hyperlink{unstructured__domains_8h_a13ac877c9db89a1a5b5d9c0394148595}{vrna\_ud\_set\_prob\_cb}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}        *vc,}
+\DoxyCodeLine{498                           \mbox{\hyperlink{group__domains__up_gab10498abc84fcaf336aca8f8d7d42eb2}{vrna\_callback\_ud\_probs\_add}}  *setter,}
+\DoxyCodeLine{499                           \mbox{\hyperlink{group__domains__up_gaa10ba1b6f1e179ea84c5caca9cdaae67}{vrna\_callback\_ud\_probs\_get}}  *getter);}
+\DoxyCodeLine{500 }
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

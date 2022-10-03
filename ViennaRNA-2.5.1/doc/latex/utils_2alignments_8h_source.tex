@@ -1,0 +1,195 @@
+\hypertarget{utils_2alignments_8h_source}{}\doxysection{alignments.\+h}
+\label{utils_2alignments_8h_source}\index{ViennaRNA/utils/alignments.h@{ViennaRNA/utils/alignments.h}}
+\mbox{\hyperlink{utils_2alignments_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_ALN\_UTIL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_ALN\_UTIL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\_pinfo\_s}} \mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\_pinfo\_t}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define VRNA\_ALN\_DEFAULT      0U}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define VRNA\_ALN\_RNA          1U}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define VRNA\_ALN\_DNA          2U}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define VRNA\_ALN\_UPPERCASE    4U}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define VRNA\_ALN\_LOWERCASE    8U}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define VRNA\_MEASURE\_SHANNON\_ENTROPY  1U}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{comment}{/* the following typedefs are for backward compatibility only */}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{77 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\_pinfo\_s}} \mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{pair\_info}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{model_8h}{ViennaRNA/model.h}}>}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{94 \textcolor{keyword}{struct }\mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\_pinfo\_s}} \{}
+\DoxyCodeLine{95   \textcolor{keywordtype}{unsigned}  \mbox{\hyperlink{group__aln__utils_ab91db0a87ef8402dc151795ba5a64c6f}{i}};      }
+\DoxyCodeLine{96   \textcolor{keywordtype}{unsigned}  \mbox{\hyperlink{group__aln__utils_a4142e38d6ba127acccdf680300a88e1f}{j}};      }
+\DoxyCodeLine{97   \textcolor{keywordtype}{float}     \mbox{\hyperlink{group__aln__utils_a71990eae41fa100db8b557e4512ec281}{p}};      }
+\DoxyCodeLine{98   \textcolor{keywordtype}{float}     \mbox{\hyperlink{group__aln__utils_a5ab2a63f3da8e12c6d54d8e9dd9e3e73}{ent}};    }
+\DoxyCodeLine{99   \textcolor{keywordtype}{short}     \mbox{\hyperlink{group__aln__utils_aa5feac5559b36dcd7cb38111c45d444d}{bp}}[8];  }
+\DoxyCodeLine{100   \textcolor{keywordtype}{char}      \mbox{\hyperlink{group__aln__utils_a0720ae74ce53802a759ee9f98e9c8c43}{comp}};   }
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{110 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{111 \mbox{\hyperlink{group__aln__utils_gade5a1f2d16e7fd9a57b37d8514f08e8e}{vrna\_aln\_mpi}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{127 \mbox{\hyperlink{group__aln__utils_structvrna__pinfo__s}{vrna\_pinfo\_t}} *}
+\DoxyCodeLine{128 \mbox{\hyperlink{group__aln__utils_ga0ca568801389fcfb578db009bca9cd03}{vrna\_aln\_pinfo}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{129                \textcolor{keyword}{const} \textcolor{keywordtype}{char}           *structure,}
+\DoxyCodeLine{130                \textcolor{keywordtype}{double}               threshold);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{keywordtype}{int} *}
+\DoxyCodeLine{134 vrna\_aln\_pscore(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  **alignment,}
+\DoxyCodeLine{135                 \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}   *md);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{139 vrna\_pscore(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{140             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          i,}
+\DoxyCodeLine{141             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          j);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{145 vrna\_pscore\_freq(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{146                  \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   *frequencies,}
+\DoxyCodeLine{147                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         \mbox{\hyperlink{group__struct__utils__deprecated_ga6341cbb704924824e0236c1dce791032}{pairs}});}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{162 \textcolor{keywordtype}{char} **}
+\DoxyCodeLine{163 \mbox{\hyperlink{group__aln__utils_gaab40cf1f120da37ffe2e80ae9d91815f}{vrna\_aln\_slice}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   **alignment,}
+\DoxyCodeLine{164                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i,}
+\DoxyCodeLine{165                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{173 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{174 \mbox{\hyperlink{group__aln__utils_gac00dc80b8a324f151f92f11ab6850ecf}{vrna\_aln\_free}}(\textcolor{keywordtype}{char} **alignment);}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 }
+\DoxyCodeLine{185 \textcolor{keywordtype}{char} **}
+\DoxyCodeLine{186 \mbox{\hyperlink{group__aln__utils_gae78fb593225fc9c82e5a28c7c76e0e40}{vrna\_aln\_uppercase}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment);}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+\DoxyCodeLine{197 \textcolor{keywordtype}{char} **}
+\DoxyCodeLine{198 \mbox{\hyperlink{group__aln__utils_gab64cc5d5d6672a1213f6442bd766a726}{vrna\_aln\_toRNA}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} **alignment);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{214 \textcolor{keywordtype}{char} **}
+\DoxyCodeLine{215 \mbox{\hyperlink{group__aln__utils_ga31d79a1b1eb8bc5673303efc18461091}{vrna\_aln\_copy}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    **alignment,}
+\DoxyCodeLine{216               \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 }
+\DoxyCodeLine{233 \textcolor{keywordtype}{float} *}
+\DoxyCodeLine{234 \mbox{\hyperlink{group__aln__utils_gab6f16a2ea93f3bfd4d089cc8d448bb16}{vrna\_aln\_conservation\_struct}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}       **alignment,}
+\DoxyCodeLine{235                              \textcolor{keyword}{const} \textcolor{keywordtype}{char}       *structure,}
+\DoxyCodeLine{236                              \textcolor{keyword}{const} \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}  *md);}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 }
+\DoxyCodeLine{256 \textcolor{keywordtype}{float} *}
+\DoxyCodeLine{257 \mbox{\hyperlink{group__aln__utils_gaa12b481a7e7b965ef2eb1bcc4399e759}{vrna\_aln\_conservation\_col}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}      **alignment,}
+\DoxyCodeLine{258                           \textcolor{keyword}{const} \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}} *md\_p,}
+\DoxyCodeLine{259                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    options);}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 }
+\DoxyCodeLine{269 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{270 \mbox{\hyperlink{group__aln__utils_gac6a33fa856d66dcb6f5d40ce0b61d7c7}{vrna\_aln\_consensus\_sequence}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}      **alignment,}
+\DoxyCodeLine{271                             \textcolor{keyword}{const} \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}} *md\_p);}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{284 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{285 \mbox{\hyperlink{group__aln__utils_gacd02c66d9e6f8dd5318f4fca0dc76cba}{vrna\_aln\_consensus\_mis}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}       **alignment,}
+\DoxyCodeLine{286                        \textcolor{keyword}{const} \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}  *md\_p);}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{295 DEPRECATED(\textcolor{keywordtype}{int} read\_clustal(FILE  *clust,}
+\DoxyCodeLine{296                             \textcolor{keywordtype}{char}  *AlignedSeqs[],}
+\DoxyCodeLine{297                             \textcolor{keywordtype}{char}  *names[]),}
+\DoxyCodeLine{298           \textcolor{stringliteral}{"{}Use vrna\_file\_msa\_read() and vrna\_file\_msa\_read\_record() instead"{}});}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 }
+\DoxyCodeLine{304 DEPRECATED(\textcolor{keywordtype}{char} *consensus(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *AS[]),}
+\DoxyCodeLine{305           \textcolor{stringliteral}{"{}Use vrna\_aln\_consensus\_sequence() instead!"{}});}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307 }
+\DoxyCodeLine{311 DEPRECATED(\textcolor{keywordtype}{char} *consens\_mis(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *AS[]),}
+\DoxyCodeLine{312           \textcolor{stringliteral}{"{}Use vrna\_aln\_consensus\_mis() instead!"{}});}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 }
+\DoxyCodeLine{318 DEPRECATED(\textcolor{keywordtype}{char} *get\_ungapped\_sequence(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *seq),}
+\DoxyCodeLine{319           \textcolor{stringliteral}{"{}Use vrna\_seq\_ungapped() instead!"{}});}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321 }
+\DoxyCodeLine{333 DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__aln__utils__deprecated_gaa2d600be90844094ec145ea14a314d2f}{get\_mpi}}(\textcolor{keywordtype}{char} *Alseq[],}
+\DoxyCodeLine{334                        \textcolor{keywordtype}{int}  n\_seq,}
+\DoxyCodeLine{335                        \textcolor{keywordtype}{int}  length,}
+\DoxyCodeLine{336                        \textcolor{keywordtype}{int}  *mini),}
+\DoxyCodeLine{337           \textcolor{stringliteral}{"{}Use vrna\_aln\_mpi() instead"{}});}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339 \textcolor{comment}{/*}}
+\DoxyCodeLine{340 \textcolor{comment}{ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{341 \textcolor{comment}{ \# some helper functions that might be useful in the library \#}}
+\DoxyCodeLine{342 \textcolor{comment}{ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{343 \textcolor{comment}{ */}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{360 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__aln__utils__deprecated_gaa3e40277c837d6f7603afe319884c786}{encode\_ali\_sequence}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}      *sequence,}
+\DoxyCodeLine{361                                     \textcolor{keywordtype}{short}           *S,}
+\DoxyCodeLine{362                                     \textcolor{keywordtype}{short}           *s5,}
+\DoxyCodeLine{363                                     \textcolor{keywordtype}{short}           *s3,}
+\DoxyCodeLine{364                                     \textcolor{keywordtype}{char}            *ss,}
+\DoxyCodeLine{365                                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}  *as,}
+\DoxyCodeLine{366                                     \textcolor{keywordtype}{int}             \mbox{\hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ}}),}
+\DoxyCodeLine{367           \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369 }
+\DoxyCodeLine{386 DEPRECATED(\textcolor{keywordtype}{void}  \mbox{\hyperlink{group__aln__utils__deprecated_ga8a560930f7f2582cc3967723a86cfdfa}{alloc\_sequence\_arrays}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}     **sequences,}
+\DoxyCodeLine{387                                        \textcolor{keywordtype}{short}          ***S,}
+\DoxyCodeLine{388                                        \textcolor{keywordtype}{short}          ***S5,}
+\DoxyCodeLine{389                                        \textcolor{keywordtype}{short}          ***S3,}
+\DoxyCodeLine{390                                        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} ***a2s,}
+\DoxyCodeLine{391                                        \textcolor{keywordtype}{char}           ***Ss,}
+\DoxyCodeLine{392                                        \textcolor{keywordtype}{int}            \mbox{\hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ}}),}
+\DoxyCodeLine{393           \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395 }
+\DoxyCodeLine{411 DEPRECATED(\textcolor{keywordtype}{void}  \mbox{\hyperlink{group__aln__utils__deprecated_ga298a420a8c879202e2617b3f724fde38}{free\_sequence\_arrays}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    n\_seq,}
+\DoxyCodeLine{412                                       \textcolor{keywordtype}{short}           ***S,}
+\DoxyCodeLine{413                                       \textcolor{keywordtype}{short}           ***S5,}
+\DoxyCodeLine{414                                       \textcolor{keywordtype}{short}           ***S3,}
+\DoxyCodeLine{415                                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}  ***a2s,}
+\DoxyCodeLine{416                                       \textcolor{keywordtype}{char}            ***Ss),}
+\DoxyCodeLine{417           \textcolor{stringliteral}{"{}This fucntion is obsolete"{}});}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

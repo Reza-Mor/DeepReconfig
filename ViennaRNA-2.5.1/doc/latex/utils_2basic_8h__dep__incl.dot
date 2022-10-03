@@ -1,0 +1,31 @@
+digraph "ViennaRNA/utils/basic.h"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ViennaRNA/utils/basic.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="General utility- and helper-functions used throughout the ViennaRNA Package."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ViennaRNA/loops/hairpin.h",height=0.2,width=0.4,color="black",URL="$hairpin_8h.html",tooltip="Energy evaluation of hairpin loops for MFE and partition function calculations."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ViennaRNA/hairpin_loops.h",height=0.2,width=0.4,color="black",URL="$hairpin__loops_8h.html",tooltip="Use ViennaRNA/loops/hairpin.h instead."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ViennaRNA/loops/all.h",height=0.2,width=0.4,color="black",URL="$all_8h.html",tooltip="Energy evaluation for MFE and partition function calculations."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ViennaRNA/loop_energies.h",height=0.2,width=0.4,color="black",URL="$loop__energies_8h.html",tooltip="Use ViennaRNA/loops/all.h instead."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ViennaRNA/loops/internal.h",height=0.2,width=0.4,color="black",URL="$internal_8h.html",tooltip="Energy evaluation of interior loops for MFE and partition function calculations."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ViennaRNA/interior\l_loops.h",height=0.2,width=0.4,color="black",URL="$interior__loops_8h.html",tooltip="Use ViennaRNA/loops/internal.h instead."];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="ViennaRNA/loops/multibranch.h",height=0.2,width=0.4,color="black",URL="$multibranch_8h.html",tooltip="Energy evaluation of multibranch loops for MFE and partition function calculations."];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="ViennaRNA/multibranch\l_loops.h",height=0.2,width=0.4,color="black",URL="$multibranch__loops_8h.html",tooltip="Use ViennaRNA/loops/multibranch.h instead."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ViennaRNA/pair_mat.h",height=0.2,width=0.4,color="black",URL="$pair__mat_8h_source.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="ViennaRNA/utils.h",height=0.2,width=0.4,color="black",URL="$utils_8h.html",tooltip="Use ViennaRNA/utils/basic.h instead."];
+}

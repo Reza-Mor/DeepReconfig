@@ -1,0 +1,78 @@
+\hypertarget{subopt_8h}{}\doxysection{Vienna\+RNA/subopt.h File Reference}
+\label{subopt_8h}\index{ViennaRNA/subopt.h@{ViennaRNA/subopt.h}}
+
+
+RNAsubopt and density of states declarations.  
+
+
+Include dependency graph for subopt.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Solution element from subopt.\+c. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{subopt_8h_a5ec740b80afb4906ba4311dbd8ddbd89}\label{subopt_8h_a5ec740b80afb4906ba4311dbd8ddbd89}} 
+\#define {\bfseries MAXDOS}~1000
+\begin{DoxyCompactList}\small\item\em Maximum density of states discretization for subopt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{subopt_8h_a01ae9a0f27d245d89f705afd843fc457}\label{subopt_8h_a01ae9a0f27d245d89f705afd843fc457}} 
+typedef struct \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}} {\bfseries vrna\+\_\+subopt\+\_\+solution\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Typename for the subopt solution list repesenting data structure \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}}. \end{DoxyCompactList}\item 
+typedef void() \mbox{\hyperlink{group__subopt__wuchty_gaa0270c66d04f59e750401695b8282e04}{vrna\+\_\+subopt\+\_\+callback}}(const char $\ast$stucture, float energy, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Callback for \mbox{\hyperlink{group__subopt__wuchty_gaa9c6b75ecb478d87fae4bd42c40d7c11}{vrna\+\_\+subopt\+\_\+cb()}} \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}} \mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}}
+\begin{DoxyCompactList}\small\item\em Backward compatibility typedef for \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{subopt_8h_a01ae9a0f27d245d89f705afd843fc457}{vrna\+\_\+subopt\+\_\+solution\+\_\+t}} $\ast$ \mbox{\hyperlink{group__subopt__wuchty_gad0cce16455fda0737873d8e1c5846480}{vrna\+\_\+subopt}} (\mbox{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}} $\ast$fc, int delta, int sorted, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Returns list of subopt structures or writes to fp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__subopt__wuchty_gaa9c6b75ecb478d87fae4bd42c40d7c11}{vrna\+\_\+subopt\+\_\+cb}} (\mbox{\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}} $\ast$fc, int delta, \mbox{\hyperlink{group__subopt__wuchty_gaa0270c66d04f59e750401695b8282e04}{vrna\+\_\+subopt\+\_\+callback}} $\ast$cb, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Generate suboptimal structures within an energy band arround the MFE. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}} $\ast$ \mbox{\hyperlink{group__subopt__wuchty_ga9913b3a58b8d315be3f4f7f4dbe3c481}{subopt}} (char $\ast$seq, char $\ast$structure, int delta, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Returns list of subopt structures or writes to fp. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}} $\ast$ {\bfseries subopt\+\_\+par} (char $\ast$seq, char $\ast$structure, \mbox{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t}} $\ast$parameters, int delta, int is\+\_\+constrained, int is\+\_\+circular, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Returns list of subopt structures or writes to fp. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}} $\ast$ \mbox{\hyperlink{group__subopt__wuchty_ga72ed97775f3e2ce2159fdcb994da383e}{subopt\+\_\+circ}} (char $\ast$seq, char $\ast$sequence, int delta, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Returns list of circular subopt structures or writes to fp. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}} $\ast$ \mbox{\hyperlink{group__subopt__zuker_ga6b9eca4eb5772eecee76a6bb188063c0}{zukersubopt}} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Compute Zuker type suboptimal structures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}} $\ast$ \mbox{\hyperlink{group__subopt__zuker_gaf8d33bb499d66ef758db9c62cb0f6caa}{zukersubopt\+\_\+par}} (const char $\ast$string, \mbox{\hyperlink{group__energy__parameters_ga8a69ca7d787e4fd6079914f5343a1f35}{vrna\+\_\+param\+\_\+t}} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Compute Zuker type suboptimal structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries print\+\_\+energy}
+\begin{DoxyCompactList}\small\item\em printing threshold for use with log\+ML \end{DoxyCompactList}\item 
+int {\bfseries subopt\+\_\+sorted}
+\begin{DoxyCompactList}\small\item\em Sort output by energy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__dos_ga937634a76b46a22530a74906f1957a9e}{density\+\_\+of\+\_\+states}} \mbox{[}\mbox{\hyperlink{subopt_8h_a5ec740b80afb4906ba4311dbd8ddbd89}{MAXDOS}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em The Density of States. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RNAsubopt and density of states declarations. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}\label{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}} 
+\index{subopt.h@{subopt.h}!SOLUTION@{SOLUTION}}
+\index{SOLUTION@{SOLUTION}!subopt.h@{subopt.h}}
+\doxysubsubsection{\texorpdfstring{SOLUTION}{SOLUTION}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}} \mbox{\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{SOLUTION}}}
+
+
+
+Backward compatibility typedef for \mbox{\hyperlink{structvrna__subopt__sol__s}{vrna\+\_\+subopt\+\_\+sol\+\_\+s}}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000136}{Deprecated}}]Use \mbox{\hyperlink{subopt_8h_a01ae9a0f27d245d89f705afd843fc457}{vrna\+\_\+subopt\+\_\+solution\+\_\+t}} instead! \end{DoxyRefDesc}

@@ -1,0 +1,10 @@
+digraph "Deprecated Interface for Multiple Sequence Alignment Utilities"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Multiple Sequence Alignment\l Utilities",height=0.2,width=0.4,color="black",URL="$group__aln__utils.html",tooltip="Functions to extract features from and to manipulate multiple sequence alignments."];
+  Node1 [label="Deprecated Interface\l for Multiple Sequence\l Alignment Utilities",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

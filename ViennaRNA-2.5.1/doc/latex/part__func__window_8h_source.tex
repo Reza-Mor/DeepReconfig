@@ -1,0 +1,84 @@
+\hypertarget{part__func__window_8h_source}{}\doxysection{part\+\_\+func\+\_\+window.\+h}
+\label{part__func__window_8h_source}\index{ViennaRNA/part\_func\_window.h@{ViennaRNA/part\_func\_window.h}}
+\mbox{\hyperlink{part__func__window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_WINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_WINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{63 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__part__func__window_gabe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}})(\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}    *\mbox{\hyperlink{fold__vars_8h_ac98ec419070aee6831b44e5c700f090f}{pr}},}
+\DoxyCodeLine{64                                           \textcolor{keywordtype}{int}           pr\_size,}
+\DoxyCodeLine{65                                           \textcolor{keywordtype}{int}           i,}
+\DoxyCodeLine{66                                           \textcolor{keywordtype}{int}           max,}
+\DoxyCodeLine{67                                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  type,}
+\DoxyCodeLine{68                                           \textcolor{keywordtype}{void}          *data);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_2structures_8h}{ViennaRNA/utils/structures.h}}>}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define VRNA\_EXT\_LOOP   1U}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define VRNA\_HP\_LOOP    2U}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define VRNA\_INT\_LOOP   4U}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define VRNA\_MB\_LOOP    8U}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define VRNA\_ANY\_LOOP   (VRNA\_EXT\_LOOP | VRNA\_HP\_LOOP | VRNA\_INT\_LOOP | VRNA\_MB\_LOOP)}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define VRNA\_PROBS\_WINDOW\_BPP  4096U}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define VRNA\_PROBS\_WINDOW\_UP   8192U}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define VRNA\_PROBS\_WINDOW\_STACKP   16384U}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define VRNA\_PROBS\_WINDOW\_UP\_SPLIT   32768U}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 }
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define VRNA\_PROBS\_WINDOW\_PF        65536U}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{207 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{208 \mbox{\hyperlink{group__part__func__window_ga7115d012988541a65ec323c5f17a334b}{vrna\_probs\_window}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}        *fc,}
+\DoxyCodeLine{209                   \textcolor{keywordtype}{int}                         ulength,}
+\DoxyCodeLine{210                   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                options,}
+\DoxyCodeLine{211                   \mbox{\hyperlink{group__part__func__window_gabe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}}  *cb,}
+\DoxyCodeLine{212                   \textcolor{keywordtype}{void}                        *data);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 \textcolor{comment}{/* End basic interface */}}
+\DoxyCodeLine{243 \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *}
+\DoxyCodeLine{244 \mbox{\hyperlink{group__part__func__window_ga1f12fb1ae8b1d0a5d7ab7c2cdddf98c1}{vrna\_pfl\_fold}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *sequence,}
+\DoxyCodeLine{245               \textcolor{keywordtype}{int}         window\_size,}
+\DoxyCodeLine{246               \textcolor{keywordtype}{int}         \mbox{\hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span}},}
+\DoxyCodeLine{247               \textcolor{keywordtype}{float}       cutoff);}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 }
+\DoxyCodeLine{272 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{273 \mbox{\hyperlink{group__part__func__window_ga457a60751b2a5225477e3b7735636a5f}{vrna\_pfl\_fold\_cb}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}                 *sequence,}
+\DoxyCodeLine{274                  \textcolor{keywordtype}{int}                        window\_size,}
+\DoxyCodeLine{275                  \textcolor{keywordtype}{int}                        \mbox{\hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span}},}
+\DoxyCodeLine{276                  \mbox{\hyperlink{group__part__func__window_gabe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}} *cb,}
+\DoxyCodeLine{277                  \textcolor{keywordtype}{void}                       *data);}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 }
+\DoxyCodeLine{302 \textcolor{keywordtype}{double} **}
+\DoxyCodeLine{303 \mbox{\hyperlink{group__part__func__window_gaef3a34027fcf975dda31602d7b4ac4f2}{vrna\_pfl\_fold\_up}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *sequence,}
+\DoxyCodeLine{304                  \textcolor{keywordtype}{int}        ulength,}
+\DoxyCodeLine{305                  \textcolor{keywordtype}{int}        window\_size,}
+\DoxyCodeLine{306                  \textcolor{keywordtype}{int}        \mbox{\hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span}});}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308 }
+\DoxyCodeLine{332 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{333 \mbox{\hyperlink{group__part__func__window_gac3251d3da0238d6d9ffdd6703b00f1d3}{vrna\_pfl\_fold\_up\_cb}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}                  *sequence,}
+\DoxyCodeLine{334                     \textcolor{keywordtype}{int}                         ulength,}
+\DoxyCodeLine{335                     \textcolor{keywordtype}{int}                         window\_size,}
+\DoxyCodeLine{336                     \textcolor{keywordtype}{int}                         \mbox{\hyperlink{group__model__details_ga18df869af0d70101106458fc3f027806}{max\_bp\_span}},}
+\DoxyCodeLine{337                     \mbox{\hyperlink{group__part__func__window_gabe710a1182e6db69cc75329dfc9bed67}{vrna\_probs\_window\_callback}}  *cb,}
+\DoxyCodeLine{338                     \textcolor{keywordtype}{void}                        *data);}
+\DoxyCodeLine{339 }
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341 \textcolor{comment}{/* End simplified interface */}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

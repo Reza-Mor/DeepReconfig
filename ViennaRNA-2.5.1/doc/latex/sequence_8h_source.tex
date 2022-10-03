@@ -1,0 +1,90 @@
+\hypertarget{sequence_8h_source}{}\doxysection{sequence.\+h}
+\label{sequence_8h_source}\index{ViennaRNA/sequence.h@{ViennaRNA/sequence.h}}
+\mbox{\hyperlink{sequence_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_SEQUENCE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_SEQUENCE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_sequence\_s}} \mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_seq\_t}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__alphabet__utils_structvrna__alignment__s}{vrna\_alignment\_s}} \mbox{\hyperlink{group__alphabet__utils_structvrna__alignment__s}{vrna\_msa\_t}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define VRNA\_SEQUENCE\_RNA       1U}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define VRNA\_SEQUENCE\_DNA       2U}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{32   \mbox{\hyperlink{group__alphabet__utils_gga85cda3fcf5d6bd7ec090d3a96e808609ad8682ac290d0dd51022e3b82840e1a74}{VRNA\_SEQ\_UNKNOWN}},   }
+\DoxyCodeLine{33   \mbox{\hyperlink{group__alphabet__utils_gga85cda3fcf5d6bd7ec090d3a96e808609ac52309234beaf94e6a3bd1b9b69de9f4}{VRNA\_SEQ\_RNA}},       }
+\DoxyCodeLine{34   \mbox{\hyperlink{group__alphabet__utils_gga85cda3fcf5d6bd7ec090d3a96e808609a4da1613644c3a3766ef1d6494f271332}{VRNA\_SEQ\_DNA}}        }
+\DoxyCodeLine{35 \} \mbox{\hyperlink{group__alphabet__utils_ga85cda3fcf5d6bd7ec090d3a96e808609}{vrna\_seq\_type\_e}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41 \textcolor{keyword}{struct }\mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_sequence\_s}} \{}
+\DoxyCodeLine{42   \mbox{\hyperlink{group__alphabet__utils_ga85cda3fcf5d6bd7ec090d3a96e808609}{vrna\_seq\_type\_e}} \mbox{\hyperlink{group__alphabet__utils_aee11f4cc6f792cd36afab3bf7a30ca7b}{type}};       }
+\DoxyCodeLine{43   \textcolor{keywordtype}{char}            *name;}
+\DoxyCodeLine{44   \textcolor{keywordtype}{char}            *\mbox{\hyperlink{group__alphabet__utils_aa885a2c52b3f87fb6c8f51a77a3430a7}{string}};    }
+\DoxyCodeLine{45   \textcolor{keywordtype}{short}           *\mbox{\hyperlink{group__alphabet__utils_a8010ad82da6766e859e6f25e275a1d89}{encoding}};  }
+\DoxyCodeLine{46   \textcolor{keywordtype}{short}           *encoding5;}
+\DoxyCodeLine{47   \textcolor{keywordtype}{short}           *encoding3;}
+\DoxyCodeLine{48   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}    \mbox{\hyperlink{group__alphabet__utils_af60876d93312ce0b842574a14c3a9cdd}{length}};     }
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{struct }\mbox{\hyperlink{group__alphabet__utils_structvrna__alignment__s}{vrna\_alignment\_s}} \{}
+\DoxyCodeLine{53   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  n\_seq;}
+\DoxyCodeLine{54   \mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_seq\_t}}          *sequences;}
+\DoxyCodeLine{55   \textcolor{keywordtype}{char}                **gapfree\_seq;}
+\DoxyCodeLine{56   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}        *gapfree\_size;  \textcolor{comment}{/* for MAF alignment coordinates */}}
+\DoxyCodeLine{57   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *genome\_size;     \textcolor{comment}{/* for MAF alignment coordinates */}}
+\DoxyCodeLine{58   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *start;           \textcolor{comment}{/* for MAF alignment coordinates */}}
+\DoxyCodeLine{59   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}       *orientation;     \textcolor{comment}{/* for MAF alignment coordinates */}}
+\DoxyCodeLine{60   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}        **a2s;}
+\DoxyCodeLine{61 \};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_seq\_t}} *}
+\DoxyCodeLine{65 vrna\_sequence(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{66               \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{70 vrna\_sequence\_add(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *fc,}
+\DoxyCodeLine{71                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}            *\textcolor{keywordtype}{string},}
+\DoxyCodeLine{72                   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          options);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{76 vrna\_sequence\_remove(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{77                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         i);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{81 vrna\_sequence\_remove\_all(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{85 vrna\_sequence\_prepare(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{89 vrna\_sequence\_order\_update(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{90                            \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   *order);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{94 vrna\_msa\_add( \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}      *fc,}
+\DoxyCodeLine{95               \textcolor{keyword}{const} \textcolor{keywordtype}{char}                **alignment,}
+\DoxyCodeLine{96               \textcolor{keyword}{const} \textcolor{keywordtype}{char}                **names,}
+\DoxyCodeLine{97               \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}       *orientation,}
+\DoxyCodeLine{98               \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *start,}
+\DoxyCodeLine{99               \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *genome\_size,}
+\DoxyCodeLine{100               \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}              options);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

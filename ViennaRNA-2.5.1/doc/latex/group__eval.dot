@@ -1,0 +1,23 @@
+digraph "Free Energy Evaluation"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Free Energy Evaluation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions and variables related to free energy evaluation of sequence/structure pairs."];
+  Node4 [label="Deprecated Interface\l for Free Energy Evaluation",height=0.2,width=0.4,color="black",URL="$group__eval__deprecated.html",tooltip="Deprecated Energy Evaluation functions."];
+  Node2 [label="Energy Evaluation for\l Individual Loops",height=0.2,width=0.4,color="black",URL="$group__eval__loops.html",tooltip="Functions to evaluate the free energy of particular types of loops."];
+  Node5 [label="Exterior Loops",height=0.2,width=0.4,color="black",URL="$group__eval__loops__ext.html",tooltip="Functions to evaluate the free energy contributions for exterior loops."];
+  Node6 [label="Hairpin Loops",height=0.2,width=0.4,color="black",URL="$group__eval__loops__hp.html",tooltip="Functions to evaluate the free energy contributions for hairpin loops."];
+  Node7 [label="Internal Loops",height=0.2,width=0.4,color="black",URL="$group__eval__loops__int.html",tooltip="Functions to evaluate the free energy contributions for internal loops."];
+  Node8 [label="Multibranch Loops",height=0.2,width=0.4,color="black",URL="$group__eval__loops__mb.html",tooltip="Functions to evaluate the free energy contributions for mutlibranch loops."];
+  Node3 [label="Energy Evaluation for\l Atomic Moves",height=0.2,width=0.4,color="black",URL="$group__eval__move.html",tooltip="Functions to evaluate the free energy change of a structure after application of (a set of) atomic mo..."];
+  Node1->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node2 [shape=plaintext, label="all.h\nexternal.h\nhairpin.h\ninternal.h\nmultibranch.h", color="darkgreen", dir="none", style="dashed"];
+  Node1->Node5 [shape=plaintext, label="external.h", color="darkgreen", dir="none", style="dashed"];
+  Node1->Node6 [shape=plaintext, label="hairpin.h", color="darkgreen", dir="none", style="dashed"];
+  Node1->Node7 [shape=plaintext, label="internal.h", color="darkgreen", dir="none", style="dashed"];
+  Node1->Node8 [shape=plaintext, label="multibranch.h", color="darkgreen", dir="none", style="dashed"];
+}

@@ -1,0 +1,56 @@
+\hypertarget{heat__capacity_8h_source}{}\doxysection{heat\+\_\+capacity.\+h}
+\label{heat__capacity_8h_source}\index{ViennaRNA/heat\_capacity.h@{ViennaRNA/heat\_capacity.h}}
+\mbox{\hyperlink{heat__capacity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_MELTING\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_MELTING\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__thermodynamics_ga18316e4657502e9203931f924d93732f}{vrna\_heat\_capacity\_callback}})(\textcolor{keywordtype}{float}  temp,}
+\DoxyCodeLine{39                                            \textcolor{keywordtype}{float}  heat\_capacity,}
+\DoxyCodeLine{40                                            \textcolor{keywordtype}{void}   *data);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__thermodynamics_structvrna__heat__capacity__s}{vrna\_heat\_capacity\_s}} \mbox{\hyperlink{group__thermodynamics_structvrna__heat__capacity__s}{vrna\_heat\_capacity\_t}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56 \textcolor{keyword}{struct }\mbox{\hyperlink{group__thermodynamics_structvrna__heat__capacity__s}{vrna\_heat\_capacity\_s}} \{}
+\DoxyCodeLine{57   \textcolor{keywordtype}{float} \mbox{\hyperlink{group__thermodynamics_a62ed3466ce614f4f1e729463fac41d72}{temperature}};    }
+\DoxyCodeLine{58   \textcolor{keywordtype}{float} \mbox{\hyperlink{group__thermodynamics_a2987d5e5ef974d14a108ec1c7062562f}{heat\_capacity}};  }
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{91 \mbox{\hyperlink{group__thermodynamics_structvrna__heat__capacity__s}{vrna\_heat\_capacity\_t}} *}
+\DoxyCodeLine{92 \mbox{\hyperlink{group__thermodynamics_gafd95c2350d67d8f4374369c19cf111f1}{vrna\_heat\_capacity}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{93                    \textcolor{keywordtype}{float}                T\_min,}
+\DoxyCodeLine{94                    \textcolor{keywordtype}{float}                T\_max,}
+\DoxyCodeLine{95                    \textcolor{keywordtype}{float}                T\_increment,}
+\DoxyCodeLine{96                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         mpoints);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{128 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{129 \mbox{\hyperlink{group__thermodynamics_gaca54de116562d187484e3fa884aeb52c}{vrna\_heat\_capacity\_cb}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}        *fc,}
+\DoxyCodeLine{130                       \textcolor{keywordtype}{float}                       T\_min,}
+\DoxyCodeLine{131                       \textcolor{keywordtype}{float}                       T\_max,}
+\DoxyCodeLine{132                       \textcolor{keywordtype}{float}                       T\_increment,}
+\DoxyCodeLine{133                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                mpoints,}
+\DoxyCodeLine{134                       \mbox{\hyperlink{group__thermodynamics_ga18316e4657502e9203931f924d93732f}{vrna\_heat\_capacity\_callback}} *cb,}
+\DoxyCodeLine{135                       \textcolor{keywordtype}{void}                        *data);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \textcolor{comment}{/* End basic interface */}}
+\DoxyCodeLine{172 \mbox{\hyperlink{group__thermodynamics_structvrna__heat__capacity__s}{vrna\_heat\_capacity\_t}} *}
+\DoxyCodeLine{173 \mbox{\hyperlink{group__thermodynamics_ga0c2664e15dded704d805a9d2a625ff21}{vrna\_heat\_capacity\_simple}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *sequence,}
+\DoxyCodeLine{174                           \textcolor{keywordtype}{float}         T\_min,}
+\DoxyCodeLine{175                           \textcolor{keywordtype}{float}         T\_max,}
+\DoxyCodeLine{176                           \textcolor{keywordtype}{float}         T\_increment,}
+\DoxyCodeLine{177                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  mpoints);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179 \textcolor{comment}{/* End basic interface */}}
+\DoxyCodeLine{182 \textcolor{comment}{/* End thermodynamics */}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

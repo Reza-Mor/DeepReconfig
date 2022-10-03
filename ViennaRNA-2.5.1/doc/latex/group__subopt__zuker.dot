@@ -1,0 +1,10 @@
+digraph "Suboptimal Structures sensu Stiegler et al. 1984 / Zuker et al. 1989"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Suboptimals and Representative\l Structures",height=0.2,width=0.4,color="black",URL="$group__subopt__and__representatives.html",tooltip="Sample and enumerate suboptimal secondary structures from RNA sequence data."];
+  Node1 [label="Suboptimal Structures\l sensu Stiegler et al.\l 1984 / Zuker et al. 1989",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

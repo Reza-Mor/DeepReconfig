@@ -1,0 +1,215 @@
+\hypertarget{fold__compound_8h_source}{}\doxysection{fold\+\_\+compound.\+h}
+\label{fold__compound_8h_source}\index{ViennaRNA/fold\_compound.h@{ViennaRNA/fold\_compound.h}}
+\mbox{\hyperlink{fold__compound_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_FOLD\_COMPOUND\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_FOLD\_COMPOUND\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fc\_s}} \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{58 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__fold__compound_ga7806651f51b195013839a218b3bbd5a3}{vrna\_callback\_free\_auxdata}})(\textcolor{keywordtype}{void} *data);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} void (\mbox{\hyperlink{group__fold__compound_gac86036fa8cad1108832335063243cdc8}{vrna\_callback\_recursion\_status}})(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} status,}
+\DoxyCodeLine{79                                               \textcolor{keywordtype}{void}          *data);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define VRNA\_STATUS\_MFE\_PRE     (unsigned char)1}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define VRNA\_STATUS\_MFE\_POST    (unsigned char)2}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define VRNA\_STATUS\_PF\_PRE      (unsigned char)3}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define VRNA\_STATUS\_PF\_POST     (unsigned char)4}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{model_8h}{ViennaRNA/model.h}}>}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sequence_8h}{ViennaRNA/sequence.h}}>}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{dp__matrices_8h}{ViennaRNA/dp\_matrices.h}}>}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{hard_8h}{ViennaRNA/constraints/hard.h}}>}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{soft_8h}{ViennaRNA/constraints/soft.h}}>}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{grammar_8h}{ViennaRNA/grammar.h}}>}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{structured__domains_8h}{ViennaRNA/structured\_domains.h}}>}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{unstructured__domains_8h}{ViennaRNA/unstructured\_domains.h}}>}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#ifdef VRNA\_WITH\_SVM}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#include <ViennaRNA/zscore.h>}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{130 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{131   \mbox{\hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447da7e264dd3cf2dc9b6448caabcb7763cd6}{VRNA\_FC\_TYPE\_SINGLE}},      }
+\DoxyCodeLine{132   \mbox{\hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{VRNA\_FC\_TYPE\_COMPARATIVE}}  }
+\DoxyCodeLine{133 \} \mbox{\hyperlink{group__fold__compound_ga01a4ff86fa71deaaa5d1abbd95a1447d}{vrna\_fc\_type\_e}};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 }
+\DoxyCodeLine{148 \textcolor{keyword}{struct }\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fc\_s}} \{}
+\DoxyCodeLine{153   \textcolor{keyword}{const} \mbox{\hyperlink{group__fold__compound_ga01a4ff86fa71deaaa5d1abbd95a1447d}{vrna\_fc\_type\_e}} \mbox{\hyperlink{group__fold__compound_a391bcf8ac5997784aaf780cdd251c464}{type}};        }
+\DoxyCodeLine{160   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      \mbox{\hyperlink{group__fold__compound_a95fbfed770b858e50c766505dc4bf998}{length}};         }
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{162   DEPRECATED(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__fold__compound_ae1a7bbff0256577e2b22709bac11fdb4}{cutpoint}},}
+\DoxyCodeLine{163              \textcolor{stringliteral}{"{}Use strand\_* members instead"{}});}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{168   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      *\mbox{\hyperlink{group__fold__compound_a23304c5186dfae97bc69dc19d37f70c3}{strand\_number}}; }
+\DoxyCodeLine{169   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      *\mbox{\hyperlink{group__fold__compound_a3bf15e0e44539f9f622fd09227bf3de1}{strand\_order}};  }
+\DoxyCodeLine{170   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      *\mbox{\hyperlink{group__fold__compound_af698d79085056aa9a9075e834b0748ed}{strand\_order\_uniq}}; }
+\DoxyCodeLine{171   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      *\mbox{\hyperlink{group__fold__compound_a571ee9a932f633c7d9167ae029573935}{strand\_start}};  }
+\DoxyCodeLine{172   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      *\mbox{\hyperlink{group__fold__compound_aaa1b51bc6eb47cc661fea834d7175a54}{strand\_end}};    }
+\DoxyCodeLine{174   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}      \mbox{\hyperlink{group__fold__compound_ad8962b97f5e5e233d9bfb5b16a691d26}{strands}};        }
+\DoxyCodeLine{175   \mbox{\hyperlink{group__alphabet__utils_structvrna__sequence__s}{vrna\_seq\_t}}        *\mbox{\hyperlink{group__fold__compound_a855b503aefd052430bf463d8518d2ff5}{nucleotides}};   }
+\DoxyCodeLine{176   \mbox{\hyperlink{group__alphabet__utils_structvrna__alignment__s}{vrna\_msa\_t}}        *\mbox{\hyperlink{group__fold__compound_a0387efd460429ca0847c8009d327c0fb}{alignment}};     }
+\DoxyCodeLine{178   \mbox{\hyperlink{group__hard__constraints_structvrna__hc__s}{vrna\_hc\_t}}         *\mbox{\hyperlink{group__fold__compound_aceaa904dbf50092d403ca99422e8f824}{hc}};            }
+\DoxyCodeLine{180   \mbox{\hyperlink{group__dp__matrices_structvrna__mx__mfe__s}{vrna\_mx\_mfe\_t}}     *\mbox{\hyperlink{group__fold__compound_aca8be7bdc65bafe2172c6ee777f18568}{matrices}};      }
+\DoxyCodeLine{181   \mbox{\hyperlink{group__dp__matrices_structvrna__mx__pf__s}{vrna\_mx\_pf\_t}}      *\mbox{\hyperlink{group__fold__compound_afc38ed5a1028a2712d2365274bf49727}{exp\_matrices}};  }
+\DoxyCodeLine{183   \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}}      *\mbox{\hyperlink{group__fold__compound_a19b8720c2c5321c1b97c830bd17566ea}{params}};        }
+\DoxyCodeLine{184   \mbox{\hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}}  *\mbox{\hyperlink{group__fold__compound_a7052a5d24f6091b9c5f79edcc9456a12}{exp\_params}};    }
+\DoxyCodeLine{186   \textcolor{keywordtype}{int}               *\mbox{\hyperlink{group__fold__compound_afdead4cf55c882d3497e779573e17e03}{iindx}};         }
+\DoxyCodeLine{187   \textcolor{keywordtype}{int}               *\mbox{\hyperlink{group__fold__compound_a5037235dee512efd85ca543780bbca1a}{jindx}};         }
+\DoxyCodeLine{195   \mbox{\hyperlink{group__fold__compound_gac86036fa8cad1108832335063243cdc8}{vrna\_callback\_recursion\_status}}  *\mbox{\hyperlink{group__fold__compound_a87a83f6795b569000efcbe65acc3dd81}{stat\_cb}};       }
+\DoxyCodeLine{200   \textcolor{keywordtype}{void}                            *\mbox{\hyperlink{group__fold__compound_a20048e0c369e9f24b55423d600037c68}{auxdata}};       }
+\DoxyCodeLine{204   \mbox{\hyperlink{group__fold__compound_ga7806651f51b195013839a218b3bbd5a3}{vrna\_callback\_free\_auxdata}}      *\mbox{\hyperlink{group__fold__compound_a8e84dbabab016ecd74da6c38cb94e816}{free\_auxdata}};  }
+\DoxyCodeLine{215   \textcolor{comment}{/* data structure to adjust additional structural domains, such as G-\/quadruplexes */}}
+\DoxyCodeLine{216   \mbox{\hyperlink{structvrna__structured__domains__s}{vrna\_sd\_t}}     *\mbox{\hyperlink{group__fold__compound_ac25a84f2658de0d7a54cd710c16198b1}{domains\_struc}};             }
+\DoxyCodeLine{218   \textcolor{comment}{/* data structure to adjust additional contributions to unpaired stretches, e.g. due to protein binding */}}
+\DoxyCodeLine{219   \mbox{\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_ud\_t}}     *\mbox{\hyperlink{group__fold__compound_a4f70b6d32681fc8ca061236f21819ae7}{domains\_up}};                }
+\DoxyCodeLine{221   \textcolor{comment}{/* auxiliary (user-\/defined) extension to the folding grammar */}}
+\DoxyCodeLine{222   \mbox{\hyperlink{group__grammar_structvrna__gr__aux__s}{vrna\_gr\_aux\_t}} *\mbox{\hyperlink{group__fold__compound_a42f34f531718cead0550a1ed59785e6d}{aux\_grammar}};               }
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_C11\_FEATURES}}
+\DoxyCodeLine{229   \textcolor{comment}{/* C11 support for unnamed unions/structs */}}
+\DoxyCodeLine{230   \textcolor{keyword}{union }\{}
+\DoxyCodeLine{231     \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{238       \textcolor{keywordtype}{char} *\mbox{\hyperlink{group__fold__compound_a87f6abcda89cfb7a486c97e1f5371525}{sequence}};                   }
+\DoxyCodeLine{241       \textcolor{keywordtype}{short} *\mbox{\hyperlink{group__fold__compound_a9934bdb695d35a3544285cbcc19f9763}{sequence\_encoding}};         }
+\DoxyCodeLine{245       \textcolor{keywordtype}{short} *encoding5;}
+\DoxyCodeLine{246       \textcolor{keywordtype}{short} *encoding3;}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248       \textcolor{keywordtype}{short} *sequence\_encoding2;}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251       \textcolor{keywordtype}{char} *\mbox{\hyperlink{group__fold__compound_a3fbea559f1d1976b2d67c215cdeee0b2}{ptype}};                      }
+\DoxyCodeLine{260       \textcolor{keywordtype}{char} *\mbox{\hyperlink{group__fold__compound_a7fe1235ce3d41287695f1ae1e283e8fc}{ptype\_pf\_compat}};            }
+\DoxyCodeLine{265       \mbox{\hyperlink{group__soft__constraints_structvrna__sc__s}{vrna\_sc\_t}} *\mbox{\hyperlink{group__fold__compound_ac7089e90460ad3990a308808c8044c9f}{sc}};                    }
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_C11\_FEATURES}}
+\DoxyCodeLine{274   \textcolor{comment}{/* C11 support for unnamed unions/structs */}}
+\DoxyCodeLine{275 \};}
+\DoxyCodeLine{276 \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{283       \textcolor{keywordtype}{char}          **\mbox{\hyperlink{group__fold__compound_a965dbb42f2e13cace5aa3bbab4396530}{sequences}};        }
+\DoxyCodeLine{287       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  \mbox{\hyperlink{group__fold__compound_a614702ab74478e786272be44f8cebfe3}{n\_seq}};              }
+\DoxyCodeLine{290       \textcolor{keywordtype}{char}          *\mbox{\hyperlink{group__fold__compound_ac472afde64d8b3c8b84e4809fda7d814}{cons\_seq}};          }
+\DoxyCodeLine{293       \textcolor{keywordtype}{short}         *\mbox{\hyperlink{group__fold__compound_aa3fab7ae38ebfed2028375221d295686}{S\_cons}};            }
+\DoxyCodeLine{296       \textcolor{keywordtype}{short}         **\mbox{\hyperlink{group__fold__compound_aebb37297f92c7bd22aac6343f8f61d61}{S}};                }
+\DoxyCodeLine{299       \textcolor{keywordtype}{short}         **\mbox{\hyperlink{group__fold__compound_a78d089b475e2230bd536b9a6ed8bb17c}{S5}};               }
+\DoxyCodeLine{302       \textcolor{keywordtype}{short}         **\mbox{\hyperlink{group__fold__compound_af6ab2a25b84d2308ee23f6b11b5fd52d}{S3}};               }
+\DoxyCodeLine{305   \textcolor{keywordtype}{char}          **Ss;}
+\DoxyCodeLine{306   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  **a2s;}
+\DoxyCodeLine{307       \textcolor{keywordtype}{int}           *\mbox{\hyperlink{group__fold__compound_a14dc7755af6019ddbd0cf94b209e89dd}{pscore}};              }
+\DoxyCodeLine{310       \textcolor{keywordtype}{int}           **\mbox{\hyperlink{group__fold__compound_ad966c15907e6c2e32b0910c7a3154509}{pscore\_local}};       }
+\DoxyCodeLine{313       \textcolor{keywordtype}{short}         *\mbox{\hyperlink{group__fold__compound_abf5e82d14649b6179ae60ed7da6e4fc0}{pscore\_pf\_compat}};    }
+\DoxyCodeLine{317       \mbox{\hyperlink{group__soft__constraints_structvrna__sc__s}{vrna\_sc\_t}}     **\mbox{\hyperlink{group__fold__compound_ac2b047fddabc51a76a96511174e47db1}{scs}};                }
+\DoxyCodeLine{320   \textcolor{keywordtype}{int}           oldAliEn;}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_C11\_FEATURES}}
+\DoxyCodeLine{326 \};}
+\DoxyCodeLine{327 \};}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{336   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  \mbox{\hyperlink{group__fold__compound_a426305721b16023f2f3247f7354d2c46}{maxD1}};            }
+\DoxyCodeLine{337   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  \mbox{\hyperlink{group__fold__compound_a38695774fd396c892f9a70d39978b231}{maxD2}};            }
+\DoxyCodeLine{338   \textcolor{keywordtype}{short}         *\mbox{\hyperlink{group__fold__compound_aa279ba4bd0ff541d435d3a049687f3ac}{reference\_pt1}};   }
+\DoxyCodeLine{339   \textcolor{keywordtype}{short}         *\mbox{\hyperlink{group__fold__compound_a926ad253f5f0eed642bc227493d0278d}{reference\_pt2}};   }
+\DoxyCodeLine{341   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__fold__compound_a62a8d4ab8dadffbf09da917adff6c71e}{referenceBPs1}};   }
+\DoxyCodeLine{342   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__fold__compound_a19187f33433e84683730dedff8544f71}{referenceBPs2}};   }
+\DoxyCodeLine{343   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__fold__compound_a5c53e55583ce096148075bc240fc2bce}{bpdist}};          }
+\DoxyCodeLine{345   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__fold__compound_a0af5a888bac2ae32107da32776144504}{mm1}};             }
+\DoxyCodeLine{346   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  *\mbox{\hyperlink{group__fold__compound_a54c0b979274b285a7e093ed54aa3252e}{mm2}};             }
+\DoxyCodeLine{358   \textcolor{keywordtype}{int}   \mbox{\hyperlink{group__fold__compound_adacbf7cdfb47d3072683ab509de735f6}{window\_size}};              }
+\DoxyCodeLine{359   \textcolor{keywordtype}{char}  **\mbox{\hyperlink{group__fold__compound_a2ecb8ff5e21190936a8a146be7a251ff}{ptype\_local}};            }
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#ifdef VRNA\_WITH\_SVM}}
+\DoxyCodeLine{361   vrna\_zsc\_dat\_t  \mbox{\hyperlink{group__fold__compound_ab9e9e3fd24c960c6e2390be1a070e4c5}{zscore\_data}};    }
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{367 \};}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370 \textcolor{comment}{/* the definitions below should be used for functions that return/receive/destroy fold compound data structures */}}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define VRNA\_OPTION\_DEFAULT         0U}}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define VRNA\_OPTION\_MFE             1U}}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define VRNA\_OPTION\_PF              2U}}
+\DoxyCodeLine{392 }
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define VRNA\_OPTION\_HYBRID          4U}}
+\DoxyCodeLine{397 }
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define VRNA\_OPTION\_EVAL\_ONLY       8U}}
+\DoxyCodeLine{408 }
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define VRNA\_OPTION\_WINDOW          16U}}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{451 \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *}
+\DoxyCodeLine{452 \mbox{\hyperlink{group__fold__compound_gab89fe9844031711d42c70d1b9277c0d5}{vrna\_fold\_compound}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}       *sequence,}
+\DoxyCodeLine{453                    \textcolor{keyword}{const} \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}  *md\_p,}
+\DoxyCodeLine{454                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}     options);}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{456 }
+\DoxyCodeLine{494 \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *}
+\DoxyCodeLine{495 \mbox{\hyperlink{group__fold__compound_gabbaffe56b1a37f6ed1a31e9e4f5613f1}{vrna\_fold\_compound\_comparative}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   **sequences,}
+\DoxyCodeLine{496                                \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}    *md\_p,}
+\DoxyCodeLine{497                                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} options);}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{499 }
+\DoxyCodeLine{500 \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *}
+\DoxyCodeLine{501 vrna\_fold\_compound\_comparative2(\textcolor{keyword}{const} \textcolor{keywordtype}{char}                **sequences,}
+\DoxyCodeLine{502                                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}                **names,}
+\DoxyCodeLine{503                                 \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}       *orientation,}
+\DoxyCodeLine{504                                 \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *start,}
+\DoxyCodeLine{505                                 \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}  *genome\_size,}
+\DoxyCodeLine{506                                 \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}                 *md\_p,}
+\DoxyCodeLine{507                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}              options);}
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509 }
+\DoxyCodeLine{510 \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *}
+\DoxyCodeLine{511 vrna\_fold\_compound\_TwoD(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *sequence,}
+\DoxyCodeLine{512                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *s1,}
+\DoxyCodeLine{513                         \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *s2,}
+\DoxyCodeLine{514                         \mbox{\hyperlink{group__model__details_structvrna__md__s}{vrna\_md\_t}}     *md\_p,}
+\DoxyCodeLine{515                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{517 }
+\DoxyCodeLine{518 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{519 vrna\_fold\_compound\_prepare(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc,}
+\DoxyCodeLine{520                            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         options);}
+\DoxyCodeLine{521 }
+\DoxyCodeLine{522 }
+\DoxyCodeLine{530 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{531 \mbox{\hyperlink{group__fold__compound_ga576a077b418a9c3650e06f8e5d296fc2}{vrna\_fold\_compound\_free}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *fc);}
+\DoxyCodeLine{532 }
+\DoxyCodeLine{533 }
+\DoxyCodeLine{551 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{552 \mbox{\hyperlink{group__fold__compound_gafc44c76a1aacf61bfccb8cd698772b98}{vrna\_fold\_compound\_add\_auxdata}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}       *fc,}
+\DoxyCodeLine{553                                \textcolor{keywordtype}{void}                       *data,}
+\DoxyCodeLine{554                                \mbox{\hyperlink{group__fold__compound_ga7806651f51b195013839a218b3bbd5a3}{vrna\_callback\_free\_auxdata}} *f);}
+\DoxyCodeLine{555 }
+\DoxyCodeLine{556 }
+\DoxyCodeLine{572 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{573 \mbox{\hyperlink{group__fold__compound_ga680ddfe1e67d1459689b1e92c80b9c4c}{vrna\_fold\_compound\_add\_callback}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}            *fc,}
+\DoxyCodeLine{574                                 \mbox{\hyperlink{group__fold__compound_gac86036fa8cad1108832335063243cdc8}{vrna\_callback\_recursion\_status}}  *f);}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{576 }
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

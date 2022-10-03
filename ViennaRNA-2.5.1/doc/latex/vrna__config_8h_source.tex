@@ -1,0 +1,96 @@
+\hypertarget{vrna__config_8h_source}{}\doxysection{vrna\+\_\+config.\+h}
+\label{vrna__config_8h_source}\index{ViennaRNA/vrna\_config.h@{ViennaRNA/vrna\_config.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_CONFIG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_CONFIG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{/* version number */}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define VRNA\_VERSION  "{}2.5.1"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define VRNA\_VERSION\_MAJOR  2}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define VRNA\_VERSION\_MINOR  5}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define VRNA\_VERSION\_PATCH  1}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{/*}}
+\DoxyCodeLine{12 \textcolor{comment}{ * The following pre-\/processor definitions specify whether}}
+\DoxyCodeLine{13 \textcolor{comment}{ * or not certain features were activated upon build-\/time}}
+\DoxyCodeLine{14 \textcolor{comment}{ */}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{/*}}
+\DoxyCodeLine{17 \textcolor{comment}{ * Build with deactivated C11 Features}}
+\DoxyCodeLine{18 \textcolor{comment}{ *}}
+\DoxyCodeLine{19 \textcolor{comment}{ * It this feature is missing, the next line defines}}
+\DoxyCodeLine{20 \textcolor{comment}{ * 'VRNA\_DISABLE\_C11\_FEATURES'}}
+\DoxyCodeLine{21 \textcolor{comment}{ */}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{comment}{/*}}
+\DoxyCodeLine{25 \textcolor{comment}{ * Build with OpenMP support}}
+\DoxyCodeLine{26 \textcolor{comment}{ *}}
+\DoxyCodeLine{27 \textcolor{comment}{ * If this feature is present, the next line defines}}
+\DoxyCodeLine{28 \textcolor{comment}{ * 'VRNA\_WITH\_OPENMP'}}
+\DoxyCodeLine{29 \textcolor{comment}{ */}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define VRNA\_WITH\_OPENMP}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{comment}{/*}}
+\DoxyCodeLine{33 \textcolor{comment}{ * Build with single precision partition function}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * If this feature is present, the next line defines}}
+\DoxyCodeLine{36 \textcolor{comment}{ * 'USE\_FLOAT\_PF'}}
+\DoxyCodeLine{37 \textcolor{comment}{ */}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{/*}}
+\DoxyCodeLine{41 \textcolor{comment}{ * Build with JSON input/output support}}
+\DoxyCodeLine{42 \textcolor{comment}{ *}}
+\DoxyCodeLine{43 \textcolor{comment}{ * If this feature is present, the next line defines}}
+\DoxyCodeLine{44 \textcolor{comment}{ * 'VRNA\_WITH\_JSON\_SUPPORT'}}
+\DoxyCodeLine{45 \textcolor{comment}{ */}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define VRNA\_WITH\_JSON\_SUPPORT}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/*}}
+\DoxyCodeLine{49 \textcolor{comment}{ * Build with Support Vector Machine (SVM) Z-\/score feature in RNALfold}}
+\DoxyCodeLine{50 \textcolor{comment}{ *}}
+\DoxyCodeLine{51 \textcolor{comment}{ * If this feature is present, the next line defines}}
+\DoxyCodeLine{52 \textcolor{comment}{ * 'VRNA\_WITH\_SVM'}}
+\DoxyCodeLine{53 \textcolor{comment}{ */}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define VRNA\_WITH\_SVM}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{/*}}
+\DoxyCodeLine{57 \textcolor{comment}{ * Build with GSL minimizers}}
+\DoxyCodeLine{58 \textcolor{comment}{ *}}
+\DoxyCodeLine{59 \textcolor{comment}{ * If this feature is present, the next line defines}}
+\DoxyCodeLine{60 \textcolor{comment}{ * 'VRNA\_WITH\_GSL'}}
+\DoxyCodeLine{61 \textcolor{comment}{ */}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define VRNA\_WITH\_GSL}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{/*}}
+\DoxyCodeLine{65 \textcolor{comment}{ * Build with colored TTY output}}
+\DoxyCodeLine{66 \textcolor{comment}{ *}}
+\DoxyCodeLine{67 \textcolor{comment}{ * If this feature is missing, the next line defines}}
+\DoxyCodeLine{68 \textcolor{comment}{ * 'VRNA\_WITHOUT\_TTY\_COLORS'}}
+\DoxyCodeLine{69 \textcolor{comment}{ */}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/*}}
+\DoxyCodeLine{73 \textcolor{comment}{ * Build with Link Time Optimization support}}
+\DoxyCodeLine{74 \textcolor{comment}{ *}}
+\DoxyCodeLine{75 \textcolor{comment}{ * If this feature is enabled, the next line defines}}
+\DoxyCodeLine{76 \textcolor{comment}{ * 'VRNA\_WITH\_LTO'}}
+\DoxyCodeLine{77 \textcolor{comment}{ */}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{/*}}
+\DoxyCodeLine{81 \textcolor{comment}{ * Build with Naview Layout algorithm of Bruccoleri 1988}}
+\DoxyCodeLine{82 \textcolor{comment}{ *}}
+\DoxyCodeLine{83 \textcolor{comment}{ * If this feature is enabled, the next line defines}}
+\DoxyCodeLine{84 \textcolor{comment}{ * 'VRNA\_WITH\_NAVIEW\_LAYOUT'}}
+\DoxyCodeLine{85 \textcolor{comment}{ */}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define VRNA\_WITH\_NAVIEW\_LAYOUT}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

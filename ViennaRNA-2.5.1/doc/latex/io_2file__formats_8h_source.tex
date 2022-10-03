@@ -1,0 +1,119 @@
+\hypertarget{io_2file__formats_8h_source}{}\doxysection{file\+\_\+formats.\+h}
+\label{io_2file__formats_8h_source}\index{ViennaRNA/io/file\_formats.h@{ViennaRNA/io/file\_formats.h}}
+\mbox{\hyperlink{io_2file__formats_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_FILE\_FORMATS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_FILE\_FORMATS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{40 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{41 \mbox{\hyperlink{group__file__formats_gaaface7db12fadc3d271641c4515ab6e4}{vrna\_file\_helixlist}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *seq,}
+\DoxyCodeLine{42                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *db,}
+\DoxyCodeLine{43                     \textcolor{keywordtype}{float}       energy,}
+\DoxyCodeLine{44                     FILE        *file);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{71 \mbox{\hyperlink{group__file__formats_gab69682373ccca1e0e28cc967eec07745}{vrna\_file\_connect}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *seq,}
+\DoxyCodeLine{72                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *db,}
+\DoxyCodeLine{73                   \textcolor{keywordtype}{float}       energy,}
+\DoxyCodeLine{74                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *identifier,}
+\DoxyCodeLine{75                   FILE        *file);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{85 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{86 \mbox{\hyperlink{group__file__formats_ga9b462e6f202594af5d3fa56e280d633f}{vrna\_file\_bpseq}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *seq,}
+\DoxyCodeLine{87                 \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *db,}
+\DoxyCodeLine{88                 FILE        *file);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#if VRNA\_WITH\_JSON\_SUPPORT}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{102 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{103 \mbox{\hyperlink{group__file__formats_ga31f4a6c2ea1495a6e4f9eb45a9f6193d}{vrna\_file\_json}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *seq,}
+\DoxyCodeLine{104                \textcolor{keyword}{const} \textcolor{keywordtype}{char} *db,}
+\DoxyCodeLine{105                \textcolor{keywordtype}{double}     energy,}
+\DoxyCodeLine{106                \textcolor{keyword}{const} \textcolor{keywordtype}{char} *identifier,}
+\DoxyCodeLine{107                FILE       *file);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define VRNA\_OPTION\_MULTILINE             32U}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define VRNA\_CONSTRAINT\_MULTILINE         32U}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{193 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}}
+\DoxyCodeLine{194 \mbox{\hyperlink{group__file__formats_ga8cfb7e271efc9e1f34640acb85475639}{vrna\_file\_fasta\_read\_record}}(\textcolor{keywordtype}{char}          **header,}
+\DoxyCodeLine{195                             \textcolor{keywordtype}{char}          **sequence,}
+\DoxyCodeLine{196                             \textcolor{keywordtype}{char}          ***rest,}
+\DoxyCodeLine{197                             FILE          *file,}
+\DoxyCodeLine{198                             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{217 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{218 \mbox{\hyperlink{group__file__formats_gac788da233f9160b06c2e751afad8936c}{vrna\_extract\_record\_rest\_structure}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   **lines,}
+\DoxyCodeLine{219                                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length,}
+\DoxyCodeLine{220                                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} option);}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 }
+\DoxyCodeLine{235 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{236 \mbox{\hyperlink{group__file__formats_ga646ebf45450a69a7f2533f9ecd283a32}{vrna\_file\_SHAPE\_read}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *file\_name,}
+\DoxyCodeLine{237                      \textcolor{keywordtype}{int}        length,}
+\DoxyCodeLine{238                      \textcolor{keywordtype}{double}     default\_value,}
+\DoxyCodeLine{239                      \textcolor{keywordtype}{char}       *sequence,}
+\DoxyCodeLine{240                      \textcolor{keywordtype}{double}     *values);}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define VRNA\_INPUT\_VERBOSE  16384U}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{246 vrna\_file\_connect\_read\_record(FILE          *fp,}
+\DoxyCodeLine{247                               \textcolor{keywordtype}{char}          **\textcolor{keywordtype}{id},}
+\DoxyCodeLine{248                               \textcolor{keywordtype}{char}          **sequence,}
+\DoxyCodeLine{249                               \textcolor{keywordtype}{char}          **structure,}
+\DoxyCodeLine{250                               \textcolor{keywordtype}{char}          **remainder,}
+\DoxyCodeLine{251                               \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{271 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__file__formats_ga55a9ae6dfeecc1b3f0c2acf6fa796c15}{vrna\_extract\_record\_rest\_constraint}}(\textcolor{keywordtype}{char}          **cstruc,}
+\DoxyCodeLine{272                                                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    **lines,}
+\DoxyCodeLine{273                                                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  option),}
+\DoxyCodeLine{274            \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{280 DEPRECATED(\textcolor{keywordtype}{char} *extract\_record\_rest\_structure(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   **lines,}
+\DoxyCodeLine{281                                                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length,}
+\DoxyCodeLine{282                                                \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} option),}
+\DoxyCodeLine{283            \textcolor{stringliteral}{"{}Use vrna\_extract\_record\_rest\_structure() instead"{}});}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{291 DEPRECATED(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__file__formats_gafd194a69af9d92b5b0412a7627ac1595}{read\_record}}(\textcolor{keywordtype}{char}          **header,}
+\DoxyCodeLine{292                                     \textcolor{keywordtype}{char}          **sequence,}
+\DoxyCodeLine{293                                     \textcolor{keywordtype}{char}          ***rest,}
+\DoxyCodeLine{294                                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options),}
+\DoxyCodeLine{295            \textcolor{stringliteral}{"{}Use vrna\_file\_fasta\_read\_record() instead"{}});}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298 DEPRECATED(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} get\_multi\_input\_line(\textcolor{keywordtype}{char}         **\textcolor{keywordtype}{string},}
+\DoxyCodeLine{299                                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} options),}
+\DoxyCodeLine{300            \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

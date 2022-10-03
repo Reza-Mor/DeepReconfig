@@ -1,0 +1,45 @@
+\hypertarget{profiledist_8h_source}{}\doxysection{profiledist.\+h}
+\label{profiledist_8h_source}\index{ViennaRNA/profiledist.h@{ViennaRNA/profiledist.h}}
+\mbox{\hyperlink{profiledist_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PROFILEDIST\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PROFILEDIST\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{float} \mbox{\hyperlink{profiledist_8h_abe75e90e00a1e5dd8862944ed53dad5d}{profile\_edit\_distance}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float} *T1,}
+\DoxyCodeLine{29                             \textcolor{keyword}{const} \textcolor{keywordtype}{float} *T2);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{42 \textcolor{keywordtype}{float} *\mbox{\hyperlink{profiledist_8h_a512ae37eed5828cc1cd3fcb9ce2326a2}{Make\_bp\_profile\_bppm}}(\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}}  *bppm,}
+\DoxyCodeLine{43                             \textcolor{keywordtype}{int}         length);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49 \textcolor{keywordtype}{void}  \mbox{\hyperlink{profiledist_8h_a8e0b4fe3698b3502945116ecc0ba6160}{print\_bppm}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float} *T);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57 \textcolor{keywordtype}{void}  \mbox{\hyperlink{profiledist_8h_a9b0b84a5a45761bf42d7c835dcdb3b85}{free\_profile}}(\textcolor{keywordtype}{float} *T);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{68 DEPRECATED(\textcolor{keywordtype}{float} *\mbox{\hyperlink{profiledist_8h_a15fe01e1e2df9a7b1d53c8ed192b2f15}{Make\_bp\_profile}}(\textcolor{keywordtype}{int} length),}
+\DoxyCodeLine{69 \textcolor{stringliteral}{"{}Use Make\_bp\_profile\_bppm() instead"{}});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

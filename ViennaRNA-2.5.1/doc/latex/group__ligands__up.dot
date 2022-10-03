@@ -1,0 +1,10 @@
+digraph "Ligands Binding to Unstructured Domains"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Ligands Binding to\l RNA Structures",height=0.2,width=0.4,color="black",URL="$group__ligand__binding.html",tooltip="Simple Extensions to Model Ligand Binding to RNA Structures."];
+  Node1 [label="Ligands Binding to\l Unstructured Domains",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add ligand binding to loop regions using the Unstructured Domains feature."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

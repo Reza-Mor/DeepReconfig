@@ -1,0 +1,21 @@
+\hypertarget{naview_8h_source}{}\doxysection{naview.\+h}
+\label{naview_8h_source}\index{ViennaRNA/naview.h@{ViennaRNA/naview.h}}
+\mbox{\hyperlink{naview_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PLOT\_NAVIEW\_DEPRECATED\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PLOT\_NAVIEW\_DEPRECATED\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#   warning "{}Including deprecated header file <ViennaRNA/naview.h>! Use <ViennaRNA/plotting/naview.h> instead!"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\# ifdef VRNA\_WITH\_NAVIEW\_LAYOUT}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#   include <ViennaRNA/plotting/naview/naview.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#   warning "{}Naview Layout algorithm is not available in this version!"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

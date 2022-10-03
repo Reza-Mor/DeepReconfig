@@ -1,0 +1,12 @@
+digraph "Computing MFE representatives of a Distance Based Partitioning"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Distance Based Partitioning\l of the Secondary Structure Space",height=0.2,width=0.4,color="black",URL="$group__kl__neighborhood.html",tooltip=" "];
+  Node1 [label="Computing MFE representatives\l of a Distance Based Partitioning",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the minimum free energy (MFE) and secondary structures for a partitioning of the secondary st..."];
+  Node3 [label="Global MFE Prediction",height=0.2,width=0.4,color="black",URL="$group__mfe__global.html",tooltip="Variations of the global Minimum Free Energy (MFE) prediction algorithm."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node3->Node1 [shape=plaintext, dir="back", style="solid"];
+}

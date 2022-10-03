@@ -1,0 +1,189 @@
+\hypertarget{2Dfold_8h_source}{}\doxysection{2Dfold.\+h}
+\label{2Dfold_8h_source}\index{ViennaRNA/2Dfold.h@{ViennaRNA/2Dfold.h}}
+\mbox{\hyperlink{2Dfold_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_TWO\_D\_FOLD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_TWO\_D\_FOLD\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{53 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__kl__neighborhood__mfe_structvrna__sol__TwoD__t}{vrna\_sol\_TwoD\_t}} \{}
+\DoxyCodeLine{54   \textcolor{keywordtype}{int}   \mbox{\hyperlink{group__kl__neighborhood__mfe_ac111e850bb3b3a11b6b5707912cfa1b8}{k}};        }
+\DoxyCodeLine{55   \textcolor{keywordtype}{int}   \mbox{\hyperlink{group__kl__neighborhood__mfe_ab8e95cd920901175a2cc8de726ab1d36}{l}};        }
+\DoxyCodeLine{56   \textcolor{keywordtype}{float} \mbox{\hyperlink{group__kl__neighborhood__mfe_a7577863a6a84224dfee39b321c03cab1}{en}};       }
+\DoxyCodeLine{57   \textcolor{keywordtype}{char}  *\mbox{\hyperlink{group__kl__neighborhood__mfe_ac5942d2505a6cd7e4a8073a321d5d2d5}{s}};       }
+\DoxyCodeLine{58 \} \mbox{\hyperlink{group__kl__neighborhood__mfe_ga2ab9478dc2f8d94ab38ca8b3308d1c1e}{vrna\_sol\_TwoD\_t}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{88 \mbox{\hyperlink{group__kl__neighborhood__mfe_structvrna__sol__TwoD__t}{vrna\_sol\_TwoD\_t}} *}
+\DoxyCodeLine{89 \mbox{\hyperlink{group__kl__neighborhood__mfe_ga112ad1f01c9a3eac4e5bbe8530d4ad50}{vrna\_mfe\_TwoD}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{90               \textcolor{keywordtype}{int}                   distance1,}
+\DoxyCodeLine{91               \textcolor{keywordtype}{int}                   distance2);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{112 \textcolor{keywordtype}{char} *}
+\DoxyCodeLine{113 \mbox{\hyperlink{group__kl__neighborhood__mfe_ga578fc3ac55f818a9029d07635bc6decf}{vrna\_backtrack5\_TwoD}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{114                      \textcolor{keywordtype}{int}                  k,}
+\DoxyCodeLine{115                      \textcolor{keywordtype}{int}                  l,}
+\DoxyCodeLine{116                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         j);}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define TwoDfold\_solution       vrna\_sol\_TwoD\_t         }\textcolor{comment}{/* restore compatibility of struct rename */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{130 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}} \{}
+\DoxyCodeLine{131   \mbox{\hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t}}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_a70da9e83ad87c37013b4bf0b265dd307}{P}};           }
+\DoxyCodeLine{132   \textcolor{keywordtype}{int}                   \mbox{\hyperlink{group__kl__neighborhood__mfe_ade5c7e9337a458ae20bac75abdc52d64}{do\_backtrack}}; }
+\DoxyCodeLine{133   \textcolor{keywordtype}{char}                  *\mbox{\hyperlink{group__kl__neighborhood__mfe_aedf60b8b26dae05ad266d3e098d18208}{ptype}};       }
+\DoxyCodeLine{134   \textcolor{keywordtype}{char}                  *\mbox{\hyperlink{group__kl__neighborhood__mfe_a3596f3d4d320318c4b8428e2abc7ab56}{sequence}};    }
+\DoxyCodeLine{135   \textcolor{keywordtype}{short}                 *S, *\mbox{\hyperlink{group__kl__neighborhood__mfe_ab9ee459ffbfb5d2c138a033516056cdc}{S1}};      }
+\DoxyCodeLine{136   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          \mbox{\hyperlink{group__kl__neighborhood__mfe_a621ed2ab02116f3f8f5e7120dec429eb}{maxD1}};        }
+\DoxyCodeLine{137   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          \mbox{\hyperlink{group__kl__neighborhood__mfe_a03f198a4abdb3b784486d2ba5c533aa4}{maxD2}};        }
+\DoxyCodeLine{140   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_aa11f5bcd8c4fe70a91c155c877c855d5}{mm1}};       }
+\DoxyCodeLine{141   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_a2eaa93316b6beb17531f0c078806036c}{mm2}};       }
+\DoxyCodeLine{143   \textcolor{keywordtype}{int}                   *\mbox{\hyperlink{group__kl__neighborhood__mfe_a1a20cb06b58b75d1a3dbdbc8bc60d0a7}{my\_iindx}};  }
+\DoxyCodeLine{145   \textcolor{keywordtype}{double}                temperature;}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_a536525b98c1b633d4c5f2da4f8d78c18}{referenceBPs1}}; }
+\DoxyCodeLine{148   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_aa7abf73c3114cb5f0dc90e702fa9dd0f}{referenceBPs2}}; }
+\DoxyCodeLine{149   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          *\mbox{\hyperlink{group__kl__neighborhood__mfe_af1106e1a592e2dccc92b3452340549e0}{bpdist}};        }
+\DoxyCodeLine{151   \textcolor{keywordtype}{short}                 *reference\_pt1;}
+\DoxyCodeLine{152   \textcolor{keywordtype}{short}                 *reference\_pt2;}
+\DoxyCodeLine{153   \textcolor{keywordtype}{int}                   circ;}
+\DoxyCodeLine{154   \textcolor{keywordtype}{int}                   dangles;}
+\DoxyCodeLine{155   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          seq\_length;}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157   \textcolor{keywordtype}{int}                   ***E\_F5;}
+\DoxyCodeLine{158   \textcolor{keywordtype}{int}                   ***E\_F3;}
+\DoxyCodeLine{159   \textcolor{keywordtype}{int}                   ***E\_C;}
+\DoxyCodeLine{160   \textcolor{keywordtype}{int}                   ***E\_M;}
+\DoxyCodeLine{161   \textcolor{keywordtype}{int}                   ***E\_M1;}
+\DoxyCodeLine{162   \textcolor{keywordtype}{int}                   ***E\_M2;}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164   \textcolor{keywordtype}{int}                   **E\_Fc;}
+\DoxyCodeLine{165   \textcolor{keywordtype}{int}                   **E\_FcH;}
+\DoxyCodeLine{166   \textcolor{keywordtype}{int}                   **E\_FcI;}
+\DoxyCodeLine{167   \textcolor{keywordtype}{int}                   **E\_FcM;}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169   \textcolor{keywordtype}{int}                   **l\_min\_values;}
+\DoxyCodeLine{170   \textcolor{keywordtype}{int}                   **l\_max\_values;}
+\DoxyCodeLine{171   \textcolor{keywordtype}{int}                   *k\_min\_values;}
+\DoxyCodeLine{172   \textcolor{keywordtype}{int}                   *k\_max\_values;}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174   \textcolor{keywordtype}{int}                   **l\_min\_values\_m;}
+\DoxyCodeLine{175   \textcolor{keywordtype}{int}                   **l\_max\_values\_m;}
+\DoxyCodeLine{176   \textcolor{keywordtype}{int}                   *k\_min\_values\_m;}
+\DoxyCodeLine{177   \textcolor{keywordtype}{int}                   *k\_max\_values\_m;}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179   \textcolor{keywordtype}{int}                   **l\_min\_values\_m1;}
+\DoxyCodeLine{180   \textcolor{keywordtype}{int}                   **l\_max\_values\_m1;}
+\DoxyCodeLine{181   \textcolor{keywordtype}{int}                   *k\_min\_values\_m1;}
+\DoxyCodeLine{182   \textcolor{keywordtype}{int}                   *k\_max\_values\_m1;}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   \textcolor{keywordtype}{int}                   **l\_min\_values\_f;}
+\DoxyCodeLine{185   \textcolor{keywordtype}{int}                   **l\_max\_values\_f;}
+\DoxyCodeLine{186   \textcolor{keywordtype}{int}                   *k\_min\_values\_f;}
+\DoxyCodeLine{187   \textcolor{keywordtype}{int}                   *k\_max\_values\_f;}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordtype}{int}                   **l\_min\_values\_f3;}
+\DoxyCodeLine{190   \textcolor{keywordtype}{int}                   **l\_max\_values\_f3;}
+\DoxyCodeLine{191   \textcolor{keywordtype}{int}                   *k\_min\_values\_f3;}
+\DoxyCodeLine{192   \textcolor{keywordtype}{int}                   *k\_max\_values\_f3;}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \textcolor{keywordtype}{int}                   **l\_min\_values\_m2;}
+\DoxyCodeLine{195   \textcolor{keywordtype}{int}                   **l\_max\_values\_m2;}
+\DoxyCodeLine{196   \textcolor{keywordtype}{int}                   *k\_min\_values\_m2;}
+\DoxyCodeLine{197   \textcolor{keywordtype}{int}                   *k\_max\_values\_m2;}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   \textcolor{keywordtype}{int}                   *l\_min\_values\_fc;}
+\DoxyCodeLine{200   \textcolor{keywordtype}{int}                   *l\_max\_values\_fc;}
+\DoxyCodeLine{201   \textcolor{keywordtype}{int}                   k\_min\_values\_fc;}
+\DoxyCodeLine{202   \textcolor{keywordtype}{int}                   k\_max\_values\_fc;}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204   \textcolor{keywordtype}{int}                   *l\_min\_values\_fcH;}
+\DoxyCodeLine{205   \textcolor{keywordtype}{int}                   *l\_max\_values\_fcH;}
+\DoxyCodeLine{206   \textcolor{keywordtype}{int}                   k\_min\_values\_fcH;}
+\DoxyCodeLine{207   \textcolor{keywordtype}{int}                   k\_max\_values\_fcH;}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209   \textcolor{keywordtype}{int}                   *l\_min\_values\_fcI;}
+\DoxyCodeLine{210   \textcolor{keywordtype}{int}                   *l\_max\_values\_fcI;}
+\DoxyCodeLine{211   \textcolor{keywordtype}{int}                   k\_min\_values\_fcI;}
+\DoxyCodeLine{212   \textcolor{keywordtype}{int}                   k\_max\_values\_fcI;}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214   \textcolor{keywordtype}{int}                   *l\_min\_values\_fcM;}
+\DoxyCodeLine{215   \textcolor{keywordtype}{int}                   *l\_max\_values\_fcM;}
+\DoxyCodeLine{216   \textcolor{keywordtype}{int}                   k\_min\_values\_fcM;}
+\DoxyCodeLine{217   \textcolor{keywordtype}{int}                   k\_max\_values\_fcM;}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219   \textcolor{comment}{/* auxilary arrays for remaining set of coarse graining (k,l) > (k\_max, l\_max) */}}
+\DoxyCodeLine{220   \textcolor{keywordtype}{int}                   *E\_F5\_rem;}
+\DoxyCodeLine{221   \textcolor{keywordtype}{int}                   *E\_F3\_rem;}
+\DoxyCodeLine{222   \textcolor{keywordtype}{int}                   *E\_C\_rem;}
+\DoxyCodeLine{223   \textcolor{keywordtype}{int}                   *E\_M\_rem;}
+\DoxyCodeLine{224   \textcolor{keywordtype}{int}                   *E\_M1\_rem;}
+\DoxyCodeLine{225   \textcolor{keywordtype}{int}                   *E\_M2\_rem;}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   \textcolor{keywordtype}{int}                   E\_Fc\_rem;}
+\DoxyCodeLine{228   \textcolor{keywordtype}{int}                   E\_FcH\_rem;}
+\DoxyCodeLine{229   \textcolor{keywordtype}{int}                   E\_FcI\_rem;}
+\DoxyCodeLine{230   \textcolor{keywordtype}{int}                   E\_FcM\_rem;}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#ifdef COUNT\_STATES}}
+\DoxyCodeLine{233   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}         ***N\_F5;}
+\DoxyCodeLine{234   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}         ***N\_C;}
+\DoxyCodeLine{235   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}         ***N\_M;}
+\DoxyCodeLine{236   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}         ***N\_M1;}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239   \mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *compatibility;}
+\DoxyCodeLine{240 \} \mbox{\hyperlink{group__kl__neighborhood__mfe_gad18b01ec62ac426567b9a235fe754548}{TwoDfold\_vars}};}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{260 DEPRECATED(\mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}} *}
+\DoxyCodeLine{261            \mbox{\hyperlink{group__kl__neighborhood__mfe_ga9dd36b619bffbbead5735ff5f0d91ee2}{get\_TwoDfold\_variables}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}  *seq,}
+\DoxyCodeLine{262                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure1,}
+\DoxyCodeLine{263                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char}  *structure2,}
+\DoxyCodeLine{264                                   \textcolor{keywordtype}{int}         \mbox{\hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ}}),}
+\DoxyCodeLine{265            \textcolor{stringliteral}{"{}Use the new API and corresponding functions vrna\_fold\_compound\_TwoD(), etc. instead"{}});}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{277 DEPRECATED(\textcolor{keywordtype}{void}}
+\DoxyCodeLine{278            \mbox{\hyperlink{group__kl__neighborhood__mfe_ga05bf4f31d216b1b160fd2d3d68e9b487}{destroy\_TwoDfold\_variables}}(\mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}} *our\_variables),}
+\DoxyCodeLine{279            \textcolor{stringliteral}{"{}Use the new API and vrna\_fold\_compound\_free() instead"{}});}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{306 DEPRECATED(TwoDfold\_solution *}
+\DoxyCodeLine{307            \mbox{\hyperlink{group__kl__neighborhood__mfe_ga29bf340cdee5d5294dd0215419b858d3}{TwoDfoldList}}(\mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}} *vars,}
+\DoxyCodeLine{308                         \textcolor{keywordtype}{int}           distance1,}
+\DoxyCodeLine{309                         \textcolor{keywordtype}{int}           distance2),}
+\DoxyCodeLine{310           \textcolor{stringliteral}{"{}Use the new API and vrna\_mfe\_TwoD() instead"{}});}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{332 DEPRECATED(\textcolor{keywordtype}{char} *\mbox{\hyperlink{group__kl__neighborhood__mfe_ga83816eb31ac4d0d7403354d1916495c0}{TwoDfold\_backtrack\_f5}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   j,}
+\DoxyCodeLine{333                                        \textcolor{keywordtype}{int}            k,}
+\DoxyCodeLine{334                                        \textcolor{keywordtype}{int}            l,}
+\DoxyCodeLine{335                                        \mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}}  *vars),}
+\DoxyCodeLine{336           \textcolor{stringliteral}{"{}Use the new API and vrna\_backtrack5\_TwoD() instead"{}});}
+\DoxyCodeLine{337 }
+\DoxyCodeLine{341 DEPRECATED(TwoDfold\_solution **TwoDfold(\mbox{\hyperlink{group__kl__neighborhood__mfe_structTwoDfold__vars}{TwoDfold\_vars}} *our\_variables,}
+\DoxyCodeLine{342                                         \textcolor{keywordtype}{int}           distance1,}
+\DoxyCodeLine{343                                         \textcolor{keywordtype}{int}           distance2),}
+\DoxyCodeLine{344           \textcolor{stringliteral}{"{}Use the new API and vrna\_mfe\_TwoD() instead"{}});}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

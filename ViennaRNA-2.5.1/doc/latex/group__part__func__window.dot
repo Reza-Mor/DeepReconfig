@@ -1,0 +1,13 @@
+digraph "Local (sliding window) Partition Function and Equilibrium Probabilities"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Local (sliding window)\l Partition Function and\l Equilibrium Probabilities",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Scanning version using a sliding window approach to compute equilibrium probabilities."];
+  Node3 [label="Deprecated Interface\l for Local (Sliding Window)\l Partition Function Computation",height=0.2,width=0.4,color="black",URL="$group__part__func__window__deprecated.html",tooltip=" "];
+  Node2 [label="Partition Function\l and Equilibrium Properties",height=0.2,width=0.4,color="black",URL="$group__pf__fold.html",tooltip="Compute the partition function to assess various equilibrium properties."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node1->Node2 [shape=plaintext, label="part_func_window.h", color="darkgreen", dir="none", style="dashed"];
+}

@@ -1,0 +1,41 @@
+\hypertarget{landscape_2walk_8h_source}{}\doxysection{walk.\+h}
+\label{landscape_2walk_8h_source}\index{ViennaRNA/landscape/walk.h@{ViennaRNA/landscape/walk.h}}
+\mbox{\hyperlink{landscape_2walk_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_WALK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_WALK\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{move_8h}{ViennaRNA/landscape/move.h}}>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define  VRNA\_PATH\_STEEPEST\_DESCENT 128}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define  VRNA\_PATH\_RANDOM           256}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define  VRNA\_PATH\_NO\_TRANSITION\_OUTPUT          512}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define VRNA\_PATH\_DEFAULT   (VRNA\_PATH\_STEEPEST\_DESCENT | VRNA\_MOVESET\_DEFAULT)}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{73 \mbox{\hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}} *}
+\DoxyCodeLine{74 \mbox{\hyperlink{group__paths__walk_gaef7afadc36933b80706de49fe36e7b94}{vrna\_path}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{75           \textcolor{keywordtype}{short}                 *pt,}
+\DoxyCodeLine{76           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          steps,}
+\DoxyCodeLine{77           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}          options);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{101 \mbox{\hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}} *}
+\DoxyCodeLine{102 \mbox{\hyperlink{group__paths__walk_ga9594d7424dbe301f0dd3f4900db0f05c}{vrna\_path\_gradient}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{103                    \textcolor{keywordtype}{short}                *pt,}
+\DoxyCodeLine{104                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         options);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{129 \mbox{\hyperlink{group__neighbors_structvrna__move__s}{vrna\_move\_t}} *}
+\DoxyCodeLine{130 \mbox{\hyperlink{group__paths__walk_ga98fdc3f5cfa36a12738c2ec1ce024570}{vrna\_path\_random}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}} *vc,}
+\DoxyCodeLine{131                  \textcolor{keywordtype}{short}                *pt,}
+\DoxyCodeLine{132                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         steps,}
+\DoxyCodeLine{133                  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}         options);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 }
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* VIENNA\_RNA\_PACKAGE\_WALK\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

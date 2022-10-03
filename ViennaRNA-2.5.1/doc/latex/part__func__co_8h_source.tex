@@ -1,0 +1,84 @@
+\hypertarget{part__func__co_8h_source}{}\doxysection{part\+\_\+func\+\_\+co.\+h}
+\label{part__func__co_8h_source}\index{ViennaRNA/part\_func\_co.h@{ViennaRNA/part\_func\_co.h}}
+\mbox{\hyperlink{part__func__co_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_CO\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PART\_FUNC\_CO\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifdef VRNA\_WARN\_DEPRECATED}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\# if defined(\_\_clang\_\_)}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated("{}"{}}, msg)))}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\# elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func \_\_attribute\_\_ ((deprecated(msg)))}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\# else}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#  define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\# endif}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\# define DEPRECATED(func, msg) func}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{datastructures_2basic_8h}{ViennaRNA/datastructures/basic.h}}>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{params_2basic_8h}{ViennaRNA/params/basic.h}}>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{part__func_8h}{ViennaRNA/part\_func.h}}>}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{equilibrium__probs_8h}{ViennaRNA/equilibrium\_probs.h}}>}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{concentrations_8h}{ViennaRNA/concentrations.h}}>}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{utils_2structures_8h}{ViennaRNA/utils/structures.h}}>}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{extern} \textcolor{keywordtype}{int}    \mbox{\hyperlink{group__pf__cofold_gaff27888c4088cc1f60fd59cbd589474c}{mirnatog}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{group__pf__cofold_gac2d1851a710a8561390861155ca988fe}{F\_monomer}}[2];}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#ifndef VRNA\_DISABLE\_BACKWARD\_COMPATIBILITY}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{comment}{/*}}
+\DoxyCodeLine{76 \textcolor{comment}{ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{77 \textcolor{comment}{ \# DEPRECATED FUNCTIONS                          \#}}
+\DoxyCodeLine{78 \textcolor{comment}{ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{79 \textcolor{comment}{ */}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{101 DEPRECATED(\mbox{\hyperlink{group__part__func__global_structvrna__dimer__pf__s}{vrna\_dimer\_pf\_t}} \mbox{\hyperlink{group__part__func__global__deprecated_gae5c1e7331718669bdae7a86de2be6184}{co\_pf\_fold}}(\textcolor{keywordtype}{char}  *sequence,}
+\DoxyCodeLine{102                                       \textcolor{keywordtype}{char}  *structure),}
+\DoxyCodeLine{103 \textcolor{stringliteral}{"{}Use vrna\_pf\_co\_fold() or vrna\_pf\_dimer() instead"{}});}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{126 DEPRECATED(\mbox{\hyperlink{group__part__func__global_structvrna__dimer__pf__s}{vrna\_dimer\_pf\_t}} \mbox{\hyperlink{group__part__func__global__deprecated_gaabfc6cb6d02b8f08ac4c92f4f5b125d9}{co\_pf\_fold\_par}}(\textcolor{keywordtype}{char}              *sequence,}
+\DoxyCodeLine{127                                           \textcolor{keywordtype}{char}              *structure,}
+\DoxyCodeLine{128                                           \mbox{\hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}}  *parameters,}
+\DoxyCodeLine{129                                           \textcolor{keywordtype}{int}               calculate\_bppm,}
+\DoxyCodeLine{130                                           \textcolor{keywordtype}{int}               is\_constrained),}
+\DoxyCodeLine{131 \textcolor{stringliteral}{"{}Use the new API and vrna\_pf\_dimer() instead"{}});}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{138 DEPRECATED(\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *\mbox{\hyperlink{part__func__co_8h_ab978ec3cc69b1082bcbbb016a26c00d0}{get\_plist}}(\mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *pl,}
+\DoxyCodeLine{139                                 \textcolor{keywordtype}{int}       length,}
+\DoxyCodeLine{140                                 \textcolor{keywordtype}{double}    cut\_off),}
+\DoxyCodeLine{141 \textcolor{stringliteral}{"{}Use vrna\_plist() and vrna\_plist\_from\_probs() instead"{}});}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{164 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__part__func__global__deprecated_ga94c19120130e66a667a10a3c8598550c}{compute\_probabilities}}(\textcolor{keywordtype}{double}    FAB,}
+\DoxyCodeLine{165                                       \textcolor{keywordtype}{double}    FEA,}
+\DoxyCodeLine{166                                       \textcolor{keywordtype}{double}    FEB,}
+\DoxyCodeLine{167                                       \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *prAB,}
+\DoxyCodeLine{168                                       \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *prA,}
+\DoxyCodeLine{169                                       \mbox{\hyperlink{group__struct__utils__plist_structvrna__elem__prob__s}{vrna\_ep\_t}} *prB,}
+\DoxyCodeLine{170                                       \textcolor{keywordtype}{int}       Alength),}
+\DoxyCodeLine{171 \textcolor{stringliteral}{"{}Use vrna\_pf\_dimer\_probs() instead"{}});}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{178 DEPRECATED(\textcolor{keywordtype}{void}   \mbox{\hyperlink{group__part__func__global__deprecated_gaa12dda9dd6179cdd22bcce87c0682c07}{init\_co\_pf\_fold}}(\textcolor{keywordtype}{int} length),}
+\DoxyCodeLine{179 \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{196 DEPRECATED(\mbox{\hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}} *\mbox{\hyperlink{group__part__func__global__deprecated_gaa06ab81cec7fe070bfe4e3c7e8a19afb}{export\_co\_bppm}}(\textcolor{keywordtype}{void}),}
+\DoxyCodeLine{197 \textcolor{stringliteral}{"{}Use the new API with vrna\_fold\_compound\_t instead"{}});}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{207 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__part__func__global__deprecated_gade3ce34ae8214811374b1d28a40dc247}{free\_co\_pf\_arrays}}(\textcolor{keywordtype}{void}),}
+\DoxyCodeLine{208 \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{222 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__part__func__global__deprecated_ga6e0f36c1f9b7d9dd4bfbad914c1119e5}{update\_co\_pf\_params}}(\textcolor{keywordtype}{int} length),}
+\DoxyCodeLine{223 \textcolor{stringliteral}{"{}This function is obsolete"{}});}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{246 DEPRECATED(\textcolor{keywordtype}{void} \mbox{\hyperlink{group__part__func__global__deprecated_ga75465d7e8793db68a434d83df9a2e794}{update\_co\_pf\_params\_par}}(\textcolor{keywordtype}{int}               length,}
+\DoxyCodeLine{247                                         \mbox{\hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t}}  *parameters),}
+\DoxyCodeLine{248 \textcolor{stringliteral}{"{}Use the new API with vrna\_fold\_compound\_t instead"{}});}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

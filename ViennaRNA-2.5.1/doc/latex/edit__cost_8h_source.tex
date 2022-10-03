@@ -1,0 +1,55 @@
+\hypertarget{edit__cost_8h_source}{}\doxysection{edit\+\_\+cost.\+h}
+\label{edit__cost_8h_source}\index{ViennaRNA/edit\_cost.h@{ViennaRNA/edit\_cost.h}}
+\mbox{\hyperlink{edit__cost_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PRIVATE static}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 PRIVATE \textcolor{keywordtype}{char}   sep    = \textcolor{charliteral}{':'};}
+\DoxyCodeLine{9 PRIVATE \textcolor{keywordtype}{char}  *coding = \textcolor{stringliteral}{"{}Null:U:P:H:B:I:M:S:E:R"{}};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define DIST\_INF 10000  }\textcolor{comment}{/* infinity */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} CostMatrix[10][10];}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 PRIVATE CostMatrix *EditCost;  \textcolor{comment}{/* will point to UsualCost or ShapiroCost */}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 PRIVATE CostMatrix  UsualCost =}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{/*    Null,       U,        P,        H,        B,        I,        M,        S,        E,        R     */}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22    \{        0,        1,        2,        2,        2,        2,        2,        1,        1, DIST\_INF\},   \textcolor{comment}{/* Null replaced */}}
+\DoxyCodeLine{23    \{        1,        0,        1, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* U    replaced */}}
+\DoxyCodeLine{24    \{        2,        1,        0, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* P    replaced */}}
+\DoxyCodeLine{25    \{        2, DIST\_INF, DIST\_INF,        0,        2,        2,        2, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* H    replaced */}}
+\DoxyCodeLine{26    \{        2, DIST\_INF, DIST\_INF,        2,        0,        1,        2, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* B    replaced */}}
+\DoxyCodeLine{27    \{        2, DIST\_INF, DIST\_INF,        2,        1,        0,        2, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* I    replaced */}}
+\DoxyCodeLine{28    \{        2, DIST\_INF, DIST\_INF,        2,        2,        2,        0, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* M    replaced */}}
+\DoxyCodeLine{29    \{        1, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* S    replaced */}}
+\DoxyCodeLine{30    \{        1, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0, DIST\_INF\},   \textcolor{comment}{/* E    replaced */}}
+\DoxyCodeLine{31    \{ DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0\},   \textcolor{comment}{/* R    replaced */}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 PRIVATE CostMatrix ShapiroCost =}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{/*    Null,       U,        P,        H,        B,        I,        M,        S,        E,        R     */}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41    \{        0,        1,        2,      100,        5,        5,       75,        5,        5, DIST\_INF\},   \textcolor{comment}{/* Null replaced */}}
+\DoxyCodeLine{42    \{        1,        0,        1, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* U    replaced */}}
+\DoxyCodeLine{43    \{        2,        1,        0, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* P    replaced */}}
+\DoxyCodeLine{44    \{      100, DIST\_INF, DIST\_INF,        0,        8,        8,        8, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* H    replaced */}}
+\DoxyCodeLine{45    \{        5, DIST\_INF, DIST\_INF,        8,        0,        3,        8, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* B    replaced */}}
+\DoxyCodeLine{46    \{        5, DIST\_INF, DIST\_INF,        8,        3,        0,        8, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* I    replaced */}}
+\DoxyCodeLine{47    \{       75, DIST\_INF, DIST\_INF,        8,        8,        8,        0, DIST\_INF, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* M    replaced */}}
+\DoxyCodeLine{48    \{        5, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0, DIST\_INF, DIST\_INF\},   \textcolor{comment}{/* S    replaced */}}
+\DoxyCodeLine{49    \{        5, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0, DIST\_INF\},   \textcolor{comment}{/* E    replaced */}}
+\DoxyCodeLine{50    \{ DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF, DIST\_INF,        0\},   \textcolor{comment}{/* R    replaced */}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+
+\end{DoxyCode}

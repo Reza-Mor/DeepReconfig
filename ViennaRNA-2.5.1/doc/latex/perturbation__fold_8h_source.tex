@@ -1,0 +1,47 @@
+\hypertarget{perturbation__fold_8h_source}{}\doxysection{perturbation\+\_\+fold.\+h}
+\label{perturbation__fold_8h_source}\index{ViennaRNA/perturbation\_fold.h@{ViennaRNA/perturbation\_fold.h}}
+\mbox{\hyperlink{perturbation__fold_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_PERTURBATION\_FOLD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_PERTURBATION\_FOLD\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fold__compound_8h}{ViennaRNA/fold\_compound.h}}>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define VRNA\_OBJECTIVE\_FUNCTION\_QUADRATIC 0}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define VRNA\_OBJECTIVE\_FUNCTION\_ABSOLUTE 1}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_DEFAULT 0}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_CONJUGATE\_FR 1}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_CONJUGATE\_PR 2}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_VECTOR\_BFGS 3}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_VECTOR\_BFGS2 4}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define VRNA\_MINIMIZER\_STEEPEST\_DESCENT 5}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{96 \textcolor{keyword}{typedef} void (*\mbox{\hyperlink{group__perturbation_gaa715397c7afd2d2955c315512a3d571a}{progress\_callback}})(\textcolor{keywordtype}{int}     iteration,}
+\DoxyCodeLine{97                                   \textcolor{keywordtype}{double}  score,}
+\DoxyCodeLine{98                                   \textcolor{keywordtype}{double}  *epsilon);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{139 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__perturbation_gaa124bdc20d88001c38ade590c4bcc3c4}{vrna\_sc\_minimize\_pertubation}}(\mbox{\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}}  *vc,}
+\DoxyCodeLine{140                                   \textcolor{keyword}{const} \textcolor{keywordtype}{double}          *q\_prob\_unpaired,}
+\DoxyCodeLine{141                                   \textcolor{keywordtype}{int}                   objective\_function,}
+\DoxyCodeLine{142                                   \textcolor{keywordtype}{double}                sigma\_squared,}
+\DoxyCodeLine{143                                   \textcolor{keywordtype}{double}                tau\_squared,}
+\DoxyCodeLine{144                                   \textcolor{keywordtype}{int}                   algorithm,}
+\DoxyCodeLine{145                                   \textcolor{keywordtype}{int}                   sample\_size,}
+\DoxyCodeLine{146                                   \textcolor{keywordtype}{double}                *epsilon,}
+\DoxyCodeLine{147                                   \textcolor{keywordtype}{double}                initialStepSize,}
+\DoxyCodeLine{148                                   \textcolor{keywordtype}{double}                minStepSize,}
+\DoxyCodeLine{149                                   \textcolor{keywordtype}{double}                minImprovement,}
+\DoxyCodeLine{150                                   \textcolor{keywordtype}{double}                minimizerTolerance,}
+\DoxyCodeLine{151                                   \mbox{\hyperlink{group__perturbation_gaa715397c7afd2d2955c315512a3d571a}{progress\_callback}}     callback);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

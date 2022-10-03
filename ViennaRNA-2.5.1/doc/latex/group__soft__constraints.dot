@@ -1,0 +1,10 @@
+digraph "Soft Constraints"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="Constraining the RNA\l Folding Grammar",height=0.2,width=0.4,color="black",URL="$group__constraints.html",tooltip="This module provides general functions that allow for an easy control of constrained secondary struct..."];
+  Node1 [label="Soft Constraints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Functions and data structures for secondary structure soft constraints."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+}

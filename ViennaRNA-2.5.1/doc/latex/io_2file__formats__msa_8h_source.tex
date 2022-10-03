@@ -1,0 +1,72 @@
+\hypertarget{io_2file__formats__msa_8h_source}{}\doxysection{file\+\_\+formats\+\_\+msa.\+h}
+\label{io_2file__formats__msa_8h_source}\index{ViennaRNA/io/file\_formats\_msa.h@{ViennaRNA/io/file\_formats\_msa.h}}
+\mbox{\hyperlink{io_2file__formats__msa_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VIENNA\_RNA\_PACKAGE\_FILE\_FORMATS\_MSA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VIENNA\_RNA\_PACKAGE\_FILE\_FORMATS\_MSA\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_CLUSTAL      1U}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_STOCKHOLM    2U}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_FASTA        4U}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_MAF          8U}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_MIS          16U}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_DEFAULT      ( \(\backslash\)}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{    VRNA\_FILE\_FORMAT\_MSA\_CLUSTAL \(\backslash\)}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{    | VRNA\_FILE\_FORMAT\_MSA\_STOCKHOLM \(\backslash\)}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{    | VRNA\_FILE\_FORMAT\_MSA\_FASTA \(\backslash\)}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{    | VRNA\_FILE\_FORMAT\_MSA\_MAF \(\backslash\)}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{    )}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_NOCHECK      4096U}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_UNKNOWN      8192U}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_APPEND       16384U}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_QUIET        32768U}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define VRNA\_FILE\_FORMAT\_MSA\_SILENT       65536U}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{145 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{146 \mbox{\hyperlink{group__file__formats__msa_gad02d5d12bda54611c915a1019323b7be}{vrna\_file\_msa\_read}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}   *filename,}
+\DoxyCodeLine{147                    \textcolor{keywordtype}{char}         ***names,}
+\DoxyCodeLine{148                    \textcolor{keywordtype}{char}         ***aln,}
+\DoxyCodeLine{149                    \textcolor{keywordtype}{char}         **\textcolor{keywordtype}{id},}
+\DoxyCodeLine{150                    \textcolor{keywordtype}{char}         **structure,}
+\DoxyCodeLine{151                    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} options);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{210 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{211 \mbox{\hyperlink{group__file__formats__msa_gad4203a438622b2df7bc2f16578d54799}{vrna\_file\_msa\_read\_record}}(FILE          *fp,}
+\DoxyCodeLine{212                           \textcolor{keywordtype}{char}          ***names,}
+\DoxyCodeLine{213                           \textcolor{keywordtype}{char}          ***aln,}
+\DoxyCodeLine{214                           \textcolor{keywordtype}{char}          **\textcolor{keywordtype}{id},}
+\DoxyCodeLine{215                           \textcolor{keywordtype}{char}          **structure,}
+\DoxyCodeLine{216                           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 }
+\DoxyCodeLine{244 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}}
+\DoxyCodeLine{245 \mbox{\hyperlink{group__file__formats__msa_gade4fa8136ebb2d0f7eb3f8b59a8658e3}{vrna\_file\_msa\_detect\_format}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *filename,}
+\DoxyCodeLine{246                             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 }
+\DoxyCodeLine{266 \textcolor{keywordtype}{int}}
+\DoxyCodeLine{267 \mbox{\hyperlink{group__file__formats__msa_gaccca55b71d34def88e18ed9a51ccb2bf}{vrna\_file\_msa\_write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}    *filename,}
+\DoxyCodeLine{268                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    **names,}
+\DoxyCodeLine{269                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    **aln,}
+\DoxyCodeLine{270                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *\textcolor{keywordtype}{id},}
+\DoxyCodeLine{271                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *structure,}
+\DoxyCodeLine{272                     \textcolor{keyword}{const} \textcolor{keywordtype}{char}    *source,}
+\DoxyCodeLine{273                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}  options);}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275 }
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
