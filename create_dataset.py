@@ -64,15 +64,19 @@ outputs a pkl dataset consisting of the RNA strand and the bipartite graph made 
 The input file must be of json format outlined in https://rnacentral.org/ (download any of the datasets in json format)
 There are two secondary structure created per RNA strand, see RNAsubopt -p https://www.tbi.univie.ac.at/RNA/RNAsubopt.1.html)
 """
-def create_dataset(input_file, output_file, data_set_size, max_string_length, max_graph_size):
+def create_dataset(input_file, output_file, dataset_size, max_string_length, max_graph_size):
+    print("Creating a dataset of {}by{} graphs (RNA string length: {})".format(max_graph_size, max_graph_size, max_string_length))
     i = 0
     data = []
+    graph_size_avg = 0
     encoding = 'utf-8'
     db = shelve.open(output_file)
     # write meta data
-    db['dataset_size'] = data_set_size
+    db['dataset_size'] = dataset_size
+    db['dataset_name'] = input_file 
+    db['max_string_length'] = max_string_length
     # we store the biggest graph size in case we use vairable sized graphs
-    db['max_graph_size']= max_graph_size
+    db['max_graph_size']= max_graph_size 
     with open(input_file) as f:
         datas = json.load(f)
         for data in tqdm(datas):
@@ -84,6 +88,7 @@ def create_dataset(input_file, output_file, data_set_size, max_string_length, ma
             command = "echo '{}' | RNAsubopt -p 2".format(sequence)
             output = subprocess.check_output(command, shell=True).decode(encoding).split('\n')
             G , u, v = create_bipartite_graph(output[1], output[2], max_graph_size)
+            graph_size_avg += v
             dict = {
                 "sequence": output[0],
                 "graph": G,
@@ -92,11 +97,14 @@ def create_dataset(input_file, output_file, data_set_size, max_string_length, ma
                 }
             #pickle.dump(dict, out_file)
             db[str(i)] = dict
-            if i >= data_set_size - 1:
+            if i >= dataset_size - 1:
                 break
             i += 1
-    print("dataset of size {} created".format(i + 1))
+    db['avg_v_size'] = graph_size_avg/(i+1)
+    print('avg_v_size: ', graph_size_avg/(i+1))
+    print("Dataset of size {} created".format(i + 1))
     #out_file.close()
+    f.close()
     db.close()
 
 
@@ -111,18 +119,18 @@ if __name__ == "__main__":
         help="The input file must be of json format outlined in https://rnacentral.org/ (download any of the datasets in json format)",
     )
     parser.add_argument(
-        "--data_set_size", type=int, default=30, help="The dataset size (limited by the number of data points in input_file"
+        "--dataset_size", type=int, default=1, help="The dataset size (limited by the number of data points in input_file"
     )
     parser.add_argument(
-        "--max_string_len", type=int, default=50, help="The maximum RNA string length (get RNA[:max_string_len], throw the extra '(' brackets away)"
+        "--max_string_len", type=int, default=350, help="The maximum RNA string length (get RNA[:max_string_len], throw the extra '(' brackets away)"
     )
     parser.add_argument(
-        "--max_graph_size", type=int, default=5, help="The maximum bipartite graph size (if inputted n, will get n by n graph). Used for testing"
+        "--max_graph_size", type=int, default=20, help="The maximum bipartite graph size (if inputted n, will get n by n graph)."
     )
     parser.add_argument(
         "--output_file",
         type=str,
-        default="datasets/expert_dbCRW_AND_entry_typeSequence_bonds_5by5",
+        default="datasets/dataset1_20by20",
         help="the file name to store the dataset",
     )
     args = parser.parse_args()
@@ -131,4 +139,4 @@ if __name__ == "__main__":
         print("WARNING: Computing the secondary structure grows exponentially with both sequence length and energy range")
         print("Computing a pair of secondary structure for a single string of length 1000 can take up to 10 seconds")
 
-    create_dataset(args.input_file, args.output_file, args.data_set_size, args.max_string_len, args.max_graph_size)
+    create_dataset(args.input_file, args.output_file, args.dataset_size, args.max_string_len, args.max_graph_size)

@@ -6,7 +6,7 @@ import math
 from networkx.algorithms import bipartite
 import shelve
 
-class Rnaenv_v1 (gym.Env):
+class Rnaenv_v3 (gym.Env):
 
     def __init__ (self, dataset, max_episode_steps = np.inf):
         self.seed = 0
@@ -132,8 +132,8 @@ class Rnaenv_v1 (gym.Env):
         self.state["energy_dist"][1] = self.curr_energy - self.k
 
         # make the "energy unavailable nodes (deselected nodes due to low energy)" available if the energy is above threshold
-        if self.curr_energy >= self.k and self.curr_energy -1 < self.k and type(self.selected_indexes_prev) != type(None):
-            self.state["action_mask"][self.selected_indexes_prev] = 1 
+        #if self.curr_energy >= self.k and self.curr_energy -1 < self.k and type(self.selected_indexes_prev) != type(None):
+        #    self.state["action_mask"][self.selected_indexes_prev] = 1 
 
         # update the state
         self.state["selected_nodes"][action] = 0 if self.state["selected_nodes"][action] == 1 else 1
@@ -164,11 +164,9 @@ class Rnaenv_v1 (gym.Env):
         else:
             self.state["action_mask"][ngbrs_index] = 1
 
-        # if energy < k, cannot deselect any selected nodes
+        # if energy < k, get a negative reward
         if self.curr_energy < self.k:
-            selected_indexes = np.where(self.state["selected_nodes"] == 1)[0]
-            self.selected_indexes_prev =  selected_indexes.copy()
-            self.state["action_mask"][selected_indexes] = 0
+            self.reward -= self.dim
             #print('hit low energy')
 
     """

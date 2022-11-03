@@ -4,13 +4,17 @@
 import gym
 import envs
 import numpy as np
+from envs.gym_envs.env import Rnaenv_v1
+from envs.gym_envs.env2 import Rnaenv_v2
+from envs.gym_envs.env3 import Rnaenv_v3
+from envs.gym_envs.env4 import Rnaenv_v4
 
 def run_one_episode (env, verbose=False):
     env.reset()
     sum_reward = 0
-
+    
     #for i in range(env.MAX_STEPS): #should be max_steps
-    for i in range(3):
+    for i in range(10):
         #action = env.action_space.sample()
 
         #pick a random action from uniform distribution (after masking)
@@ -23,7 +27,11 @@ def run_one_episode (env, verbose=False):
         sum_reward += reward
 
         if verbose:
-            env.render()
+            print('state: ', state)
+            print('reward: ', reward)
+            #env.render()
+            #print('diff: ', abs(state['adj_matrix']- prev_state))
+            #prev_state = state['adj_matrix']
 
         if done:
             if verbose:
@@ -41,7 +49,9 @@ def main ():
     # first, create the custom environment and run it for one episode
     #env = gym.make("example-v0")
     #kwargs = {'dataset':'datasets.expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
-    env = gym.make("rnaenv-v0")
+    #env = gym.make("rnaenv-v0")
+    dataset = 'datasets/expert_dbCRW_AND_entry_typeSequence_10by10'
+    env = Rnaenv_v1(dataset)
     sum_reward = run_one_episode(env, verbose=True)
 
     # next, calculate a baseline of rewards based on random actions
