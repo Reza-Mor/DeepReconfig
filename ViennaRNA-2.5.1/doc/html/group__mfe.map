@@ -1,6 +1,0 @@
-<map id="Minimum Free Energy (MFE) Algorithms" name="Minimum Free Energy (MFE) Algorithms">
-<area shape="rect" id="node1" title="Predicting the Minimum Free Energy (MFE) and a corresponding (consensus) secondary structure." alt="" coords="5,66,156,106"/>
-<area shape="rect" id="node2" href="$group__mfe__backtracking.html" title="Backtracking related interfaces." alt="" coords="287,5,479,31"/>
-<area shape="rect" id="node3" href="$group__mfe__global.html" title="Variations of the global Minimum Free Energy (MFE) prediction algorithm." alt="" coords="306,64,459,89"/>
-<area shape="rect" id="node4" href="$group__mfe__window.html" title="Variations of the local (sliding window) Minimum Free Energy (MFE) prediction algorithm." alt="" coords="307,125,458,165"/>
-</map>
