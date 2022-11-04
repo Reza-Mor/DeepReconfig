@@ -1,5 +1,0 @@
-<map id="Local (sliding window) MFE Prediction" name="Local (sliding window) MFE Prediction">
-<area shape="rect" id="node1" href="$group__mfe.html" title="Predicting the Minimum Free Energy (MFE) and a corresponding (consensus) secondary structure." alt="" coords="5,13,156,53"/>
-<area shape="rect" id="node2" title="Variations of the local (sliding window) Minimum Free Energy (MFE) prediction algorithm." alt="" coords="287,13,437,53"/>
-<area shape="rect" id="node3" href="$group__mfe__window__deprecated.html" title=" " alt="" coords="487,5,665,60"/>
-</map>

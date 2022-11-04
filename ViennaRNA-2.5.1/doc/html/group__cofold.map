@@ -1,6 +1,0 @@
-<map id="RNA&#45;RNA Interaction" name="RNA&#45;RNA Interaction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,153,107"/>
-<area shape="rect" id="node2" href="$group__pf__cofold.html" title="Partition Function Cofolding." alt="" coords="321,5,455,60"/>
-<area shape="rect" id="node3" href="$group__pf__fold.html" title="Compute the partition function to assess various equilibrium properties." alt="" coords="299,97,477,137"/>
-<area shape="rect" id="node4" href="$group__up__cofold.html" title="RNA&#45;RNA interaction as a stepwise process." alt="" coords="299,161,477,230"/>
-</map>
