@@ -10,7 +10,7 @@ from ray.tune.registry import register_env
 import gym
 import os
 import ray
-from ray import air, tune
+#from ray import air, tune
 import ray.rllib.agents.ppo as ppo
 from ray.rllib.agents.ppo import PPOTrainer
 from ray import tune
@@ -25,7 +25,7 @@ tf, tf_original, tf_version = try_import_tf(error = True)
 dic = {'Rnaenv_v1': Rnaenv_v1, 'Rnaenv_v2': Rnaenv_v2, 'Rnaenv_v3': Rnaenv_v3, 'Rnaenv_v4': Rnaenv_v4, 'Rnaenv_v5': Rnaenv_v5}
 
 # check models.py for model specifications
-model_configs= {'ff1': MODEL_CONFIG_1, 'f22': MODEL_CONFIG_2}
+model_configs= {'ff1': MODEL_CONFIG_1, 'ff2': MODEL_CONFIG_2}
 
 def main (dataset, environment, model_config, n_iter, gamma):
     # init directory in which to save checkpoints
