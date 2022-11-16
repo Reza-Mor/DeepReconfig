@@ -24,3 +24,8 @@ register(
     kwargs={'dataset': 'datasets/expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
 )
 
+register(
+    id="rnaenv-v5",
+    entry_point="envs.gym_envs:Rnaenv_v5",
+    kwargs={'dataset': 'datasets/expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
+)

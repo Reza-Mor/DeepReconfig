@@ -4,8 +4,8 @@ import numpy as np
 from ray.rllib.agents.dqn import dqn
 from ray.rllib.models.tf.tf_modelv2 import TFModelV2
 from ray.rllib.policy.sample_batch import SampleBatch
-from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
-from ray.rllib.models.torch.fcnet import FullyConnectedNetwork as TorchFC
+#from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
+#from ray.rllib.models.torch.fcnet import FullyConnectedNetwork as TorchFC
 from ray.rllib.models.tf.misc import normc_initializer
 from ray.rllib.models.modelv2 import restore_original_dimensions
 from ray.rllib.utils.framework import try_import_tf, try_import_torch
@@ -19,7 +19,7 @@ MODEL_CONFIG_1 = {"custom_model": "CustomModel",
                        
 
 MODEL_CONFIG_2 = {"custom_model": "CustomModel", 
-                       "custom_model_config": {"fcnet_hiddens": [64, 64, 64, 64], "fcnet_activation": "relu", "no_final_linear": False}}
+                       "custom_model_config": {"fcnet_hiddens": [64, 32, 32, 32], "fcnet_activation": "relu", "no_final_linear": False}}
 
 class ActionMaskModel(TFModelV2):
     """Model that handles simple discrete action masking.
@@ -52,7 +52,6 @@ class ActionMaskModel(TFModelV2):
         orig_obs_flat = input_dict["obs_flat"]
         orig_obs = input_dict["obs"]
         action_mask = orig_obs["action_mask"]
-
 
         # Compute the unmasked logits.
         logits, _ = self.internal_model({"obs": orig_obs_flat})

@@ -5,6 +5,7 @@ from envs.gym_envs.env import Rnaenv_v1
 from envs.gym_envs.env2 import Rnaenv_v2
 from envs.gym_envs.env3 import Rnaenv_v3
 from envs.gym_envs.env4 import Rnaenv_v4
+from envs.gym_envs.env5 import Rnaenv_v5
 from ray.tune.registry import register_env
 import gym
 import os
@@ -21,7 +22,7 @@ from models import ActionMaskModel, MODEL_CONFIG_1, MODEL_CONFIG_2
 from ray.rllib.utils import try_import_tf
 tf, tf_original, tf_version = try_import_tf(error = True)
 
-dic = {'Rnaenv_v1': Rnaenv_v1, 'Rnaenv_v2': Rnaenv_v2, 'Rnaenv_v3': Rnaenv_v3, 'Rnaenv_v4': Rnaenv_v4}
+dic = {'Rnaenv_v1': Rnaenv_v1, 'Rnaenv_v2': Rnaenv_v2, 'Rnaenv_v3': Rnaenv_v3, 'Rnaenv_v4': Rnaenv_v4, 'Rnaenv_v5': Rnaenv_v5}
 
 # check models.py for model specifications
 model_configs= {'ff1': MODEL_CONFIG_1, 'f22': MODEL_CONFIG_2}
@@ -29,7 +30,7 @@ model_configs= {'ff1': MODEL_CONFIG_1, 'f22': MODEL_CONFIG_2}
 def main (dataset, environment, model_config, n_iter, gamma):
     # init directory in which to save checkpoints
     ckpt_dir = "{}_{}_{}".format(dataset, environment, model_config)
-    chkpt_root = "tmp/exa/{}".format(dataset)
+    chkpt_root = "tmp/exa/{}".format(ckpt_dir)
     shutil.rmtree(chkpt_root, ignore_errors=True, onerror=None)
 
     # init directory in which to log results
@@ -53,7 +54,8 @@ def main (dataset, environment, model_config, n_iter, gamma):
     # configure the environment and create agent
     config = ppo.DEFAULT_CONFIG.copy()
     #config = dqn.DEFAULT_CONFIG.copy()
-    config["num_workers"] = 5
+    config["num_workers"] = 3
+    config["num_gpus"] = len(tf.config.list_physical_devices('GPU'))
     config["gamma"] = gamma
     config["model"] = model_configs[model_config]
    
@@ -118,7 +120,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--environment",
         type=str,
-        default='Rnaenv_v2',
+        default='Rnaenv_v5',
         help="the environment to train the model on",
     )
     parser.add_argument(
