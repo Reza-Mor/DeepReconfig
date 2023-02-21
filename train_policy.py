@@ -11,7 +11,7 @@ from ray.tune.registry import register_env
 import gym
 import os
 import ray
-from ray import air, tune
+#from ray import air, tune
 import ray.rllib.agents.ppo as ppo
 from ray.rllib.agents.ppo import PPOTrainer
 from ray import tune
