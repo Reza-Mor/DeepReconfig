@@ -8,6 +8,8 @@ from envs.gym_envs.env import Rnaenv_v1
 from envs.gym_envs.env2 import Rnaenv_v2
 from envs.gym_envs.env3 import Rnaenv_v3
 from envs.gym_envs.env4 import Rnaenv_v4
+from envs.gym_envs.env5 import Rnaenv_v5
+from envs.gym_envs.env6 import Flows_v1
 
 def run_one_episode (env, verbose=False):
     env.reset()
@@ -18,7 +20,8 @@ def run_one_episode (env, verbose=False):
         #action = env.action_space.sample()
 
         #pick a random action from uniform distribution (after masking)
-        action = np.argmax(env.state["action_mask"] * np.random.uniform(low=0.0, high=1.0, size=len(env.state["action_mask"])))
+        #action = np.argmax(env.state["action_mask"] * np.random.uniform(low=0.0, high=1.0, size=len(env.state["action_mask"])))
+        action = np.argmax(np.random.uniform(low=0.0, high=1.0, size=len(env.state["selected_flows"])))
 
         if verbose:
             print("action:", action)
@@ -50,8 +53,9 @@ def main ():
     #env = gym.make("example-v0")
     #kwargs = {'dataset':'datasets.expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
     #env = gym.make("rnaenv-v0")
-    dataset = 'datasets/expert_dbCRW_AND_entry_typeSequence_10by10'
-    env = Rnaenv_v1(dataset)
+    dataset = 'datasets/flows/dataset_1'
+    #env = Rnaenv_v5(dataset)
+    env = Flows_v1(dataset)
     sum_reward = run_one_episode(env, verbose=True)
 
     # next, calculate a baseline of rewards based on random actions

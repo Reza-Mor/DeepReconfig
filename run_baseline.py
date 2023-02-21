@@ -1,4 +1,4 @@
-from xmlrpc.client import boolean
+#from xmlrpc.client import boolean
 import networkx as nx
 from baseline_algorithms.general_bipartite import realize
 from networkx.algorithms import bipartite
@@ -63,7 +63,6 @@ def main(dataset, write_k):
             if write_k:
                 dic['k'] = u - k
                 sh[str(i)] = dic
-                
 
         except EOFError:
             break
@@ -108,7 +107,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--write_k",
-        type=boolean,
+        type=bool,
         default=True,
         help="write the k value obtained by the baseline m-MIS algorithm for each graph with key 'k'",
     )

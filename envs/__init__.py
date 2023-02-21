@@ -29,3 +29,9 @@ register(
     entry_point="envs.gym_envs:Rnaenv_v5",
     kwargs={'dataset': 'datasets/expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
 )
+
+register(
+    id="flows-v1",
+    entry_point="envs.gym_envs:Flows_v1",
+    kwargs={'dataset': 'datasets/flows/dataset_1'}
+)

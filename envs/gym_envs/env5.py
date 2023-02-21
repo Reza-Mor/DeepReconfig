@@ -34,7 +34,6 @@ class Rnaenv_v5 (gym.Env):
 
         self.reset()
 
-
     def reset (self):
         """
         Reset the state of the environment and returns an initial observation based on the 

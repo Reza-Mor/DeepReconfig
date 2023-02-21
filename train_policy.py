@@ -6,6 +6,7 @@ from envs.gym_envs.env2 import Rnaenv_v2
 from envs.gym_envs.env3 import Rnaenv_v3
 from envs.gym_envs.env4 import Rnaenv_v4
 from envs.gym_envs.env5 import Rnaenv_v5
+from envs.gym_envs.env6 import Flows_v1
 from ray.tune.registry import register_env
 import gym
 import os
@@ -18,14 +19,31 @@ from ray.rllib.models import ModelCatalog
 import shutil
 import shelve
 import argparse
-from models import ActionMaskModel, MODEL_CONFIG_1, MODEL_CONFIG_2
+from models import FeedForward, GAT, MODEL_CONFIG_1, MODEL_CONFIG_2, MODEL_CONFIG_3
 from ray.rllib.utils import try_import_tf
 tf, tf_original, tf_version = try_import_tf(error = True)
 
-dic = {'Rnaenv_v1': Rnaenv_v1, 'Rnaenv_v2': Rnaenv_v2, 'Rnaenv_v3': Rnaenv_v3, 'Rnaenv_v4': Rnaenv_v4, 'Rnaenv_v5': Rnaenv_v5}
+dic = {'Rnaenv_v1': Rnaenv_v1, 'Rnaenv_v2': Rnaenv_v2, 'Rnaenv_v3': Rnaenv_v3, 
+'Rnaenv_v4': Rnaenv_v4, 'Rnaenv_v5': Rnaenv_v5, 'Flows_v1': Flows_v1}
 
 # check models.py for model specifications
-model_configs= {'ff1': MODEL_CONFIG_1, 'f22': MODEL_CONFIG_2}
+model_configs= {'ff1': MODEL_CONFIG_1, 'ff2': MODEL_CONFIG_2, 'gat': MODEL_CONFIG_3}
+
+def get_dataset_info(environment, dataset_path):
+    if environment in ['Rnaenv_v1', 'Rnaenv_v2', 'Rnaenv_v3', 'Rnaenv_v4', 'Rnaenv_v5']:
+        db = shelve.open(dataset_path)
+        dataset_size, max_graph_size, max_string_length =  db['non_zero_k'], db['max_graph_size'], db['max_string_length']
+        max_reward =  max_graph_size * 2
+        db.close()
+        print("Training a model on a dataset of size {} of {}by{} graphs (RNA string length: {})".format(dataset_size, max_graph_size, max_graph_size, max_string_length))
+    
+    elif environment in ['Flows_v1']:
+        db = shelve.open(dataset_path)
+        num_flows = db['num_flows']
+        print("Traning a model on a dataset with {} flows".format(num_flows))
+        max_reward = num_flows
+
+    return max_reward
 
 def main (dataset, environment, model_config, n_iter, gamma):
     # init directory in which to save checkpoints
@@ -41,12 +59,14 @@ def main (dataset, environment, model_config, n_iter, gamma):
 
     # start Ray -- add `local_mode=True` here for debugging
     ray.init(ignore_reinit_error=True)
-
     print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
-
-    # register the model for Rllib usage
-    ModelCatalog.register_custom_model("CustomModel", ActionMaskModel)
     
+    # register the model for Rllib usage
+    if model_config == 'gat':
+        ModelCatalog.register_custom_model("GAT", GAT)
+    else:
+        ModelCatalog.register_custom_model("FeedForward", FeedForward)
+
     # register the custom environment
     select_env = environment
     register_env(select_env, lambda config: dic[environment](dataset_path))
@@ -54,7 +74,8 @@ def main (dataset, environment, model_config, n_iter, gamma):
     # configure the environment and create agent
     config = ppo.DEFAULT_CONFIG.copy()
     #config = dqn.DEFAULT_CONFIG.copy()
-    config["num_workers"] = 3
+    config["num_workers"] = 1 #3
+    config["disable_env_checking"]=True
     config["num_gpus"] = len(tf.config.list_physical_devices('GPU'))
     config["gamma"] = gamma
     config["model"] = model_configs[model_config]
@@ -63,16 +84,11 @@ def main (dataset, environment, model_config, n_iter, gamma):
     agent = ppo.PPOTrainer(config, env=select_env)
     #agent = dqn.DQNTrainer(config=config, env=select_env)
 
+    max_reward = get_dataset_info(environment, dataset_path)
+
     status = "{:2d} reward {:6.2f}/{:6.2f}/{:6.2f} len {:4.2f}"
     n = 0
 
-    # train a policy with RLlib using PPO
-    db = shelve.open(dataset_path)
-    dataset_size, max_graph_size, max_string_length =  db['non_zero_k'], db['max_graph_size'], db['max_string_length']
-    max_reward =  max_graph_size * 2
-    db.close()
-    
-    print("Training a model on a dataset of size {} of {}by{} graphs (RNA string length: {})".format(dataset_size, max_graph_size, max_graph_size, max_string_length))
     while n < n_iter:
         result = agent.train()
         if n % 5 == 0:
@@ -87,7 +103,7 @@ def main (dataset, environment, model_config, n_iter, gamma):
                 result["episode_len_mean"]
                 ))
 
-        if result["episode_reward_mean"] > max_reward - 0.1:
+        if result["episode_reward_mean"] > max_reward - 0.01:
             break
 
     # examine the trained policy
@@ -127,7 +143,7 @@ if __name__ == "__main__":
         "--model_config",
         type=str,
         default='ff1',
-        help="the model configurations as set in models.py. model_config must be one of ff1, ff2",
+        help="the model configurations as set in models.py. model_config must be one of ff1, ff2, gat",
     )
     parser.add_argument(
         "--n_iter",
@@ -146,7 +162,7 @@ if __name__ == "__main__":
     if args.dataset == None:
         print('Must specify a file to read from')
     if not args.environment in dic:
-        print('Environment must be one of Rnaenv_v1, Rnaenv_v2, Rnaenv_v3, Rnaenv_v4 ')
+        print('Environment must be defined- check the env dic')
     if not args.model_config in model_configs:
         print('Model_config must be specified in model_configs')
     if args.gamma > 1 or args.gamma < 0:

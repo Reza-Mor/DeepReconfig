@@ -13,8 +13,8 @@ class Rnaenv_v2 (gym.Env):
         self.dataset = dataset
         self.max_episode_steps = 100 #max_episode_steps
         self.set_seed()
-        self.set_n()
-        #self.n = 10
+        #self.set_n()
+        self.n = 10
         # the action space is a set of discrete values (each node is a number)
         self.action_space = Discrete(self.n//2)
 
@@ -42,7 +42,8 @@ class Rnaenv_v2 (gym.Env):
         observation (object): the initial observation of the space.
         """
         self.dim = self.n//2
-        adj_matrix = self.get_graph()
+        #adj_matrix = self.get_graph()
+        adj_matrix = self.get_graph_test()
         selected_left_nodes = np.ones(self.dim, dtype=np.int32)
         selected_right_nodes = np.zeros(self.dim, dtype=np.int32)
         action_mask = np.ones(self.dim, dtype=np.int32)

@@ -29,12 +29,12 @@ if __name__ == "__main__":
     input_file = 'datasets/expert_dbCRW_AND_entry_typeSequence.json'
     # ideally we would want the string len to be large enough so the
     # number of bounds formed is larger than the max_graph_size
-    max_string_lens = [250] #[80, 150, 200, 350, 380]
+    max_string_lens = [350] #[80, 150, 200, 350, 380]
     # max_graph_sizes denotes the number of nodes on one side of a bipirtite graph
-    max_graph_sizes = [20] #[10, 25, 50, 85, 100]
+    max_graph_sizes = [50] #[10, 25, 50, 85, 100]
     dataset_size = 800
 
-    dataset_files = ['datasets/dataset1_20by20']
+    dataset_files = ['datasets/dataset1_50by50']
     # COMMENT OUT IF DON'T WANT TO MAKE DATASETS
     generate_datasets(input_file, max_string_lens, max_graph_sizes, dataset_size)
 
