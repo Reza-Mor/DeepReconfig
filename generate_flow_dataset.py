@@ -120,27 +120,26 @@ def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start,
             max_flow_size = max(min_flow_size, max_flow_size//2)
     
     link_capacity = sum(edges.values())
+    #print(edges)
     while capacity_used/link_capacity > avg_utilization:
         f = init_flows.pop(flow_id-1)
         path = f[:-1]
         flow_size = f[-1]
         flow_id -= 1
-        capacity_used -= flow_size
+        capacity_used -= flow_size * len(path)
         for i in range(1, len(path)):
             edge = path[i-1], path[i]
             G_temp[edge]  = G_temp[edge] + flow_size
 
-    print('link utilization: {}'.format(capacity_used/link_capacity))
-    print('total network capacity: {}, link_capacity : {}'.format(network_capacity, link_capacity))
-    print('number of flows in each configuration: {}'.format(flow_id))
-    print('longest flow length: ', longest_flow_length)
+    #print('average link utilization: {}'.format(capacity_used/link_capacity))
+    #print('total network capacity: {}, link_capacity : {}'.format(network_capacity, link_capacity))
+    #print('number of flows in each configuration: {}'.format(flow_id))
+    #print('longest flow length: ', longest_flow_length)
 
     G_induced = np.where(G- G_temp == 0, 0, G_temp)
+    G_induced2 = np.where(G- G_temp == G, 0, G)
 
-    print("G: ", G)
-    print("G_induced: ", G_induced)
-    print("init_flows: ", init_flows)
-    db['config_0'] = init_flows , G_induced
+    db['config_0'] = init_flows , G_induced, G_induced2
 
     return init_flows
     
@@ -174,8 +173,9 @@ def generate_configurations(G, init_flows, num_configs):
                 print('could not find a target flow path for flow {}'.format(flow))
         
         G_induced = np.where(G- G_temp == 0, 0, G_temp)
+        G_induced2 = np.where(G- G_temp == G, 0, G)
 
-        db['config_{}'.format(j)] = target_flows , G_induced
+        db['config_{}'.format(j)] = target_flows , G_induced, G_induced2
 
 def compute_distance(dict1, dict2):
     same_flows = 0
@@ -194,37 +194,77 @@ if __name__ == "__main__":
         default="datasets/flows/dataset_1",
         help="the file name to store the dataset",
     )
+    parser.add_argument(
+        "--min_link_capacity",
+        type=int,
+        default=3,
+        help="",
+    )
+    parser.add_argument(
+        "--max_link_capacity",
+        type=int,
+        default=6,
+        help="",
+    )
+    parser.add_argument(
+        "--min_flow_size",
+        type=int,
+        default=1,
+        help="",
+    )
+    parser.add_argument(
+        "--max_flow_size",
+        type=int,
+        default=1,
+        help="",
+    )
+    parser.add_argument(
+        "--graph_size",
+        type=int,
+        default=15,
+        help="number of nodes in the graph",
+    )
+    parser.add_argument(
+        "--num_configs",
+        type=int,
+        default=5,
+        help="number of flow migration configurations to generate",
+    )
+    parser.add_argument(
+        "--avg_link_utilization",
+        type=float,
+        default=0.6,
+        help="avrage link utilization in the configurations",
+    )
     args = parser.parse_args()
+    
+    assert args.max_flow_size <= args.min_link_capacity
+    assert 0 < args.avg_link_utilization < 1
 
-    min_capacity = 10
-    max_capacity = 10
-    min_flow_size = 1
-    max_flow_size = 5
-    er_param = 0.7
-    graph_size = 150
-    num_configs = 2
+    er_param = 0.3
     seed = 1
-    avg_utilization = 0.8
-
-    G = generate_graph(max_capacity, min_capacity, graph_size, er_param, seed)
+    
+    G = generate_graph(args.max_link_capacity, args.min_link_capacity, args.graph_size, er_param, seed)
     
     db = shelve.open(args.output_file)
     db['G'] = G
-    db['num_configs'] = num_configs
-    db['max_capacity'] = max_capacity
-    db['min_capacity'] = min_capacity
-    db['min_flow_size'] = min_flow_size
-    db['max_flow_size'] = max_flow_size
+    db['num_configs'] = args.num_configs
+    db['max_capacity'] = args.max_link_capacity
+    db['min_capacity'] = args.min_link_capacity
+    db['min_flow_size'] = args.min_flow_size
+    db['max_flow_size'] = args.max_flow_size
 
-    start = 0
-    end = furthest_nodes(G)[-1]
+    start = 0 #source node
+    end = furthest_nodes(G)[-1] #sink node
 
-    init_flows = generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start, end, seed)
-    generate_configurations(G, init_flows, num_configs)
+    #print('source and sink nodes: ', start, end)
 
+    init_flows = generate_init_flows(G, args.avg_link_utilization, args.min_flow_size, args.max_flow_size, start, end, seed)
+    generate_configurations(G, init_flows, args.num_configs)
 
     db['num_flows'] = len(init_flows)
     db['longest_flow_length'] = longest_flow_length
+
     db.close()
 
     #for i in range(len(configs)):
