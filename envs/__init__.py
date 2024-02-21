@@ -1,5 +1,7 @@
 from gym.envs.registration import register
 
+#from gymnasium.envs.registration import register
+
 register(
     id="rnaenv-v1",
     entry_point="envs.gym_envs:Rnaenv_v1",

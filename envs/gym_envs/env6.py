@@ -17,14 +17,24 @@ class Flows_v1 (gym.Env):
         # the action space is a set of discrete values (each node is a number)
         self.action_space = Discrete(self.num_flows)
 
+        #self.observation_space = Dict({
+        #    "adj_matrix": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
+        #    "curr_edge_capacities": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
+        #    "selected_flows": MultiBinary(self.num_flows),    
+        #    "init_config": Box(low=0, high=max(self.num_flows, self.n), shape=((self.longest_flow_length + 2) * self.num_flows, ), dtype=np.float32),
+        #    "target_config": Box(low=0, high=max(self.num_flows, self.n), shape=((self.longest_flow_length + 2) * self.num_flows, ), dtype=np.float32)
+        #    })
+        
         self.observation_space = Dict({
+            "node_features": Box(low=-100, high=100, shape=(self.n, 3)),
+            "edge_indices": Box(low=0, high=self.n, shape=(2, num_edges)),
             "adj_matrix": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
             "curr_edge_capacities": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
             "selected_flows": MultiBinary(self.num_flows),    
             "init_config": Box(low=0, high=max(self.num_flows, self.n), shape=((self.longest_flow_length + 2) * self.num_flows, ), dtype=np.float32),
             "target_config": Box(low=0, high=max(self.num_flows, self.n), shape=((self.longest_flow_length + 2) * self.num_flows, ), dtype=np.float32)
             })
-        
+
         #print('self.observation_space: ', self.observation_space)
 
         self.reset()
@@ -139,6 +149,7 @@ class Flows_v1 (gym.Env):
     def set_dataset_info(self):
         db = shelve.open(self.dataset)
         self.G = db['G']
+        print(type(self.G))
         self.n = self.G.shape[0]
         self.num_configs = db['num_configs']
         self.num_flows = db['num_flows']
@@ -146,6 +157,7 @@ class Flows_v1 (gym.Env):
         self.min_flow_size = db['min_flow_size']
         self.max_flow_size = db['max_flow_size']
         self.longest_flow_length = db['longest_flow_length']
+        print('self.num_flows: ', self.num_flows)
         db.close()
     """
     
@@ -154,10 +166,12 @@ class Flows_v1 (gym.Env):
         db = shelve.open(self.dataset)
         i1, i2 = random.sample(range(self.num_configs), 2)
         self.init_config, self.init_edge_capacities = db['config_{}'.format(i1)]
+        print('init_edge_c: ', self.init_edge_capacities)
         self.target_config, self.target_edge_capacities = db['config_{}'.format(i2)]
         db.close()
 
     def convert_to_flat_array(self, dict):
+        print('flows: ', dict)
         lst = []
         for flow_id in dict.keys():
             lst.append(flow_id)
@@ -167,16 +181,14 @@ class Flows_v1 (gym.Env):
             lst += zeros
         return np.array(lst, dtype=np.float32)
 
+    """
+    node_features: N x node_dim matrix (N being the number of nodes)
+    Return a F x node_dim matrix (F being the number of flows)
+    """
+    def get_flow_embeddings(self, node_features, flow_dict):
+        node_indices= list(flow_dict.values())
+        return np.sum(node_features[node_indices], axis =1)
 
-    def render (self, mode="graph"):
-        """Renders the environment.
-        Args:
-            mode (str): the mode to render with 
-            graph gives the graph
-            "print" gives the state
-        """
-        #UPDATE
-        print(self.state)
 
 
     def set_seed(self, seed=None):
