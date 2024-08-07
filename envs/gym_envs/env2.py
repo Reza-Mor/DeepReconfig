@@ -23,35 +23,6 @@ class Rnaenv_v2 (gym.Env):
         # the action space is a set of discrete values (each node is a number)
         self.action_space = Discrete(self.n//2)
         self.set_observation_space()
-        # this variable is not used, use self.state instead
-        #self.observation_space = Dict({
-        #    "node_features": MultiBinary([self.n, 14]),
-        #    "configuration": MultiBinary([self.n, 3]),
-        #    "coo_indices": MultiBinary([self.n//2, self.n//2]),
-        #    "action_mask": MultiBinary(self.n//2),
-        #    "energy_dist": Box(-1, self.n, shape=(2,), dtype=np.int32)
-        #    })
-
-        #Graph(node_space=Box(low=-100, high=100, shape=(self.n, 14)), edge_space=Discrete(3)),
-        #self.observation_space = Dict({
-            #"node_features": Box(low=-100, high=100, shape=(self.n, 2)),
-            #"edge_indices": Discrete(3),
-            #"selected_left_nodes": MultiBinary(self.n//2),
-            #"selected_right_nodes": MultiBinary(self.n//2),
-            #"action_mask": MultiBinary(self.n//2),
-            #"energy_dist": Box(-1, self.n, shape=(2,), dtype=np.int32)
-        #})
-        
-        #self.observation_space = Dict({
-        #    "node_features": Repeated(
-        #        gym.spaces.Box(-100, 100, shape=(2,), dtype=np.float32),
-        #        self.n,
-        #    ),
-        #    "edge_index": Repeated(
-        #        gym.spaces.Box(0, self.n, shape=(2,), dtype=np.int64),
-        #        self.n ** 2,
-        #    ),
-        #})
 
         self.reset()
 

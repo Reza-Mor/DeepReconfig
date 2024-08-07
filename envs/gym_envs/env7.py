@@ -14,27 +14,24 @@ class Flows_v1 (gym.Env):
         self.seed = 0
         self.dataset = dataset
         self.max_episode_steps = 60 #max_episode_steps
-        self.node_feature_dim = 3
         self.set_seed()
         self.set_observation_space() 
         # the action space is a set of discrete values (each node is a number)
         self.action_space = Discrete(self.num_flows)
-        
 
         self.reset()
 
     def set_observation_space(self):
         db = shelve.open(self.dataset)
         self.G = db['G'] # the adj matrix
-        #print('G: ', dense_to_sparse(torch.from_numpy(self.G)))
+        print('G: ', dense_to_sparse(torch.from_numpy(self.G)))
         self.n = self.G.shape[0]
         torch.manual_seed(1)
-        self.edge_indices, self.edge_capacities = dense_to_sparse(torch.from_numpy(self.G)) #coo adj matrix
-        #self.features = torch.rand(self.n, 3) # set node features
-        self.features = np.random.rand(self.n, 3)
+        dense_G = dense_to_sparse(torch.from_numpy(self.G))
+        self.edge_indices, self.edge_capacities = dense_G[0], dense_G[1] #coo adj matrix
+        self.features = torch.rand(self.n, 3) # set node features
         self.num_configs = db['num_configs']
         self.num_flows = db['num_flows']
-        #print('self.num_flows: ', self.num_flows)
         self.max_capacity = db['max_capacity']
         self.min_flow_size = db['min_flow_size']
         self.max_flow_size = db['max_flow_size']
@@ -43,17 +40,17 @@ class Flows_v1 (gym.Env):
         db.close()
     
         self.observation_space = Dict({
-            "node_features": Box(low=0, high=1, shape=(self.n, self.node_feature_dim)),
-            "edge_indices": Box(low=0, high=self.n, shape=(2, num_edges), dtype=np.int16),
-            "edge_features": Box(low=0, high=self.max_capacity, shape=(num_edges, 3)),
+            "node_features": Box(low=-100, high=100, shape=(self.n, 3)),
+            "edge_indices": Box(low=0, high=self.n, shape=(2, num_edges)),
+            "edge_features": Box(low=0, high=self.n, shape=(num_edges, 3)),
             #"edge_capacities": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
             #"curr_edge_capacities": Box(low=0.0, high=self.max_capacity, shape=(self.n, self.n), dtype=np.float32),
             "selected_flows": MultiBinary(self.num_flows),    
-            "init_config": Box(low=0, high=self.n, shape=(self.num_flows, self.longest_flow_length), dtype=np.float32),
-            "target_config": Box(low=0, high=self.n, shape=(self.num_flows, self.longest_flow_length), dtype=np.float32),
-            #"indices_init": Box(low=0, high=self.n, shape=(self.num_flows, ), dtype=np.float32),
-            #"indices_target": Box(low=0, high=self.n, shape=(self.num_flows, ), dtype=np.float32),
-            "flow_sizes": Box(low=0, high=self.max_capacity, shape=(self.num_flows, ), dtype=np.float32)
+            "init_config": Box(low=0, high=self.n, shape=((self.longest_flow_length + 1) * self.num_flows, ), dtype=np.float32),
+            "target_config": Box(low=0, high=self.n, shape=((self.longest_flow_length + 1) * self.num_flows, ), dtype=np.float32),
+            "indices_init": Box(low=0, high=self.n, shape=(self.num_flows, ), dtype=np.float32),
+            "indices_target": Box(low=0, high=self.n, shape=(self.num_flows, ), dtype=np.float32),
+            "flow_sizes": Box(low=0, high=self.n, shape=(self.num_flows, ), dtype=np.float32)
             })
         
     def reset (self):
@@ -68,11 +65,11 @@ class Flows_v1 (gym.Env):
         self.set_configurations()
         self.selected_flows = np.zeros(self.num_flows, dtype=np.int32)
         self.curr_edge_capacities = self.init_edge_capacities.copy()
-        init_flows, flow_sizes = self.convert_to_numpy_array(self.init_config)
-        target_flows, _ = self.convert_to_numpy_array(self.target_config)
+        init_flows, flow_sizes, indices_init = self.convert_to_flat_array(self.init_config)
+        target_flows, _, indices_target = self.convert_to_flat_array(self.target_config)
         self.update_edge_features(self.edge_capacities, self.curr_edge_capacities)
 
-        self.init_state = {"node_features": self.features, #.numpy(),
+        self.init_state = {"node_features": self.features.numpy(),
                            "edge_indices": self.edge_indices.numpy(),
                            "edge_features": self.edge_features,
                            #"edge_capacities": self.edge_capacities,
@@ -80,8 +77,8 @@ class Flows_v1 (gym.Env):
                            "selected_flows": self.selected_flows,
                            "init_config": init_flows,
                            "target_config": target_flows,
-                           #"indices_init": indices_init,
-                           #"indices_target": indices_target,
+                           "indices_init": indices_init,
+                           "indices_target": indices_target,
                            "flow_sizes": flow_sizes,
                            
         }
@@ -95,7 +92,7 @@ class Flows_v1 (gym.Env):
         self.state = self.init_state
         self.reward = 0
         self.done = False
-        self.info = {4:10}
+        self.info = {}
 
         return self.state
 
@@ -116,7 +113,7 @@ class Flows_v1 (gym.Env):
             self.done = True
 
         else:
-            #assert self.action_space.contains(action)
+            assert self.action_space.contains(action)
 
             self.count += 1
             
@@ -163,7 +160,7 @@ class Flows_v1 (gym.Env):
                 self.done = True
 
         self.update_edge_features(self.edge_capacities, self.curr_edge_capacities)
-        
+
         return [self.state, self.reward, self.done, self.info]
 
     def set_configurations(self):
@@ -175,19 +172,7 @@ class Flows_v1 (gym.Env):
         #print('target_config: ', self.target_config)
         db.close()
 
-    def convert_to_numpy_array(self, dict):
-        flows = np.ndarray((len(dict), self.longest_flow_length))
-        flow_sizes = []
-        i = 0 
-        for flow_path in dict.values():
-            zeros = [0] * (self.longest_flow_length - (len(flow_path)-1))
-            flows[i] = flow_path[:-1] + zeros
-            flow_sizes.append(flow_path[-1])
-            i += 1
-        return flows, np.array(flow_sizes, dtype=np.float32)
-    
-    
-    def convert_to_flat_array3(self, dict):
+    def convert_to_flat_array2(self, dict):
         #print('flows: ', dict)
         lst = []
         for flow_id in dict.keys():
@@ -198,7 +183,7 @@ class Flows_v1 (gym.Env):
             lst += zeros
         return np.array(lst, dtype=np.float32)
     
-    def convert_to_flat_array2(self, dict):
+    def convert_to_flat_array(self, dict):
         flow_paths = []
         flow_sizes = []
         indices = []
@@ -225,7 +210,6 @@ class Flows_v1 (gym.Env):
     def update_edge_features(self, edge_capacities, curr_edge_capacities):
         
         # the total edge capacities added to the current edge capacities, only used for processing the data 
-        # sparse_curr_edge_cap_total = dense_to_sparse(torch.from_numpy(self.G + curr_edge_capacities))[1]
         sparse_curr_edge_cap_total = dense_to_sparse(torch.from_numpy(self.G + curr_edge_capacities))[1]
 
         sparse_curr_edge_cap = sparse_curr_edge_cap_total - edge_capacities
@@ -233,7 +217,7 @@ class Flows_v1 (gym.Env):
         
         self.edge_features = torch.cat((torch.unsqueeze(edge_capacities,1),
                              torch.unsqueeze(sparse_curr_edge_cap,1),
-                             torch.unsqueeze(sparse_curr_edge_used,1)), 1).numpy()
+                             torch.unsqueeze(sparse_curr_edge_used,1)), 1)
 
     """
     Processes the input data to obtain a list of flow paths
