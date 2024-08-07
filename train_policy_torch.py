@@ -28,7 +28,9 @@ import shutil
 import shelve
 import argparse
 #from models import FeedForward, GAT, MODEL_CONFIG_1, MODEL_CONFIG_2, MODEL_CONFIG_3
-from models_pyG import GCN, TorchActionMaskModel
+#from models_pyG import GCN, TorchActionMaskModel
+from models.model_flows import GCN_Flows
+from models.model_vc import GCN_VC, TorchActionMaskModel
 from ray.rllib.utils.framework import try_import_torch
 torch, nn = try_import_torch()
 
@@ -54,6 +56,7 @@ def get_dataset_info(environment, dataset_path):
     return max_reward
 
 def main(dataset, environment, model_config, n_iter, gamma):
+    
     # init directory in which to save checkpoints
     ckpt_dir = "{}_{}_{}".format(dataset, environment, model_config)
     chkpt_root = "tmp/exa/{}".format(ckpt_dir)
@@ -61,7 +64,8 @@ def main(dataset, environment, model_config, n_iter, gamma):
 
     # init directory in which to log results
     # ray_results = "{}/ray_results/".format(os.getenv("HOME"))
-    dataset_path = 'datasets/{}'.format(dataset)
+    # dataset_path = 'datasets/{}'.format(dataset)
+    dataset_path = '{}'.format(dataset)
     ray_results = "results/ray_results/{}".format(dataset_path)
     shutil.rmtree(ray_results, ignore_errors=True, onerror=None)
 
@@ -75,11 +79,13 @@ def main(dataset, environment, model_config, n_iter, gamma):
     #else:
     #    ModelCatalog.register_custom_model("FeedForward", FeedForward)
     
-    ModelCatalog.register_custom_model("GCN", GCN)
+    ModelCatalog.register_custom_model("GCN_VC", GCN_VC)
     ModelCatalog.register_custom_model("TorchActionMaskModel", TorchActionMaskModel)
+    ModelCatalog.register_custom_model("GCN_Flows", GCN_Flows)
 
     # configure the environment and create agent
     config = ppo.DEFAULT_CONFIG.copy()
+    #print(config)
     #config = dqn.DEFAULT_CONFIG.copy()
 
     #print(DQNConfig())
@@ -100,17 +106,17 @@ def main(dataset, environment, model_config, n_iter, gamma):
     #config.resources(num_gpus= torch.cuda.device_count())
 
 
-    MODEL_CONFIG_1 = {"custom_model": "GCN",
+    MODEL_CONFIG_1 = {"custom_model": "GCN_Flows",
                        "custom_model_config": {"_disable_preprocessor_api": True}}         
     config["model"] = MODEL_CONFIG_1
-    config["model"]["no_final_linear"] = True
+    #config["model"]["no_final_linear"] = True
     config['framework'] = 'torch'
     
     #config.environment(select_env)
     config["log_level"] = "WARN"
-    #print(config["model"])
-    agent = ppo.PPOTrainer(config, env=select_env)
-    #agent = dqn.DQNTrainer(config=config, env=select_env)
+    print(config["model"])
+    #agent = ppo.PPOTrainer(config, env=select_env)
+    agent = ppo.PPOTrainer(config=config, env=select_env)
     #algo = DQN(config=config, env=select_env)
     #algo.train()
 
@@ -164,13 +170,15 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset",
         type=str,
-        default='RNA/dataset1_20by20',
+        #default='RNA/dataset1_20by20',
+        default='datasets/flows/dataset_2',
         help="the file to load the dataset from",
     )
     parser.add_argument(
         "--environment",
         type=str,
-        default='Rnaenv_v2',
+        #default='Rnaenv_v2',
+        default='Flows_v1',
         help="the environment to train the model on",
     )
     parser.add_argument(
@@ -182,7 +190,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n_iter",
         type=int,
-        default=100,
+        default=2,
         help="number of iterations",
     )
     parser.add_argument(
