@@ -1,0 +1,649 @@
+datasets/flows/dataset_1 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.0075223445892333984 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.0024454593658447266 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.003381490707397461 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.0015425682067871094 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.0008671283721923828 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.0008823871612548828 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.0008327960968017578 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.0008597373962402344 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.0010402202606201172 
+avg_time solving 9 instances in datasets/flows/dataset_1: 0.002152681350708008
+
+datasets/flows/dataset_2 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.015204906463623047 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.007039546966552734 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.005954265594482422 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.004778146743774414 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.0078012943267822266 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.00528407096862793 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.005870819091796875 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.005601167678833008 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.007646799087524414 
+avg_time solving 9 instances in datasets/flows/dataset_2: 0.00724233521355523
+
+datasets/flows/dataset_3 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.024115562438964844 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.015790462493896484 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.023103713989257812 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.025905847549438477 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.03787112236022949 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.018386363983154297 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.023149728775024414 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.032273292541503906 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.03078603744506836 
+avg_time solving 9 instances in datasets/flows/dataset_3: 0.025709125730726454
+
+datasets/flows/dataset_4 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.052628278732299805 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.0738523006439209 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.06119823455810547 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.07063698768615723 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.05571913719177246 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.04508709907531738 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.06904745101928711 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.1318807601928711 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.07515931129455566 
+avg_time solving 9 instances in datasets/flows/dataset_4: 0.07057884004380968
+
+datasets/flows/dataset_5 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.07079792022705078 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.10240769386291504 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.07745051383972168 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.23218154907226562 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.08097600936889648 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.09606003761291504 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.09104394912719727 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.11491703987121582 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.14321565628051758 
+avg_time solving 9 instances in datasets/flows/dataset_5: 0.11211670769585504
+
+datasets/flows/dataset_6 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.2617330551147461 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.2535109519958496 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.18740606307983398 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.4658167362213135 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.17682862281799316 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.3383944034576416 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.14837121963500977 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.20390009880065918 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.1627810001373291 
+avg_time solving 9 instances in datasets/flows/dataset_6: 0.2443046834733751
+
+datasets/flows/dataset_7 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.026309490203857422 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.01425313949584961 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.009724855422973633 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.008383035659790039 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.00837850570678711 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.008547544479370117 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.009003400802612305 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.010750532150268555 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.013150453567504883 
+avg_time solving 9 instances in datasets/flows/dataset_7: 0.012055661943223741
+
+datasets/flows/dataset_8 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.09757542610168457 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.062123775482177734 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.050742149353027344 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.06285214424133301 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.07194232940673828 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.07066226005554199 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.08742594718933105 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.08072566986083984 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.09798884391784668 
+avg_time solving 9 instances in datasets/flows/dataset_8: 0.07578206062316895
+
+datasets/flows/dataset_9 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.5181348323822021 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.44510459899902344 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.46317052841186523 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.4631233215332031 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.41729211807250977 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.41940879821777344 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.4477052688598633 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.46655750274658203 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.40813159942626953 
+avg_time solving 9 instances in datasets/flows/dataset_9: 0.44984761873881024
+
+datasets/flows/dataset_10 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 1.3207910060882568 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 1.8226053714752197 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 1.5455396175384521 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 1.7957837581634521 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 1.5122487545013428 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 2.2061545848846436 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 1.6990091800689697 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 1.9886846542358398 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 1.4471566677093506 
+avg_time solving 9 instances in datasets/flows/dataset_10: 1.7042192882961698
+
+datasets/flows/dataset_11 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 2.738199234008789 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 5.375168323516846 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 6.646040201187134 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 4.078202724456787 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 11.727286100387573 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 4.073983192443848 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 4.194542646408081 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 4.626795530319214 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 4.233180046081543 
+avg_time solving 9 instances in datasets/flows/dataset_11: 5.2992664443122015
+
+datasets/flows/dataset_12 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 19.904255867004395 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 13.379147291183472 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 55.30652141571045 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 33.93458676338196 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 48.26525545120239 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 9.01380443572998 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 38.33224892616272 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 42.160221338272095 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 14.464897632598877 
+avg_time solving 9 instances in datasets/flows/dataset_12: 30.52899323569404
+
+datasets/flows/dataset_13 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.014432191848754883 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.012171506881713867 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.010168313980102539 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.0060384273529052734 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.006901264190673828 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.005788087844848633 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.00436711311340332 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.004896879196166992 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.007438182830810547 
+avg_time solving 9 instances in datasets/flows/dataset_13: 0.008022440804375542
+
+datasets/flows/dataset_14 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.3332364559173584 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.3705761432647705 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.27523350715637207 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.2843313217163086 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.23762869834899902 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.26804566383361816 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.3428974151611328 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.24890875816345215 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.2568221092224121 
+avg_time solving 9 instances in datasets/flows/dataset_14: 0.2908533414204915
+
+datasets/flows/dataset_15 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.8012306690216064 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.8819763660430908 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.9255335330963135 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.8820271492004395 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 1.0953259468078613 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.7761335372924805 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.7040648460388184 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.7696628570556641 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.769580602645874 
+avg_time solving 9 instances in datasets/flows/dataset_15: 0.8450595008002387
+
+datasets/flows/dataset_16 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 3.288006067276001 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 2.4231836795806885 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 2.7739906311035156 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 3.113436222076416 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 2.4201529026031494 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 2.5238351821899414 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 2.7996718883514404 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 2.2644824981689453 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 2.577056646347046 
+avg_time solving 9 instances in datasets/flows/dataset_16: 2.6870906352996826
+
+datasets/flows/dataset_17 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 5.106738805770874 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 6.0463621616363525 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 7.813636779785156 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 7.220710277557373 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 6.052621126174927 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 6.943639516830444 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 5.4331841468811035 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 5.918378114700317 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 4.7245032787323 
+avg_time solving 9 instances in datasets/flows/dataset_17: 6.139974912007649
+
+datasets/flows/dataset_18 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 27.50627589225769 
+Solving flow reconfiguration with source config_1 and target config_2
+
+datasets/flows/dataset_25 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.024929200008045882 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.01712139998562634 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.012026899988995865 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.01806199998827651 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.018343999981880188 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.014970900025218725 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.019213000021409243 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.01653910000459291 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.016646699979901314 
+avg_time solving 9 instances in datasets/flows/dataset_25: 0.017539244442660775
+
+datasets/flows/dataset_26 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 1.2201852000143845 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 1.489852200000314 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 1.4475414999760687 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.8503730999946129 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 1.1149785000015981 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 1.1677381999907084 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.8937899000011384 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 1.08265460000257 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 1.0236789000045974 
+avg_time solving 9 instances in datasets/flows/dataset_26: 1.143421344442888
+
+datasets/flows/dataset_27 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 4.726878699992085 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 4.941923200007295 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 4.437173899990739 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 4.903854999982286 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 4.088529499975266 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 4.9234099999885075 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 5.187371300009545 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 5.233006900001783 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 5.426379799988354 
+avg_time solving 9 instances in datasets/flows/dataset_27: 4.874280922215096
+
+datasets/flows/dataset_28 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 13.686124100000598 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 15.18393259998993 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 17.548107599985087 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 19.915431000001263 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 15.023813800013158 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 20.653770599979907 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 20.88792619999731 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 14.073081900016405 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 12.166772099997615 
+avg_time solving 9 instances in datasets/flows/dataset_28: 16.570995544442365
+
+datasets/flows/dataset_29 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 68.47991880000336 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 127.45895859997836 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 117.77391339998576 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 66.7909066999855 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 76.86162859998876 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 362.1113027999818 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 71.4915500000061 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 473.8420271000068 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 72.02603629999794 
+avg_time solving 9 instances in datasets/flows/dataset_29: 159.64847136665938
+
+datasets/flows/dataset_30 
+Solving flow reconfiguration with source config_0 and target config_1
+datasets/flows/dataset_31 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.5058275000192225 
+Total time: 2.4342583999969065 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 0.35423589998390526 
+Total time: 1.9838613999891095 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 0.3537845999817364 
+Total time: 1.888764400035143 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 0.3023364000255242 
+Total time: 1.968758600007277 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 0.4602784999879077 
+Total time: 2.458504999987781 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 0.31636799999978393 
+Total time: 1.9098964000004344 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 0.418817300000228 
+Total time: 2.5269668999826536 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 0.3945285000372678 
+Total time: 2.6854238000232726 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 0.3676993999979459 
+Total time: 2.558547399996314 
+avg_time solving 9 instances in datasets/flows/dataset_31: 0.38598623333705795
+
+datasets/flows/dataset_32 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 6.298589700018056 
+Total time: 64.30699140002253 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 6.019497600034811 
+Total time: 58.03179809998255 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 6.986225200002082 
+Total time: 59.79847320000408 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 6.151108000020031 
+Total time: 58.11542579997331 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 6.360886899987236 
+Total time: 58.55381109996233 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 5.752351199975237 
+Total time: 57.502435700036585 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 5.999318099988159 
+Total time: 58.42399470001692 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 6.223855199990794 
+Total time: 58.77633840002818 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 6.09516910003731 
+Total time: 58.93282950000139 
+avg_time solving 9 instances in datasets/flows/dataset_32: 6.209666777783746
+
+datasets/flows/dataset_33 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 26.963295799971092 
+Total time: 276.63044480001554 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 18.06480220000958 
+Total time: 166.35710969998036 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 14.878288900014013 
+Total time: 165.5512920000474 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 15.062700799957383 
+Total time: 151.89571109996177 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 17.019765299977735 
+Total time: 149.3479151999927 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 15.84183170000324 
+Total time: 146.45670969999628 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 13.947359399986453 
+Total time: 143.35324209998362 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 14.54012329998659 
+Total time: 141.77161229995545 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 14.993928300042171 
+Total time: 146.0876666000113 
+avg_time solving 9 instances in datasets/flows/dataset_33: 16.81245507777203
+
+datasets/flows/dataset_34 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 49.69650440005353 
+Total time: 468.2292230000021 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 70.36939939996228 
+Total time: 493.66342199995415 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 65.44511800003238 
+Total time: 448.39607519999845 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 58.88641400000779 
+Total time: 460.24470740003744 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 65.35682220000308 
+Total time: 439.0462615999859 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 151.1384874000214 
+Total time: 521.2042915000347 
+Solving flow reconfiguration with source config_6 and target config_7
+Time: 50.648477599956095 
+Total time: 425.1522144000046 
+Solving flow reconfiguration with source config_7 and target config_8
+Time: 51.622077400039416 
+Total time: 432.04781380004715 
+Solving flow reconfiguration with source config_8 and target config_9
+Time: 62.89001630002167 
+Total time: 465.5183566000196 
+avg_time solving 9 instances in datasets/flows/dataset_34: 69.56147963334418
+
+datasets/flows/dataset_35 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 277.4486777000129 
+Total time: 1177.7694470999995 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 435.03669269999955 
+Total time: 1331.3405879999627 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 2498.7283557999763 
+Total time: 3402.4151885000174 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 717.9015057000215 
+Total time: 1614.2465522999992 
+Solving flow reconfiguration with source config_4 and target config_5
+Encountered an error. Status: 11 
+Total time: 1226.2660236000083 
+Solving flow reconfiguration with source config_5 and target config_6
+datasets/flows/dataset_1 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.30036930000642315 
+Total time: 0.5690433999989182 
+Solving flow reconfiguration with source config_1 and target config_2
+Time: 44.112111199996434 
+Total time: 44.30816130002495 
+Solving flow reconfiguration with source config_2 and target config_3
+Time: 58.803818799962755 
+Total time: 59.02010289998725 
+Solving flow reconfiguration with source config_3 and target config_4
+Time: 37.26876850001281 
+Total time: 37.4869232000201 
+Solving flow reconfiguration with source config_4 and target config_5
+Time: 2.574741999967955 
+Total time: 2.809221300005447 
+Solving flow reconfiguration with source config_5 and target config_6
+Time: 69.48627599998144 
+Total time: 69.76306600001408 
+Solving flow reconfiguration with source config_6 and target config_7
+Encountered an error. Status: 11 
+Total time: 1197.2511112000211 
+Solving flow reconfiguration with source config_7 and target config_8
+Encountered an error. Status: 11 
+Total time: 1.0279132000287063 
+Solving flow reconfiguration with source config_8 and target config_9
+datasets/flows/dataset_1 
+Solving flow reconfiguration with source config_0 and target config_1
+Time: 0.22943109995685518 
+Total time: 0.5105563999968581 
+Solving flow reconfiguration with source config_1 and target config_2
+Encountered an error. Status: 11 
+Total time: 1.9600442000082694 
+Solving flow reconfiguration with source config_2 and target config_3
+Encountered an error. Status: 11 
+Total time: 0.2840289999730885 
+Solving flow reconfiguration with source config_3 and target config_4
+Encountered an error. Status: 11 
+Total time: 0.2267930000089109 
+Solving flow reconfiguration with source config_4 and target config_5
+Encountered an error. Status: 11 
+Total time: 0.6811605999828316 
+Solving flow reconfiguration with source config_5 and target config_6

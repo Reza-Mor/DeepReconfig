@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import gymnasium as gym
 from envs.gym_envs.env import Rnaenv_v1
 from envs.gym_envs.env2 import Rnaenv_v2
 from envs.gym_envs.env3 import Rnaenv_v3
 from envs.gym_envs.env4 import Rnaenv_v4
 from envs.gym_envs.env5 import Rnaenv_v5
 from envs.gym_envs.env6 import Flows_v1
-from ray.tune.registry import register_env
-import gym
+from ray.tune.registry import register_env 
 import os
 import ray
 #from ray import air, tune
@@ -45,7 +45,7 @@ def get_dataset_info(environment, dataset_path):
 
     return max_reward
 
-def main (dataset, environment, model_config, n_iter, gamma):
+def main(dataset, environment, model_config, n_iter, gamma):
     # init directory in which to save checkpoints
     ckpt_dir = "{}_{}_{}".format(dataset, environment, model_config)
     chkpt_root = "tmp/exa/{}".format(ckpt_dir)
@@ -66,23 +66,27 @@ def main (dataset, environment, model_config, n_iter, gamma):
         ModelCatalog.register_custom_model("GAT", GAT)
     else:
         ModelCatalog.register_custom_model("FeedForward", FeedForward)
+    
+    # configure the environment and create agent
+    config = ppo.DEFAULT_CONFIG.copy()
 
     # register the custom environment
     select_env = environment
     register_env(select_env, lambda config: dic[environment](dataset_path))
 
-    # configure the environment and create agent
-    config = ppo.DEFAULT_CONFIG.copy()
     #config = dqn.DEFAULT_CONFIG.copy()
-    config["num_workers"] = 1 #3
-    config["disable_env_checking"]=True
+    config["num_workers"] = 0 #3
+    config["disable_env_checking"]= True
     config["num_gpus"] = len(tf.config.list_physical_devices('GPU'))
-    config["gamma"] = gamma
+    config["gamma"] = gamma                      
     config["model"] = model_configs[model_config]
    
     #config["log_level"] = "WARN"
     agent = ppo.PPOTrainer(config, env=select_env)
     #agent = dqn.DQNTrainer(config=config, env=select_env)
+
+    #policy_network = agent.get_policy().model
+    #policy_network.logits_and_value_model.summary() # Prints the model summary
 
     max_reward = get_dataset_info(environment, dataset_path)
 
@@ -130,13 +134,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset",
         type=str,
-        default='dataset1_20by20',
+        default='RNA/dataset1_20by20',
         help="the file to load the dataset from",
     )
     parser.add_argument(
         "--environment",
         type=str,
-        default='Rnaenv_v5',
+        default='Rnaenv_v2',
         help="the environment to train the model on",
     )
     parser.add_argument(
@@ -148,7 +152,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--n_iter",
         type=int,
-        default=500,
+        default=2,
         help="number of iterations",
     )
     parser.add_argument(
@@ -163,8 +167,8 @@ if __name__ == "__main__":
         print('Must specify a file to read from')
     if not args.environment in dic:
         print('Environment must be defined- check the env dic')
-    if not args.model_config in model_configs:
-        print('Model_config must be specified in model_configs')
+    #if not args.model_config in model_configs:
+    #    print('Model_config must be specified in model_configs')
     if args.gamma > 1 or args.gamma < 0:
         print('gamma must be between 0 and 1')
     else:

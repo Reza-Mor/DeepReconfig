@@ -11,15 +11,16 @@ from envs.gym_envs.env4 import Rnaenv_v4
 from envs.gym_envs.env5 import Rnaenv_v5
 from envs.gym_envs.env6 import Flows_v1
 
-def run_one_episode (env, verbose=False):
+def run_one_episode(env, verbose=False):
     env.reset()
     sum_reward = 0
     
     #for i in range(env.MAX_STEPS): #should be max_steps
-    for i in range(10):
+    for i in range(1):
         #action = env.action_space.sample()
 
         #pick a random action from uniform distribution (after masking)
+        
         #action = np.argmax(env.state["action_mask"] * np.random.uniform(low=0.0, high=1.0, size=len(env.state["action_mask"])))
         action = np.argmax(np.random.uniform(low=0.0, high=1.0, size=len(env.state["selected_flows"])))
 
@@ -27,10 +28,16 @@ def run_one_episode (env, verbose=False):
             print("action:", action)
 
         state, reward, done, info = env.step(action)
+        #print(state['graph'].edge_index)
         sum_reward += reward
-
+        
         if verbose:
             print('state: ', state)
+            print('adj_matrix: ', state['adj_matrix'].shape)
+            print('curr_edge_capacities: ', state['curr_edge_capacities'].shape)
+            print('selected_flows: ', state['selected_flows'].shape)
+            print('init_config: ', state['init_config'].shape)
+            print('target_config: ', state['target_config'].shape)
             print('reward: ', reward)
             #env.render()
             #print('diff: ', abs(state['adj_matrix']- prev_state))
@@ -52,11 +59,15 @@ def main ():
     # first, create the custom environment and run it for one episode
     #env = gym.make("example-v0")
     #kwargs = {'dataset':'datasets.expert_dbCRW_AND_entry_typeSequence_bonds_5by5'}
+    
     #env = gym.make("rnaenv-v0")
-    dataset = 'datasets/flows/dataset_1'
-    #env = Rnaenv_v5(dataset)
+    dataset = 'datasets/flows/dataset_2'
     env = Flows_v1(dataset)
     sum_reward = run_one_episode(env, verbose=True)
+
+    #dataset = 'datasets/RNA/dataset1_20by20'
+    #env = Rnaenv_v2(dataset)
+    #sum_reward = run_one_episode(env, verbose=True)
 
     # next, calculate a baseline of rewards based on random actions
     # (no policy)

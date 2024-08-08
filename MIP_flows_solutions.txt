@@ -1,0 +1,793 @@
+datasets/flows/dataset_1 
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,2)(1,2)(2,2)(3,2)
+Number of flows in each configuration 4 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,2)(1,2)(2,2)(3,2)
+datasets/flows/dataset_2 
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,0)(1,7)(2,7)(3,0)(4,7)(5,7)(6,7)(7,5)(8,4)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,7)(1,7)(2,6)(3,8)(4,5)(5,5)(6,6)(7,5)(8,8)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,8)(1,3)(2,7)(3,5)(4,4)(5,0)(6,7)(7,5)(8,4)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,0)(1,2)(2,2)(3,8)(4,7)(5,8)(6,1)(7,7)(8,8)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,4)(1,7)(2,6)(3,8)(4,4)(5,0)(6,4)(7,8)(8,8)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,7)(1,7)(2,7)(3,7)(4,7)(5,0)(6,7)(7,7)(8,7)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,7)(1,8)(2,4)(3,8)(4,7)(5,8)(6,7)(7,7)(8,7)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,6)(1,7)(2,7)(3,1)(4,7)(5,0)(6,1)(7,8)(8,8)
+Number of flows in each configuration 9 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,2)(1,7)(2,6)(3,7)(4,1)(5,8)(6,0)(7,7)(8,7)
+datasets/flows/dataset_3 
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,13)(1,4)(2,5)(3,8)(4,12)(5,5)(6,10)(7,13)(8,13)(9,13)(10,12)(11,1)(12,13)(13,8)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,9)(1,4)(2,13)(3,0)(4,0)(5,5)(6,4)(7,8)(8,2)(9,6)(10,11)(11,12)(12,7)(13,12)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,12)(1,0)(2,8)(3,8)(4,8)(5,12)(6,13)(7,0)(8,12)(9,12)(10,6)(11,13)(12,13)(13,13)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,13)(1,13)(2,13)(3,13)(4,13)(5,13)(6,13)(7,12)(8,0)(9,13)(10,13)(11,11)(12,12)(13,12)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,13)(1,13)(2,13)(3,13)(4,0)(5,13)(6,7)(7,10)(8,13)(9,7)(10,13)(11,13)(12,12)(13,12)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,13)(1,2)(2,5)(3,1)(4,2)(5,2)(6,12)(7,2)(8,2)(9,5)(10,5)(11,12)(12,0)(13,0)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,13)(1,4)(2,2)(3,2)(4,0)(5,0)(6,8)(7,3)(8,2)(9,1)(10,6)(11,3)(12,12)(13,0)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,13)(1,13)(2,13)(3,0)(4,13)(5,0)(6,13)(7,13)(8,5)(9,12)(10,12)(11,13)(12,12)(13,13)
+Number of flows in each configuration 14 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,11)(1,13)(2,13)(3,8)(4,11)(5,5)(6,0)(7,13)(8,12)(9,2)(10,13)(11,4)(12,6)(13,13)
+datasets/flows/dataset_4 
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,17)(1,0)(2,0)(3,17)(4,17)(5,0)(6,17)(7,17)(8,17)(9,17)(10,17)(11,17)(12,17)(13,16)(14,17)(15,16)(16,16)(17,15)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,16)(1,10)(2,17)(3,16)(4,16)(5,15)(6,16)(7,16)(8,6)(9,11)(10,17)(11,8)(12,16)(13,0)(14,4)(15,16)(16,10)(17,17)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,16)(1,17)(2,17)(3,16)(4,10)(5,16)(6,0)(7,17)(8,17)(9,0)(10,10)(11,17)(12,9)(13,17)(14,16)(15,17)(16,16)(17,0)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,11)(1,17)(2,16)(3,0)(4,16)(5,8)(6,16)(7,15)(8,16)(9,17)(10,6)(11,14)(12,16)(13,10)(14,14)(15,17)(16,17)(17,4)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,17)(1,15)(2,17)(3,16)(4,1)(5,16)(6,17)(7,9)(8,4)(9,17)(10,11)(11,15)(12,16)(13,5)(14,17)(15,1)(16,16)(17,10)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,2)(1,1)(2,1)(3,11)(4,11)(5,5)(6,15)(7,17)(8,4)(9,16)(10,16)(11,0)(12,17)(13,5)(14,5)(15,16)(16,1)(17,16)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,11)(1,15)(2,17)(3,10)(4,8)(5,16)(6,16)(7,11)(8,5)(9,12)(10,7)(11,1)(12,13)(13,15)(14,10)(15,17)(16,17)(17,17)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,17)(1,15)(2,17)(3,10)(4,6)(5,3)(6,16)(7,0)(8,4)(9,0)(10,0)(11,4)(12,17)(13,16)(14,1)(15,16)(16,3)(17,14)
+Number of flows in each configuration 18 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,17)(1,1)(2,4)(3,10)(4,17)(5,5)(6,14)(7,1)(8,17)(9,4)(10,16)(11,15)(12,4)(13,5)(14,17)(15,0)(16,17)(17,16)
+datasets/flows/dataset_5 
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,19)(1,20)(2,12)(3,16)(4,18)(5,20)(6,21)(7,3)(8,20)(9,12)(10,16)(11,21)(12,19)(13,21)(14,20)(15,21)(16,20)(17,17)(18,21)(19,21)(20,21)(21,20)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,20)(1,21)(2,20)(3,20)(4,19)(5,7)(6,19)(7,20)(8,4)(9,11)(10,8)(11,21)(12,21)(13,20)(14,21)(15,20)(16,11)(17,3)(18,0)(19,11)(20,16)(21,19)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,20)(1,20)(2,0)(3,8)(4,20)(5,20)(6,12)(7,20)(8,17)(9,16)(10,6)(11,7)(12,10)(13,21)(14,16)(15,20)(16,5)(17,15)(18,2)(19,21)(20,21)(21,21)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,21)(1,21)(2,20)(3,19)(4,9)(5,21)(6,20)(7,20)(8,13)(9,20)(10,19)(11,20)(12,5)(13,21)(14,20)(15,18)(16,21)(17,5)(18,2)(19,20)(20,5)(21,21)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,5)(1,14)(2,11)(3,21)(4,20)(5,21)(6,6)(7,19)(8,21)(9,0)(10,19)(11,20)(12,1)(13,20)(14,20)(15,3)(16,16)(17,4)(18,21)(19,21)(20,1)(21,2)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,10)(1,11)(2,20)(3,1)(4,2)(5,18)(6,6)(7,17)(8,20)(9,7)(10,19)(11,10)(12,19)(13,7)(14,20)(15,21)(16,20)(17,0)(18,20)(19,19)(20,4)(21,18)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,6)(1,20)(2,21)(3,0)(4,20)(5,19)(6,0)(7,17)(8,21)(9,3)(10,19)(11,17)(12,2)(13,20)(14,21)(15,10)(16,21)(17,16)(18,20)(19,16)(20,20)(21,1)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,21)(1,11)(2,21)(3,7)(4,7)(5,11)(6,20)(7,20)(8,20)(9,20)(10,21)(11,21)(12,10)(13,21)(14,21)(15,20)(16,5)(17,20)(18,15)(19,10)(20,21)(21,10)
+Number of flows in each configuration 22 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,2)(1,2)(2,7)(3,4)(4,4)(5,20)(6,21)(7,19)(8,20)(9,20)(10,21)(11,19)(12,9)(13,9)(14,17)(15,10)(16,21)(17,20)(18,21)(19,5)(20,9)(21,18)
+datasets/flows/dataset_6 
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,21)(1,0)(2,14)(3,9)(4,24)(5,26)(6,23)(7,0)(8,25)(9,15)(10,24)(11,20)(12,20)(13,26)(14,13)(15,22)(16,20)(17,11)(18,26)(19,25)(20,21)(21,13)(22,19)(23,25)(24,23)(25,15)(26,22)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,3)(1,8)(2,10)(3,11)(4,14)(5,23)(6,8)(7,0)(8,16)(9,18)(10,9)(11,3)(12,18)(13,5)(14,25)(15,20)(16,20)(17,19)(18,24)(19,23)(20,11)(21,26)(22,24)(23,25)(24,26)(25,21)(26,24)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,6)(1,24)(2,26)(3,1)(4,0)(5,25)(6,1)(7,25)(8,21)(9,20)(10,19)(11,26)(12,20)(13,15)(14,19)(15,3)(16,20)(17,23)(18,22)(19,2)(20,26)(21,21)(22,3)(23,19)(24,13)(25,24)(26,15)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,17)(1,19)(2,18)(3,1)(4,23)(5,8)(6,22)(7,24)(8,26)(9,13)(10,20)(11,8)(12,1)(13,9)(14,14)(15,23)(16,21)(17,25)(18,4)(19,22)(20,25)(21,11)(22,13)(23,26)(24,1)(25,16)(26,24)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,23)(1,25)(2,1)(3,26)(4,13)(5,25)(6,18)(7,7)(8,21)(9,19)(10,26)(11,26)(12,22)(13,22)(14,0)(15,0)(16,15)(17,12)(18,23)(19,22)(20,24)(21,21)(22,19)(23,21)(24,16)(25,7)(26,6)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,25)(1,19)(2,9)(3,26)(4,5)(5,2)(6,25)(7,5)(8,15)(9,9)(10,14)(11,14)(12,0)(13,0)(14,13)(15,12)(16,22)(17,13)(18,3)(19,25)(20,11)(21,21)(22,8)(23,10)(24,16)(25,16)(26,9)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,12)(1,14)(2,24)(3,2)(4,1)(5,23)(6,24)(7,21)(8,0)(9,6)(10,26)(11,15)(12,23)(13,22)(14,11)(15,12)(16,19)(17,12)(18,25)(19,26)(20,6)(21,21)(22,17)(23,22)(24,13)(25,25)(26,23)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,26)(1,23)(2,20)(3,26)(4,25)(5,19)(6,23)(7,21)(8,0)(9,12)(10,16)(11,26)(12,14)(13,6)(14,25)(15,17)(16,21)(17,4)(18,19)(19,21)(20,6)(21,8)(22,24)(23,7)(24,19)(25,25)(26,23)
+Number of flows in each configuration 27 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,3)(1,22)(2,26)(3,26)(4,25)(5,24)(6,23)(7,10)(8,13)(9,1)(10,19)(11,21)(12,15)(13,26)(14,7)(15,7)(16,11)(17,9)(18,19)(19,21)(20,14)(21,0)(22,24)(23,25)(24,1)(25,22)(26,23)
+datasets/flows/dataset_7 
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,0)(1,9)(2,10)(3,10)(4,6)(5,8)(6,3)(7,6)(8,10)(9,9)(10,7)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,6)(1,9)(2,9)(3,5)(4,9)(5,4)(6,5)(7,9)(8,10)(9,4)(10,7)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,4)(1,9)(2,9)(3,9)(4,10)(5,4)(6,9)(7,9)(8,10)(9,4)(10,5)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,9)(1,6)(2,9)(3,8)(4,4)(5,1)(6,1)(7,9)(8,9)(9,9)(10,9)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,5)(1,9)(2,5)(3,7)(4,9)(5,9)(6,9)(7,0)(8,1)(9,9)(10,4)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,5)(1,6)(2,7)(3,10)(4,10)(5,6)(6,10)(7,10)(8,10)(9,6)(10,9)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,9)(1,9)(2,9)(3,9)(4,9)(5,5)(6,9)(7,9)(8,9)(9,6)(10,6)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,4)(1,9)(2,9)(3,9)(4,9)(5,9)(6,3)(7,9)(8,10)(9,2)(10,10)
+Number of flows in each configuration 11 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,9)(1,10)(2,4)(3,10)(4,8)(5,9)(6,10)(7,9)(8,8)(9,10)(10,10)
+datasets/flows/dataset_8 
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,21)(1,3)(2,21)(3,22)(4,0)(5,22)(6,21)(7,21)(8,21)(9,21)(10,21)(11,21)(12,22)(13,22)(14,22)(15,21)(16,21)(17,2)(18,0)(19,21)(20,21)(21,21)(22,22)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,21)(1,21)(2,22)(3,21)(4,22)(5,22)(6,21)(7,21)(8,21)(9,21)(10,21)(11,21)(12,22)(13,22)(14,0)(15,21)(16,21)(17,21)(18,21)(19,21)(20,21)(21,21)(22,22)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,21)(1,22)(2,22)(3,22)(4,0)(5,22)(6,22)(7,22)(8,22)(9,22)(10,22)(11,22)(12,0)(13,0)(14,21)(15,22)(16,21)(17,22)(18,21)(19,21)(20,21)(21,22)(22,22)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,22)(1,22)(2,2)(3,19)(4,10)(5,14)(6,21)(7,2)(8,21)(9,21)(10,7)(11,22)(12,21)(13,19)(14,22)(15,21)(16,3)(17,19)(18,2)(19,2)(20,21)(21,7)(22,0)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,18)(1,15)(2,21)(3,21)(4,17)(5,18)(6,16)(7,11)(8,21)(9,14)(10,5)(11,6)(12,16)(13,16)(14,3)(15,18)(16,22)(17,4)(18,0)(19,1)(20,0)(21,22)(22,19)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,22)(1,10)(2,21)(3,22)(4,7)(5,21)(6,22)(7,22)(8,21)(9,21)(10,0)(11,22)(12,22)(13,22)(14,21)(15,19)(16,21)(17,21)(18,8)(19,0)(20,7)(21,22)(22,22)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,7)(1,6)(2,22)(3,0)(4,22)(5,0)(6,22)(7,0)(8,22)(9,22)(10,22)(11,22)(12,22)(13,22)(14,22)(15,4)(16,22)(17,22)(18,1)(19,22)(20,22)(21,20)(22,22)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,13)(1,0)(2,21)(3,21)(4,17)(5,21)(6,21)(7,22)(8,6)(9,12)(10,21)(11,6)(12,12)(13,14)(14,18)(15,22)(16,22)(17,21)(18,22)(19,9)(20,14)(21,22)(22,19)
+Number of flows in each configuration 23 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,4)(1,0)(2,21)(3,21)(4,22)(5,1)(6,22)(7,8)(8,22)(9,0)(10,5)(11,21)(12,22)(13,21)(14,2)(15,5)(16,21)(17,21)(18,22)(19,21)(20,4)(21,22)(22,21)
+datasets/flows/dataset_9 
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,39)(1,0)(2,39)(3,0)(4,39)(5,39)(6,39)(7,39)(8,39)(9,0)(10,0)(11,39)(12,39)(13,39)(14,0)(15,39)(16,39)(17,6)(18,39)(19,8)(20,39)(21,39)(22,39)(23,0)(24,39)(25,38)(26,37)(27,38)(28,39)(29,39)(30,39)(31,39)(32,39)(33,38)(34,39)(35,39)(36,38)(37,38)(38,38)(39,39)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,39)(1,39)(2,38)(3,39)(4,39)(5,38)(6,39)(7,39)(8,38)(9,38)(10,39)(11,0)(12,38)(13,38)(14,39)(15,38)(16,38)(17,38)(18,38)(19,38)(20,20)(21,38)(22,39)(23,39)(24,38)(25,29)(26,39)(27,38)(28,8)(29,10)(30,38)(31,5)(32,0)(33,39)(34,0)(35,38)(36,39)(37,39)(38,30)(39,38)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,38)(1,39)(2,39)(3,29)(4,38)(5,38)(6,39)(7,0)(8,38)(9,37)(10,39)(11,38)(12,38)(13,39)(14,33)(15,38)(16,3)(17,26)(18,36)(19,39)(20,19)(21,20)(22,38)(23,38)(24,38)(25,7)(26,39)(27,39)(28,39)(29,15)(30,37)(31,1)(32,38)(33,38)(34,38)(35,0)(36,38)(37,38)(38,38)(39,38)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,39)(1,19)(2,39)(3,39)(4,38)(5,23)(6,17)(7,39)(8,33)(9,32)(10,10)(11,19)(12,39)(13,38)(14,39)(15,26)(16,39)(17,38)(18,38)(19,1)(20,38)(21,38)(22,38)(23,38)(24,0)(25,38)(26,1)(27,0)(28,32)(29,38)(30,38)(31,8)(32,9)(33,13)(34,38)(35,38)(36,38)(37,16)(38,2)(39,38)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,38)(1,39)(2,39)(3,39)(4,38)(5,39)(6,39)(7,0)(8,38)(9,38)(10,39)(11,39)(12,15)(13,29)(14,39)(15,38)(16,38)(17,38)(18,34)(19,39)(20,38)(21,38)(22,38)(23,38)(24,38)(25,38)(26,38)(27,38)(28,38)(29,38)(30,38)(31,39)(32,38)(33,29)(34,1)(35,38)(36,38)(37,38)(38,38)(39,29)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,39)(1,38)(2,20)(3,0)(4,38)(5,0)(6,38)(7,12)(8,0)(9,39)(10,0)(11,5)(12,38)(13,8)(14,39)(15,0)(16,38)(17,39)(18,38)(19,38)(20,10)(21,39)(22,14)(23,0)(24,4)(25,39)(26,38)(27,5)(28,39)(29,0)(30,39)(31,0)(32,39)(33,20)(34,39)(35,39)(36,38)(37,38)(38,38)(39,39)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,1)(1,28)(2,19)(3,39)(4,0)(5,38)(6,0)(7,33)(8,7)(9,39)(10,39)(11,38)(12,39)(13,21)(14,39)(15,38)(16,32)(17,38)(18,15)(19,37)(20,38)(21,31)(22,38)(23,32)(24,27)(25,38)(26,17)(27,38)(28,38)(29,38)(30,38)(31,38)(32,36)(33,14)(34,7)(35,19)(36,21)(37,19)(38,30)(39,39)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,39)(1,21)(2,19)(3,33)(4,38)(5,39)(6,38)(7,39)(8,0)(9,39)(10,38)(11,36)(12,29)(13,38)(14,39)(15,34)(16,0)(17,5)(18,39)(19,39)(20,38)(21,38)(22,35)(23,35)(24,38)(25,38)(26,39)(27,38)(28,38)(29,0)(30,38)(31,38)(32,38)(33,1)(34,35)(35,13)(36,38)(37,35)(38,39)(39,38)
+Number of flows in each configuration 40 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,38)(1,39)(2,38)(3,19)(4,35)(5,38)(6,39)(7,39)(8,39)(9,39)(10,38)(11,38)(12,19)(13,39)(14,24)(15,39)(16,19)(17,38)(18,23)(19,38)(20,12)(21,38)(22,39)(23,31)(24,38)(25,38)(26,38)(27,11)(28,38)(29,38)(30,38)(31,26)(32,38)(33,13)(34,32)(35,38)(36,1)(37,38)(38,1)(39,38)
+datasets/flows/dataset_10 
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,18)(1,49)(2,31)(3,53)(4,53)(5,53)(6,50)(7,14)(8,25)(9,53)(10,52)(11,49)(12,53)(13,52)(14,49)(15,52)(16,42)(17,21)(18,52)(19,50)(20,50)(21,44)(22,52)(23,53)(24,0)(25,52)(26,52)(27,52)(28,51)(29,39)(30,3)(31,37)(32,23)(33,27)(34,24)(35,25)(36,52)(37,0)(38,52)(39,17)(40,50)(41,41)(42,51)(43,52)(44,53)(45,50)(46,52)(47,45)(48,52)(49,53)(50,52)(51,3)(52,52)(53,53)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,33)(1,52)(2,18)(3,29)(4,52)(5,53)(6,52)(7,43)(8,13)(9,52)(10,0)(11,9)(12,49)(13,52)(14,7)(15,10)(16,52)(17,53)(18,52)(19,9)(20,11)(21,53)(22,52)(23,39)(24,23)(25,53)(26,53)(27,0)(28,1)(29,52)(30,16)(31,6)(32,9)(33,40)(34,43)(35,52)(36,53)(37,52)(38,32)(39,52)(40,52)(41,13)(42,19)(43,14)(44,51)(45,46)(46,53)(47,52)(48,49)(49,53)(50,49)(51,19)(52,21)(53,0)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,6)(1,46)(2,52)(3,27)(4,52)(5,19)(6,45)(7,52)(8,42)(9,53)(10,52)(11,41)(12,25)(13,9)(14,41)(15,53)(16,52)(17,10)(18,50)(19,48)(20,49)(21,49)(22,5)(23,52)(24,52)(25,18)(26,22)(27,48)(28,2)(29,0)(30,34)(31,51)(32,52)(33,5)(34,43)(35,12)(36,53)(37,39)(38,52)(39,44)(40,52)(41,46)(42,6)(43,52)(44,8)(45,52)(46,52)(47,53)(48,36)(49,41)(50,53)(51,50)(52,46)(53,45)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,32)(1,52)(2,53)(3,53)(4,53)(5,46)(6,46)(7,53)(8,47)(9,50)(10,33)(11,53)(12,0)(13,52)(14,34)(15,53)(16,47)(17,53)(18,35)(19,52)(20,53)(21,21)(22,52)(23,43)(24,29)(25,52)(26,40)(27,5)(28,38)(29,53)(30,51)(31,46)(32,52)(33,53)(34,10)(35,18)(36,52)(37,50)(38,52)(39,44)(40,53)(41,44)(42,53)(43,53)(44,52)(45,39)(46,53)(47,51)(48,19)(49,46)(50,44)(51,52)(52,53)(53,51)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,41)(1,53)(2,52)(3,22)(4,18)(5,49)(6,51)(7,43)(8,39)(9,49)(10,53)(11,53)(12,0)(13,52)(14,14)(15,52)(16,53)(17,41)(18,53)(19,40)(20,43)(21,35)(22,53)(23,9)(24,52)(25,53)(26,44)(27,46)(28,52)(29,15)(30,52)(31,53)(32,1)(33,31)(34,50)(35,52)(36,45)(37,12)(38,52)(39,19)(40,19)(41,34)(42,53)(43,52)(44,42)(45,43)(46,50)(47,52)(48,19)(49,19)(50,48)(51,52)(52,50)(53,52)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,52)(1,49)(2,41)(3,19)(4,25)(5,53)(6,11)(7,53)(8,48)(9,20)(10,41)(11,42)(12,53)(13,40)(14,49)(15,52)(16,38)(17,23)(18,50)(19,39)(20,3)(21,53)(22,51)(23,16)(24,28)(25,53)(26,50)(27,20)(28,53)(29,49)(30,7)(31,41)(32,51)(33,51)(34,53)(35,33)(36,19)(37,53)(38,52)(39,52)(40,52)(41,51)(42,10)(43,52)(44,52)(45,39)(46,52)(47,43)(48,53)(49,49)(50,3)(51,41)(52,45)(53,11)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,53)(1,19)(2,17)(3,53)(4,51)(5,35)(6,43)(7,53)(8,52)(9,22)(10,5)(11,53)(12,50)(13,17)(14,52)(15,49)(16,9)(17,7)(18,51)(19,53)(20,47)(21,52)(22,52)(23,2)(24,17)(25,32)(26,52)(27,52)(28,52)(29,53)(30,51)(31,52)(32,41)(33,9)(34,43)(35,39)(36,29)(37,19)(38,47)(39,52)(40,36)(41,50)(42,52)(43,52)(44,17)(45,52)(46,9)(47,52)(48,40)(49,51)(50,0)(51,49)(52,53)(53,19)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,49)(1,53)(2,0)(3,5)(4,52)(5,49)(6,41)(7,48)(8,53)(9,53)(10,53)(11,50)(12,52)(13,44)(14,39)(15,0)(16,47)(17,53)(18,48)(19,37)(20,52)(21,31)(22,45)(23,3)(24,39)(25,52)(26,52)(27,40)(28,38)(29,44)(30,52)(31,51)(32,3)(33,29)(34,49)(35,19)(36,38)(37,50)(38,16)(39,53)(40,36)(41,50)(42,0)(43,43)(44,15)(45,21)(46,48)(47,52)(48,45)(49,51)(50,43)(51,52)(52,50)(53,35)
+Number of flows in each configuration 54 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,49)(1,43)(2,46)(3,53)(4,43)(5,20)(6,14)(7,9)(8,7)(9,41)(10,53)(11,26)(12,0)(13,35)(14,52)(15,36)(16,16)(17,29)(18,37)(19,52)(20,7)(21,53)(22,9)(23,52)(24,39)(25,53)(26,52)(27,52)(28,39)(29,7)(30,6)(31,52)(32,6)(33,52)(34,52)(35,37)(36,52)(37,25)(38,29)(39,30)(40,52)(41,52)(42,4)(43,53)(44,0)(45,46)(46,52)(47,46)(48,48)(49,50)(50,52)(51,51)(52,52)(53,52)
+datasets/flows/dataset_11 
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,50)(1,63)(2,66)(3,57)(4,67)(5,58)(6,59)(7,46)(8,67)(9,64)(10,67)(11,63)(12,63)(13,65)(14,66)(15,20)(16,59)(17,33)(18,66)(19,33)(20,36)(21,29)(22,66)(23,63)(24,22)(25,3)(26,45)(27,66)(28,40)(29,49)(30,54)(31,58)(32,67)(33,30)(34,1)(35,41)(36,64)(37,67)(38,56)(39,0)(40,58)(41,66)(42,64)(43,66)(44,66)(45,63)(46,67)(47,64)(48,66)(49,18)(50,42)(51,59)(52,59)(53,50)(54,12)(55,67)(56,64)(57,66)(58,66)(59,14)(60,0)(61,42)(62,55)(63,55)(64,57)(65,5)(66,49)(67,51)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,51)(1,65)(2,65)(3,36)(4,65)(5,65)(6,3)(7,61)(8,59)(9,62)(10,30)(11,67)(12,63)(13,33)(14,65)(15,66)(16,67)(17,60)(18,34)(19,40)(20,3)(21,67)(22,63)(23,42)(24,1)(25,36)(26,66)(27,37)(28,35)(29,51)(30,31)(31,55)(32,66)(33,66)(34,60)(35,38)(36,50)(37,39)(38,33)(39,48)(40,46)(41,65)(42,66)(43,54)(44,66)(45,66)(46,67)(47,67)(48,28)(49,13)(50,39)(51,67)(52,16)(53,0)(54,66)(55,66)(56,34)(57,7)(58,59)(59,19)(60,62)(61,54)(62,32)(63,55)(64,20)(65,66)(66,66)(67,65)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,67)(1,17)(2,61)(3,63)(4,67)(5,60)(6,66)(7,43)(8,66)(9,64)(10,41)(11,63)(12,67)(13,66)(14,64)(15,66)(16,57)(17,29)(18,40)(19,62)(20,0)(21,56)(22,23)(23,18)(24,61)(25,63)(26,32)(27,64)(28,48)(29,67)(30,22)(31,67)(32,37)(33,66)(34,24)(35,47)(36,15)(37,65)(38,67)(39,61)(40,51)(41,50)(42,20)(43,8)(44,28)(45,66)(46,46)(47,67)(48,60)(49,41)(50,66)(51,56)(52,2)(53,65)(54,22)(55,38)(56,20)(57,46)(58,19)(59,35)(60,65)(61,35)(62,9)(63,28)(64,66)(65,36)(66,61)(67,50)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,61)(1,66)(2,54)(3,67)(4,65)(5,64)(6,49)(7,60)(8,54)(9,64)(10,66)(11,67)(12,62)(13,67)(14,65)(15,47)(16,61)(17,66)(18,51)(19,67)(20,35)(21,33)(22,58)(23,66)(24,22)(25,67)(26,20)(27,67)(28,0)(29,52)(30,15)(31,50)(32,39)(33,19)(34,52)(35,1)(36,40)(37,66)(38,62)(39,57)(40,7)(41,59)(42,65)(43,2)(44,66)(45,67)(46,58)(47,52)(48,0)(49,12)(50,66)(51,63)(52,65)(53,50)(54,58)(55,66)(56,63)(57,66)(58,60)(59,60)(60,10)(61,53)(62,60)(63,65)(64,61)(65,52)(66,60)(67,67)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,41)(1,19)(2,13)(3,66)(4,3)(5,66)(6,67)(7,63)(8,67)(9,55)(10,4)(11,56)(12,67)(13,64)(14,59)(15,66)(16,43)(17,43)(18,53)(19,42)(20,1)(21,45)(22,67)(23,37)(24,66)(25,48)(26,35)(27,67)(28,46)(29,47)(30,67)(31,67)(32,60)(33,19)(34,66)(35,45)(36,60)(37,36)(38,59)(39,29)(40,35)(41,58)(42,49)(43,67)(44,64)(45,66)(46,67)(47,17)(48,1)(49,27)(50,42)(51,6)(52,63)(53,63)(54,2)(55,63)(56,45)(57,30)(58,41)(59,64)(60,48)(61,62)(62,65)(63,56)(64,66)(65,33)(66,66)(67,0)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,65)(1,33)(2,52)(3,60)(4,60)(5,37)(6,67)(7,67)(8,64)(9,36)(10,46)(11,63)(12,60)(13,66)(14,66)(15,67)(16,23)(17,67)(18,66)(19,50)(20,58)(21,30)(22,67)(23,66)(24,18)(25,66)(26,66)(27,60)(28,52)(29,62)(30,62)(31,14)(32,40)(33,23)(34,54)(35,66)(36,67)(37,60)(38,59)(39,20)(40,22)(41,28)(42,66)(43,66)(44,59)(45,53)(46,3)(47,66)(48,66)(49,47)(50,15)(51,15)(52,65)(53,65)(54,41)(55,64)(56,7)(57,15)(58,23)(59,65)(60,63)(61,66)(62,66)(63,7)(64,30)(65,6)(66,1)(67,64)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,48)(1,67)(2,66)(3,43)(4,61)(5,31)(6,0)(7,56)(8,66)(9,45)(10,66)(11,27)(12,54)(13,50)(14,10)(15,37)(16,67)(17,66)(18,66)(19,35)(20,22)(21,67)(22,53)(23,61)(24,67)(25,66)(26,47)(27,3)(28,45)(29,0)(30,63)(31,66)(32,67)(33,64)(34,62)(35,45)(36,66)(37,49)(38,63)(39,32)(40,35)(41,59)(42,55)(43,66)(44,36)(45,37)(46,66)(47,0)(48,67)(49,53)(50,3)(51,67)(52,51)(53,20)(54,56)(55,66)(56,66)(57,58)(58,24)(59,63)(60,66)(61,4)(62,49)(63,66)(64,66)(65,16)(66,48)(67,49)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,17)(1,64)(2,60)(3,0)(4,7)(5,20)(6,58)(7,8)(8,57)(9,56)(10,25)(11,10)(12,66)(13,67)(14,67)(15,67)(16,19)(17,27)(18,64)(19,38)(20,19)(21,41)(22,34)(23,7)(24,66)(25,20)(26,59)(27,42)(28,4)(29,11)(30,51)(31,66)(32,60)(33,37)(34,67)(35,45)(36,66)(37,27)(38,49)(39,56)(40,66)(41,26)(42,20)(43,33)(44,44)(45,38)(46,48)(47,66)(48,67)(49,67)(50,14)(51,63)(52,2)(53,48)(54,46)(55,17)(56,66)(57,66)(58,51)(59,28)(60,19)(61,12)(62,53)(63,0)(64,66)(65,66)(66,66)(67,39)
+Number of flows in each configuration 68 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,19)(1,28)(2,66)(3,67)(4,14)(5,57)(6,66)(7,53)(8,59)(9,37)(10,18)(11,65)(12,25)(13,39)(14,65)(15,56)(16,67)(17,63)(18,47)(19,67)(20,66)(21,58)(22,67)(23,39)(24,40)(25,66)(26,42)(27,62)(28,66)(29,26)(30,51)(31,65)(32,5)(33,40)(34,58)(35,3)(36,66)(37,28)(38,60)(39,65)(40,48)(41,29)(42,53)(43,65)(44,66)(45,18)(46,57)(47,66)(48,23)(49,38)(50,0)(51,66)(52,57)(53,64)(54,67)(55,60)(56,7)(57,63)(58,66)(59,67)(60,18)(61,10)(62,38)(63,67)(64,49)(65,36)(66,66)(67,28)
+datasets/flows/dataset_12 
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,75)(1,78)(2,72)(3,54)(4,63)(5,80)(6,77)(7,78)(8,59)(9,61)(10,80)(11,76)(12,79)(13,4)(14,0)(15,73)(16,66)(17,43)(18,78)(19,80)(20,70)(21,50)(22,69)(23,77)(24,73)(25,79)(26,13)(27,52)(28,65)(29,79)(30,77)(31,78)(32,4)(33,80)(34,67)(35,75)(36,77)(37,78)(38,80)(39,41)(40,68)(41,15)(42,75)(43,80)(44,56)(45,20)(46,56)(47,58)(48,45)(49,79)(50,0)(51,71)(52,79)(53,77)(54,27)(55,24)(56,1)(57,0)(58,22)(59,20)(60,79)(61,20)(62,72)(63,78)(64,48)(65,72)(66,79)(67,64)(68,76)(69,73)(70,70)(71,61)(72,75)(73,70)(74,65)(75,80)(76,70)(77,75)(78,78)(79,80)(80,77)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,18)(1,46)(2,65)(3,63)(4,75)(5,80)(6,79)(7,68)(8,75)(9,77)(10,73)(11,80)(12,72)(13,12)(14,80)(15,80)(16,79)(17,44)(18,78)(19,14)(20,20)(21,66)(22,66)(23,67)(24,76)(25,21)(26,79)(27,80)(28,16)(29,76)(30,4)(31,78)(32,77)(33,47)(34,80)(35,63)(36,28)(37,50)(38,80)(39,79)(40,80)(41,63)(42,27)(43,77)(44,61)(45,0)(46,48)(47,77)(48,80)(49,9)(50,68)(51,12)(52,33)(53,77)(54,78)(55,79)(56,43)(57,79)(58,74)(59,46)(60,47)(61,73)(62,74)(63,16)(64,34)(65,66)(66,69)(67,71)(68,63)(69,41)(70,77)(71,43)(72,39)(73,72)(74,65)(75,40)(76,79)(77,74)(78,69)(79,71)(80,29)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,76)(1,80)(2,75)(3,4)(4,33)(5,42)(6,77)(7,13)(8,42)(9,18)(10,80)(11,58)(12,37)(13,38)(14,79)(15,12)(16,44)(17,67)(18,75)(19,79)(20,46)(21,76)(22,80)(23,17)(24,14)(25,11)(26,15)(27,62)(28,73)(29,35)(30,9)(31,1)(32,29)(33,41)(34,75)(35,80)(36,79)(37,80)(38,45)(39,21)(40,54)(41,61)(42,56)(43,73)(44,44)(45,71)(46,76)(47,45)(48,10)(49,42)(50,77)(51,79)(52,60)(53,52)(54,77)(55,69)(56,64)(57,78)(58,76)(59,78)(60,32)(61,26)(62,75)(63,78)(64,80)(65,35)(66,45)(67,4)(68,66)(69,78)(70,40)(71,31)(72,65)(73,76)(74,72)(75,80)(76,80)(77,22)(78,78)(79,38)(80,5)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,1)(1,59)(2,45)(3,76)(4,74)(5,16)(6,0)(7,78)(8,75)(9,72)(10,24)(11,35)(12,76)(13,39)(14,42)(15,51)(16,74)(17,53)(18,57)(19,79)(20,7)(21,27)(22,79)(23,31)(24,7)(25,47)(26,74)(27,59)(28,77)(29,76)(30,30)(31,60)(32,80)(33,2)(34,80)(35,80)(36,66)(37,4)(38,65)(39,29)(40,77)(41,58)(42,34)(43,75)(44,78)(45,71)(46,49)(47,69)(48,77)(49,73)(50,7)(51,49)(52,80)(53,77)(54,80)(55,71)(56,52)(57,40)(58,53)(59,47)(60,53)(61,59)(62,56)(63,44)(64,79)(65,13)(66,79)(67,66)(68,57)(69,7)(70,80)(71,80)(72,46)(73,77)(74,79)(75,67)(76,19)(77,79)(78,75)(79,69)(80,69)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,9)(1,72)(2,61)(3,65)(4,79)(5,60)(6,60)(7,67)(8,79)(9,12)(10,10)(11,70)(12,72)(13,79)(14,19)(15,79)(16,78)(17,72)(18,19)(19,75)(20,63)(21,77)(22,28)(23,80)(24,76)(25,68)(26,74)(27,74)(28,4)(29,78)(30,77)(31,66)(32,59)(33,57)(34,78)(35,59)(36,74)(37,67)(38,38)(39,74)(40,32)(41,78)(42,5)(43,75)(44,42)(45,25)(46,23)(47,66)(48,78)(49,5)(50,49)(51,67)(52,59)(53,76)(54,80)(55,80)(56,24)(57,11)(58,80)(59,26)(60,21)(61,79)(62,76)(63,44)(64,58)(65,80)(66,21)(67,80)(68,76)(69,0)(70,77)(71,13)(72,66)(73,20)(74,77)(75,14)(76,9)(77,23)(78,76)(79,43)(80,63)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,71)(1,40)(2,60)(3,9)(4,0)(5,41)(6,4)(7,1)(8,0)(9,75)(10,0)(11,0)(12,0)(13,48)(14,1)(15,80)(16,3)(17,41)(18,17)(19,80)(20,5)(21,11)(22,59)(23,11)(24,0)(25,7)(26,72)(27,79)(28,7)(29,8)(30,19)(31,48)(32,79)(33,2)(34,5)(35,75)(36,79)(37,0)(38,79)(39,78)(40,18)(41,77)(42,62)(43,79)(44,1)(45,3)(46,9)(47,44)(48,4)(49,80)(50,1)(51,5)(52,80)(53,39)(54,15)(55,80)(56,31)(57,70)(58,9)(59,65)(60,74)(61,3)(62,2)(63,42)(64,18)(65,77)(66,79)(67,77)(68,78)(69,40)(70,5)(71,37)(72,77)(73,79)(74,15)(75,78)(76,39)(77,4)(78,13)(79,80)(80,28)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,9)(1,13)(2,64)(3,1)(4,67)(5,7)(6,0)(7,0)(8,4)(9,1)(10,80)(11,0)(12,75)(13,0)(14,78)(15,78)(16,23)(17,70)(18,13)(19,80)(20,34)(21,3)(22,1)(23,61)(24,74)(25,35)(26,77)(27,79)(28,79)(29,75)(30,80)(31,71)(32,1)(33,71)(34,25)(35,2)(36,75)(37,15)(38,6)(39,25)(40,19)(41,77)(42,8)(43,68)(44,0)(45,34)(46,0)(47,32)(48,77)(49,5)(50,22)(51,18)(52,60)(53,47)(54,80)(55,80)(56,79)(57,21)(58,78)(59,76)(60,27)(61,15)(62,3)(63,4)(64,23)(65,80)(66,59)(67,79)(68,5)(69,0)(70,38)(71,78)(72,79)(73,1)(74,61)(75,62)(76,62)(77,79)(78,52)(79,80)(80,65)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,78)(1,69)(2,18)(3,78)(4,25)(5,80)(6,1)(7,77)(8,23)(9,71)(10,5)(11,80)(12,76)(13,5)(14,80)(15,24)(16,65)(17,79)(18,72)(19,4)(20,75)(21,17)(22,80)(23,69)(24,78)(25,75)(26,30)(27,74)(28,79)(29,80)(30,78)(31,2)(32,73)(33,69)(34,71)(35,76)(36,13)(37,55)(38,23)(39,15)(40,68)(41,77)(42,80)(43,71)(44,73)(45,15)(46,73)(47,24)(48,22)(49,79)(50,79)(51,76)(52,19)(53,4)(54,17)(55,77)(56,64)(57,19)(58,75)(59,70)(60,38)(61,66)(62,79)(63,75)(64,76)(65,74)(66,78)(67,9)(68,69)(69,16)(70,13)(71,67)(72,78)(73,17)(74,16)(75,43)(76,0)(77,11)(78,61)(79,19)(80,11)
+Number of flows in each configuration 81 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,32)(1,78)(2,0)(3,75)(4,54)(5,80)(6,77)(7,0)(8,56)(9,77)(10,74)(11,80)(12,58)(13,51)(14,79)(15,46)(16,23)(17,56)(18,75)(19,53)(20,42)(21,80)(22,80)(23,77)(24,80)(25,79)(26,55)(27,79)(28,72)(29,78)(30,32)(31,71)(32,46)(33,1)(34,36)(35,13)(36,63)(37,53)(38,21)(39,48)(40,31)(41,77)(42,43)(43,70)(44,75)(45,78)(46,62)(47,80)(48,80)(49,51)(50,38)(51,0)(52,34)(53,65)(54,66)(55,32)(56,56)(57,77)(58,80)(59,73)(60,7)(61,32)(62,79)(63,46)(64,0)(65,16)(66,48)(67,80)(68,9)(69,73)(70,28)(71,58)(72,11)(73,54)(74,33)(75,52)(76,79)(77,56)(78,14)(79,76)(80,78)
+datasets/flows/dataset_13 
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,0)(1,10)(2,11)(3,10)(4,1)(5,9)(6,11)(7,11)(8,3)(9,7)(10,9)(11,0)(12,2)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,5)(1,12)(2,12)(3,7)(4,11)(5,12)(6,11)(7,11)(8,11)(9,11)(10,10)(11,12)(12,11)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,8)(1,12)(2,11)(3,10)(4,5)(5,11)(6,7)(7,3)(8,7)(9,9)(10,12)(11,4)(12,9)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,6)(1,12)(2,11)(3,0)(4,11)(5,9)(6,11)(7,11)(8,11)(9,12)(10,12)(11,11)(12,4)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,1)(1,9)(2,7)(3,0)(4,3)(5,0)(6,11)(7,0)(8,1)(9,12)(10,12)(11,11)(12,12)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,12)(1,12)(2,11)(3,12)(4,11)(5,11)(6,11)(7,11)(8,9)(9,6)(10,10)(11,11)(12,12)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,11)(1,7)(2,8)(3,11)(4,11)(5,11)(6,11)(7,7)(8,11)(9,11)(10,11)(11,11)(12,11)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,12)(1,12)(2,11)(3,11)(4,12)(5,11)(6,11)(7,12)(8,7)(9,11)(10,1)(11,7)(12,10)
+Number of flows in each configuration 13 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,8)(1,0)(2,7)(3,11)(4,1)(5,10)(6,11)(7,5)(8,11)(9,9)(10,5)(11,11)(12,4)
+datasets/flows/dataset_14 
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,40)(1,40)(2,41)(3,40)(4,40)(5,0)(6,41)(7,0)(8,39)(9,40)(10,41)(11,39)(12,0)(13,3)(14,40)(15,40)(16,36)(17,41)(18,40)(19,0)(20,23)(21,40)(22,41)(23,41)(24,38)(25,41)(26,41)(27,28)(28,26)(29,41)(30,41)(31,39)(32,39)(33,39)(34,38)(35,31)(36,1)(37,40)(38,41)(39,39)(40,41)(41,16)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,13)(1,41)(2,41)(3,22)(4,0)(5,41)(6,40)(7,40)(8,0)(9,0)(10,41)(11,0)(12,0)(13,41)(14,41)(15,41)(16,41)(17,9)(18,40)(19,41)(20,40)(21,41)(22,40)(23,41)(24,40)(25,19)(26,30)(27,40)(28,0)(29,0)(30,40)(31,0)(32,41)(33,0)(34,41)(35,7)(36,41)(37,40)(38,41)(39,40)(40,40)(41,40)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,40)(1,41)(2,40)(3,40)(4,7)(5,10)(6,41)(7,41)(8,20)(9,29)(10,40)(11,41)(12,40)(13,12)(14,0)(15,40)(16,41)(17,10)(18,15)(19,40)(20,40)(21,40)(22,0)(23,19)(24,40)(25,0)(26,41)(27,41)(28,41)(29,41)(30,0)(31,40)(32,41)(33,0)(34,8)(35,0)(36,41)(37,40)(38,41)(39,40)(40,40)(41,38)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,41)(1,39)(2,40)(3,5)(4,40)(5,40)(6,0)(7,40)(8,40)(9,22)(10,40)(11,5)(12,41)(13,41)(14,41)(15,32)(16,40)(17,30)(18,40)(19,40)(20,40)(21,41)(22,0)(23,10)(24,41)(25,0)(26,41)(27,22)(28,41)(29,41)(30,40)(31,0)(32,40)(33,40)(34,40)(35,40)(36,41)(37,41)(38,41)(39,41)(40,40)(41,40)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,40)(1,10)(2,20)(3,40)(4,40)(5,40)(6,40)(7,41)(8,40)(9,41)(10,41)(11,40)(12,41)(13,41)(14,41)(15,41)(16,41)(17,0)(18,41)(19,41)(20,41)(21,41)(22,41)(23,41)(24,41)(25,0)(26,0)(27,41)(28,40)(29,0)(30,41)(31,40)(32,41)(33,41)(34,41)(35,0)(36,40)(37,40)(38,40)(39,41)(40,41)(41,40)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,40)(1,20)(2,8)(3,40)(4,40)(5,41)(6,0)(7,40)(8,40)(9,41)(10,41)(11,6)(12,3)(13,36)(14,40)(15,35)(16,40)(17,41)(18,40)(19,40)(20,38)(21,40)(22,29)(23,34)(24,40)(25,40)(26,35)(27,40)(28,29)(29,7)(30,40)(31,38)(32,40)(33,40)(34,40)(35,41)(36,40)(37,41)(38,40)(39,36)(40,40)(41,40)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,0)(1,41)(2,40)(3,40)(4,40)(5,40)(6,41)(7,41)(8,5)(9,41)(10,41)(11,40)(12,40)(13,20)(14,40)(15,39)(16,41)(17,38)(18,40)(19,40)(20,40)(21,41)(22,0)(23,40)(24,40)(25,40)(26,40)(27,40)(28,40)(29,40)(30,40)(31,1)(32,40)(33,40)(34,38)(35,41)(36,41)(37,40)(38,40)(39,40)(40,40)(41,40)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,0)(1,41)(2,41)(3,41)(4,0)(5,41)(6,0)(7,41)(8,0)(9,41)(10,0)(11,41)(12,41)(13,41)(14,5)(15,41)(16,0)(17,41)(18,0)(19,41)(20,41)(21,0)(22,41)(23,41)(24,41)(25,0)(26,41)(27,41)(28,41)(29,41)(30,8)(31,41)(32,41)(33,41)(34,41)(35,41)(36,40)(37,41)(38,41)(39,41)(40,41)(41,41)
+Number of flows in each configuration 42 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,41)(1,10)(2,40)(3,0)(4,41)(5,41)(6,19)(7,41)(8,40)(9,40)(10,2)(11,40)(12,40)(13,40)(14,40)(15,40)(16,41)(17,40)(18,40)(19,40)(20,40)(21,41)(22,40)(23,40)(24,0)(25,18)(26,41)(27,40)(28,0)(29,40)(30,40)(31,23)(32,33)(33,3)(34,41)(35,40)(36,40)(37,10)(38,40)(39,41)(40,40)(41,23)
+datasets/flows/dataset_15 
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,61)(1,22)(2,61)(3,61)(4,60)(5,21)(6,61)(7,60)(8,61)(9,60)(10,61)(11,61)(12,60)(13,61)(14,30)(15,61)(16,61)(17,60)(18,60)(19,60)(20,60)(21,60)(22,0)(23,2)(24,60)(25,61)(26,61)(27,61)(28,61)(29,60)(30,60)(31,7)(32,61)(33,61)(34,61)(35,14)(36,61)(37,61)(38,61)(39,60)(40,13)(41,60)(42,60)(43,28)(44,60)(45,0)(46,61)(47,61)(48,61)(49,60)(50,60)(51,60)(52,60)(53,60)(54,61)(55,19)(56,61)(57,61)(58,61)(59,60)(60,61)(61,61)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,59)(1,60)(2,54)(3,51)(4,13)(5,9)(6,61)(7,61)(8,60)(9,55)(10,61)(11,60)(12,61)(13,61)(14,9)(15,57)(16,37)(17,60)(18,61)(19,61)(20,61)(21,60)(22,61)(23,61)(24,61)(25,61)(26,61)(27,57)(28,56)(29,51)(30,0)(31,4)(32,60)(33,51)(34,47)(35,60)(36,60)(37,61)(38,55)(39,61)(40,61)(41,60)(42,60)(43,15)(44,57)(45,2)(46,13)(47,42)(48,55)(49,60)(50,60)(51,0)(52,61)(53,61)(54,60)(55,60)(56,60)(57,60)(58,61)(59,60)(60,60)(61,61)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,60)(1,60)(2,61)(3,53)(4,61)(5,3)(6,60)(7,61)(8,56)(9,61)(10,59)(11,60)(12,60)(13,60)(14,2)(15,25)(16,55)(17,59)(18,25)(19,61)(20,60)(21,25)(22,60)(23,60)(24,61)(25,60)(26,60)(27,60)(28,58)(29,60)(30,60)(31,60)(32,61)(33,58)(34,60)(35,57)(36,9)(37,61)(38,61)(39,48)(40,61)(41,60)(42,27)(43,60)(44,51)(45,2)(46,35)(47,60)(48,54)(49,28)(50,60)(51,60)(52,61)(53,56)(54,5)(55,55)(56,51)(57,60)(58,60)(59,60)(60,60)(61,60)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,3)(1,61)(2,58)(3,61)(4,61)(5,57)(6,60)(7,60)(8,23)(9,60)(10,60)(11,60)(12,60)(13,59)(14,23)(15,9)(16,0)(17,60)(18,61)(19,60)(20,38)(21,61)(22,14)(23,61)(24,60)(25,8)(26,60)(27,60)(28,5)(29,38)(30,60)(31,60)(32,61)(33,0)(34,61)(35,60)(36,55)(37,60)(38,51)(39,60)(40,60)(41,60)(42,60)(43,58)(44,56)(45,60)(46,17)(47,60)(48,60)(49,15)(50,5)(51,1)(52,0)(53,19)(54,60)(55,54)(56,32)(57,60)(58,60)(59,19)(60,0)(61,60)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,61)(1,60)(2,9)(3,41)(4,59)(5,60)(6,61)(7,37)(8,44)(9,38)(10,60)(11,27)(12,4)(13,60)(14,51)(15,54)(16,49)(17,59)(18,54)(19,61)(20,60)(21,58)(22,60)(23,48)(24,60)(25,60)(26,49)(27,60)(28,60)(29,60)(30,49)(31,60)(32,25)(33,18)(34,51)(35,11)(36,60)(37,27)(38,60)(39,61)(40,45)(41,60)(42,57)(43,27)(44,9)(45,31)(46,60)(47,35)(48,60)(49,21)(50,54)(51,57)(52,51)(53,61)(54,60)(55,6)(56,57)(57,60)(58,60)(59,59)(60,0)(61,61)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,60)(1,60)(2,60)(3,60)(4,61)(5,60)(6,60)(7,45)(8,61)(9,42)(10,60)(11,6)(12,11)(13,35)(14,60)(15,58)(16,61)(17,21)(18,61)(19,61)(20,60)(21,60)(22,42)(23,60)(24,60)(25,61)(26,60)(27,3)(28,59)(29,60)(30,60)(31,61)(32,57)(33,58)(34,60)(35,60)(36,54)(37,17)(38,61)(39,60)(40,60)(41,60)(42,60)(43,60)(44,60)(45,60)(46,60)(47,32)(48,61)(49,60)(50,60)(51,60)(52,42)(53,3)(54,60)(55,8)(56,60)(57,60)(58,60)(59,60)(60,60)(61,52)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,60)(1,60)(2,61)(3,61)(4,61)(5,60)(6,14)(7,51)(8,60)(9,60)(10,60)(11,61)(12,53)(13,60)(14,61)(15,9)(16,51)(17,60)(18,60)(19,4)(20,60)(21,2)(22,60)(23,60)(24,61)(25,42)(26,60)(27,60)(28,52)(29,0)(30,60)(31,60)(32,60)(33,53)(34,60)(35,61)(36,60)(37,60)(38,60)(39,60)(40,36)(41,60)(42,15)(43,9)(44,60)(45,60)(46,60)(47,19)(48,60)(49,60)(50,1)(51,60)(52,60)(53,60)(54,19)(55,60)(56,14)(57,60)(58,60)(59,60)(60,60)(61,1)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,60)(1,61)(2,58)(3,55)(4,61)(5,55)(6,61)(7,16)(8,8)(9,57)(10,60)(11,21)(12,17)(13,32)(14,47)(15,6)(16,44)(17,61)(18,61)(19,60)(20,60)(21,60)(22,60)(23,60)(24,9)(25,60)(26,60)(27,50)(28,32)(29,61)(30,46)(31,60)(32,60)(33,60)(34,61)(35,55)(36,60)(37,60)(38,60)(39,60)(40,60)(41,56)(42,60)(43,7)(44,61)(45,60)(46,60)(47,60)(48,60)(49,58)(50,60)(51,35)(52,54)(53,60)(54,61)(55,60)(56,50)(57,60)(58,61)(59,60)(60,2)(61,60)
+Number of flows in each configuration 62 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,60)(1,61)(2,61)(3,61)(4,60)(5,60)(6,0)(7,57)(8,61)(9,41)(10,61)(11,60)(12,46)(13,11)(14,1)(15,61)(16,61)(17,13)(18,60)(19,60)(20,7)(21,28)(22,61)(23,1)(24,60)(25,60)(26,60)(27,4)(28,0)(29,60)(30,60)(31,61)(32,60)(33,9)(34,60)(35,61)(36,0)(37,43)(38,61)(39,11)(40,60)(41,60)(42,60)(43,60)(44,60)(45,60)(46,54)(47,25)(48,59)(49,22)(50,60)(51,60)(52,60)(53,60)(54,60)(55,60)(56,60)(57,60)(58,60)(59,61)(60,60)(61,60)
+datasets/flows/dataset_16 
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,83)(1,72)(2,83)(3,39)(4,40)(5,82)(6,6)(7,33)(8,57)(9,81)(10,83)(11,69)(12,55)(13,83)(14,82)(15,71)(16,71)(17,66)(18,80)(19,57)(20,83)(21,83)(22,80)(23,83)(24,83)(25,82)(26,83)(27,83)(28,82)(29,83)(30,80)(31,60)(32,83)(33,82)(34,82)(35,49)(36,53)(37,52)(38,3)(39,55)(40,7)(41,59)(42,82)(43,32)(44,82)(45,83)(46,83)(47,83)(48,71)(49,40)(50,55)(51,60)(52,61)(53,67)(54,77)(55,81)(56,83)(57,32)(58,80)(59,68)(60,82)(61,82)(62,77)(63,82)(64,0)(65,82)(66,78)(67,59)(68,82)(69,82)(70,80)(71,83)(72,79)(73,82)(74,60)(75,69)(76,22)(77,63)(78,82)(79,55)(80,82)(81,82)(82,82)(83,82)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,7)(1,0)(2,78)(3,3)(4,82)(5,21)(6,21)(7,1)(8,21)(9,80)(10,1)(11,0)(12,0)(13,51)(14,2)(15,0)(16,11)(17,32)(18,20)(19,82)(20,83)(21,0)(22,82)(23,2)(24,83)(25,83)(26,5)(27,82)(28,83)(29,0)(30,0)(31,14)(32,0)(33,0)(34,3)(35,2)(36,1)(37,82)(38,0)(39,82)(40,0)(41,83)(42,17)(43,77)(44,18)(45,83)(46,82)(47,83)(48,2)(49,2)(50,21)(51,82)(52,70)(53,49)(54,3)(55,20)(56,5)(57,82)(58,82)(59,0)(60,82)(61,82)(62,82)(63,83)(64,78)(65,17)(66,82)(67,81)(68,1)(69,83)(70,0)(71,83)(72,6)(73,2)(74,80)(75,7)(76,83)(77,11)(78,19)(79,80)(80,0)(81,76)(82,19)(83,70)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,23)(1,83)(2,83)(3,4)(4,82)(5,82)(6,19)(7,0)(8,2)(9,82)(10,34)(11,23)(12,6)(13,82)(14,5)(15,81)(16,55)(17,0)(18,77)(19,1)(20,0)(21,3)(22,3)(23,12)(24,83)(25,3)(26,0)(27,44)(28,69)(29,19)(30,83)(31,47)(32,0)(33,83)(34,3)(35,23)(36,81)(37,43)(38,34)(39,81)(40,1)(41,82)(42,5)(43,83)(44,0)(45,80)(46,44)(47,17)(48,56)(49,0)(50,0)(51,1)(52,0)(53,80)(54,3)(55,73)(56,62)(57,55)(58,12)(59,73)(60,80)(61,83)(62,25)(63,1)(64,82)(65,3)(66,51)(67,0)(68,0)(69,1)(70,65)(71,81)(72,83)(73,5)(74,9)(75,2)(76,80)(77,1)(78,2)(79,82)(80,83)(81,82)(82,82)(83,83)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,0)(1,0)(2,83)(3,7)(4,82)(5,83)(6,82)(7,81)(8,82)(9,2)(10,82)(11,83)(12,3)(13,0)(14,0)(15,4)(16,76)(17,78)(18,83)(19,3)(20,83)(21,3)(22,83)(23,82)(24,80)(25,82)(26,1)(27,8)(28,82)(29,0)(30,0)(31,82)(32,81)(33,1)(34,19)(35,3)(36,81)(37,81)(38,2)(39,81)(40,83)(41,80)(42,13)(43,77)(44,82)(45,82)(46,82)(47,78)(48,83)(49,37)(50,82)(51,80)(52,83)(53,83)(54,82)(55,79)(56,0)(57,82)(58,82)(59,0)(60,25)(61,0)(62,45)(63,80)(64,82)(65,0)(66,83)(67,1)(68,82)(69,19)(70,5)(71,23)(72,0)(73,82)(74,83)(75,81)(76,82)(77,83)(78,82)(79,2)(80,0)(81,82)(82,79)(83,4)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,0)(1,82)(2,82)(3,17)(4,82)(5,4)(6,82)(7,0)(8,3)(9,21)(10,83)(11,77)(12,71)(13,1)(14,83)(15,24)(16,29)(17,19)(18,0)(19,0)(20,83)(21,19)(22,82)(23,1)(24,77)(25,0)(26,64)(27,1)(28,11)(29,79)(30,82)(31,0)(32,14)(33,82)(34,2)(35,82)(36,83)(37,39)(38,81)(39,83)(40,3)(41,19)(42,15)(43,77)(44,6)(45,1)(46,0)(47,0)(48,82)(49,83)(50,35)(51,79)(52,60)(53,81)(54,3)(55,81)(56,3)(57,3)(58,17)(59,9)(60,16)(61,1)(62,0)(63,79)(64,4)(65,2)(66,0)(67,49)(68,0)(69,1)(70,82)(71,50)(72,33)(73,82)(74,56)(75,82)(76,82)(77,0)(78,78)(79,0)(80,3)(81,83)(82,78)(83,83)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,4)(1,83)(2,4)(3,81)(4,83)(5,81)(6,83)(7,0)(8,1)(9,3)(10,0)(11,11)(12,9)(13,0)(14,0)(15,0)(16,0)(17,0)(18,79)(19,6)(20,83)(21,76)(22,82)(23,0)(24,63)(25,83)(26,39)(27,83)(28,26)(29,40)(30,69)(31,18)(32,0)(33,83)(34,0)(35,49)(36,82)(37,29)(38,29)(39,81)(40,3)(41,0)(42,81)(43,59)(44,0)(45,83)(46,79)(47,66)(48,19)(49,0)(50,9)(51,83)(52,76)(53,0)(54,82)(55,1)(56,82)(57,83)(58,9)(59,81)(60,35)(61,3)(62,0)(63,82)(64,76)(65,81)(66,82)(67,82)(68,36)(69,83)(70,5)(71,83)(72,82)(73,59)(74,2)(75,11)(76,83)(77,0)(78,2)(79,48)(80,47)(81,19)(82,82)(83,72)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,82)(1,0)(2,82)(3,19)(4,81)(5,0)(6,79)(7,1)(8,82)(9,82)(10,81)(11,71)(12,79)(13,83)(14,82)(15,81)(16,1)(17,82)(18,25)(19,81)(20,10)(21,0)(22,83)(23,19)(24,73)(25,82)(26,3)(27,82)(28,0)(29,0)(30,78)(31,5)(32,10)(33,3)(34,19)(35,82)(36,16)(37,83)(38,0)(39,82)(40,79)(41,65)(42,0)(43,3)(44,83)(45,0)(46,55)(47,1)(48,37)(49,83)(50,82)(51,79)(52,23)(53,34)(54,0)(55,81)(56,0)(57,82)(58,26)(59,0)(60,78)(61,22)(62,82)(63,83)(64,4)(65,37)(66,9)(67,83)(68,52)(69,3)(70,82)(71,0)(72,71)(73,82)(74,2)(75,82)(76,83)(77,1)(78,1)(79,3)(80,0)(81,83)(82,41)(83,79)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,1)(1,57)(2,82)(3,0)(4,82)(5,82)(6,81)(7,83)(8,11)(9,27)(10,76)(11,23)(12,83)(13,1)(14,82)(15,22)(16,71)(17,3)(18,69)(19,82)(20,5)(21,5)(22,81)(23,83)(24,83)(25,83)(26,10)(27,30)(28,28)(29,75)(30,83)(31,1)(32,21)(33,82)(34,81)(35,6)(36,0)(37,83)(38,0)(39,43)(40,6)(41,27)(42,82)(43,0)(44,43)(45,1)(46,73)(47,1)(48,0)(49,0)(50,23)(51,79)(52,83)(53,83)(54,2)(55,14)(56,82)(57,82)(58,11)(59,83)(60,36)(61,69)(62,82)(63,18)(64,14)(65,82)(66,79)(67,2)(68,83)(69,70)(70,82)(71,82)(72,82)(73,3)(74,14)(75,72)(76,8)(77,54)(78,82)(79,0)(80,83)(81,82)(82,82)(83,2)
+Number of flows in each configuration 84 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,0)(1,83)(2,83)(3,83)(4,82)(5,0)(6,79)(7,0)(8,0)(9,83)(10,1)(11,83)(12,83)(13,3)(14,0)(15,0)(16,79)(17,82)(18,1)(19,0)(20,0)(21,82)(22,10)(23,5)(24,2)(25,82)(26,5)(27,3)(28,83)(29,37)(30,18)(31,0)(32,81)(33,82)(34,2)(35,83)(36,14)(37,82)(38,82)(39,2)(40,55)(41,0)(42,83)(43,82)(44,31)(45,49)(46,0)(47,0)(48,83)(49,82)(50,82)(51,17)(52,82)(53,14)(54,2)(55,79)(56,83)(57,83)(58,82)(59,1)(60,1)(61,75)(62,77)(63,0)(64,82)(65,20)(66,82)(67,83)(68,73)(69,82)(70,82)(71,83)(72,7)(73,27)(74,82)(75,82)(76,83)(77,30)(78,83)(79,0)(80,82)(81,82)(82,83)(83,49)
+datasets/flows/dataset_17 
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,102)(1,102)(2,102)(3,103)(4,0)(5,103)(6,26)(7,0)(8,102)(9,51)(10,102)(11,102)(12,37)(13,102)(14,102)(15,99)(16,102)(17,62)(18,101)(19,103)(20,102)(21,0)(22,43)(23,1)(24,37)(25,31)(26,37)(27,19)(28,0)(29,0)(30,101)(31,102)(32,0)(33,97)(34,102)(35,103)(36,103)(37,27)(38,0)(39,97)(40,7)(41,0)(42,102)(43,1)(44,102)(45,86)(46,1)(47,1)(48,0)(49,102)(50,71)(51,102)(52,79)(53,77)(54,103)(55,44)(56,95)(57,103)(58,97)(59,101)(60,102)(61,0)(62,98)(63,18)(64,101)(65,64)(66,102)(67,100)(68,102)(69,102)(70,0)(71,9)(72,95)(73,0)(74,103)(75,57)(76,99)(77,103)(78,57)(79,57)(80,37)(81,26)(82,0)(83,101)(84,52)(85,63)(86,101)(87,103)(88,103)(89,103)(90,99)(91,99)(92,99)(93,41)(94,0)(95,103)(96,102)(97,101)(98,103)(99,103)(100,103)(101,101)(102,102)(103,103)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,0)(1,103)(2,103)(3,0)(4,83)(5,100)(6,5)(7,97)(8,83)(9,0)(10,103)(11,5)(12,101)(13,1)(14,102)(15,96)(16,26)(17,103)(18,0)(19,2)(20,102)(21,0)(22,1)(23,71)(24,103)(25,43)(26,3)(27,0)(28,102)(29,103)(30,1)(31,38)(32,102)(33,102)(34,2)(35,98)(36,102)(37,76)(38,102)(39,0)(40,102)(41,89)(42,2)(43,102)(44,99)(45,3)(46,2)(47,0)(48,103)(49,102)(50,102)(51,1)(52,1)(53,102)(54,74)(55,3)(56,0)(57,102)(58,101)(59,2)(60,7)(61,38)(62,34)(63,1)(64,20)(65,0)(66,1)(67,102)(68,90)(69,0)(70,19)(71,102)(72,98)(73,103)(74,103)(75,103)(76,0)(77,5)(78,103)(79,100)(80,33)(81,25)(82,1)(83,55)(84,103)(85,103)(86,57)(87,2)(88,92)(89,32)(90,92)(91,0)(92,27)(93,60)(94,102)(95,2)(96,41)(97,0)(98,103)(99,102)(100,103)(101,99)(102,41)(103,102)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,1)(1,101)(2,102)(3,3)(4,0)(5,102)(6,64)(7,101)(8,95)(9,103)(10,100)(11,65)(12,2)(13,103)(14,3)(15,5)(16,100)(17,90)(18,97)(19,35)(20,47)(21,17)(22,6)(23,0)(24,3)(25,103)(26,2)(27,29)(28,102)(29,53)(30,102)(31,0)(32,63)(33,102)(34,96)(35,0)(36,102)(37,98)(38,3)(39,102)(40,99)(41,103)(42,103)(43,1)(44,97)(45,102)(46,2)(47,103)(48,9)(49,0)(50,16)(51,103)(52,81)(53,0)(54,7)(55,56)(56,103)(57,103)(58,102)(59,34)(60,69)(61,102)(62,4)(63,49)(64,18)(65,0)(66,1)(67,0)(68,1)(69,1)(70,6)(71,6)(72,102)(73,17)(74,94)(75,0)(76,92)(77,4)(78,98)(79,103)(80,103)(81,83)(82,50)(83,1)(84,99)(85,0)(86,101)(87,100)(88,103)(89,56)(90,26)(91,49)(92,102)(93,1)(94,102)(95,102)(96,103)(97,2)(98,77)(99,45)(100,103)(101,101)(102,101)(103,57)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,103)(1,102)(2,15)(3,19)(4,103)(5,19)(6,103)(7,3)(8,1)(9,1)(10,9)(11,103)(12,7)(13,103)(14,95)(15,0)(16,4)(17,3)(18,101)(19,102)(20,53)(21,103)(22,0)(23,63)(24,102)(25,1)(26,0)(27,2)(28,3)(29,11)(30,103)(31,5)(32,27)(33,2)(34,38)(35,102)(36,0)(37,32)(38,59)(39,1)(40,0)(41,102)(42,62)(43,0)(44,5)(45,103)(46,48)(47,0)(48,101)(49,1)(50,83)(51,21)(52,73)(53,56)(54,3)(55,1)(56,0)(57,5)(58,101)(59,103)(60,52)(61,100)(62,38)(63,63)(64,64)(65,31)(66,1)(67,102)(68,102)(69,96)(70,55)(71,7)(72,100)(73,63)(74,65)(75,27)(76,103)(77,101)(78,1)(79,102)(80,1)(81,103)(82,101)(83,88)(84,1)(85,22)(86,7)(87,98)(88,6)(89,100)(90,0)(91,7)(92,0)(93,1)(94,103)(95,30)(96,103)(97,103)(98,87)(99,0)(100,99)(101,77)(102,102)(103,55)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,7)(1,9)(2,54)(3,1)(4,102)(5,0)(6,6)(7,102)(8,102)(9,3)(10,1)(11,103)(12,103)(13,2)(14,1)(15,67)(16,6)(17,23)(18,10)(19,0)(20,102)(21,2)(22,102)(23,102)(24,45)(25,102)(26,103)(27,102)(28,0)(29,19)(30,0)(31,2)(32,3)(33,0)(34,5)(35,103)(36,0)(37,19)(38,102)(39,35)(40,2)(41,100)(42,102)(43,56)(44,103)(45,102)(46,4)(47,102)(48,11)(49,60)(50,103)(51,32)(52,0)(53,103)(54,9)(55,42)(56,102)(57,98)(58,103)(59,56)(60,102)(61,93)(62,103)(63,0)(64,9)(65,1)(66,2)(67,89)(68,11)(69,1)(70,2)(71,24)(72,101)(73,103)(74,88)(75,11)(76,0)(77,4)(78,102)(79,103)(80,36)(81,102)(82,2)(83,91)(84,2)(85,49)(86,55)(87,101)(88,53)(89,103)(90,103)(91,102)(92,1)(93,103)(94,0)(95,99)(96,21)(97,23)(98,29)(99,22)(100,1)(101,21)(102,0)(103,47)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,0)(1,9)(2,103)(3,1)(4,103)(5,102)(6,103)(7,0)(8,3)(9,8)(10,19)(11,70)(12,18)(13,4)(14,0)(15,3)(16,90)(17,75)(18,1)(19,102)(20,31)(21,37)(22,3)(23,103)(24,17)(25,96)(26,66)(27,100)(28,0)(29,0)(30,0)(31,102)(32,103)(33,103)(34,102)(35,59)(36,85)(37,102)(38,51)(39,102)(40,86)(41,0)(42,66)(43,0)(44,0)(45,101)(46,57)(47,78)(48,3)(49,1)(50,49)(51,102)(52,78)(53,7)(54,103)(55,7)(56,102)(57,97)(58,45)(59,101)(60,102)(61,97)(62,34)(63,85)(64,103)(65,103)(66,2)(67,103)(68,3)(69,103)(70,102)(71,94)(72,85)(73,57)(74,22)(75,2)(76,65)(77,100)(78,102)(79,86)(80,83)(81,101)(82,37)(83,102)(84,5)(85,0)(86,9)(87,34)(88,101)(89,3)(90,8)(91,82)(92,96)(93,66)(94,103)(95,0)(96,102)(97,103)(98,5)(99,38)(100,102)(101,76)(102,103)(103,103)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,2)(1,103)(2,40)(3,0)(4,102)(5,62)(6,97)(7,9)(8,103)(9,103)(10,53)(11,102)(12,9)(13,3)(14,99)(15,11)(16,1)(17,94)(18,95)(19,103)(20,93)(21,99)(22,2)(23,102)(24,3)(25,0)(26,52)(27,103)(28,4)(29,7)(30,103)(31,102)(32,2)(33,1)(34,53)(35,3)(36,102)(37,7)(38,101)(39,27)(40,100)(41,1)(42,97)(43,37)(44,101)(45,0)(46,101)(47,0)(48,101)(49,102)(50,99)(51,0)(52,99)(53,7)(54,7)(55,102)(56,85)(57,4)(58,102)(59,41)(60,1)(61,0)(62,102)(63,2)(64,103)(65,88)(66,1)(67,103)(68,103)(69,3)(70,2)(71,0)(72,19)(73,44)(74,1)(75,9)(76,103)(77,0)(78,102)(79,93)(80,103)(81,2)(82,9)(83,1)(84,0)(85,1)(86,99)(87,18)(88,99)(89,99)(90,2)(91,101)(92,49)(93,11)(94,103)(95,103)(96,3)(97,102)(98,0)(99,28)(100,103)(101,103)(102,84)(103,2)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,0)(1,103)(2,44)(3,90)(4,0)(5,93)(6,55)(7,103)(8,3)(9,102)(10,100)(11,39)(12,0)(13,102)(14,58)(15,99)(16,1)(17,92)(18,103)(19,0)(20,1)(21,42)(22,102)(23,0)(24,83)(25,81)(26,4)(27,31)(28,35)(29,5)(30,51)(31,101)(32,77)(33,0)(34,3)(35,32)(36,101)(37,0)(38,100)(39,43)(40,95)(41,71)(42,100)(43,4)(44,98)(45,15)(46,37)(47,0)(48,102)(49,1)(50,100)(51,103)(52,101)(53,98)(54,2)(55,1)(56,3)(57,83)(58,42)(59,81)(60,1)(61,102)(62,0)(63,97)(64,101)(65,102)(66,102)(67,60)(68,102)(69,0)(70,1)(71,49)(72,95)(73,45)(74,48)(75,103)(76,102)(77,103)(78,102)(79,0)(80,5)(81,102)(82,46)(83,90)(84,100)(85,23)(86,64)(87,73)(88,58)(89,103)(90,0)(91,97)(92,19)(93,102)(94,63)(95,1)(96,58)(97,103)(98,23)(99,102)(100,37)(101,103)(102,101)(103,103)
+Number of flows in each configuration 104 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,98)(1,1)(2,102)(3,11)(4,102)(5,80)(6,5)(7,0)(8,103)(9,97)(10,101)(11,100)(12,1)(13,81)(14,3)(15,56)(16,16)(17,14)(18,45)(19,100)(20,103)(21,102)(22,23)(23,87)(24,61)(25,0)(26,45)(27,7)(28,102)(29,1)(30,103)(31,22)(32,19)(33,103)(34,0)(35,7)(36,101)(37,102)(38,0)(39,0)(40,19)(41,102)(42,1)(43,90)(44,0)(45,103)(46,1)(47,22)(48,0)(49,4)(50,0)(51,76)(52,102)(53,0)(54,0)(55,102)(56,1)(57,1)(58,101)(59,102)(60,102)(61,0)(62,102)(63,103)(64,42)(65,1)(66,102)(67,0)(68,103)(69,103)(70,103)(71,102)(72,3)(73,48)(74,103)(75,2)(76,19)(77,0)(78,3)(79,1)(80,1)(81,7)(82,1)(83,2)(84,102)(85,83)(86,0)(87,103)(88,1)(89,103)(90,103)(91,3)(92,103)(93,68)(94,103)(95,5)(96,15)(97,100)(98,77)(99,102)(100,101)(101,75)(102,99)(103,1)
+datasets/flows/dataset_18 
+Number of flows in each configuration 126 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,61)(1,49)(2,109)(3,65)(4,1)(5,1)(6,125)(7,125)(8,122)(9,0)(10,53)(11,55)(12,125)(13,63)(14,0)(15,123)(16,121)(17,2)(18,47)(19,62)(20,0)(21,124)(22,85)(23,50)(24,118)(25,0)(26,123)(27,0)(28,66)(29,20)(30,23)(31,125)(32,23)(33,109)(34,123)(35,86)(36,123)(37,125)(38,30)(39,0)(40,121)(41,29)(42,123)(43,66)(44,119)(45,17)(46,79)(47,125)(48,87)(49,122)(50,116)(51,5)(52,123)(53,1)(54,119)(55,124)(56,48)(57,66)(58,123)(59,76)(60,22)(61,0)(62,82)(63,98)(64,52)(65,109)(66,122)(67,109)(68,124)(69,5)(70,45)(71,125)(72,20)(73,125)(74,122)(75,59)(76,123)(77,1)(78,87)(79,46)(80,107)(81,114)(82,58)(83,54)(84,124)(85,125)(86,70)(87,113)(88,15)(89,123)(90,124)(91,121)(92,30)(93,1)(94,27)(95,109)(96,32)(97,7)(98,124)(99,6)(100,95)(101,117)(102,125)(103,121)(104,108)(105,124)(106,119)(107,63)(108,62)(109,97)(110,124)(111,122)(112,40)(113,124)(114,121)(115,62)(116,123)(117,2)(118,64)(119,70)(120,124)(121,119)(122,114)(123,122)(124,77)(125,37)
+Number of flows in each configuration 126 
+Solving flow reconfiguration with source config_1 and target config_2
+datasets/flows/dataset_25 
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,14)(1,18)(2,19)(3,18)(4,2)(5,9)(6,5)(7,2)(8,3)(9,8)(10,9)(11,18)(12,14)(13,11)(14,10)(15,18)(16,18)(17,5)(18,18)(19,18)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,0)(1,2)(2,0)(3,5)(4,5)(5,12)(6,5)(7,0)(8,0)(9,17)(10,0)(11,15)(12,1)(13,10)(14,19)(15,12)(16,18)(17,18)(18,14)(19,4)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,1)(1,17)(2,19)(3,19)(4,13)(5,4)(6,2)(7,7)(8,19)(9,8)(10,9)(11,18)(12,14)(13,10)(14,10)(15,1)(16,8)(17,10)(18,14)(19,4)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,19)(1,5)(2,19)(3,19)(4,0)(5,0)(6,19)(7,4)(8,0)(9,0)(10,0)(11,19)(12,19)(13,19)(14,19)(15,19)(16,19)(17,18)(18,18)(19,19)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,18)(1,5)(2,18)(3,0)(4,19)(5,19)(6,18)(7,1)(8,19)(9,18)(10,19)(11,18)(12,18)(13,18)(14,18)(15,0)(16,18)(17,18)(18,18)(19,18)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,18)(1,3)(2,19)(3,19)(4,19)(5,4)(6,19)(7,0)(8,18)(9,7)(10,9)(11,18)(12,14)(13,10)(14,18)(15,18)(16,8)(17,19)(18,1)(19,4)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,18)(1,18)(2,19)(3,18)(4,13)(5,4)(6,5)(7,3)(8,3)(9,18)(10,9)(11,3)(12,14)(13,10)(14,18)(15,1)(16,8)(17,19)(18,14)(19,4)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,15)(1,18)(2,19)(3,1)(4,19)(5,4)(6,0)(7,19)(8,11)(9,18)(10,9)(11,0)(12,14)(13,17)(14,10)(15,18)(16,11)(17,10)(18,3)(19,4)
+Number of flows in each configuration 20 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,19)(1,19)(2,19)(3,5)(4,19)(5,19)(6,19)(7,19)(8,0)(9,19)(10,19)(11,19)(12,19)(13,19)(14,19)(15,19)(16,17)(17,18)(18,18)(19,18)
+datasets/flows/dataset_26 
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,66)(1,66)(2,66)(3,0)(4,0)(5,66)(6,66)(7,5)(8,0)(9,66)(10,66)(11,0)(12,0)(13,0)(14,0)(15,66)(16,8)(17,0)(18,0)(19,66)(20,66)(21,66)(22,66)(23,66)(24,66)(25,66)(26,66)(27,66)(28,7)(29,66)(30,66)(31,66)(32,66)(33,66)(34,66)(35,66)(36,4)(37,66)(38,66)(39,66)(40,66)(41,66)(42,66)(43,66)(44,66)(45,66)(46,66)(47,66)(48,66)(49,10)(50,66)(51,66)(52,66)(53,66)(54,66)(55,66)(56,66)(57,65)(58,66)(59,66)(60,66)(61,66)(62,66)(63,66)(64,66)(65,66)(66,65)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,64)(1,66)(2,34)(3,66)(4,9)(5,65)(6,45)(7,65)(8,65)(9,66)(10,61)(11,66)(12,61)(13,37)(14,33)(15,0)(16,63)(17,36)(18,63)(19,31)(20,26)(21,15)(22,55)(23,27)(24,29)(25,64)(26,65)(27,57)(28,22)(29,30)(30,25)(31,63)(32,64)(33,65)(34,22)(35,54)(36,64)(37,0)(38,15)(39,7)(40,65)(41,43)(42,60)(43,7)(44,13)(45,65)(46,24)(47,66)(48,63)(49,9)(50,28)(51,65)(52,7)(53,3)(54,12)(55,61)(56,7)(57,60)(58,9)(59,30)(60,64)(61,16)(62,66)(63,10)(64,7)(65,33)(66,5)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,31)(1,1)(2,12)(3,9)(4,64)(5,56)(6,41)(7,66)(8,27)(9,3)(10,26)(11,1)(12,63)(13,66)(14,66)(15,66)(16,33)(17,0)(18,3)(19,65)(20,65)(21,66)(22,14)(23,3)(24,63)(25,62)(26,63)(27,66)(28,65)(29,46)(30,66)(31,1)(32,62)(33,9)(34,65)(35,53)(36,65)(37,1)(38,65)(39,66)(40,28)(41,50)(42,64)(43,62)(44,66)(45,31)(46,65)(47,65)(48,61)(49,0)(50,60)(51,64)(52,41)(53,4)(54,64)(55,63)(56,65)(57,65)(58,64)(59,18)(60,66)(61,19)(62,60)(63,65)(64,61)(65,33)(66,65)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,20)(1,29)(2,18)(3,0)(4,66)(5,65)(6,66)(7,62)(8,0)(9,45)(10,66)(11,53)(12,65)(13,65)(14,60)(15,56)(16,57)(17,65)(18,65)(19,66)(20,65)(21,61)(22,63)(23,66)(24,65)(25,65)(26,57)(27,66)(28,0)(29,60)(30,60)(31,65)(32,65)(33,66)(34,65)(35,1)(36,60)(37,33)(38,7)(39,66)(40,55)(41,65)(42,1)(43,30)(44,65)(45,32)(46,61)(47,60)(48,66)(49,66)(50,28)(51,7)(52,36)(53,28)(54,17)(55,65)(56,65)(57,61)(58,33)(59,65)(60,34)(61,6)(62,65)(63,20)(64,11)(65,59)(66,65)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,65)(1,66)(2,2)(3,65)(4,60)(5,47)(6,37)(7,65)(8,65)(9,64)(10,62)(11,66)(12,66)(13,65)(14,59)(15,16)(16,66)(17,66)(18,65)(19,53)(20,66)(21,5)(22,37)(23,61)(24,65)(25,65)(26,9)(27,33)(28,64)(29,43)(30,37)(31,20)(32,33)(33,16)(34,66)(35,44)(36,45)(37,0)(38,57)(39,17)(40,65)(41,65)(42,65)(43,28)(44,59)(45,59)(46,11)(47,33)(48,63)(49,46)(50,41)(51,46)(52,44)(53,0)(54,1)(55,59)(56,65)(57,65)(58,65)(59,65)(60,42)(61,66)(62,58)(63,44)(64,10)(65,65)(66,39)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,66)(1,22)(2,7)(3,66)(4,63)(5,36)(6,50)(7,15)(8,49)(9,66)(10,59)(11,5)(12,66)(13,55)(14,65)(15,60)(16,62)(17,49)(18,63)(19,5)(20,9)(21,28)(22,65)(23,14)(24,1)(25,7)(26,66)(27,58)(28,64)(29,0)(30,66)(31,65)(32,4)(33,46)(34,61)(35,66)(36,50)(37,26)(38,25)(39,65)(40,66)(41,66)(42,0)(43,53)(44,3)(45,9)(46,65)(47,66)(48,65)(49,24)(50,50)(51,23)(52,65)(53,65)(54,53)(55,61)(56,65)(57,62)(58,61)(59,59)(60,64)(61,65)(62,60)(63,65)(64,0)(65,65)(66,65)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,57)(1,65)(2,33)(3,55)(4,65)(5,41)(6,65)(7,65)(8,66)(9,57)(10,26)(11,66)(12,57)(13,41)(14,65)(15,65)(16,56)(17,11)(18,0)(19,9)(20,49)(21,65)(22,66)(23,63)(24,27)(25,0)(26,59)(27,22)(28,65)(29,55)(30,37)(31,60)(32,19)(33,65)(34,65)(35,59)(36,63)(37,32)(38,16)(39,62)(40,65)(41,65)(42,50)(43,65)(44,63)(45,65)(46,50)(47,57)(48,0)(49,9)(50,31)(51,65)(52,66)(53,47)(54,66)(55,65)(56,65)(57,39)(58,28)(59,60)(60,65)(61,60)(62,66)(63,65)(64,45)(65,58)(66,1)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,63)(1,66)(2,39)(3,66)(4,66)(5,52)(6,45)(7,41)(8,65)(9,43)(10,51)(11,55)(12,19)(13,49)(14,65)(15,62)(16,60)(17,37)(18,65)(19,52)(20,51)(21,52)(22,15)(23,62)(24,16)(25,65)(26,65)(27,18)(28,40)(29,0)(30,2)(31,65)(32,20)(33,41)(34,66)(35,65)(36,49)(37,44)(38,9)(39,28)(40,65)(41,48)(42,65)(43,33)(44,52)(45,53)(46,65)(47,58)(48,65)(49,66)(50,63)(51,45)(52,65)(53,65)(54,54)(55,9)(56,65)(57,66)(58,47)(59,1)(60,7)(61,65)(62,56)(63,58)(64,41)(65,65)(66,0)
+Number of flows in each configuration 67 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,48)(1,55)(2,66)(3,10)(4,1)(5,65)(6,54)(7,65)(8,48)(9,2)(10,65)(11,52)(12,65)(13,0)(14,55)(15,27)(16,41)(17,65)(18,66)(19,0)(20,64)(21,19)(22,2)(23,27)(24,66)(25,65)(26,47)(27,18)(28,66)(29,30)(30,30)(31,65)(32,45)(33,17)(34,66)(35,0)(36,62)(37,66)(38,65)(39,66)(40,66)(41,59)(42,9)(43,61)(44,62)(45,42)(46,65)(47,39)(48,16)(49,61)(50,60)(51,65)(52,20)(53,42)(54,65)(55,60)(56,64)(57,50)(58,66)(59,65)(60,63)(61,49)(62,50)(63,57)(64,65)(65,65)(66,60)
+datasets/flows/dataset_27 
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,104)(1,104)(2,0)(3,103)(4,104)(5,103)(6,104)(7,103)(8,103)(9,104)(10,103)(11,103)(12,104)(13,103)(14,104)(15,104)(16,102)(17,0)(18,104)(19,104)(20,103)(21,104)(22,0)(23,31)(24,104)(25,104)(26,104)(27,104)(28,103)(29,103)(30,104)(31,104)(32,103)(33,103)(34,104)(35,104)(36,104)(37,103)(38,103)(39,104)(40,103)(41,104)(42,103)(43,104)(44,104)(45,104)(46,103)(47,103)(48,103)(49,103)(50,54)(51,103)(52,103)(53,103)(54,103)(55,103)(56,103)(57,103)(58,103)(59,104)(60,103)(61,103)(62,104)(63,103)(64,103)(65,103)(66,99)(67,103)(68,103)(69,103)(70,103)(71,103)(72,103)(73,103)(74,103)(75,103)(76,103)(77,103)(78,103)(79,104)(80,46)(81,52)(82,103)(83,103)(84,103)(85,35)(86,46)(87,40)(88,103)(89,103)(90,103)(91,103)(92,103)(93,103)(94,103)(95,104)(96,103)(97,103)(98,104)(99,103)(100,103)(101,103)(102,103)(103,103)(104,103)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,2)(1,0)(2,92)(3,6)(4,0)(5,104)(6,27)(7,37)(8,103)(9,0)(10,7)(11,27)(12,27)(13,19)(14,103)(15,19)(16,1)(17,103)(18,0)(19,62)(20,103)(21,104)(22,103)(23,103)(24,103)(25,30)(26,8)(27,3)(28,6)(29,39)(30,51)(31,104)(32,103)(33,104)(34,4)(35,103)(36,54)(37,102)(38,8)(39,0)(40,86)(41,3)(42,103)(43,100)(44,4)(45,96)(46,98)(47,104)(48,102)(49,4)(50,22)(51,0)(52,104)(53,12)(54,33)(55,100)(56,30)(57,0)(58,35)(59,103)(60,104)(61,103)(62,3)(63,0)(64,101)(65,29)(66,11)(67,1)(68,77)(69,17)(70,1)(71,84)(72,0)(73,104)(74,0)(75,104)(76,13)(77,104)(78,19)(79,51)(80,103)(81,103)(82,0)(83,101)(84,0)(85,103)(86,103)(87,104)(88,88)(89,1)(90,64)(91,62)(92,5)(93,11)(94,104)(95,0)(96,103)(97,103)(98,104)(99,0)(100,46)(101,1)(102,5)(103,28)(104,103)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,6)(1,1)(2,98)(3,103)(4,94)(5,0)(6,37)(7,104)(8,4)(9,38)(10,103)(11,104)(12,6)(13,0)(14,1)(15,32)(16,2)(17,0)(18,97)(19,48)(20,103)(21,104)(22,0)(23,84)(24,104)(25,21)(26,102)(27,11)(28,0)(29,100)(30,18)(31,103)(32,1)(33,0)(34,2)(35,97)(36,40)(37,103)(38,93)(39,104)(40,1)(41,103)(42,101)(43,50)(44,0)(45,102)(46,64)(47,104)(48,102)(49,27)(50,103)(51,0)(52,100)(53,100)(54,100)(55,37)(56,104)(57,39)(58,104)(59,0)(60,0)(61,0)(62,102)(63,64)(64,103)(65,103)(66,102)(67,101)(68,102)(69,102)(70,102)(71,2)(72,9)(73,1)(74,49)(75,2)(76,103)(77,101)(78,0)(79,74)(80,5)(81,104)(82,104)(83,64)(84,103)(85,2)(86,57)(87,103)(88,103)(89,103)(90,104)(91,38)(92,104)(93,104)(94,3)(95,0)(96,2)(97,2)(98,88)(99,0)(100,1)(101,25)(102,104)(103,3)(104,101)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,62)(1,3)(2,104)(3,29)(4,32)(5,0)(6,4)(7,102)(8,103)(9,84)(10,104)(11,2)(12,1)(13,104)(14,104)(15,104)(16,1)(17,2)(18,12)(19,9)(20,98)(21,3)(22,103)(23,5)(24,104)(25,103)(26,101)(27,0)(28,0)(29,102)(30,91)(31,54)(32,3)(33,102)(34,41)(35,104)(36,2)(37,23)(38,19)(39,89)(40,103)(41,102)(42,104)(43,3)(44,0)(45,4)(46,100)(47,0)(48,4)(49,102)(50,74)(51,99)(52,53)(53,3)(54,102)(55,43)(56,1)(57,101)(58,3)(59,0)(60,104)(61,3)(62,1)(63,104)(64,100)(65,103)(66,7)(67,5)(68,103)(69,103)(70,104)(71,93)(72,1)(73,102)(74,103)(75,1)(76,103)(77,17)(78,103)(79,0)(80,38)(81,104)(82,103)(83,96)(84,55)(85,41)(86,104)(87,103)(88,104)(89,103)(90,103)(91,0)(92,104)(93,0)(94,100)(95,1)(96,104)(97,102)(98,62)(99,97)(100,104)(101,103)(102,1)(103,104)(104,96)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,104)(1,104)(2,6)(3,104)(4,104)(5,103)(6,13)(7,103)(8,4)(9,4)(10,36)(11,5)(12,104)(13,0)(14,42)(15,29)(16,2)(17,85)(18,14)(19,0)(20,100)(21,0)(22,100)(23,102)(24,93)(25,23)(26,5)(27,103)(28,104)(29,104)(30,97)(31,103)(32,103)(33,84)(34,17)(35,4)(36,103)(37,103)(38,0)(39,4)(40,103)(41,103)(42,102)(43,102)(44,98)(45,7)(46,104)(47,103)(48,44)(49,103)(50,96)(51,9)(52,104)(53,102)(54,24)(55,103)(56,102)(57,103)(58,103)(59,103)(60,103)(61,102)(62,103)(63,102)(64,103)(65,102)(66,102)(67,89)(68,0)(69,103)(70,16)(71,102)(72,0)(73,10)(74,0)(75,95)(76,0)(77,102)(78,3)(79,103)(80,104)(81,86)(82,102)(83,104)(84,91)(85,1)(86,104)(87,50)(88,36)(89,82)(90,99)(91,103)(92,38)(93,102)(94,101)(95,103)(96,102)(97,97)(98,100)(99,101)(100,104)(101,104)(102,101)(103,23)(104,102)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,1)(1,0)(2,93)(3,9)(4,0)(5,4)(6,102)(7,0)(8,0)(9,103)(10,4)(11,6)(12,6)(13,80)(14,90)(15,61)(16,103)(17,103)(18,103)(19,104)(20,0)(21,100)(22,3)(23,102)(24,0)(25,104)(26,104)(27,1)(28,0)(29,2)(30,102)(31,2)(32,2)(33,104)(34,103)(35,48)(36,104)(37,94)(38,103)(39,3)(40,102)(41,103)(42,102)(43,104)(44,103)(45,0)(46,104)(47,98)(48,103)(49,102)(50,22)(51,0)(52,2)(53,104)(54,103)(55,0)(56,102)(57,43)(58,103)(59,104)(60,90)(61,19)(62,0)(63,100)(64,101)(65,103)(66,104)(67,1)(68,2)(69,8)(70,97)(71,104)(72,20)(73,103)(74,95)(75,6)(76,29)(77,2)(78,3)(79,94)(80,43)(81,104)(82,21)(83,38)(84,102)(85,1)(86,101)(87,104)(88,100)(89,103)(90,104)(91,104)(92,94)(93,102)(94,100)(95,104)(96,102)(97,2)(98,104)(99,0)(100,104)(101,0)(102,13)(103,103)(104,103)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,104)(1,31)(2,50)(3,104)(4,0)(5,4)(6,1)(7,0)(8,4)(9,3)(10,101)(11,103)(12,104)(13,1)(14,104)(15,103)(16,5)(17,0)(18,4)(19,56)(20,38)(21,0)(22,87)(23,103)(24,103)(25,103)(26,103)(27,0)(28,104)(29,104)(30,103)(31,104)(32,75)(33,0)(34,103)(35,100)(36,0)(37,100)(38,103)(39,101)(40,0)(41,103)(42,103)(43,54)(44,53)(45,103)(46,103)(47,58)(48,104)(49,42)(50,104)(51,96)(52,102)(53,19)(54,103)(55,103)(56,0)(57,104)(58,103)(59,76)(60,104)(61,103)(62,31)(63,1)(64,26)(65,2)(66,0)(67,1)(68,0)(69,1)(70,93)(71,103)(72,18)(73,86)(74,104)(75,104)(76,103)(77,2)(78,0)(79,0)(80,36)(81,2)(82,102)(83,99)(84,15)(85,13)(86,55)(87,104)(88,46)(89,103)(90,103)(91,104)(92,104)(93,0)(94,103)(95,5)(96,49)(97,104)(98,104)(99,0)(100,103)(101,55)(102,99)(103,104)(104,104)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,103)(1,0)(2,104)(3,96)(4,0)(5,102)(6,104)(7,0)(8,1)(9,3)(10,0)(11,3)(12,4)(13,0)(14,103)(15,80)(16,103)(17,104)(18,61)(19,104)(20,2)(21,103)(22,25)(23,33)(24,19)(25,79)(26,103)(27,6)(28,101)(29,8)(30,102)(31,94)(32,0)(33,63)(34,104)(35,2)(36,44)(37,1)(38,42)(39,0)(40,100)(41,18)(42,31)(43,1)(44,99)(45,104)(46,0)(47,100)(48,103)(49,17)(50,44)(51,103)(52,23)(53,0)(54,5)(55,6)(56,99)(57,103)(58,104)(59,103)(60,81)(61,103)(62,0)(63,5)(64,1)(65,1)(66,103)(67,104)(68,0)(69,5)(70,103)(71,103)(72,4)(73,102)(74,23)(75,0)(76,0)(77,44)(78,104)(79,2)(80,1)(81,100)(82,31)(83,0)(84,103)(85,27)(86,103)(87,104)(88,103)(89,52)(90,1)(91,1)(92,103)(93,101)(94,103)(95,103)(96,0)(97,7)(98,46)(99,103)(100,35)(101,101)(102,23)(103,38)(104,104)
+Number of flows in each configuration 105 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,94)(1,5)(2,23)(3,102)(4,0)(5,22)(6,0)(7,96)(8,96)(9,103)(10,96)(11,0)(12,102)(13,0)(14,49)(15,0)(16,5)(17,44)(18,2)(19,0)(20,19)(21,103)(22,3)(23,0)(24,2)(25,1)(26,0)(27,53)(28,83)(29,3)(30,2)(31,0)(32,104)(33,27)(34,1)(35,104)(36,103)(37,103)(38,8)(39,1)(40,103)(41,103)(42,0)(43,101)(44,103)(45,104)(46,104)(47,104)(48,103)(49,96)(50,11)(51,3)(52,5)(53,0)(54,98)(55,104)(56,22)(57,19)(58,44)(59,103)(60,103)(61,104)(62,104)(63,104)(64,1)(65,103)(66,2)(67,84)(68,30)(69,104)(70,5)(71,104)(72,103)(73,96)(74,90)(75,13)(76,104)(77,81)(78,102)(79,52)(80,103)(81,19)(82,0)(83,100)(84,91)(85,104)(86,4)(87,100)(88,80)(89,102)(90,35)(91,100)(92,27)(93,103)(94,103)(95,104)(96,3)(97,29)(98,86)(99,100)(100,84)(101,1)(102,2)(103,90)(104,66)
+datasets/flows/dataset_28 
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,140)(1,140)(2,0)(3,139)(4,88)(5,140)(6,140)(7,30)(8,140)(9,140)(10,140)(11,140)(12,140)(13,118)(14,140)(15,140)(16,140)(17,139)(18,140)(19,139)(20,139)(21,139)(22,140)(23,140)(24,95)(25,122)(26,139)(27,140)(28,114)(29,129)(30,140)(31,131)(32,140)(33,139)(34,131)(35,140)(36,140)(37,130)(38,138)(39,139)(40,140)(41,140)(42,123)(43,139)(44,139)(45,139)(46,137)(47,123)(48,140)(49,90)(50,100)(51,139)(52,140)(53,139)(54,140)(55,139)(56,139)(57,140)(58,140)(59,32)(60,129)(61,139)(62,139)(63,139)(64,140)(65,140)(66,140)(67,140)(68,140)(69,139)(70,140)(71,139)(72,139)(73,140)(74,139)(75,139)(76,139)(77,140)(78,139)(79,139)(80,88)(81,102)(82,139)(83,139)(84,140)(85,130)(86,140)(87,139)(88,139)(89,140)(90,140)(91,139)(92,140)(93,140)(94,140)(95,140)(96,139)(97,139)(98,139)(99,139)(100,139)(101,139)(102,139)(103,140)(104,138)(105,140)(106,139)(107,139)(108,139)(109,139)(110,135)(111,132)(112,139)(113,139)(114,139)(115,136)(116,140)(117,136)(118,139)(119,140)(120,136)(121,139)(122,87)(123,139)(124,139)(125,139)(126,134)(127,140)(128,139)(129,139)(130,139)(131,139)(132,139)(133,137)(134,139)(135,135)(136,139)(137,94)(138,137)(139,139)(140,139)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,77)(1,41)(2,87)(3,2)(4,139)(5,3)(6,140)(7,51)(8,140)(9,6)(10,2)(11,0)(12,81)(13,2)(14,140)(15,2)(16,1)(17,43)(18,66)(19,139)(20,139)(21,139)(22,139)(23,0)(24,138)(25,139)(26,7)(27,27)(28,47)(29,137)(30,140)(31,89)(32,48)(33,122)(34,140)(35,139)(36,139)(37,0)(38,7)(39,87)(40,13)(41,1)(42,74)(43,64)(44,2)(45,2)(46,116)(47,130)(48,131)(49,86)(50,6)(51,139)(52,127)(53,0)(54,48)(55,140)(56,83)(57,140)(58,137)(59,139)(60,3)(61,140)(62,140)(63,140)(64,132)(65,85)(66,0)(67,137)(68,138)(69,129)(70,140)(71,0)(72,140)(73,139)(74,66)(75,140)(76,139)(77,0)(78,136)(79,136)(80,27)(81,94)(82,140)(83,139)(84,139)(85,140)(86,0)(87,86)(88,136)(89,139)(90,139)(91,2)(92,0)(93,139)(94,82)(95,123)(96,78)(97,86)(98,4)(99,108)(100,138)(101,140)(102,85)(103,86)(104,126)(105,49)(106,0)(107,140)(108,140)(109,139)(110,102)(111,0)(112,3)(113,136)(114,100)(115,15)(116,1)(117,133)(118,140)(119,137)(120,1)(121,139)(122,139)(123,139)(124,83)(125,135)(126,140)(127,1)(128,4)(129,140)(130,122)(131,11)(132,79)(133,106)(134,2)(135,100)(136,16)(137,140)(138,35)(139,127)(140,11)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,0)(1,1)(2,139)(3,11)(4,130)(5,4)(6,139)(7,0)(8,136)(9,1)(10,140)(11,134)(12,91)(13,0)(14,140)(15,140)(16,81)(17,140)(18,3)(19,0)(20,0)(21,139)(22,1)(23,0)(24,136)(25,0)(26,2)(27,0)(28,140)(29,78)(30,139)(31,0)(32,78)(33,120)(34,136)(35,44)(36,0)(37,8)(38,63)(39,48)(40,1)(41,139)(42,3)(43,3)(44,14)(45,59)(46,1)(47,79)(48,1)(49,3)(50,0)(51,139)(52,137)(53,140)(54,139)(55,139)(56,139)(57,0)(58,140)(59,79)(60,6)(61,129)(62,140)(63,132)(64,139)(65,70)(66,2)(67,130)(68,140)(69,5)(70,0)(71,139)(72,139)(73,29)(74,136)(75,139)(76,2)(77,140)(78,2)(79,136)(80,1)(81,13)(82,1)(83,140)(84,137)(85,14)(86,5)(87,0)(88,139)(89,139)(90,140)(91,138)(92,70)(93,64)(94,55)(95,139)(96,132)(97,0)(98,140)(99,9)(100,3)(101,84)(102,140)(103,140)(104,56)(105,140)(106,139)(107,21)(108,139)(109,139)(110,0)(111,140)(112,1)(113,3)(114,136)(115,139)(116,3)(117,0)(118,140)(119,53)(120,0)(121,0)(122,9)(123,139)(124,83)(125,140)(126,138)(127,138)(128,140)(129,2)(130,136)(131,137)(132,121)(133,140)(134,11)(135,5)(136,9)(137,100)(138,5)(139,140)(140,94)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,6)(1,74)(2,1)(3,140)(4,2)(5,0)(6,76)(7,139)(8,0)(9,90)(10,1)(11,140)(12,4)(13,140)(14,0)(15,122)(16,132)(17,100)(18,15)(19,68)(20,2)(21,133)(22,3)(23,138)(24,5)(25,65)(26,139)(27,9)(28,139)(29,13)(30,37)(31,140)(32,138)(33,139)(34,140)(35,140)(36,140)(37,58)(38,4)(39,6)(40,37)(41,1)(42,5)(43,0)(44,140)(45,15)(46,129)(47,126)(48,138)(49,139)(50,140)(51,140)(52,125)(53,0)(54,2)(55,140)(56,8)(57,2)(58,0)(59,20)(60,82)(61,4)(62,63)(63,0)(64,140)(65,68)(66,2)(67,6)(68,132)(69,139)(70,59)(71,139)(72,0)(73,1)(74,139)(75,126)(76,42)(77,34)(78,86)(79,90)(80,139)(81,138)(82,7)(83,39)(84,139)(85,37)(86,135)(87,104)(88,140)(89,139)(90,0)(91,77)(92,5)(93,49)(94,1)(95,2)(96,105)(97,11)(98,0)(99,60)(100,139)(101,136)(102,5)(103,66)(104,0)(105,28)(106,16)(107,140)(108,7)(109,1)(110,19)(111,140)(112,14)(113,11)(114,139)(115,10)(116,139)(117,69)(118,88)(119,140)(120,0)(121,112)(122,78)(123,59)(124,29)(125,15)(126,138)(127,8)(128,1)(129,125)(130,139)(131,100)(132,138)(133,93)(134,84)(135,133)(136,129)(137,139)(138,139)(139,102)(140,128)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,139)(1,17)(2,3)(3,135)(4,13)(5,139)(6,5)(7,2)(8,0)(9,4)(10,120)(11,135)(12,114)(13,34)(14,86)(15,2)(16,139)(17,112)(18,0)(19,0)(20,9)(21,3)(22,0)(23,139)(24,140)(25,57)(26,48)(27,132)(28,139)(29,139)(30,23)(31,139)(32,86)(33,104)(34,140)(35,139)(36,0)(37,139)(38,139)(39,0)(40,5)(41,82)(42,47)(43,138)(44,87)(45,130)(46,139)(47,2)(48,0)(49,139)(50,27)(51,86)(52,140)(53,48)(54,0)(55,3)(56,115)(57,1)(58,139)(59,98)(60,135)(61,139)(62,85)(63,66)(64,1)(65,72)(66,138)(67,2)(68,132)(69,47)(70,5)(71,83)(72,139)(73,66)(74,140)(75,87)(76,7)(77,136)(78,140)(79,139)(80,82)(81,139)(82,83)(83,120)(84,140)(85,38)(86,78)(87,1)(88,123)(89,81)(90,137)(91,139)(92,90)(93,137)(94,140)(95,0)(96,1)(97,90)(98,9)(99,31)(100,140)(101,65)(102,140)(103,120)(104,136)(105,140)(106,140)(107,84)(108,138)(109,86)(110,136)(111,140)(112,138)(113,132)(114,135)(115,86)(116,139)(117,31)(118,139)(119,139)(120,90)(121,85)(122,126)(123,9)(124,11)(125,140)(126,46)(127,140)(128,138)(129,138)(130,130)(131,27)(132,140)(133,28)(134,140)(135,7)(136,110)(137,19)(138,27)(139,34)(140,136)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,5)(1,140)(2,20)(3,0)(4,2)(5,4)(6,11)(7,2)(8,48)(9,51)(10,0)(11,140)(12,0)(13,81)(14,97)(15,68)(16,2)(17,139)(18,39)(19,137)(20,86)(21,1)(22,41)(23,139)(24,137)(25,140)(26,139)(27,131)(28,0)(29,1)(30,130)(31,140)(32,130)(33,139)(34,139)(35,1)(36,113)(37,71)(38,1)(39,4)(40,10)(41,136)(42,139)(43,4)(44,126)(45,0)(46,84)(47,136)(48,0)(49,134)(50,0)(51,1)(52,2)(53,104)(54,120)(55,136)(56,131)(57,140)(58,140)(59,140)(60,82)(61,47)(62,134)(63,90)(64,128)(65,0)(66,0)(67,2)(68,68)(69,139)(70,10)(71,125)(72,139)(73,98)(74,5)(75,140)(76,5)(77,140)(78,137)(79,138)(80,139)(81,0)(82,5)(83,140)(84,55)(85,9)(86,139)(87,93)(88,81)(89,0)(90,140)(91,136)(92,3)(93,0)(94,140)(95,134)(96,14)(97,83)(98,139)(99,4)(100,3)(101,0)(102,35)(103,3)(104,139)(105,140)(106,3)(107,137)(108,137)(109,73)(110,140)(111,4)(112,11)(113,136)(114,140)(115,5)(116,131)(117,11)(118,1)(119,125)(120,136)(121,13)(122,11)(123,39)(124,107)(125,132)(126,140)(127,140)(128,2)(129,31)(130,13)(131,5)(132,137)(133,123)(134,138)(135,140)(136,140)(137,140)(138,0)(139,63)(140,139)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,0)(1,2)(2,2)(3,135)(4,2)(5,1)(6,93)(7,9)(8,62)(9,1)(10,139)(11,140)(12,41)(13,2)(14,3)(15,3)(16,2)(17,1)(18,1)(19,0)(20,33)(21,139)(22,139)(23,0)(24,13)(25,25)(26,106)(27,1)(28,7)(29,132)(30,93)(31,130)(32,140)(33,139)(34,3)(35,136)(36,0)(37,110)(38,139)(39,140)(40,139)(41,1)(42,1)(43,0)(44,140)(45,136)(46,82)(47,140)(48,6)(49,0)(50,5)(51,116)(52,134)(53,139)(54,2)(55,94)(56,0)(57,139)(58,0)(59,139)(60,120)(61,140)(62,0)(63,12)(64,139)(65,138)(66,21)(67,139)(68,0)(69,0)(70,139)(71,0)(72,140)(73,37)(74,136)(75,7)(76,129)(77,0)(78,116)(79,139)(80,3)(81,53)(82,139)(83,0)(84,139)(85,139)(86,114)(87,2)(88,136)(89,0)(90,128)(91,0)(92,0)(93,5)(94,137)(95,0)(96,62)(97,140)(98,4)(99,1)(100,132)(101,0)(102,133)(103,139)(104,66)(105,58)(106,138)(107,132)(108,0)(109,0)(110,3)(111,133)(112,140)(113,3)(114,139)(115,139)(116,140)(117,135)(118,140)(119,140)(120,39)(121,135)(122,139)(123,136)(124,138)(125,140)(126,140)(127,62)(128,139)(129,137)(130,0)(131,1)(132,139)(133,2)(134,138)(135,124)(136,138)(137,90)(138,140)(139,139)(140,136)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,7)(1,7)(2,0)(3,140)(4,11)(5,64)(6,70)(7,5)(8,1)(9,0)(10,138)(11,15)(12,9)(13,0)(14,139)(15,3)(16,140)(17,0)(18,140)(19,0)(20,140)(21,140)(22,139)(23,0)(24,0)(25,128)(26,0)(27,98)(28,136)(29,139)(30,59)(31,1)(32,68)(33,77)(34,2)(35,139)(36,0)(37,139)(38,139)(39,140)(40,5)(41,131)(42,112)(43,129)(44,140)(45,0)(46,63)(47,139)(48,3)(49,7)(50,139)(51,1)(52,55)(53,139)(54,90)(55,138)(56,121)(57,4)(58,140)(59,134)(60,62)(61,138)(62,11)(63,136)(64,137)(65,136)(66,139)(67,1)(68,0)(69,139)(70,2)(71,0)(72,62)(73,140)(74,138)(75,2)(76,138)(77,111)(78,0)(79,140)(80,136)(81,139)(82,21)(83,138)(84,139)(85,138)(86,120)(87,139)(88,137)(89,127)(90,139)(91,139)(92,90)(93,17)(94,19)(95,3)(96,66)(97,138)(98,9)(99,23)(100,131)(101,20)(102,140)(103,71)(104,139)(105,66)(106,0)(107,110)(108,1)(109,130)(110,140)(111,140)(112,0)(113,140)(114,83)(115,124)(116,138)(117,84)(118,139)(119,69)(120,122)(121,137)(122,139)(123,139)(124,6)(125,139)(126,136)(127,11)(128,68)(129,140)(130,140)(131,69)(132,14)(133,138)(134,3)(135,121)(136,81)(137,2)(138,5)(139,0)(140,132)
+Number of flows in each configuration 141 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,3)(1,4)(2,140)(3,0)(4,138)(5,137)(6,0)(7,100)(8,139)(9,0)(10,140)(11,139)(12,2)(13,5)(14,140)(15,56)(16,139)(17,140)(18,138)(19,3)(20,140)(21,2)(22,139)(23,2)(24,138)(25,139)(26,0)(27,137)(28,138)(29,2)(30,140)(31,134)(32,139)(33,0)(34,140)(35,139)(36,140)(37,1)(38,88)(39,72)(40,1)(41,138)(42,49)(43,140)(44,140)(45,139)(46,66)(47,0)(48,34)(49,0)(50,133)(51,136)(52,5)(53,139)(54,138)(55,128)(56,80)(57,0)(58,59)(59,75)(60,90)(61,0)(62,5)(63,140)(64,59)(65,88)(66,139)(67,138)(68,140)(69,3)(70,26)(71,0)(72,13)(73,140)(74,65)(75,7)(76,1)(77,139)(78,140)(79,140)(80,0)(81,139)(82,140)(83,128)(84,1)(85,138)(86,11)(87,2)(88,138)(89,140)(90,3)(91,139)(92,139)(93,29)(94,0)(95,140)(96,0)(97,140)(98,3)(99,140)(100,2)(101,3)(102,135)(103,139)(104,138)(105,78)(106,139)(107,65)(108,66)(109,3)(110,0)(111,2)(112,139)(113,127)(114,138)(115,6)(116,88)(117,140)(118,139)(119,140)(120,93)(121,138)(122,6)(123,2)(124,1)(125,50)(126,136)(127,140)(128,13)(129,140)(130,140)(131,138)(132,139)(133,5)(134,140)(135,140)(136,139)(137,138)(138,138)(139,139)(140,139)
+datasets/flows/dataset_29 
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,176)(1,175)(2,0)(3,65)(4,155)(5,78)(6,32)(7,171)(8,146)(9,175)(10,73)(11,63)(12,140)(13,177)(14,169)(15,174)(16,0)(17,118)(18,160)(19,177)(20,177)(21,173)(22,177)(23,120)(24,116)(25,35)(26,122)(27,136)(28,53)(29,32)(30,177)(31,108)(32,177)(33,5)(34,28)(35,163)(36,174)(37,170)(38,177)(39,95)(40,177)(41,174)(42,176)(43,173)(44,177)(45,171)(46,152)(47,174)(48,176)(49,162)(50,177)(51,146)(52,147)(53,149)(54,143)(55,60)(56,151)(57,148)(58,161)(59,174)(60,176)(61,173)(62,168)(63,170)(64,149)(65,177)(66,177)(67,80)(68,79)(69,71)(70,6)(71,35)(72,177)(73,176)(74,174)(75,177)(76,174)(77,169)(78,173)(79,164)(80,127)(81,177)(82,173)(83,127)(84,4)(85,176)(86,105)(87,157)(88,176)(89,59)(90,176)(91,141)(92,176)(93,167)(94,174)(95,176)(96,176)(97,174)(98,171)(99,121)(100,125)(101,174)(102,33)(103,9)(104,11)(105,176)(106,24)(107,177)(108,19)(109,33)(110,36)(111,176)(112,66)(113,177)(114,44)(115,67)(116,66)(117,67)(118,42)(119,176)(120,84)(121,176)(122,173)(123,75)(124,75)(125,176)(126,76)(127,23)(128,50)(129,18)(130,157)(131,3)(132,52)(133,42)(134,176)(135,175)(136,176)(137,165)(138,80)(139,175)(140,177)(141,176)(142,171)(143,173)(144,174)(145,29)(146,166)(147,141)(148,139)(149,159)(150,177)(151,173)(152,176)(153,9)(154,166)(155,177)(156,166)(157,176)(158,177)(159,175)(160,174)(161,155)(162,176)(163,176)(164,171)(165,171)(166,176)(167,172)(168,164)(169,173)(170,176)(171,176)(172,174)(173,167)(174,177)(175,153)(176,124)(177,174)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,162)(1,0)(2,177)(3,80)(4,177)(5,1)(6,67)(7,59)(8,32)(9,85)(10,129)(11,176)(12,177)(13,75)(14,171)(15,176)(16,174)(17,52)(18,176)(19,160)(20,171)(21,81)(22,82)(23,27)(24,176)(25,86)(26,169)(27,177)(28,124)(29,61)(30,175)(31,177)(32,89)(33,6)(34,172)(35,177)(36,161)(37,177)(38,49)(39,0)(40,112)(41,177)(42,41)(43,177)(44,163)(45,100)(46,27)(47,162)(48,100)(49,177)(50,177)(51,177)(52,176)(53,171)(54,42)(55,176)(56,0)(57,74)(58,50)(59,147)(60,172)(61,114)(62,33)(63,78)(64,176)(65,10)(66,24)(67,177)(68,150)(69,151)(70,71)(71,159)(72,176)(73,176)(74,176)(75,159)(76,169)(77,9)(78,171)(79,176)(80,49)(81,3)(82,37)(83,176)(84,175)(85,171)(86,167)(87,171)(88,87)(89,55)(90,72)(91,24)(92,110)(93,174)(94,177)(95,155)(96,177)(97,170)(98,18)(99,176)(100,171)(101,86)(102,176)(103,43)(104,177)(105,154)(106,19)(107,173)(108,84)(109,113)(110,30)(111,99)(112,173)(113,177)(114,49)(115,0)(116,177)(117,176)(118,176)(119,124)(120,37)(121,74)(122,1)(123,9)(124,176)(125,5)(126,157)(127,108)(128,174)(129,110)(130,173)(131,173)(132,9)(133,85)(134,176)(135,153)(136,166)(137,176)(138,173)(139,176)(140,169)(141,151)(142,46)(143,157)(144,15)(145,26)(146,176)(147,110)(148,0)(149,176)(150,159)(151,176)(152,82)(153,176)(154,144)(155,0)(156,9)(157,175)(158,85)(159,17)(160,176)(161,75)(162,14)(163,64)(164,152)(165,175)(166,174)(167,174)(168,154)(169,175)(170,163)(171,176)(172,99)(173,106)(174,0)(175,174)(176,176)(177,174)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,176)(1,39)(2,128)(3,167)(4,177)(5,41)(6,8)(7,172)(8,5)(9,101)(10,174)(11,131)(12,168)(13,98)(14,158)(15,107)(16,168)(17,177)(18,156)(19,176)(20,5)(21,16)(22,173)(23,175)(24,151)(25,172)(26,176)(27,176)(28,101)(29,167)(30,93)(31,14)(32,26)(33,15)(34,145)(35,122)(36,149)(37,175)(38,177)(39,176)(40,177)(41,1)(42,176)(43,137)(44,121)(45,23)(46,7)(47,117)(48,35)(49,176)(50,117)(51,8)(52,148)(53,152)(54,74)(55,1)(56,96)(57,176)(58,176)(59,127)(60,129)(61,172)(62,174)(63,35)(64,177)(65,164)(66,174)(67,127)(68,176)(69,176)(70,131)(71,173)(72,8)(73,176)(74,131)(75,0)(76,176)(77,177)(78,31)(79,15)(80,82)(81,78)(82,3)(83,21)(84,0)(85,27)(86,176)(87,110)(88,141)(89,176)(90,164)(91,177)(92,175)(93,22)(94,145)(95,175)(96,4)(97,8)(98,168)(99,86)(100,38)(101,26)(102,173)(103,45)(104,42)(105,6)(106,70)(107,174)(108,82)(109,114)(110,43)(111,6)(112,21)(113,39)(114,166)(115,174)(116,174)(117,59)(118,177)(119,118)(120,124)(121,129)(122,26)(123,91)(124,176)(125,128)(126,176)(127,160)(128,93)(129,4)(130,160)(131,176)(132,159)(133,171)(134,176)(135,15)(136,172)(137,59)(138,129)(139,101)(140,124)(141,165)(142,177)(143,7)(144,174)(145,176)(146,173)(147,19)(148,0)(149,171)(150,175)(151,177)(152,156)(153,144)(154,38)(155,7)(156,74)(157,176)(158,49)(159,7)(160,92)(161,133)(162,110)(163,162)(164,126)(165,176)(166,57)(167,175)(168,114)(169,177)(170,90)(171,176)(172,166)(173,141)(174,175)(175,163)(176,116)(177,100)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,167)(1,140)(2,171)(3,108)(4,177)(5,128)(6,161)(7,176)(8,38)(9,177)(10,173)(11,165)(12,8)(13,177)(14,3)(15,19)(16,8)(17,0)(18,174)(19,177)(20,176)(21,171)(22,8)(23,177)(24,21)(25,176)(26,1)(27,55)(28,177)(29,167)(30,173)(31,156)(32,173)(33,174)(34,66)(35,163)(36,176)(37,177)(38,89)(39,177)(40,78)(41,59)(42,177)(43,160)(44,176)(45,177)(46,171)(47,165)(48,177)(49,15)(50,42)(51,163)(52,9)(53,170)(54,177)(55,171)(56,177)(57,55)(58,167)(59,177)(60,173)(61,144)(62,169)(63,162)(64,10)(65,90)(66,171)(67,177)(68,176)(69,171)(70,176)(71,167)(72,176)(73,170)(74,176)(75,141)(76,170)(77,0)(78,176)(79,177)(80,16)(81,167)(82,176)(83,177)(84,177)(85,137)(86,125)(87,176)(88,50)(89,171)(90,174)(91,175)(92,26)(93,12)(94,22)(95,79)(96,129)(97,111)(98,169)(99,165)(100,68)(101,176)(102,167)(103,169)(104,110)(105,176)(106,171)(107,174)(108,163)(109,177)(110,166)(111,167)(112,12)(113,167)(114,5)(115,110)(116,175)(117,172)(118,1)(119,99)(120,101)(121,30)(122,162)(123,172)(124,165)(125,32)(126,176)(127,97)(128,82)(129,133)(130,97)(131,43)(132,176)(133,176)(134,147)(135,176)(136,174)(137,110)(138,167)(139,176)(140,63)(141,85)(142,160)(143,118)(144,174)(145,176)(146,83)(147,176)(148,117)(149,60)(150,0)(151,174)(152,104)(153,156)(154,73)(155,3)(156,84)(157,56)(158,176)(159,8)(160,176)(161,61)(162,112)(163,175)(164,169)(165,154)(166,119)(167,173)(168,96)(169,171)(170,166)(171,175)(172,176)(173,171)(174,160)(175,176)(176,20)(177,110)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,177)(1,177)(2,176)(3,15)(4,155)(5,177)(6,177)(7,170)(8,162)(9,177)(10,172)(11,174)(12,148)(13,177)(14,176)(15,122)(16,32)(17,101)(18,167)(19,143)(20,176)(21,173)(22,27)(23,152)(24,177)(25,157)(26,73)(27,91)(28,10)(29,172)(30,40)(31,176)(32,176)(33,175)(34,175)(35,177)(36,40)(37,25)(38,168)(39,9)(40,7)(41,160)(42,169)(43,80)(44,22)(45,25)(46,177)(47,177)(48,174)(49,125)(50,142)(51,86)(52,159)(53,177)(54,177)(55,31)(56,15)(57,177)(58,177)(59,176)(60,176)(61,26)(62,41)(63,169)(64,171)(65,173)(66,34)(67,156)(68,177)(69,177)(70,169)(71,37)(72,11)(73,33)(74,173)(75,174)(76,56)(77,176)(78,176)(79,0)(80,147)(81,9)(82,147)(83,101)(84,176)(85,142)(86,161)(87,83)(88,129)(89,173)(90,128)(91,176)(92,2)(93,175)(94,28)(95,35)(96,161)(97,111)(98,153)(99,0)(100,177)(101,167)(102,20)(103,19)(104,175)(105,37)(106,174)(107,6)(108,177)(109,12)(110,176)(111,152)(112,176)(113,174)(114,13)(115,171)(116,173)(117,174)(118,174)(119,175)(120,176)(121,176)(122,174)(123,160)(124,127)(125,176)(126,19)(127,170)(128,31)(129,176)(130,176)(131,25)(132,165)(133,176)(134,176)(135,176)(136,154)(137,169)(138,177)(139,122)(140,170)(141,136)(142,176)(143,45)(144,8)(145,143)(146,81)(147,177)(148,171)(149,176)(150,147)(151,43)(152,38)(153,7)(154,41)(155,5)(156,169)(157,86)(158,176)(159,176)(160,130)(161,176)(162,40)(163,167)(164,176)(165,176)(166,77)(167,29)(168,176)(169,22)(170,144)(171,151)(172,172)(173,174)(174,5)(175,152)(176,177)(177,135)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,82)(1,145)(2,177)(3,83)(4,173)(5,171)(6,11)(7,177)(8,174)(9,173)(10,57)(11,7)(12,151)(13,47)(14,51)(15,105)(16,108)(17,165)(18,167)(19,177)(20,145)(21,163)(22,121)(23,10)(24,177)(25,58)(26,108)(27,169)(28,41)(29,119)(30,176)(31,173)(32,176)(33,177)(34,175)(35,161)(36,171)(37,175)(38,106)(39,177)(40,143)(41,103)(42,176)(43,177)(44,165)(45,175)(46,22)(47,170)(48,45)(49,132)(50,41)(51,177)(52,177)(53,99)(54,62)(55,164)(56,50)(57,156)(58,176)(59,162)(60,170)(61,177)(62,28)(63,175)(64,77)(65,173)(66,31)(67,176)(68,175)(69,170)(70,170)(71,177)(72,161)(73,176)(74,149)(75,177)(76,172)(77,0)(78,25)(79,176)(80,164)(81,177)(82,6)(83,0)(84,176)(85,115)(86,2)(87,123)(88,172)(89,165)(90,167)(91,13)(92,176)(93,151)(94,175)(95,177)(96,121)(97,82)(98,9)(99,170)(100,175)(101,168)(102,96)(103,70)(104,128)(105,171)(106,12)(107,177)(108,175)(109,102)(110,175)(111,113)(112,113)(113,52)(114,176)(115,171)(116,176)(117,0)(118,0)(119,170)(120,176)(121,173)(122,175)(123,159)(124,174)(125,168)(126,46)(127,6)(128,58)(129,103)(130,166)(131,176)(132,172)(133,8)(134,176)(135,177)(136,176)(137,169)(138,172)(139,12)(140,32)(141,176)(142,38)(143,147)(144,168)(145,166)(146,4)(147,140)(148,170)(149,169)(150,131)(151,173)(152,170)(153,2)(154,176)(155,27)(156,176)(157,23)(158,10)(159,175)(160,80)(161,5)(162,176)(163,109)(164,101)(165,98)(166,177)(167,160)(168,118)(169,59)(170,175)(171,108)(172,176)(173,4)(174,17)(175,174)(176,176)(177,111)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,51)(1,114)(2,177)(3,175)(4,162)(5,177)(6,176)(7,90)(8,165)(9,164)(10,109)(11,158)(12,177)(13,177)(14,176)(15,153)(16,66)(17,170)(18,47)(19,149)(20,43)(21,72)(22,114)(23,84)(24,171)(25,39)(26,176)(27,176)(28,121)(29,157)(30,169)(31,177)(32,177)(33,9)(34,177)(35,57)(36,177)(37,21)(38,169)(39,165)(40,152)(41,169)(42,37)(43,177)(44,176)(45,104)(46,173)(47,78)(48,172)(49,148)(50,19)(51,1)(52,25)(53,82)(54,176)(55,176)(56,177)(57,26)(58,42)(59,96)(60,176)(61,175)(62,37)(63,173)(64,111)(65,174)(66,63)(67,155)(68,118)(69,175)(70,152)(71,169)(72,125)(73,170)(74,7)(75,2)(76,177)(77,165)(78,158)(79,168)(80,176)(81,49)(82,165)(83,169)(84,176)(85,170)(86,129)(87,5)(88,167)(89,176)(90,35)(91,3)(92,173)(93,6)(94,157)(95,82)(96,19)(97,176)(98,117)(99,171)(100,173)(101,73)(102,175)(103,1)(104,176)(105,74)(106,37)(107,173)(108,124)(109,177)(110,107)(111,177)(112,177)(113,141)(114,80)(115,176)(116,169)(117,164)(118,96)(119,176)(120,93)(121,175)(122,173)(123,84)(124,169)(125,110)(126,176)(127,81)(128,176)(129,48)(130,163)(131,30)(132,176)(133,176)(134,0)(135,170)(136,174)(137,43)(138,176)(139,127)(140,78)(141,104)(142,34)(143,134)(144,86)(145,177)(146,176)(147,171)(148,117)(149,39)(150,176)(151,176)(152,176)(153,133)(154,27)(155,103)(156,16)(157,9)(158,46)(159,176)(160,7)(161,176)(162,176)(163,164)(164,0)(165,0)(166,177)(167,87)(168,129)(169,19)(170,112)(171,168)(172,3)(173,176)(174,86)(175,152)(176,165)(177,177)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,171)(1,159)(2,71)(3,109)(4,101)(5,177)(6,176)(7,13)(8,147)(9,177)(10,177)(11,169)(12,31)(13,80)(14,170)(15,94)(16,58)(17,92)(18,176)(19,175)(20,177)(21,177)(22,169)(23,39)(24,7)(25,176)(26,171)(27,165)(28,169)(29,176)(30,177)(31,173)(32,103)(33,108)(34,71)(35,135)(36,90)(37,115)(38,176)(39,90)(40,14)(41,167)(42,177)(43,176)(44,63)(45,174)(46,69)(47,105)(48,39)(49,168)(50,35)(51,65)(52,177)(53,172)(54,58)(55,174)(56,174)(57,173)(58,36)(59,177)(60,170)(61,167)(62,84)(63,28)(64,77)(65,33)(66,155)(67,163)(68,172)(69,171)(70,51)(71,169)(72,161)(73,177)(74,175)(75,176)(76,175)(77,175)(78,163)(79,177)(80,30)(81,174)(82,176)(83,96)(84,131)(85,11)(86,32)(87,177)(88,98)(89,78)(90,39)(91,7)(92,65)(93,86)(94,174)(95,90)(96,121)(97,176)(98,176)(99,19)(100,171)(101,15)(102,90)(103,85)(104,106)(105,121)(106,176)(107,49)(108,74)(109,172)(110,174)(111,98)(112,97)(113,174)(114,124)(115,165)(116,22)(117,107)(118,166)(119,26)(120,170)(121,57)(122,163)(123,174)(124,155)(125,133)(126,42)(127,175)(128,176)(129,28)(130,86)(131,129)(132,175)(133,159)(134,169)(135,97)(136,172)(137,174)(138,171)(139,171)(140,28)(141,53)(142,80)(143,167)(144,69)(145,176)(146,26)(147,95)(148,35)(149,172)(150,30)(151,176)(152,177)(153,122)(154,131)(155,148)(156,98)(157,138)(158,177)(159,60)(160,176)(161,123)(162,128)(163,176)(164,172)(165,37)(166,96)(167,169)(168,176)(169,13)(170,167)(171,14)(172,177)(173,33)(174,7)(175,89)(176,156)(177,93)
+Number of flows in each configuration 178 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,47)(1,79)(2,176)(3,177)(4,177)(5,177)(6,172)(7,172)(8,109)(9,62)(10,175)(11,129)(12,22)(13,177)(14,160)(15,10)(16,176)(17,176)(18,169)(19,142)(20,164)(21,176)(22,176)(23,176)(24,177)(25,134)(26,7)(27,177)(28,173)(29,100)(30,47)(31,152)(32,96)(33,177)(34,176)(35,177)(36,176)(37,19)(38,95)(39,176)(40,176)(41,177)(42,18)(43,158)(44,100)(45,42)(46,106)(47,62)(48,121)(49,177)(50,110)(51,85)(52,157)(53,56)(54,176)(55,26)(56,34)(57,176)(58,177)(59,173)(60,176)(61,176)(62,177)(63,175)(64,171)(65,152)(66,172)(67,176)(68,176)(69,74)(70,177)(71,23)(72,174)(73,158)(74,177)(75,141)(76,136)(77,145)(78,176)(79,4)(80,141)(81,13)(82,56)(83,167)(84,174)(85,177)(86,56)(87,176)(88,1)(89,176)(90,13)(91,175)(92,101)(93,147)(94,43)(95,104)(96,163)(97,46)(98,94)(99,0)(100,166)(101,142)(102,166)(103,80)(104,177)(105,175)(106,68)(107,171)(108,18)(109,39)(110,176)(111,7)(112,177)(113,31)(114,174)(115,121)(116,176)(117,154)(118,176)(119,175)(120,102)(121,172)(122,135)(123,58)(124,12)(125,147)(126,175)(127,102)(128,167)(129,65)(130,130)(131,100)(132,145)(133,168)(134,103)(135,1)(136,158)(137,25)(138,14)(139,176)(140,176)(141,177)(142,157)(143,176)(144,177)(145,159)(146,102)(147,126)(148,157)(149,166)(150,45)(151,176)(152,3)(153,176)(154,92)(155,177)(156,44)(157,142)(158,173)(159,113)(160,174)(161,23)(162,94)(163,127)(164,22)(165,176)(166,172)(167,41)(168,98)(169,30)(170,176)(171,176)(172,160)(173,156)(174,3)(175,174)(176,106)(177,154)
+datasets/flows/dataset_30 
+Number of flows in each configuration 216 
+Solving flow reconfiguration with source config_0 and target config_1
+datasets/flows/dataset_31 
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,12)(1,23)(2,38)(3,37)(4,13)(5,37)(6,10)(7,0)(8,3)(9,14)(10,0)(11,27)(12,1)(13,2)(14,1)(15,6)(16,22)(17,12)(18,16)(19,7)(20,18)(21,3)(22,1)(23,32)(24,37)(25,7)(26,32)(27,35)(28,2)(29,4)(30,1)(31,8)(32,20)(33,22)(34,21)(35,15)(36,37)(37,37)(38,33)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,33)(1,37)(2,19)(3,12)(4,37)(5,37)(6,38)(7,37)(8,30)(9,1)(10,4)(11,22)(12,34)(13,9)(14,38)(15,0)(16,33)(17,9)(18,38)(19,37)(20,0)(21,5)(22,28)(23,20)(24,0)(25,27)(26,37)(27,29)(28,3)(29,37)(30,3)(31,8)(32,37)(33,36)(34,32)(35,37)(36,9)(37,37)(38,37)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,38)(1,36)(2,38)(3,6)(4,9)(5,38)(6,20)(7,14)(8,37)(9,3)(10,38)(11,38)(12,37)(13,37)(14,28)(15,12)(16,37)(17,37)(18,24)(19,37)(20,36)(21,16)(22,28)(23,38)(24,19)(25,37)(26,37)(27,30)(28,0)(29,1)(30,36)(31,17)(32,35)(33,0)(34,31)(35,37)(36,29)(37,1)(38,35)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,38)(1,16)(2,37)(3,0)(4,37)(5,37)(6,0)(7,3)(8,38)(9,38)(10,38)(11,1)(12,19)(13,20)(14,37)(15,38)(16,37)(17,37)(18,21)(19,2)(20,5)(21,38)(22,37)(23,37)(24,37)(25,0)(26,37)(27,37)(28,38)(29,0)(30,36)(31,20)(32,5)(33,36)(34,37)(35,27)(36,16)(37,29)(38,37)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,37)(1,30)(2,37)(3,22)(4,38)(5,6)(6,38)(7,38)(8,37)(9,38)(10,19)(11,38)(12,25)(13,37)(14,0)(15,37)(16,0)(17,36)(18,29)(19,37)(20,37)(21,38)(22,6)(23,25)(24,37)(25,38)(26,32)(27,25)(28,19)(29,1)(30,27)(31,37)(32,38)(33,37)(34,29)(35,10)(36,37)(37,21)(38,19)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,1)(1,0)(2,35)(3,38)(4,37)(5,0)(6,0)(7,38)(8,0)(9,37)(10,38)(11,37)(12,37)(13,38)(14,0)(15,0)(16,38)(17,37)(18,38)(19,38)(20,10)(21,0)(22,38)(23,22)(24,0)(25,22)(26,0)(27,36)(28,0)(29,38)(30,37)(31,38)(32,38)(33,38)(34,38)(35,38)(36,36)(37,38)(38,37)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,31)(1,37)(2,37)(3,37)(4,1)(5,19)(6,37)(7,28)(8,7)(9,31)(10,29)(11,19)(12,1)(13,1)(14,34)(15,37)(16,31)(17,37)(18,0)(19,37)(20,38)(21,37)(22,29)(23,32)(24,37)(25,36)(26,38)(27,36)(28,38)(29,9)(30,1)(31,36)(32,37)(33,29)(34,0)(35,0)(36,0)(37,37)(38,37)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,17)(1,38)(2,11)(3,38)(4,6)(5,38)(6,0)(7,17)(8,37)(9,1)(10,5)(11,37)(12,17)(13,3)(14,38)(15,34)(16,37)(17,17)(18,35)(19,0)(20,15)(21,38)(22,38)(23,30)(24,37)(25,4)(26,0)(27,37)(28,0)(29,14)(30,37)(31,7)(32,24)(33,21)(34,37)(35,2)(36,35)(37,9)(38,1)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,38)(1,1)(2,38)(3,36)(4,35)(5,37)(6,35)(7,38)(8,0)(9,32)(10,38)(11,23)(12,37)(13,3)(14,18)(15,38)(16,37)(17,37)(18,37)(19,38)(20,37)(21,36)(22,33)(23,0)(24,37)(25,37)(26,30)(27,0)(28,37)(29,37)(30,37)(31,37)(32,37)(33,1)(34,37)(35,25)(36,37)(37,23)(38,6)
+datasets/flows/dataset_32 
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,97)(1,98)(2,98)(3,91)(4,23)(5,98)(6,97)(7,98)(8,0)(9,0)(10,0)(11,98)(12,97)(13,0)(14,97)(15,98)(16,97)(17,98)(18,97)(19,97)(20,28)(21,97)(22,98)(23,97)(24,98)(25,98)(26,98)(27,97)(28,97)(29,97)(30,97)(31,97)(32,97)(33,98)(34,97)(35,98)(36,98)(37,35)(38,98)(39,98)(40,98)(41,98)(42,0)(43,98)(44,26)(45,98)(46,98)(47,98)(48,98)(49,98)(50,97)(51,98)(52,98)(53,17)(54,97)(55,97)(56,97)(57,98)(58,97)(59,97)(60,98)(61,48)(62,97)(63,98)(64,98)(65,97)(66,49)(67,98)(68,97)(69,97)(70,58)(71,97)(72,97)(73,98)(74,98)(75,98)(76,98)(77,98)(78,64)(79,16)(80,98)(81,98)(82,97)(83,97)(84,98)(85,97)(86,98)(87,97)(88,98)(89,98)(90,97)(91,98)(92,97)(93,97)(94,98)(95,98)(96,98)(97,97)(98,98)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,97)(1,89)(2,0)(3,96)(4,97)(5,98)(6,98)(7,95)(8,17)(9,98)(10,97)(11,84)(12,78)(13,98)(14,98)(15,40)(16,97)(17,0)(18,0)(19,97)(20,0)(21,29)(22,96)(23,0)(24,98)(25,37)(26,11)(27,81)(28,83)(29,3)(30,0)(31,39)(32,0)(33,0)(34,29)(35,40)(36,97)(37,48)(38,89)(39,37)(40,47)(41,97)(42,97)(43,92)(44,98)(45,98)(46,97)(47,94)(48,0)(49,17)(50,94)(51,0)(52,96)(53,97)(54,13)(55,97)(56,85)(57,7)(58,29)(59,75)(60,0)(61,9)(62,19)(63,68)(64,70)(65,98)(66,19)(67,97)(68,97)(69,91)(70,98)(71,32)(72,9)(73,98)(74,0)(75,15)(76,90)(77,23)(78,13)(79,34)(80,97)(81,28)(82,93)(83,98)(84,88)(85,96)(86,33)(87,98)(88,98)(89,25)(90,98)(91,98)(92,98)(93,17)(94,96)(95,9)(96,67)(97,96)(98,25)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,98)(1,0)(2,42)(3,97)(4,77)(5,0)(6,97)(7,62)(8,0)(9,30)(10,0)(11,0)(12,0)(13,0)(14,84)(15,4)(16,42)(17,94)(18,97)(19,9)(20,41)(21,84)(22,97)(23,98)(24,5)(25,3)(26,5)(27,0)(28,5)(29,98)(30,0)(31,98)(32,0)(33,97)(34,98)(35,98)(36,97)(37,97)(38,73)(39,96)(40,1)(41,97)(42,0)(43,97)(44,88)(45,1)(46,0)(47,4)(48,97)(49,1)(50,66)(51,97)(52,1)(53,3)(54,98)(55,1)(56,97)(57,45)(58,41)(59,0)(60,97)(61,3)(62,97)(63,48)(64,0)(65,68)(66,98)(67,97)(68,98)(69,5)(70,92)(71,2)(72,14)(73,91)(74,97)(75,3)(76,96)(77,73)(78,5)(79,96)(80,6)(81,98)(82,35)(83,44)(84,69)(85,16)(86,12)(87,98)(88,19)(89,98)(90,98)(91,91)(92,1)(93,43)(94,89)(95,96)(96,5)(97,17)(98,34)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,98)(1,0)(2,0)(3,39)(4,0)(5,2)(6,0)(7,94)(8,2)(9,19)(10,98)(11,98)(12,1)(13,5)(14,0)(15,0)(16,0)(17,97)(18,98)(19,97)(20,81)(21,98)(22,0)(23,19)(24,0)(25,98)(26,75)(27,82)(28,77)(29,97)(30,41)(31,97)(32,2)(33,93)(34,65)(35,0)(36,98)(37,98)(38,0)(39,2)(40,0)(41,97)(42,98)(43,51)(44,98)(45,0)(46,98)(47,97)(48,98)(49,59)(50,94)(51,22)(52,0)(53,4)(54,97)(55,98)(56,97)(57,2)(58,89)(59,94)(60,83)(61,97)(62,98)(63,2)(64,11)(65,98)(66,97)(67,98)(68,10)(69,97)(70,98)(71,94)(72,19)(73,97)(74,98)(75,3)(76,32)(77,7)(78,0)(79,97)(80,97)(81,97)(82,10)(83,98)(84,19)(85,97)(86,93)(87,97)(88,3)(89,97)(90,5)(91,2)(92,1)(93,0)(94,98)(95,98)(96,17)(97,27)(98,92)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,0)(1,98)(2,89)(3,0)(4,96)(5,98)(6,0)(7,0)(8,97)(9,94)(10,97)(11,98)(12,97)(13,98)(14,0)(15,91)(16,91)(17,6)(18,0)(19,98)(20,12)(21,0)(22,98)(23,0)(24,98)(25,97)(26,19)(27,96)(28,92)(29,51)(30,97)(31,97)(32,94)(33,39)(34,97)(35,56)(36,97)(37,49)(38,2)(39,98)(40,97)(41,97)(42,29)(43,0)(44,98)(45,98)(46,23)(47,0)(48,31)(49,8)(50,98)(51,98)(52,0)(53,20)(54,0)(55,39)(56,97)(57,2)(58,3)(59,96)(60,20)(61,90)(62,11)(63,89)(64,98)(65,97)(66,39)(67,60)(68,46)(69,96)(70,39)(71,98)(72,97)(73,60)(74,0)(75,0)(76,94)(77,98)(78,98)(79,98)(80,40)(81,1)(82,6)(83,97)(84,97)(85,97)(86,1)(87,97)(88,98)(89,90)(90,19)(91,96)(92,87)(93,98)(94,94)(95,97)(96,96)(97,31)(98,0)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,44)(1,98)(2,0)(3,98)(4,0)(5,60)(6,0)(7,96)(8,98)(9,2)(10,96)(11,1)(12,0)(13,3)(14,98)(15,97)(16,45)(17,79)(18,98)(19,0)(20,7)(21,88)(22,52)(23,96)(24,98)(25,0)(26,0)(27,98)(28,98)(29,20)(30,28)(31,96)(32,0)(33,50)(34,90)(35,2)(36,87)(37,33)(38,1)(39,91)(40,3)(41,0)(42,20)(43,88)(44,92)(45,98)(46,98)(47,97)(48,47)(49,0)(50,98)(51,96)(52,98)(53,49)(54,19)(55,90)(56,82)(57,0)(58,98)(59,0)(60,90)(61,92)(62,98)(63,96)(64,98)(65,40)(66,38)(67,98)(68,19)(69,0)(70,98)(71,98)(72,3)(73,90)(74,0)(75,98)(76,0)(77,98)(78,98)(79,98)(80,0)(81,98)(82,95)(83,0)(84,96)(85,0)(86,4)(87,0)(88,45)(89,58)(90,97)(91,7)(92,91)(93,98)(94,96)(95,98)(96,98)(97,5)(98,0)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,30)(1,0)(2,97)(3,98)(4,0)(5,0)(6,94)(7,96)(8,96)(9,96)(10,5)(11,19)(12,23)(13,0)(14,47)(15,9)(16,96)(17,52)(18,97)(19,91)(20,97)(21,97)(22,98)(23,97)(24,94)(25,97)(26,96)(27,0)(28,0)(29,0)(30,52)(31,97)(32,42)(33,96)(34,97)(35,52)(36,97)(37,96)(38,94)(39,98)(40,0)(41,98)(42,9)(43,17)(44,90)(45,2)(46,2)(47,96)(48,19)(49,0)(50,13)(51,85)(52,0)(53,98)(54,30)(55,96)(56,98)(57,94)(58,0)(59,6)(60,98)(61,98)(62,1)(63,4)(64,97)(65,50)(66,98)(67,97)(68,94)(69,92)(70,98)(71,90)(72,1)(73,97)(74,95)(75,97)(76,97)(77,95)(78,3)(79,13)(80,14)(81,98)(82,93)(83,97)(84,97)(85,98)(86,98)(87,97)(88,98)(89,20)(90,98)(91,97)(92,98)(93,98)(94,98)(95,95)(96,2)(97,97)(98,31)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,98)(1,0)(2,5)(3,98)(4,0)(5,0)(6,68)(7,64)(8,86)(9,2)(10,97)(11,97)(12,1)(13,98)(14,0)(15,32)(16,97)(17,32)(18,0)(19,78)(20,18)(21,36)(22,1)(23,19)(24,0)(25,24)(26,70)(27,97)(28,28)(29,97)(30,8)(31,39)(32,34)(33,96)(34,50)(35,8)(36,97)(37,96)(38,0)(39,98)(40,94)(41,9)(42,97)(43,53)(44,37)(45,14)(46,97)(47,86)(48,56)(49,0)(50,97)(51,89)(52,22)(53,52)(54,28)(55,22)(56,17)(57,8)(58,97)(59,97)(60,97)(61,97)(62,97)(63,97)(64,0)(65,98)(66,88)(67,89)(68,97)(69,98)(70,16)(71,0)(72,81)(73,98)(74,74)(75,4)(76,98)(77,43)(78,97)(79,98)(80,15)(81,28)(82,9)(83,4)(84,19)(85,97)(86,97)(87,7)(88,97)(89,97)(90,94)(91,97)(92,0)(93,98)(94,18)(95,0)(96,95)(97,98)(98,9)
+Number of flows in each configuration 99 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,97)(1,98)(2,97)(3,98)(4,0)(5,97)(6,43)(7,98)(8,81)(9,0)(10,0)(11,98)(12,97)(13,94)(14,97)(15,49)(16,97)(17,1)(18,5)(19,2)(20,98)(21,56)(22,82)(23,80)(24,1)(25,0)(26,34)(27,97)(28,98)(29,0)(30,19)(31,3)(32,21)(33,87)(34,2)(35,98)(36,97)(37,98)(38,9)(39,96)(40,0)(41,0)(42,93)(43,3)(44,97)(45,97)(46,98)(47,0)(48,98)(49,0)(50,1)(51,4)(52,96)(53,0)(54,0)(55,98)(56,41)(57,98)(58,97)(59,98)(60,0)(61,98)(62,96)(63,6)(64,97)(65,94)(66,13)(67,0)(68,97)(69,80)(70,97)(71,97)(72,88)(73,97)(74,0)(75,0)(76,98)(77,97)(78,43)(79,19)(80,98)(81,9)(82,49)(83,97)(84,0)(85,11)(86,2)(87,97)(88,96)(89,98)(90,98)(91,98)(92,25)(93,97)(94,0)(95,10)(96,97)(97,98)(98,7)
+datasets/flows/dataset_33 
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,0)(1,147)(2,147)(3,147)(4,147)(5,146)(6,146)(7,147)(8,147)(9,147)(10,147)(11,147)(12,147)(13,143)(14,97)(15,147)(16,147)(17,147)(18,147)(19,146)(20,147)(21,147)(22,146)(23,146)(24,147)(25,147)(26,146)(27,147)(28,147)(29,146)(30,146)(31,147)(32,146)(33,88)(34,146)(35,147)(36,147)(37,147)(38,147)(39,147)(40,146)(41,146)(42,146)(43,146)(44,147)(45,146)(46,146)(47,146)(48,147)(49,146)(50,147)(51,147)(52,146)(53,147)(54,147)(55,146)(56,147)(57,147)(58,147)(59,146)(60,147)(61,147)(62,147)(63,146)(64,146)(65,147)(66,146)(67,146)(68,147)(69,146)(70,147)(71,146)(72,146)(73,147)(74,147)(75,146)(76,147)(77,147)(78,147)(79,147)(80,146)(81,88)(82,80)(83,147)(84,92)(85,147)(86,102)(87,146)(88,146)(89,146)(90,146)(91,146)(92,146)(93,146)(94,146)(95,125)(96,146)(97,146)(98,147)(99,146)(100,147)(101,146)(102,147)(103,147)(104,146)(105,146)(106,146)(107,146)(108,74)(109,108)(110,146)(111,146)(112,146)(113,146)(114,146)(115,146)(116,146)(117,146)(118,146)(119,146)(120,146)(121,142)(122,146)(123,146)(124,146)(125,146)(126,146)(127,147)(128,146)(129,146)(130,146)(131,146)(132,146)(133,83)(134,146)(135,146)(136,146)(137,146)(138,146)(139,146)(140,146)(141,52)(142,143)(143,146)(144,147)(145,146)(146,146)(147,146)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,94)(1,101)(2,147)(3,146)(4,1)(5,8)(6,1)(7,0)(8,2)(9,0)(10,146)(11,120)(12,146)(13,2)(14,0)(15,143)(16,147)(17,2)(18,1)(19,4)(20,9)(21,146)(22,0)(23,89)(24,147)(25,1)(26,0)(27,0)(28,97)(29,100)(30,71)(31,105)(32,145)(33,30)(34,146)(35,138)(36,146)(37,138)(38,10)(39,147)(40,3)(41,147)(42,147)(43,144)(44,39)(45,0)(46,147)(47,146)(48,1)(49,146)(50,145)(51,146)(52,147)(53,9)(54,143)(55,131)(56,142)(57,146)(58,0)(59,3)(60,1)(61,146)(62,0)(63,55)(64,76)(65,11)(66,143)(67,0)(68,41)(69,62)(70,0)(71,146)(72,52)(73,143)(74,147)(75,102)(76,146)(77,5)(78,134)(79,146)(80,147)(81,75)(82,145)(83,2)(84,147)(85,0)(86,0)(87,27)(88,69)(89,147)(90,0)(91,67)(92,1)(93,90)(94,146)(95,147)(96,2)(97,143)(98,147)(99,0)(100,107)(101,146)(102,146)(103,142)(104,146)(105,147)(106,0)(107,52)(108,145)(109,9)(110,136)(111,146)(112,146)(113,112)(114,4)(115,139)(116,146)(117,9)(118,145)(119,147)(120,7)(121,146)(122,14)(123,137)(124,145)(125,1)(126,146)(127,146)(128,145)(129,147)(130,146)(131,146)(132,144)(133,3)(134,7)(135,60)(136,145)(137,146)(138,17)(139,145)(140,125)(141,146)(142,133)(143,147)(144,46)(145,146)(146,146)(147,96)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,147)(1,147)(2,0)(3,146)(4,144)(5,147)(6,59)(7,79)(8,0)(9,114)(10,2)(11,68)(12,146)(13,144)(14,147)(15,147)(16,144)(17,4)(18,13)(19,3)(20,107)(21,0)(22,3)(23,2)(24,147)(25,47)(26,58)(27,0)(28,0)(29,147)(30,80)(31,2)(32,11)(33,0)(34,1)(35,0)(36,146)(37,145)(38,0)(39,74)(40,9)(41,0)(42,60)(43,146)(44,78)(45,139)(46,144)(47,0)(48,9)(49,146)(50,147)(51,145)(52,92)(53,146)(54,146)(55,104)(56,0)(57,146)(58,6)(59,146)(60,3)(61,143)(62,145)(63,146)(64,0)(65,1)(66,80)(67,146)(68,111)(69,147)(70,0)(71,0)(72,3)(73,39)(74,145)(75,146)(76,146)(77,143)(78,147)(79,1)(80,89)(81,99)(82,138)(83,3)(84,146)(85,0)(86,145)(87,146)(88,144)(89,45)(90,79)(91,39)(92,1)(93,1)(94,145)(95,147)(96,6)(97,19)(98,108)(99,115)(100,146)(101,95)(102,75)(103,0)(104,3)(105,0)(106,147)(107,146)(108,146)(109,88)(110,145)(111,5)(112,147)(113,135)(114,0)(115,11)(116,147)(117,145)(118,141)(119,92)(120,146)(121,146)(122,146)(123,147)(124,0)(125,146)(126,140)(127,144)(128,3)(129,147)(130,75)(131,147)(132,0)(133,147)(134,27)(135,0)(136,133)(137,147)(138,137)(139,147)(140,4)(141,146)(142,65)(143,60)(144,147)(145,79)(146,69)(147,146)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,146)(1,0)(2,0)(3,0)(4,137)(5,147)(6,78)(7,4)(8,3)(9,0)(10,71)(11,45)(12,147)(13,0)(14,0)(15,147)(16,2)(17,97)(18,1)(19,147)(20,146)(21,0)(22,0)(23,147)(24,0)(25,145)(26,2)(27,147)(28,137)(29,0)(30,146)(31,117)(32,4)(33,7)(34,55)(35,147)(36,73)(37,147)(38,146)(39,146)(40,125)(41,85)(42,0)(43,0)(44,146)(45,0)(46,147)(47,147)(48,140)(49,142)(50,0)(51,0)(52,7)(53,72)(54,145)(55,147)(56,147)(57,83)(58,3)(59,9)(60,147)(61,147)(62,146)(63,145)(64,145)(65,2)(66,146)(67,75)(68,146)(69,144)(70,2)(71,19)(72,147)(73,0)(74,134)(75,3)(76,145)(77,0)(78,145)(79,71)(80,73)(81,147)(82,147)(83,145)(84,0)(85,144)(86,125)(87,84)(88,140)(89,146)(90,10)(91,1)(92,146)(93,147)(94,5)(95,19)(96,70)(97,103)(98,145)(99,7)(100,129)(101,38)(102,145)(103,134)(104,1)(105,143)(106,0)(107,147)(108,104)(109,147)(110,147)(111,0)(112,147)(113,147)(114,2)(115,17)(116,143)(117,146)(118,107)(119,147)(120,138)(121,145)(122,0)(123,147)(124,147)(125,146)(126,3)(127,147)(128,113)(129,0)(130,6)(131,0)(132,137)(133,147)(134,95)(135,3)(136,0)(137,1)(138,64)(139,144)(140,98)(141,0)(142,147)(143,105)(144,143)(145,47)(146,0)(147,7)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,96)(1,0)(2,146)(3,82)(4,51)(5,0)(6,7)(7,80)(8,5)(9,146)(10,146)(11,2)(12,146)(13,146)(14,3)(15,1)(16,88)(17,146)(18,2)(19,76)(20,64)(21,118)(22,144)(23,147)(24,138)(25,27)(26,19)(27,0)(28,18)(29,0)(30,13)(31,78)(32,147)(33,2)(34,78)(35,0)(36,93)(37,0)(38,134)(39,79)(40,90)(41,4)(42,147)(43,146)(44,146)(45,138)(46,73)(47,0)(48,14)(49,1)(50,0)(51,99)(52,81)(53,1)(54,139)(55,144)(56,146)(57,87)(58,0)(59,42)(60,146)(61,147)(62,97)(63,145)(64,147)(65,100)(66,146)(67,73)(68,146)(69,147)(70,130)(71,133)(72,146)(73,35)(74,49)(75,0)(76,146)(77,147)(78,137)(79,146)(80,64)(81,29)(82,61)(83,147)(84,146)(85,8)(86,147)(87,146)(88,145)(89,146)(90,147)(91,146)(92,45)(93,139)(94,1)(95,101)(96,144)(97,97)(98,70)(99,7)(100,147)(101,135)(102,0)(103,146)(104,146)(105,147)(106,0)(107,21)(108,145)(109,147)(110,147)(111,146)(112,86)(113,146)(114,49)(115,88)(116,146)(117,142)(118,146)(119,0)(120,145)(121,0)(122,145)(123,0)(124,146)(125,145)(126,145)(127,82)(128,134)(129,12)(130,144)(131,79)(132,0)(133,0)(134,62)(135,146)(136,2)(137,0)(138,146)(139,0)(140,146)(141,147)(142,82)(143,147)(144,147)(145,0)(146,82)(147,147)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,147)(1,147)(2,32)(3,2)(4,0)(5,146)(6,147)(7,1)(8,147)(9,0)(10,0)(11,54)(12,68)(13,147)(14,0)(15,3)(16,0)(17,126)(18,140)(19,55)(20,1)(21,147)(22,0)(23,129)(24,106)(25,9)(26,146)(27,84)(28,2)(29,146)(30,1)(31,147)(32,0)(33,146)(34,146)(35,1)(36,0)(37,146)(38,36)(39,0)(40,147)(41,93)(42,0)(43,143)(44,56)(45,147)(46,144)(47,0)(48,143)(49,68)(50,0)(51,92)(52,146)(53,23)(54,144)(55,130)(56,28)(57,0)(58,147)(59,105)(60,0)(61,0)(62,137)(63,146)(64,0)(65,143)(66,146)(67,11)(68,0)(69,147)(70,11)(71,6)(72,0)(73,146)(74,21)(75,96)(76,129)(77,143)(78,129)(79,146)(80,146)(81,147)(82,0)(83,146)(84,139)(85,105)(86,97)(87,1)(88,146)(89,146)(90,147)(91,147)(92,147)(93,147)(94,0)(95,93)(96,1)(97,146)(98,146)(99,0)(100,145)(101,41)(102,146)(103,146)(104,147)(105,2)(106,146)(107,0)(108,36)(109,0)(110,2)(111,146)(112,146)(113,146)(114,75)(115,2)(116,1)(117,146)(118,146)(119,14)(120,146)(121,0)(122,0)(123,147)(124,146)(125,146)(126,147)(127,3)(128,142)(129,147)(130,147)(131,147)(132,145)(133,146)(134,11)(135,91)(136,33)(137,3)(138,81)(139,147)(140,140)(141,1)(142,146)(143,147)(144,147)(145,28)(146,8)(147,29)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,146)(1,19)(2,0)(3,50)(4,1)(5,147)(6,135)(7,88)(8,80)(9,146)(10,147)(11,3)(12,146)(13,3)(14,2)(15,67)(16,147)(17,146)(18,0)(19,0)(20,143)(21,41)(22,146)(23,19)(24,0)(25,94)(26,7)(27,67)(28,0)(29,146)(30,99)(31,94)(32,146)(33,146)(34,142)(35,147)(36,147)(37,86)(38,5)(39,0)(40,17)(41,0)(42,147)(43,90)(44,71)(45,48)(46,147)(47,0)(48,44)(49,146)(50,1)(51,0)(52,95)(53,101)(54,101)(55,54)(56,18)(57,146)(58,96)(59,41)(60,145)(61,147)(62,146)(63,147)(64,97)(65,94)(66,52)(67,4)(68,99)(69,107)(70,145)(71,0)(72,146)(73,2)(74,147)(75,146)(76,80)(77,1)(78,2)(79,0)(80,146)(81,25)(82,66)(83,146)(84,97)(85,0)(86,147)(87,90)(88,146)(89,14)(90,48)(91,1)(92,146)(93,146)(94,0)(95,9)(96,146)(97,147)(98,143)(99,147)(100,146)(101,147)(102,145)(103,146)(104,0)(105,146)(106,5)(107,145)(108,147)(109,4)(110,0)(111,59)(112,147)(113,59)(114,147)(115,146)(116,147)(117,146)(118,1)(119,0)(120,117)(121,20)(122,147)(123,1)(124,1)(125,147)(126,91)(127,146)(128,0)(129,101)(130,147)(131,146)(132,147)(133,115)(134,87)(135,146)(136,1)(137,134)(138,147)(139,8)(140,141)(141,147)(142,86)(143,146)(144,146)(145,147)(146,0)(147,0)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,86)(1,0)(2,146)(3,0)(4,4)(5,146)(6,146)(7,2)(8,146)(9,23)(10,145)(11,1)(12,146)(13,144)(14,88)(15,90)(16,147)(17,147)(18,0)(19,21)(20,146)(21,0)(22,90)(23,0)(24,145)(25,146)(26,0)(27,0)(28,19)(29,146)(30,143)(31,143)(32,147)(33,4)(34,1)(35,82)(36,0)(37,0)(38,53)(39,11)(40,146)(41,147)(42,145)(43,0)(44,140)(45,19)(46,87)(47,0)(48,97)(49,147)(50,3)(51,91)(52,0)(53,0)(54,87)(55,0)(56,146)(57,147)(58,147)(59,146)(60,3)(61,62)(62,0)(63,55)(64,146)(65,146)(66,103)(67,143)(68,73)(69,146)(70,146)(71,146)(72,89)(73,9)(74,147)(75,6)(76,3)(77,0)(78,130)(79,66)(80,147)(81,142)(82,143)(83,5)(84,0)(85,0)(86,3)(87,93)(88,43)(89,7)(90,75)(91,140)(92,147)(93,29)(94,146)(95,132)(96,128)(97,0)(98,129)(99,1)(100,5)(101,147)(102,97)(103,1)(104,95)(105,52)(106,146)(107,0)(108,146)(109,146)(110,121)(111,147)(112,1)(113,146)(114,147)(115,75)(116,43)(117,147)(118,146)(119,119)(120,21)(121,53)(122,121)(123,146)(124,82)(125,15)(126,145)(127,146)(128,146)(129,98)(130,119)(131,142)(132,147)(133,146)(134,76)(135,88)(136,145)(137,90)(138,1)(139,97)(140,146)(141,42)(142,107)(143,146)(144,76)(145,58)(146,147)(147,97)
+Number of flows in each configuration 148 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,2)(1,144)(2,19)(3,146)(4,146)(5,1)(6,1)(7,95)(8,143)(9,137)(10,3)(11,145)(12,0)(13,43)(14,0)(15,147)(16,49)(17,0)(18,108)(19,0)(20,146)(21,1)(22,142)(23,106)(24,0)(25,147)(26,2)(27,147)(28,48)(29,2)(30,146)(31,147)(32,3)(33,146)(34,138)(35,2)(36,127)(37,0)(38,144)(39,1)(40,138)(41,145)(42,0)(43,2)(44,0)(45,147)(46,5)(47,51)(48,104)(49,147)(50,0)(51,19)(52,99)(53,147)(54,146)(55,133)(56,146)(57,146)(58,143)(59,137)(60,0)(61,1)(62,0)(63,0)(64,75)(65,146)(66,83)(67,147)(68,3)(69,48)(70,146)(71,146)(72,0)(73,97)(74,128)(75,146)(76,2)(77,101)(78,147)(79,142)(80,35)(81,147)(82,145)(83,119)(84,146)(85,132)(86,147)(87,3)(88,6)(89,145)(90,3)(91,65)(92,146)(93,147)(94,0)(95,76)(96,0)(97,1)(98,1)(99,1)(100,103)(101,1)(102,62)(103,145)(104,144)(105,147)(106,88)(107,131)(108,144)(109,58)(110,83)(111,146)(112,85)(113,145)(114,3)(115,110)(116,134)(117,2)(118,147)(119,77)(120,49)(121,93)(122,147)(123,146)(124,144)(125,147)(126,27)(127,146)(128,8)(129,147)(130,70)(131,146)(132,146)(133,146)(134,145)(135,138)(136,11)(137,0)(138,147)(139,48)(140,147)(141,147)(142,59)(143,146)(144,1)(145,47)(146,109)(147,0)
+datasets/flows/dataset_34 
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,191)(1,197)(2,197)(3,166)(4,197)(5,181)(6,193)(7,0)(8,128)(9,110)(10,97)(11,122)(12,192)(13,142)(14,197)(15,197)(16,159)(17,158)(18,196)(19,196)(20,138)(21,12)(22,144)(23,11)(24,4)(25,196)(26,185)(27,115)(28,135)(29,130)(30,104)(31,131)(32,197)(33,196)(34,197)(35,190)(36,45)(37,45)(38,197)(39,197)(40,85)(41,185)(42,196)(43,196)(44,18)(45,197)(46,197)(47,197)(48,160)(49,180)(50,196)(51,192)(52,196)(53,177)(54,26)(55,197)(56,171)(57,196)(58,196)(59,193)(60,197)(61,196)(62,197)(63,196)(64,140)(65,197)(66,197)(67,196)(68,162)(69,197)(70,190)(71,175)(72,196)(73,197)(74,197)(75,194)(76,163)(77,193)(78,197)(79,197)(80,197)(81,196)(82,58)(83,196)(84,197)(85,197)(86,197)(87,175)(88,192)(89,196)(90,197)(91,195)(92,197)(93,197)(94,197)(95,196)(96,197)(97,196)(98,197)(99,193)(100,196)(101,196)(102,195)(103,188)(104,196)(105,196)(106,196)(107,196)(108,196)(109,196)(110,196)(111,196)(112,192)(113,196)(114,197)(115,188)(116,197)(117,196)(118,196)(119,196)(120,197)(121,196)(122,196)(123,196)(124,196)(125,196)(126,196)(127,197)(128,196)(129,196)(130,197)(131,197)(132,196)(133,197)(134,192)(135,196)(136,190)(137,191)(138,190)(139,144)(140,196)(141,196)(142,131)(143,196)(144,196)(145,189)(146,170)(147,146)(148,196)(149,196)(150,196)(151,44)(152,197)(153,196)(154,196)(155,191)(156,196)(157,140)(158,196)(159,193)(160,192)(161,196)(162,196)(163,149)(164,145)(165,145)(166,149)(167,125)(168,196)(169,160)(170,188)(171,170)(172,197)(173,194)(174,196)(175,148)(176,190)(177,196)(178,196)(179,178)(180,192)(181,197)(182,193)(183,196)(184,190)(185,197)(186,196)(187,157)(188,197)(189,196)(190,182)(191,196)(192,196)(193,196)(194,196)(195,184)(196,196)(197,195)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,73)(1,12)(2,78)(3,191)(4,21)(5,100)(6,197)(7,100)(8,187)(9,117)(10,26)(11,22)(12,70)(13,159)(14,12)(15,197)(16,22)(17,197)(18,191)(19,196)(20,184)(21,179)(22,196)(23,196)(24,98)(25,196)(26,197)(27,166)(28,196)(29,142)(30,36)(31,196)(32,9)(33,197)(34,171)(35,197)(36,194)(37,197)(38,20)(39,196)(40,196)(41,100)(42,112)(43,196)(44,194)(45,190)(46,116)(47,196)(48,7)(49,25)(50,5)(51,7)(52,83)(53,170)(54,132)(55,196)(56,194)(57,90)(58,76)(59,61)(60,44)(61,192)(62,1)(63,47)(64,192)(65,33)(66,68)(67,197)(68,24)(69,192)(70,196)(71,116)(72,192)(73,21)(74,196)(75,35)(76,196)(77,56)(78,196)(79,156)(80,0)(81,177)(82,9)(83,101)(84,192)(85,23)(86,197)(87,165)(88,147)(89,26)(90,132)(91,51)(92,178)(93,155)(94,197)(95,22)(96,125)(97,41)(98,196)(99,55)(100,39)(101,196)(102,140)(103,141)(104,196)(105,183)(106,187)(107,37)(108,197)(109,101)(110,14)(111,23)(112,186)(113,153)(114,127)(115,190)(116,14)(117,40)(118,47)(119,42)(120,197)(121,0)(122,89)(123,197)(124,25)(125,86)(126,190)(127,12)(128,180)(129,196)(130,9)(131,162)(132,197)(133,196)(134,36)(135,73)(136,196)(137,36)(138,19)(139,193)(140,186)(141,193)(142,32)(143,196)(144,196)(145,188)(146,196)(147,138)(148,192)(149,196)(150,186)(151,186)(152,196)(153,101)(154,195)(155,187)(156,196)(157,3)(158,14)(159,197)(160,4)(161,99)(162,26)(163,188)(164,175)(165,196)(166,185)(167,194)(168,130)(169,196)(170,145)(171,196)(172,194)(173,29)(174,196)(175,47)(176,184)(177,129)(178,195)(179,196)(180,182)(181,181)(182,196)(183,196)(184,196)(185,196)(186,45)(187,119)(188,41)(189,196)(190,175)(191,76)(192,196)(193,197)(194,195)(195,133)(196,136)(197,193)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,27)(1,196)(2,139)(3,195)(4,196)(5,194)(6,19)(7,194)(8,26)(9,184)(10,175)(11,196)(12,194)(13,13)(14,196)(15,197)(16,197)(17,197)(18,7)(19,197)(20,196)(21,193)(22,197)(23,196)(24,190)(25,197)(26,16)(27,197)(28,196)(29,178)(30,196)(31,196)(32,196)(33,196)(34,195)(35,184)(36,197)(37,172)(38,19)(39,196)(40,52)(41,187)(42,29)(43,166)(44,180)(45,196)(46,189)(47,196)(48,193)(49,196)(50,74)(51,191)(52,192)(53,196)(54,196)(55,30)(56,87)(57,196)(58,179)(59,18)(60,196)(61,194)(62,40)(63,138)(64,149)(65,177)(66,189)(67,177)(68,196)(69,35)(70,154)(71,197)(72,196)(73,127)(74,196)(75,75)(76,197)(77,197)(78,151)(79,197)(80,0)(81,188)(82,194)(83,179)(84,32)(85,56)(86,0)(87,193)(88,182)(89,197)(90,7)(91,197)(92,6)(93,23)(94,157)(95,196)(96,9)(97,186)(98,28)(99,196)(100,196)(101,149)(102,192)(103,191)(104,120)(105,197)(106,196)(107,57)(108,197)(109,17)(110,196)(111,17)(112,190)(113,49)(114,193)(115,53)(116,194)(117,194)(118,143)(119,196)(120,105)(121,197)(122,42)(123,196)(124,196)(125,179)(126,196)(127,196)(128,196)(129,195)(130,196)(131,83)(132,156)(133,196)(134,194)(135,195)(136,118)(137,196)(138,196)(139,136)(140,196)(141,68)(142,196)(143,196)(144,196)(145,195)(146,196)(147,192)(148,0)(149,20)(150,197)(151,0)(152,148)(153,196)(154,196)(155,196)(156,16)(157,193)(158,197)(159,49)(160,6)(161,195)(162,196)(163,190)(164,58)(165,15)(166,189)(167,190)(168,185)(169,196)(170,196)(171,193)(172,194)(173,177)(174,117)(175,183)(176,103)(177,196)(178,196)(179,195)(180,196)(181,196)(182,5)(183,0)(184,193)(185,40)(186,190)(187,196)(188,61)(189,195)(190,2)(191,9)(192,191)(193,197)(194,197)(195,148)(196,128)(197,54)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,8)(1,49)(2,57)(3,89)(4,196)(5,196)(6,197)(7,197)(8,13)(9,89)(10,196)(11,73)(12,196)(13,9)(14,197)(15,196)(16,197)(17,190)(18,177)(19,187)(20,197)(21,101)(22,16)(23,180)(24,196)(25,196)(26,197)(27,26)(28,197)(29,196)(30,196)(31,187)(32,146)(33,197)(34,195)(35,106)(36,196)(37,25)(38,26)(39,98)(40,189)(41,39)(42,11)(43,191)(44,183)(45,190)(46,31)(47,194)(48,157)(49,196)(50,1)(51,190)(52,54)(53,193)(54,197)(55,190)(56,196)(57,197)(58,0)(59,196)(60,10)(61,40)(62,141)(63,193)(64,194)(65,75)(66,187)(67,44)(68,197)(69,128)(70,196)(71,176)(72,194)(73,196)(74,197)(75,162)(76,196)(77,26)(78,109)(79,193)(80,194)(81,196)(82,121)(83,196)(84,197)(85,142)(86,194)(87,189)(88,195)(89,197)(90,147)(91,196)(92,190)(93,179)(94,196)(95,102)(96,100)(97,102)(98,17)(99,196)(100,96)(101,196)(102,9)(103,13)(104,195)(105,196)(106,76)(107,114)(108,189)(109,196)(110,15)(111,65)(112,193)(113,33)(114,0)(115,197)(116,54)(117,126)(118,5)(119,196)(120,183)(121,36)(122,161)(123,197)(124,195)(125,7)(126,29)(127,196)(128,196)(129,194)(130,196)(131,139)(132,33)(133,31)(134,196)(135,18)(136,196)(137,197)(138,186)(139,191)(140,102)(141,151)(142,25)(143,173)(144,75)(145,196)(146,197)(147,86)(148,196)(149,40)(150,194)(151,195)(152,117)(153,196)(154,166)(155,5)(156,66)(157,196)(158,6)(159,52)(160,196)(161,196)(162,197)(163,183)(164,81)(165,194)(166,14)(167,196)(168,191)(169,185)(170,50)(171,163)(172,118)(173,188)(174,192)(175,196)(176,41)(177,196)(178,192)(179,197)(180,194)(181,196)(182,192)(183,193)(184,196)(185,56)(186,5)(187,35)(188,196)(189,196)(190,193)(191,25)(192,196)(193,51)(194,50)(195,196)(196,188)(197,196)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,94)(1,3)(2,190)(3,191)(4,23)(5,197)(6,175)(7,193)(8,175)(9,195)(10,40)(11,14)(12,194)(13,197)(14,40)(15,195)(16,197)(17,197)(18,197)(19,77)(20,5)(21,136)(22,197)(23,196)(24,71)(25,175)(26,4)(27,197)(28,197)(29,190)(30,193)(31,47)(32,189)(33,72)(34,191)(35,39)(36,195)(37,197)(38,196)(39,197)(40,11)(41,15)(42,197)(43,157)(44,193)(45,15)(46,184)(47,195)(48,196)(49,197)(50,127)(51,196)(52,181)(53,196)(54,0)(55,195)(56,196)(57,43)(58,19)(59,195)(60,189)(61,196)(62,196)(63,193)(64,196)(65,189)(66,0)(67,19)(68,196)(69,196)(70,197)(71,190)(72,196)(73,6)(74,196)(75,195)(76,39)(77,196)(78,27)(79,197)(80,65)(81,126)(82,192)(83,7)(84,197)(85,35)(86,9)(87,190)(88,89)(89,197)(90,81)(91,197)(92,32)(93,197)(94,150)(95,103)(96,195)(97,194)(98,196)(99,191)(100,73)(101,71)(102,188)(103,79)(104,166)(105,196)(106,197)(107,196)(108,189)(109,55)(110,189)(111,0)(112,47)(113,197)(114,169)(115,59)(116,196)(117,9)(118,196)(119,45)(120,31)(121,22)(122,13)(123,196)(124,197)(125,10)(126,188)(127,61)(128,163)(129,197)(130,197)(131,194)(132,191)(133,1)(134,196)(135,196)(136,197)(137,130)(138,196)(139,196)(140,10)(141,191)(142,196)(143,7)(144,196)(145,92)(146,196)(147,196)(148,196)(149,191)(150,53)(151,36)(152,126)(153,196)(154,9)(155,61)(156,196)(157,49)(158,196)(159,58)(160,193)(161,196)(162,146)(163,196)(164,196)(165,196)(166,195)(167,121)(168,78)(169,153)(170,55)(171,196)(172,3)(173,178)(174,196)(175,11)(176,194)(177,49)(178,197)(179,195)(180,196)(181,196)(182,61)(183,191)(184,183)(185,122)(186,196)(187,191)(188,25)(189,196)(190,190)(191,193)(192,193)(193,31)(194,19)(195,35)(196,197)(197,36)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,197)(1,104)(2,196)(3,196)(4,197)(5,164)(6,175)(7,192)(8,193)(9,196)(10,197)(11,126)(12,195)(13,192)(14,95)(15,196)(16,110)(17,160)(18,32)(19,197)(20,196)(21,195)(22,196)(23,197)(24,66)(25,27)(26,196)(27,197)(28,148)(29,181)(30,193)(31,106)(32,196)(33,196)(34,196)(35,145)(36,197)(37,173)(38,197)(39,196)(40,197)(41,47)(42,4)(43,196)(44,196)(45,120)(46,196)(47,197)(48,192)(49,196)(50,197)(51,122)(52,188)(53,196)(54,109)(55,197)(56,55)(57,12)(58,190)(59,192)(60,17)(61,144)(62,196)(63,92)(64,194)(65,158)(66,177)(67,189)(68,197)(69,196)(70,196)(71,52)(72,194)(73,181)(74,168)(75,172)(76,0)(77,194)(78,40)(79,173)(80,97)(81,12)(82,177)(83,177)(84,174)(85,196)(86,197)(87,165)(88,180)(89,130)(90,194)(91,22)(92,56)(93,197)(94,90)(95,193)(96,190)(97,191)(98,57)(99,186)(100,191)(101,197)(102,194)(103,197)(104,196)(105,62)(106,196)(107,196)(108,197)(109,196)(110,77)(111,119)(112,108)(113,138)(114,196)(115,148)(116,81)(117,193)(118,197)(119,27)(120,92)(121,193)(122,196)(123,194)(124,196)(125,192)(126,195)(127,196)(128,196)(129,188)(130,196)(131,196)(132,11)(133,194)(134,180)(135,184)(136,2)(137,125)(138,197)(139,196)(140,197)(141,103)(142,196)(143,196)(144,190)(145,188)(146,196)(147,197)(148,101)(149,196)(150,194)(151,14)(152,196)(153,196)(154,163)(155,2)(156,173)(157,195)(158,190)(159,90)(160,169)(161,196)(162,193)(163,85)(164,188)(165,178)(166,193)(167,193)(168,79)(169,61)(170,196)(171,107)(172,193)(173,196)(174,196)(175,177)(176,134)(177,183)(178,196)(179,194)(180,194)(181,192)(182,106)(183,196)(184,196)(185,38)(186,196)(187,186)(188,66)(189,184)(190,196)(191,27)(192,193)(193,196)(194,196)(195,189)(196,9)(197,193)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_6 and target config_7
+(0,150)(1,195)(2,195)(3,64)(4,108)(5,197)(6,84)(7,196)(8,196)(9,197)(10,169)(11,195)(12,178)(13,191)(14,189)(15,197)(16,138)(17,147)(18,192)(19,172)(20,194)(21,6)(22,197)(23,104)(24,164)(25,154)(26,196)(27,196)(28,146)(29,166)(30,197)(31,192)(32,187)(33,193)(34,170)(35,104)(36,193)(37,197)(38,146)(39,196)(40,196)(41,197)(42,196)(43,197)(44,195)(45,79)(46,192)(47,2)(48,195)(49,196)(50,196)(51,137)(52,190)(53,11)(54,113)(55,196)(56,196)(57,77)(58,119)(59,196)(60,89)(61,197)(62,12)(63,196)(64,194)(65,196)(66,157)(67,130)(68,196)(69,72)(70,51)(71,197)(72,197)(73,140)(74,197)(75,0)(76,74)(77,20)(78,183)(79,196)(80,167)(81,196)(82,192)(83,194)(84,196)(85,196)(86,196)(87,196)(88,5)(89,0)(90,196)(91,154)(92,196)(93,1)(94,74)(95,197)(96,196)(97,30)(98,196)(99,196)(100,180)(101,197)(102,182)(103,196)(104,155)(105,195)(106,197)(107,98)(108,184)(109,177)(110,36)(111,196)(112,52)(113,196)(114,192)(115,177)(116,197)(117,157)(118,196)(119,39)(120,196)(121,103)(122,196)(123,180)(124,177)(125,196)(126,161)(127,187)(128,194)(129,171)(130,170)(131,185)(132,197)(133,196)(134,196)(135,196)(136,194)(137,192)(138,196)(139,14)(140,196)(141,126)(142,82)(143,46)(144,195)(145,196)(146,159)(147,196)(148,33)(149,128)(150,196)(151,197)(152,4)(153,196)(154,197)(155,150)(156,196)(157,197)(158,197)(159,0)(160,56)(161,195)(162,135)(163,133)(164,118)(165,85)(166,196)(167,196)(168,4)(169,193)(170,196)(171,111)(172,196)(173,12)(174,196)(175,103)(176,197)(177,196)(178,196)(179,31)(180,191)(181,197)(182,196)(183,196)(184,196)(185,124)(186,132)(187,181)(188,0)(189,181)(190,196)(191,197)(192,194)(193,193)(194,196)(195,162)(196,197)(197,188)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_7 and target config_8
+(0,194)(1,102)(2,197)(3,193)(4,190)(5,197)(6,196)(7,81)(8,187)(9,40)(10,183)(11,100)(12,197)(13,11)(14,197)(15,57)(16,196)(17,196)(18,189)(19,141)(20,196)(21,197)(22,194)(23,1)(24,191)(25,167)(26,160)(27,184)(28,197)(29,153)(30,11)(31,157)(32,0)(33,169)(34,194)(35,197)(36,19)(37,184)(38,196)(39,196)(40,74)(41,37)(42,192)(43,18)(44,197)(45,196)(46,172)(47,196)(48,9)(49,41)(50,196)(51,196)(52,196)(53,45)(54,197)(55,196)(56,189)(57,77)(58,196)(59,149)(60,197)(61,60)(62,196)(63,197)(64,197)(65,194)(66,5)(67,197)(68,68)(69,162)(70,172)(71,197)(72,194)(73,196)(74,196)(75,146)(76,195)(77,192)(78,0)(79,192)(80,196)(81,186)(82,195)(83,161)(84,196)(85,196)(86,181)(87,196)(88,9)(89,196)(90,177)(91,105)(92,51)(93,196)(94,186)(95,178)(96,188)(97,120)(98,196)(99,177)(100,197)(101,38)(102,109)(103,196)(104,29)(105,19)(106,181)(107,23)(108,194)(109,2)(110,196)(111,87)(112,6)(113,190)(114,197)(115,191)(116,148)(117,50)(118,197)(119,194)(120,156)(121,161)(122,160)(123,197)(124,153)(125,187)(126,192)(127,20)(128,196)(129,191)(130,9)(131,30)(132,197)(133,38)(134,34)(135,196)(136,123)(137,196)(138,46)(139,190)(140,196)(141,189)(142,10)(143,63)(144,195)(145,153)(146,196)(147,178)(148,196)(149,196)(150,5)(151,196)(152,51)(153,154)(154,108)(155,191)(156,158)(157,186)(158,196)(159,191)(160,196)(161,195)(162,48)(163,196)(164,185)(165,197)(166,193)(167,181)(168,41)(169,151)(170,77)(171,163)(172,196)(173,193)(174,108)(175,191)(176,149)(177,33)(178,187)(179,196)(180,193)(181,9)(182,194)(183,196)(184,190)(185,197)(186,196)(187,196)(188,197)(189,196)(190,195)(191,197)(192,42)(193,193)(194,196)(195,1)(196,165)(197,6)
+Number of flows in each configuration 198 
+Solving flow reconfiguration with source config_8 and target config_9
+(0,197)(1,0)(2,197)(3,21)(4,45)(5,21)(6,196)(7,51)(8,196)(9,197)(10,197)(11,189)(12,148)(13,59)(14,197)(15,9)(16,194)(17,197)(18,197)(19,133)(20,196)(21,187)(22,11)(23,194)(24,88)(25,196)(26,6)(27,108)(28,197)(29,147)(30,196)(31,37)(32,38)(33,51)(34,196)(35,196)(36,18)(37,55)(38,197)(39,25)(40,50)(41,197)(42,193)(43,196)(44,144)(45,196)(46,175)(47,192)(48,167)(49,196)(50,197)(51,16)(52,190)(53,193)(54,22)(55,197)(56,50)(57,145)(58,195)(59,196)(60,197)(61,6)(62,14)(63,184)(64,196)(65,149)(66,36)(67,10)(68,197)(69,88)(70,196)(71,145)(72,196)(73,49)(74,5)(75,197)(76,196)(77,197)(78,192)(79,51)(80,12)(81,3)(82,22)(83,101)(84,196)(85,196)(86,196)(87,188)(88,191)(89,197)(90,188)(91,147)(92,196)(93,191)(94,40)(95,89)(96,85)(97,185)(98,196)(99,194)(100,165)(101,195)(102,103)(103,47)(104,196)(105,195)(106,26)(107,196)(108,196)(109,1)(110,91)(111,26)(112,196)(113,28)(114,196)(115,41)(116,196)(117,139)(118,189)(119,177)(120,32)(121,193)(122,183)(123,53)(124,57)(125,147)(126,59)(127,197)(128,5)(129,128)(130,196)(131,196)(132,187)(133,86)(134,196)(135,187)(136,119)(137,23)(138,196)(139,186)(140,191)(141,127)(142,197)(143,14)(144,197)(145,194)(146,190)(147,181)(148,174)(149,96)(150,131)(151,191)(152,196)(153,196)(154,195)(155,191)(156,23)(157,9)(158,196)(159,187)(160,196)(161,90)(162,8)(163,196)(164,196)(165,183)(166,196)(167,197)(168,0)(169,68)(170,196)(171,196)(172,183)(173,51)(174,196)(175,141)(176,196)(177,27)(178,11)(179,103)(180,21)(181,183)(182,197)(183,192)(184,1)(185,193)(186,196)(187,89)(188,196)(189,194)(190,189)(191,195)(192,188)(193,100)(194,184)(195,195)(196,185)(197,195)
+datasets/flows/dataset_35 
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,0)(1,86)(2,236)(3,246)(4,215)(5,43)(6,155)(7,225)(8,55)(9,48)(10,246)(11,240)(12,40)(13,60)(14,246)(15,242)(16,238)(17,22)(18,230)(19,235)(20,124)(21,246)(22,245)(23,84)(24,46)(25,7)(26,2)(27,246)(28,246)(29,242)(30,241)(31,217)(32,148)(33,230)(34,205)(35,226)(36,215)(37,245)(38,195)(39,196)(40,179)(41,195)(42,245)(43,235)(44,242)(45,239)(46,243)(47,225)(48,238)(49,6)(50,82)(51,240)(52,242)(53,246)(54,245)(55,241)(56,240)(57,237)(58,16)(59,54)(60,9)(61,78)(62,49)(63,39)(64,10)(65,50)(66,30)(67,242)(68,245)(69,20)(70,241)(71,245)(72,0)(73,230)(74,240)(75,240)(76,245)(77,246)(78,241)(79,245)(80,246)(81,245)(82,239)(83,242)(84,201)(85,245)(86,245)(87,25)(88,239)(89,27)(90,233)(91,242)(92,240)(93,243)(94,246)(95,245)(96,203)(97,237)(98,241)(99,246)(100,232)(101,246)(102,246)(103,241)(104,204)(105,34)(106,243)(107,31)(108,64)(109,245)(110,245)(111,246)(112,243)(113,236)(114,236)(115,238)(116,240)(117,90)(118,53)(119,75)(120,71)(121,245)(122,41)(123,239)(124,115)(125,245)(126,159)(127,94)(128,136)(129,90)(130,245)(131,237)(132,185)(133,245)(134,152)(135,243)(136,226)(137,244)(138,242)(139,245)(140,243)(141,219)(142,239)(143,245)(144,244)(145,246)(146,245)(147,245)(148,245)(149,246)(150,245)(151,246)(152,51)(153,56)(154,246)(155,169)(156,243)(157,245)(158,234)(159,241)(160,211)(161,228)(162,226)(163,237)(164,241)(165,245)(166,129)(167,234)(168,2)(169,4)(170,12)(171,4)(172,0)(173,5)(174,3)(175,10)(176,50)(177,70)(178,42)(179,40)(180,70)(181,16)(182,31)(183,22)(184,237)(185,245)(186,246)(187,245)(188,237)(189,240)(190,209)(191,245)(192,54)(193,243)(194,232)(195,232)(196,242)(197,234)(198,244)(199,214)(200,243)(201,206)(202,10)(203,231)(204,216)(205,12)(206,245)(207,245)(208,244)(209,239)(210,143)(211,245)(212,135)(213,144)(214,205)(215,25)(216,5)(217,12)(218,82)(219,19)(220,40)(221,53)(222,27)(223,10)(224,238)(225,241)(226,38)(227,30)(228,231)(229,238)(230,245)(231,245)(232,244)(233,245)(234,246)(235,245)(236,244)(237,245)(238,246)(239,245)(240,27)(241,242)(242,245)(243,2)(244,35)(245,245)(246,246)
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,246)(1,240)(2,76)(3,110)(4,22)(5,242)(6,26)(7,46)(8,229)(9,19)(10,246)(11,88)(12,9)(13,246)(14,17)(15,159)(16,236)(17,48)(18,156)(19,246)(20,25)(22,65)(23,152)(24,243)(25,55)(26,56)(27,204)(28,14)(30,238)(32,59)(33,243)(34,246)(35,246)(37,245)(38,230)(39,13)(40,245)(41,246)(42,246)(46,241)(47,11)(48,43)(49,50)(50,243)(51,246)(52,246)(53,26)(54,245)(56,5)(57,89)(59,52)(60,47)(61,4)(62,246)(63,35)(64,241)(65,242)(66,246)(67,192)(68,116)(69,52)(71,245)(72,91)(73,208)(74,244)(76,243)(77,38)(78,2)(79,64)(82,30)(83,174)(84,245)(85,238)(87,64)(88,240)(89,241)(90,101)(91,246)(92,245)(93,174)(94,7)(95,245)(96,245)(98,150)(99,246)(100,182)(101,91)(102,246)(103,244)(104,46)(105,245)(106,106)(107,245)(108,25)(109,20)(110,245)(112,53)(113,245)(114,243)(115,245)(116,173)(117,26)(118,26)(119,17)(120,54)(121,65)(122,21)(123,240)(124,243)(125,246)(126,246)(127,246)(128,81)(130,111)(132,239)(133,21)(135,9)(136,245)(137,1)(138,116)(139,245)(140,245)(141,245)(142,126)(143,238)(144,110)(145,239)(146,246)(147,245)(148,245)(149,245)(150,44)(151,76)(152,11)(153,122)(154,8)(155,26)(156,66)(157,245)(158,240)(159,223)(160,241)(161,245)(162,245)(163,209)(164,201)(165,203)(166,236)(167,240)(168,245)(169,245)(170,245)(171,216)(173,240)(174,0)(175,240)(176,246)(178,46)(179,88)(180,245)(181,55)(182,0)(183,245)(184,245)(185,230)(187,238)(188,246)(189,16)(190,154)(191,241)(192,101)(193,242)(195,5)(196,0)(197,233)(199,245)(200,171)(202,24)(203,124)(205,107)(206,245)(207,32)(208,244)(209,245)(210,242)(211,246)(212,178)(213,7)(214,34)(215,63)(216,238)(217,9)(218,245)(219,245)(220,245)(221,175)(222,41)(224,245)(227,243)(228,245)(229,7)(230,242)(233,8)(234,246)(235,8)(236,239)(237,227)(238,246)(239,99)(240,245)(241,245)(244,243)(245,245)(246,245)
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,241)(1,35)(2,244)(3,239)(4,13)(5,194)(6,208)(7,175)(8,245)(9,242)(10,7)(11,246)(12,246)(13,241)(14,226)(15,43)(16,66)(17,246)(18,246)(19,201)(20,198)(21,184)(22,222)(23,246)(24,148)(25,234)(26,18)(27,245)(28,12)(29,242)(30,237)(31,221)(32,241)(33,105)(34,149)(35,246)(36,16)(37,39)(38,245)(39,74)(40,0)(41,161)(42,29)(43,221)(44,4)(45,99)(46,5)(47,103)(48,77)(49,14)(50,138)(51,1)(52,238)(53,89)(54,4)(55,66)(56,246)(57,239)(58,48)(59,245)(60,212)(61,194)(62,245)(63,242)(64,8)(65,244)(66,52)(67,244)(68,28)(69,205)(70,66)(71,245)(72,214)(73,40)(74,238)(75,246)(76,246)(77,246)(78,82)(79,59)(80,70)(81,246)(82,242)(83,164)(84,246)(85,246)(86,245)(87,95)(88,41)(89,201)(90,206)(91,70)(92,245)(93,245)(94,237)(95,21)(96,242)(97,245)(98,89)(99,102)(100,240)(101,244)(102,141)(103,245)(104,218)(105,123)(106,61)(107,245)(108,224)(109,143)(110,246)(111,0)(112,168)(113,244)(114,245)(115,240)(116,207)(117,205)(118,245)(119,100)(120,112)(121,136)(122,37)(123,6)(124,76)(125,245)(126,244)(127,245)(128,72)(129,238)(130,242)(131,246)(132,245)(133,79)(134,106)(135,199)(136,245)(137,245)(138,17)(139,155)(140,36)(141,97)(142,243)(143,5)(144,231)(145,244)(146,0)(147,44)(148,99)(149,245)(150,60)(151,51)(152,241)(153,242)(154,194)(155,220)(156,243)(157,246)(158,13)(159,245)(160,245)(161,238)(162,5)(163,234)(164,244)(165,240)(166,245)(167,243)(168,161)(169,240)(170,239)(171,229)(172,141)(173,227)(174,242)(175,245)(176,246)(177,243)(178,242)(179,73)(180,231)(181,92)(182,98)(183,72)(184,73)(185,235)(186,246)(187,133)(188,144)(189,246)(190,140)(191,193)(192,107)(193,245)(194,61)(195,69)(196,245)(197,229)(198,243)(199,18)(200,17)(201,196)(202,7)(203,242)(204,244)(205,245)(206,224)(207,1)(208,242)(209,246)(210,17)(211,137)(212,241)(213,242)(214,234)(215,52)(216,64)(217,243)(218,242)(219,234)(220,6)(221,245)(222,21)(223,205)(224,231)(225,245)(226,245)(227,239)(228,65)(229,246)(230,237)(231,243)(232,237)(233,239)(234,63)(235,82)(236,91)(237,207)(238,229)(239,70)(240,119)(241,245)(242,67)(243,81)(244,27)(245,175)(246,237)
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,217)(1,208)(2,243)(3,4)(4,14)(5,173)(6,5)(7,43)(8,246)(9,245)(10,225)(11,239)(12,3)(13,25)(14,68)(15,243)(16,158)(17,246)(18,86)(19,72)(20,24)(21,16)(22,245)(23,245)(24,246)(25,5)(26,40)(27,156)(28,246)(29,5)(30,47)(31,3)(32,241)(33,173)(34,246)(35,36)(36,169)(37,40)(38,161)(39,95)(40,226)(41,31)(42,28)(43,204)(44,9)(45,28)(46,237)(47,246)(48,202)(49,19)(50,207)(51,245)(52,16)(53,246)(54,55)(55,239)(56,242)(57,241)(58,246)(59,48)(60,11)(61,218)(62,1)(63,172)(64,14)(65,246)(66,5)(67,13)(68,6)(69,177)(70,236)(71,171)(72,34)(73,5)(74,110)(75,227)(76,243)(77,204)(78,245)(79,65)(80,245)(81,36)(82,227)(83,245)(84,40)(85,245)(86,51)(87,245)(88,139)(89,13)(90,232)(91,198)(92,6)(93,231)(94,246)(95,245)(96,230)(97,245)(98,68)(99,45)(100,246)(101,51)(102,56)(103,32)(104,19)(105,224)(106,245)(107,246)(108,21)(109,245)(110,15)(111,218)(112,230)(113,246)(114,238)(115,245)(116,245)(117,176)(118,0)(119,243)(120,23)(121,194)(122,246)(123,243)(124,152)(125,148)(126,17)(127,28)(128,210)(129,246)(130,231)(131,246)(132,122)(133,245)(134,235)(135,245)(136,221)(137,140)(138,49)(139,30)(140,222)(141,234)(142,190)(143,165)(144,3)(145,246)(146,232)(147,184)(148,32)(149,246)(150,240)(151,27)(152,245)(153,245)(154,245)(155,242)(156,240)(157,226)(158,0)(159,246)(160,85)(161,145)(162,38)(163,155)(164,55)(165,227)(166,236)(167,29)(168,4)(169,30)(170,199)(171,54)(172,16)(173,2)(174,245)(175,244)(176,245)(177,246)(178,33)(179,223)(180,24)(181,245)(182,54)(183,245)(184,244)(185,21)(186,185)(187,156)(188,24)(189,242)(190,135)(191,242)(192,245)(193,238)(194,132)(195,30)(196,26)(197,245)(198,45)(199,245)(200,246)(201,11)(202,245)(203,173)(204,246)(205,237)(206,245)(207,63)(208,33)(209,67)(210,185)(211,26)(212,175)(213,245)(214,244)(215,229)(216,17)(217,241)(218,233)(219,49)(220,1)(221,232)(222,245)(223,242)(224,245)(225,243)(226,18)(227,9)(228,245)(229,241)(230,223)(231,63)(232,167)(233,229)(234,20)(235,109)(236,136)(237,245)(238,245)(239,235)(240,60)(241,68)(242,13)(243,45)(244,169)(245,9)(246,242)
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_4 and target config_5
+Number of flows in each configuration 247 
+Solving flow reconfiguration with source config_5 and target config_6
+datasets/flows/dataset_1 
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,38)(1,37)(2,37)(3,37)(4,37)(5,38)(6,38)(7,37)(8,37)(9,37)(10,37)(11,37)(12,37)(13,37)(14,38)(15,37)(16,38)(17,37)(18,37)(19,37)(20,38)(21,37)(22,37)(23,37)(24,37)(25,37)(26,37)(27,37)(28,37)(29,37)(30,37)(31,37)(32,38)(33,37)(34,37)(35,37)(36,38)(37,37)(38,38)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_1 and target config_2
+(0,7)(1,2)(2,9)(3,9)(4,2)(5,9)(6,7)(7,2)(8,2)(9,9)(10,9)(11,9)(12,2)(13,7)(14,2)(15,2)(16,9)(17,2)(18,9)(19,2)(20,7)(21,7)(22,2)(23,7)(24,9)(25,7)(26,7)(27,2)(28,2)(29,2)(30,7)(31,7)(32,2)(33,7)(34,2)(35,9)(36,7)(37,2)(38,9)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_2 and target config_3
+(0,24)(1,2)(2,38)(3,24)(4,24)(5,2)(6,24)(7,24)(8,24)(9,38)(10,24)(11,2)(12,2)(13,2)(14,38)(15,38)(16,38)(17,2)(18,38)(19,24)(20,24)(21,24)(22,38)(23,24)(24,2)(25,24)(26,2)(27,24)(28,24)(29,24)(30,24)(31,38)(32,24)(33,2)(34,24)(35,2)(36,2)(37,38)(38,24)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_3 and target config_4
+(0,10)(1,14)(2,16)(3,16)(4,14)(5,10)(6,14)(7,14)(8,14)(9,10)(10,10)(11,16)(12,14)(13,10)(14,16)(15,10)(16,14)(17,14)(18,10)(19,10)(20,10)(21,10)(22,16)(23,16)(24,14)(25,10)(26,14)(27,14)(28,16)(29,10)(30,14)(31,10)(32,14)(33,14)(34,14)(35,16)(36,14)(37,10)(38,14)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_4 and target config_5
+(0,20)(1,20)(2,20)(3,4)(4,20)(5,0)(6,4)(7,20)(8,0)(9,20)(10,4)(11,4)(12,4)(13,20)(14,20)(15,20)(16,4)(17,4)(18,20)(19,20)(20,20)(21,4)(22,4)(23,0)(24,0)(25,4)(26,0)(27,4)(28,4)(29,0)(30,4)(31,20)(32,0)(33,0)(34,4)(35,0)(36,20)(37,4)(38,0)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_5 and target config_6
+(0,2)(1,12)(2,12)(3,2)(4,10)(5,2)(6,10)(7,2)(8,2)(9,2)(10,12)(11,12)(12,10)(13,12)(14,10)(15,2)(16,12)(17,10)(18,10)(19,12)(20,2)(21,2)(22,10)(23,2)(24,10)(25,12)(26,12)(27,2)(28,2)(29,2)(30,2)(31,10)(32,12)(33,10)(34,12)(35,12)(36,2)(37,10)(38,10)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_6 and target config_7
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_7 and target config_8
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_8 and target config_9
+datasets/flows/dataset_1 
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_0 and target config_1
+(0,37)(1,37)(2,37)(3,37)(4,37)(5,37)(6,37)(7,37)(8,37)(9,37)(10,37)(11,37)(12,37)(13,37)(14,37)(15,37)(16,37)(17,37)(18,37)(19,37)(20,37)(21,37)(22,37)(23,37)(24,37)(25,37)(26,37)(27,37)(28,37)(29,37)(30,37)(31,37)(32,37)(33,37)(34,37)(35,37)(36,37)(37,37)(38,37)
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_1 and target config_2
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_2 and target config_3
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_3 and target config_4
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_4 and target config_5
+Number of flows in each configuration 39 
+Solving flow reconfiguration with source config_5 and target config_6

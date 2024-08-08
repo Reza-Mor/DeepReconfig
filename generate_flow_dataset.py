@@ -96,11 +96,12 @@ def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start,
         # we set the flow size to go from 
         flow_size = random.randint(min_flow_size, max_flow_size)
         search_graph = np.where(G_temp - flow_size<0, 0, G_temp - flow_size)
+        #randomness = np.random.randint(0, 2, size=search_graph.shape)
         dist, previous = Astar(search_graph, start, end)
         path = get_path(previous, end)
 
         if dist != float('inf'):
-            #print('path: ', path)
+            
             if len(path) > longest_flow_length:
                 longest_flow_length = len(path)
             for i in range(1, len(path)):
@@ -120,26 +121,38 @@ def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start,
             max_flow_size = max(min_flow_size, max_flow_size//2)
     
     link_capacity = sum(edges.values())
-    #print(edges)
+    assert link_capacity != 0, "no path from source to target (no flow could be added)"
+        
+    
     while capacity_used/link_capacity > avg_utilization:
-        f = init_flows.pop(flow_id-1)
+        # randomly remove flow from the flows
+        flow = random.choice(list(init_flows.keys()))
+        f = init_flows.pop(flow)
         path = f[:-1]
         flow_size = f[-1]
         flow_id -= 1
-        capacity_used -= flow_size * len(path)
+        capacity_used -= flow_size * (len(path) -1)
         for i in range(1, len(path)):
             edge = path[i-1], path[i]
             G_temp[edge]  = G_temp[edge] + flow_size
+            # if the edge is empty of flows
+            if G_temp[edge] == edges[edge]:
+                link_capacity -= edges[edge]
+                edges.pop(edge)
 
-    #print('average link utilization: {}'.format(capacity_used/link_capacity))
+    print('average link utilization: {}'.format(capacity_used/link_capacity))
     #print('total network capacity: {}, link_capacity : {}'.format(network_capacity, link_capacity))
-    #print('number of flows in each configuration: {}'.format(flow_id))
+    print('number of flows in each configuration: {}'.format(flow_id))
+    
     #print('longest flow length: ', longest_flow_length)
+    init_flows = dict((key, value) for (key, value) in zip(range(len(init_flows)), init_flows.values()))
+    #print('init_flows: ', init_flows)
+    #print('number of flows in each configuration: {}'.format(len(init_flows)))
 
-    G_induced = np.where(G- G_temp == 0, 0, G_temp)
-    G_induced2 = np.where(G- G_temp == G, 0, G)
+    G_induced = np.where(G == G_temp, 0, G_temp)
+    #G_induced2 = np.where(G- G_temp == G, 0, G)
 
-    db['config_0'] = init_flows , G_induced, G_induced2
+    db['config_0'] = init_flows , G_induced #, G_induced2
 
     return init_flows
     
@@ -157,25 +170,31 @@ def generate_configurations(G, init_flows, num_configs):
 
         for flow in flow_ids:
             flow_size = init_flows[flow][-1]
-            serach_graph = np.where(G_temp - flow_size < 0, 0, G_temp - flow_size)
-            dist, previous = Astar(serach_graph, start, end)
-            path = get_path(previous, end)
+            search_graph = np.where(G_temp - flow_size < 0, 0, G_temp - flow_size)
+            dist = float('inf')
+            while dist == float('inf'):
+                randomness = np.random.randint(0, 2, size=search_graph.shape)
+                dist, previous = Astar(search_graph* randomness, start, end)
+                path = get_path(previous, end)
 
-            if len(path) > longest_flow_length:
-                longest_flow_length = len(path)
+                if len(path) > longest_flow_length:
+                    longest_flow_length = len(path)
 
             if dist != float('inf'):
-                for i in range(1, len(path)-1):
+                for i in range(1, len(path)):
                     edge = path[i-1], path[i]
                     G_temp[edge]  = G_temp[edge] - flow_size
                 target_flows[flow] = path + [flow_size]
             else:
                 print('could not find a target flow path for flow {}'.format(flow))
         
-        G_induced = np.where(G- G_temp == 0, 0, G_temp)
-        G_induced2 = np.where(G- G_temp == G, 0, G)
+        G_induced = np.where(G == G_temp, 0, G_temp)
+        #G_induced = np.where(G- G_temp == 0, 0, G_temp)
+        #G_induced2 = np.where(G- G_temp == G, 0, G)
+        #print(G_induced)
 
-        db['config_{}'.format(j)] = target_flows , G_induced, G_induced2
+        db['config_{}'.format(j)] = target_flows, G_induced #, G_induced2
+        #print('target_flows: ', target_flows)
 
 def compute_distance(dict1, dict2):
     same_flows = 0
@@ -197,13 +216,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--min_link_capacity",
         type=int,
-        default=3,
+        default=10,
         help="",
     )
     parser.add_argument(
         "--max_link_capacity",
         type=int,
-        default=6,
+        default=10,
         help="",
     )
     parser.add_argument(
@@ -221,19 +240,19 @@ if __name__ == "__main__":
     parser.add_argument(
         "--graph_size",
         type=int,
-        default=15,
+        default=10,
         help="number of nodes in the graph",
     )
     parser.add_argument(
         "--num_configs",
         type=int,
-        default=5,
+        default=3,
         help="number of flow migration configurations to generate",
     )
     parser.add_argument(
         "--avg_link_utilization",
         type=float,
-        default=0.6,
+        default=0.3,
         help="avrage link utilization in the configurations",
     )
     args = parser.parse_args()
@@ -241,7 +260,7 @@ if __name__ == "__main__":
     assert args.max_flow_size <= args.min_link_capacity
     assert 0 < args.avg_link_utilization < 1
 
-    er_param = 0.3
+    er_param = 0.2
     seed = 1
     
     G = generate_graph(args.max_link_capacity, args.min_link_capacity, args.graph_size, er_param, seed)
@@ -265,6 +284,7 @@ if __name__ == "__main__":
     db['num_flows'] = len(init_flows)
     db['longest_flow_length'] = longest_flow_length
 
+    print('db: ',db)
     db.close()
 
     #for i in range(len(configs)):

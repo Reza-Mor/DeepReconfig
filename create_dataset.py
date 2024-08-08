@@ -107,7 +107,6 @@ def create_dataset(input_file, output_file, dataset_size, max_string_length, max
     f.close()
     db.close()
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generating the secondary structures dataset"
