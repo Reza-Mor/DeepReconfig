@@ -1,7 +1,6 @@
-#import gymnasium as gym
-import gym
-from gym.utils import seeding
-from gym.spaces import Box, Dict, Discrete, MultiBinary#, Graph
+import gymnasium as gym
+#import gym
+from gymnasium.spaces import Box, Dict, Discrete, MultiBinary#, Graph
 import numpy as np
 import networkx as nx
 import math
@@ -9,17 +8,18 @@ from networkx.algorithms import bipartite
 from torch_geometric.utils import dense_to_sparse, from_networkx
 import shelve
 import torch
+import random
 
 class Rnaenv_v2 (gym.Env):
 
-    def __init__ (self, dataset, max_episode_steps = np.inf):
-        self.seed = 0
-        self.dataset = dataset
-        self.max_episode_steps = 100 #max_episode_steps
-        self.set_seed()
+    def __init__ (self, cfg):
+        self.cfg = cfg
+        torch.manual_seed(self.cfg.seed)
+        random.seed(self.cfg.seed)
+        self.max_episode_steps = self.cfg.max_episode_steps
         self.set_n()
         #self.n = 10
-        self.features = torch.rand(self.n, 3) #3 is the feature dimension
+        #self.features = torch.rand(self.n, 3) #3 is the feature dimension
         # the action space is a set of discrete values (each node is a number)
         self.action_space = Discrete(self.n//2)
         self.set_observation_space()
@@ -30,18 +30,19 @@ class Rnaenv_v2 (gym.Env):
         self.dim = self.n//2
         self.biadj_matrix, self.G = self.get_graph()
         num_edges = self.G.edge_index.shape[1]
+        #print('num_edges: ', num_edges)
 
         self.observation_space = Dict({
             #"graph": Graph(node_space=Box(low=-100, high=100, shape=(self.n, 2)), edge_space=Discrete(3)),
-            "node_features": Box(low=-100, high=100, shape=(self.n, 3)),
-            "edge_indices": Box(low=0, high=self.n, shape=(2, num_edges)), #Discrete(3),
-            "selected_left_nodes": MultiBinary(self.n//2),
-            "selected_right_nodes": MultiBinary(self.n//2),
-            "action_mask": MultiBinary(self.n//2),
-            "energy_dist": Box(-10, self.n, shape=(2,), dtype=np.int32)
+            #"node_features": Box(low=-100, high=100, shape=(self.n, 3)),
+            "edge_indices": Box(low=0, high=self.n, shape=(2, num_edges), dtype=np.int64), #Discrete(3),
+            "selected_left_nodes": Box(low=0, high=1, shape=(self.n//2, )), #MultiBinary(self.n//2),
+            "selected_right_nodes": Box(low=0, high=1, shape=(self.n//2, )), #MultiBinary(self.n//2),
+            "action_mask": Box(low=0, high=1, shape=(self.n//2, )), #MultiBinary(self.n//2),
+            "energy_dist": Box(-10, self.n, shape=(2,), dtype=np.int16)
         })
 
-    def reset (self):
+    def reset (self, seed=None):
         """
         Reset the state of the environment and returns an initial observation based on the 
         inputted graph (adjacancy matrix and node labels).
@@ -54,16 +55,16 @@ class Rnaenv_v2 (gym.Env):
 
         # need to fix this
         # self.biadj_matrix, self.coo_indices = self.get_graph_test()
-        selected_left_nodes = np.ones(self.dim, dtype=np.int32)
-        selected_right_nodes = np.zeros(self.dim, dtype=np.int32)
-        action_mask = np.ones(self.dim, dtype=np.int32)
+        selected_left_nodes = np.ones(self.dim, dtype=np.int16)
+        selected_right_nodes = np.zeros(self.dim, dtype=np.int16)
+        action_mask = np.ones(self.dim, dtype=np.int16)
         # at first, we can only deselect the nodes on the LHS
         self.curr_energy = self.dim #the current energy is simply the number of selected nodes
         
         # To do: encode information if node is on left\right side
 
         self.init_state = {
-            "node_features": self.features.numpy(),
+            #"node_features": self.features.numpy(),
             "edge_indices": self.G.edge_index.numpy(),
             "selected_left_nodes": selected_left_nodes,
             "selected_right_nodes": selected_right_nodes,
@@ -71,17 +72,18 @@ class Rnaenv_v2 (gym.Env):
             "energy_dist": np.array([self.k, self.curr_energy - self.k])
         }
 
-        self.goal = np.ones(self.dim, dtype=np.int32)       
+        self.goal = np.ones(self.dim, dtype=np.int16)       
         self.count = 0
         self.state = self.init_state
         self.reward = 0
         self.max_selected_right = 0
         self.selected_indexes_prev = None #this is used for energy level implementation
         #self.selected = None #True if the current action is selecting a node
-        self.done = False
+        self.terminated = False
+        self.truncated = False
         self.info = {}
 
-        return self.state
+        return self.state, self.info
 
 
     def step (self, action):
@@ -90,14 +92,14 @@ class Rnaenv_v2 (gym.Env):
 
         input: actions representing a node (each node has a number)
 
-        Returns observation, reward, done, info : tuple
+        Returns observation, reward, terminated, truncated, info : tuple
         """
-        if self.done:
+        if self.terminated:
             # code should never reach this point
             print("EPISODE DONE!!!")
 
         elif self.count == self.max_episode_steps:
-            self.done = True
+            self.terminated = True
 
         else:
             #assert self.action_space.contains(action)
@@ -109,7 +111,7 @@ class Rnaenv_v2 (gym.Env):
 
         #print('env state: ', self.init_state)
 
-        return [self.state, self.reward, self.done, self.info]
+        return [self.state, self.reward, self.terminated, self.truncated, self.info]
 
 
     def update_state(self, action):
@@ -155,7 +157,7 @@ class Rnaenv_v2 (gym.Env):
 
 
         if np.array_equal(self.goal, self.state["selected_right_nodes"]):
-            self.done = True
+            self.terminated = True
             self.reward += self.dim
             
         #try:
@@ -188,19 +190,19 @@ class Rnaenv_v2 (gym.Env):
     Loads a random graph from the dataset in form of an adj matrix and sets the threshold k 
     """
     def get_graph(self):
-        db = shelve.open(self.dataset)
+        db = shelve.open(self.cfg.dataset_dir)
         dataset_size = db['dataset_size'] 
         graph_size = db['max_graph_size']
-        x = np.random.randint(0, dataset_size)
-        x = 10
-        dic = db[str(x)]
+        x = random.sample(range(dataset_size), 1)[0]
+        #dic = db[str(x)]
+        dic = db[str(234)]
 
         while True:
             G = dic['graph']
             u, v = dic['size']
             geometric_data = from_networkx(G)
             # set the node features
-            geometric_data.x = self.features
+            #geometric_data.x = self.features
             #coo_indices = geometric_data.edge_index
             biadj_matrix = bipartite.biadjacency_matrix(G, np.array(range(u)), u + np.array(range(v))).todense()
             # pad the matrix with zeros for having the same shape across all instances
@@ -216,6 +218,9 @@ class Rnaenv_v2 (gym.Env):
             if dic['k'] != 0:
                 #self.k = dic['k']
                 self.k =  dic['k'] #u//2 
+                #for u in biadj_matrix:
+                #    print(u)
+                #print('k: ', self.k)
                 break
         db.close()
         self.k = 10
@@ -236,26 +241,20 @@ class Rnaenv_v2 (gym.Env):
         """
         Get the number of nodes (max graph size * 2) in the dataset and set it to n
         """
-        db = shelve.open(self.dataset)
+        db = shelve.open(self.cfg.dataset_dir)
         self.n = 2 * db['max_graph_size']
         db.close()
 
-
+"""
     def render (self, mode="graph"):
-        """Renders the environment.
+        '''Renders the environment.
         Args:
             mode (str): the mode to render with 
             graph gives the graph
             "print" gives the state
-        """
+        '''
         #UPDATE
         print(self.state)
+"""
 
-
-    def set_seed(self, seed=None):
-        if seed == None:
-            seed = np.random.randint(0, np.iinfo(np.int32).max)        
-        self.np_random, seed = seeding.np_random(seed)
-        torch.manual_seed(seed)
-        return [seed]
 
