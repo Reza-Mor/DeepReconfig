@@ -77,7 +77,7 @@ def generate_graph(max_capacity, min_capacity, graph_size, er_param, seed):
     #graph = nx.from_numpy_matrix(A,create_using=nx.MultiDiGraph())
     return G
 
-def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start, end, seed):
+def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start, end, db, seed):
     
     # generate the flow paths in the intial configuration
     random.seed(seed)
@@ -143,20 +143,20 @@ def generate_init_flows(G, avg_utilization, min_flow_size, max_flow_size, start,
     print('average link utilization: {}'.format(capacity_used/link_capacity))
     #print('total network capacity: {}, link_capacity : {}'.format(network_capacity, link_capacity))
     print('number of flows in each configuration: {}'.format(flow_id))
+    db['num_flows'] = flow_id
     
     #print('longest flow length: ', longest_flow_length)
     init_flows = dict((key, value) for (key, value) in zip(range(len(init_flows)), init_flows.values()))
-    #print('init_flows: ', init_flows)
     #print('number of flows in each configuration: {}'.format(len(init_flows)))
 
     G_induced = np.where(G == G_temp, 0, G_temp)
     #G_induced2 = np.where(G- G_temp == G, 0, G)
 
-    db['config_0'] = init_flows , G_induced #, G_induced2
+    db['config_0'] = init_flows #, G_induced #, G_induced2
 
     return init_flows
     
-def generate_configurations(G, init_flows, num_configs):
+def generate_configurations(G, init_flows, num_configs, db, seed):
     # generate the flow paths in the target configuration
     random.seed(seed)
     num_flows = len(init_flows)
@@ -193,7 +193,7 @@ def generate_configurations(G, init_flows, num_configs):
         #G_induced2 = np.where(G- G_temp == G, 0, G)
         #print(G_induced)
 
-        db['config_{}'.format(j)] = target_flows, G_induced #, G_induced2
+        db['config_{}'.format(j)] = target_flows #, G_induced #, G_induced2
         #print('target_flows: ', target_flows)
 
 def compute_distance(dict1, dict2):
@@ -205,24 +205,24 @@ def compute_distance(dict1, dict2):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-    description="Generating the secondary structures dataset"
+    description="Generating the flows dataset"
     )
     parser.add_argument(
         "--output_file",
         type=str,
-        default="datasets/flows/dataset_1",
+        default='/home/reza-m/DeepReconfig/datasets/flows/100_0.5ER_0.4util', #"~/DeepReconfig/datasets/flows/dataset_10",
         help="the file name to store the dataset",
     )
     parser.add_argument(
         "--min_link_capacity",
         type=int,
-        default=10,
+        default=5,
         help="",
     )
     parser.add_argument(
         "--max_link_capacity",
         type=int,
-        default=10,
+        default=5,
         help="",
     )
     parser.add_argument(
@@ -240,53 +240,67 @@ if __name__ == "__main__":
     parser.add_argument(
         "--graph_size",
         type=int,
-        default=10,
+        default=100,
         help="number of nodes in the graph",
     )
     parser.add_argument(
-        "--num_configs",
+        "--num_configs_train",
         type=int,
-        default=3,
+        default=100,
+        help="number of flow migration configurations to generate",
+    )
+    parser.add_argument(
+        "--num_configs_test",
+        type=int,
+        default=10,
         help="number of flow migration configurations to generate",
     )
     parser.add_argument(
         "--avg_link_utilization",
         type=float,
-        default=0.3,
+        default=0.4,
         help="avrage link utilization in the configurations",
+    )
+    parser.add_argument(
+        "--er_parameter",
+        type=float,
+        default=0.5,
+        help="the ER parameter deciding the density of the graph",
     )
     args = parser.parse_args()
     
     assert args.max_flow_size <= args.min_link_capacity
     assert 0 < args.avg_link_utilization < 1
+    
+    print('Generating flows datasets with the following args: {}'.format(args))
 
-    er_param = 0.2
-    seed = 1
+    G = generate_graph(args.max_link_capacity, args.min_link_capacity, args.graph_size, args.er_parameter, 0)
     
-    G = generate_graph(args.max_link_capacity, args.min_link_capacity, args.graph_size, er_param, seed)
-    
-    db = shelve.open(args.output_file)
-    db['G'] = G
-    db['num_configs'] = args.num_configs
-    db['max_capacity'] = args.max_link_capacity
-    db['min_capacity'] = args.min_link_capacity
-    db['min_flow_size'] = args.min_flow_size
-    db['max_flow_size'] = args.max_flow_size
+    db_train, db_test = shelve.open(args.output_file + '_train'),  shelve.open(args.output_file + '_test')
+    db_train['G'] , db_test['G']= G, G
+    db_train['num_configs'], db_test['num_configs'] = args.num_configs_train, args.num_configs_test
+    db_train['max_capacity'], db_test['max_capacity'] = args.max_link_capacity, args.max_link_capacity
+    db_train['min_capacity'], db_test['min_capacity'] = args.min_link_capacity, args.min_link_capacity
+    db_train['min_flow_size'], db_test['min_flow_size'] = args.min_flow_size, args.min_flow_size
+    db_train['max_flow_size'], db_test['max_flow_size'] = args.max_flow_size, args.max_flow_size
+    db_train['avg_link_utilization'], db_test['avg_link_utilization'] = args.avg_link_utilization, args.avg_link_utilization
+    db_train['er_parameter'], db_test['er_parameter'] = args.er_parameter, args.er_parameter
+    db_train['graph_size'], db_test['graph_size']= args.graph_size, args.graph_size
 
     start = 0 #source node
     end = furthest_nodes(G)[-1] #sink node
 
-    #print('source and sink nodes: ', start, end)
+    init_flows = generate_init_flows(G, args.avg_link_utilization, args.min_flow_size, args.max_flow_size, start, end, db_train, 0)
+    
+    generate_configurations(G, init_flows, args.num_configs_train, db_train, 0)
+    generate_configurations(G, init_flows, args.num_configs_test, db_test, 1)
 
-    init_flows = generate_init_flows(G, args.avg_link_utilization, args.min_flow_size, args.max_flow_size, start, end, seed)
-    generate_configurations(G, init_flows, args.num_configs)
+    db_train['num_flows'], db_test['num_flows'] = len(init_flows), len(init_flows)
+    # check if this has to be different train and test datasets
+    db_train['longest_flow_length'], db_test['longest_flow_length']= longest_flow_length, longest_flow_length
 
-    db['num_flows'] = len(init_flows)
-    db['longest_flow_length'] = longest_flow_length
-
-    print('db: ',db)
-    db.close()
-
+    db_train.close()
+    db_test.close()
     #for i in range(len(configs)):
     #    print('configuration {}: {}'.format(i, configs[i]))
     #    print('{} flows in configurations 0 and {} have the same path'.format(compute_distance(configs[0], configs[i]), i))
