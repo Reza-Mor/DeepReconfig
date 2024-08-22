@@ -1,193 +1,100 @@
 
+import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn import Linear, ReLU, Sequential
 import numpy as np
-from torch_geometric.nn import GCNConv, global_mean_pool
+from torch_geometric.nn import global_mean_pool
+from torch_geometric.nn import MLP, GCN
 from torch_geometric.utils import dense_to_sparse, from_networkx
-from ray.rllib.models.torch.torch_modelv2 import TorchModelV2
-from ray.rllib.utils.framework import try_import_torch
-from ray.rllib.utils.torch_utils import FLOAT_MIN
-torch, nn = try_import_torch()
 from gymnasium.spaces import Dict
 from ray.rllib.models.torch.fcnet import FullyConnectedNetwork as TorchFC
+from torch_geometric.data import Data, Batch
+from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
+from torch_geometric.nn import MLP
+
+def convert_to_pyG_batch(input_state, cfg):
+    #print("input_state['node_features'].shape: ", input_state['node_features'].shape)
+    num_graphs = input_state['selected_left_nodes'].shape[0]
+    num_nodes = input_state['selected_left_nodes'].shape[1] # number of nodes on one side of the graph
+    #print("input_state['init_config'].shape: ", input_state['init_config'].shape)
+    data_list = []
+
+    for i in range(num_graphs):
+        data_list.append(
+            Data(#x=input_state['node_features'][i],
+                 edge_index= input_state['edge_indices'].type(torch.int64)[i], 
+                 selected_nodes = torch.cat((input_state['selected_left_nodes'][i], input_state['selected_right_nodes'][i]), dim=0).to(torch.int32),
+                 action_mask = torch.cat((torch.zeros(num_nodes).to(cfg.device), input_state['action_mask'][i]), dim=0).to(torch.int32),
+                 #selected_nodes = torch.unsqueeze(torch.cat((input_state['selected_left_nodes'][i], input_state['selected_right_nodes'][i]), dim=0), dim =0),
+                 #action_mask = torch.unsqueeze(torch.cat((torch.zeros(num_nodes).to(cfg.device), input_state['action_mask'][i]), dim=0),
+                 energy_dist = torch.unsqueeze(input_state['energy_dist'][i], 0)
+                 )
+            )
+    batch = Batch.from_data_list(data_list = data_list)
+    return batch
 
 
-#class GCN(torch.nn.Module):
-class GCN_VC(TorchModelV2, nn.Module):
-    def __init__(self, obs_space, action_space, num_outputs, model_config, name, **kwargs):
+class GCN_VC(BaseFeaturesExtractor):
+    """
+    :param observation_space: (gym.Space)
+    :param features_dim: (int) Number of features extracted.
+        This corresponds to the number of unit for the last layer.
+    """
+
+    def __init__(self, observation_space, cfg, features_dim=1):
+        super().__init__(observation_space, features_dim=1)
+        torch.manual_seed(cfg.seed)
         
-        TorchModelV2.__init__(
-            self, obs_space, action_space, num_outputs, model_config, name, **kwargs
-        )
-        nn.Module.__init__(self)
-        self.var_list = []
+        self.cfg = cfg
+        self.out_channels = cfg.out_channels
+        self.num_nodes = cfg.num_nodes #same as number of actions
+        #self.num_nodes = 30
+        self.graph_dim = cfg.graph_dim
 
-        torch.manual_seed(123)
+        self._features_dim = self.out_channels + 2
 
-        #model = Sequential('x, edge_index, batch', [
-        #        (GCNConv(num_features, 64), 'x, edge_index -> x1'),
-        #        ReLU(inplace=True),
-        #        (GCNConv(64, 64), 'x1, edge_index -> x2'),
-        #        ReLU(inplace=True),
-        #        Linear(2 * 64, dataset.num_classes),
-        #    ])
-        
-        #https://github.com/pyg-team/pytorch_geometric/issues/965
-
-        #TO DO: checnge 5 to the input number of features
-        self.conv1 = GCNConv(5, 32, node_dim=1)
-        self.conv2 = GCNConv(32, 64, node_dim=1)
-        self.linear1 = Linear(64 + 2, 32)
-        #self.linear2 = Linear(32, 20)
+        # Node level linear layer, the first two bits represent if the node is selected, the second two bits represent the action mask
+        self.nn1 = nn.Embedding(2, int(self.graph_dim//2))
+        self.nn2 = nn.Embedding(2, int(self.graph_dim//2))
         self.relu = ReLU()
-        #self.linear2 = Linear(32, 20)
 
-        #sparse adj matrix, same as edge index
-        self.adj_matrix_sparse = None 
-
+        # GNN Encoder
+        self.conv1 = GCN(in_channels = self.graph_dim, hidden_channels= self.graph_dim, out_channels = self.graph_dim, num_layers = 2, norm="batchnorm")
         
-        self._actor_head = nn.Sequential(
-            nn.Linear(32, 32),
-            nn.ReLU(),
-            nn.Linear(32, 20)
+        # GNN Graph Level Decoder
+        self.nn3 = Sequential(
+            Linear(self.graph_dim, self.out_channels),
+            ReLU(),
+            #Linear(self.out_channels, self.out_channels),
         )
-
-        self._critic_head = nn.Sequential(
-            nn.Linear(32, 1)
-        )
-
-    def forward(self, input_dict, state, seq_lens):
         
-        input_state = input_dict["obs"]
-        
-        #print('input_dict: ', input_dict)
-        #print('input_dict: ', input_dict.get("obs"))
-        #print('input_state: ', input_state)
 
-        #restore_original_dimensions(input_dict["obs"], self.obs_space, "torch")
-        #print('node_features: ', input_state['node_features'].shape)
-        #print('edge_indices: ', input_state['edge_indices'].shape)
-        #print('selected_left_nodes: ', input_state['selected_left_nodes'].shape)
-        #print('action_mask: ', input_state['action_mask'].shape)
-
-        # NOTE: the batch size refers to the number of graphs (configurations), not the number of nodes
-        # refer to https://github.com/pyg-team/pytorch_geometric/issues/965
-
-        self.batch_size = input_state['action_mask'].shape[0]
+    def forward(self, observations):
+        data = convert_to_pyG_batch(observations, self.cfg)
         
-        #extract the features
-        n = input_state['selected_left_nodes'].size()[1]
-        selected_nodes = torch.cat((input_state['selected_left_nodes'], input_state['selected_right_nodes']), 1)
-        #print(torch.zeros(n).shape)
-        action_mask = torch.cat((torch.zeros((self.batch_size, n)), input_state['action_mask']), 1)
-        node_features = input_state['node_features']
-        
-        #print('node_features: ', node_features.shape)
-        #print('action_mask: ', action_mask.shape)
+        # get node level emebeddings
+        #print('data.selected_left_nodes: ', data.selected_left_nodes.shape)
+        #selected_nodes = torch.cat((data.selected_left_nodes, data.selected_right_nodes), dim=0).to(torch.int32)
         #print('selected_nodes: ', selected_nodes.shape)
-
-        x = torch.cat((torch.unsqueeze(action_mask, 2),  torch.unsqueeze(selected_nodes, 2)), 2)
-        #print('x: ', x.shape)
-        x = torch.cat((node_features, x), 2)
-        #print('x: ', x.shape)
-
-        edge_indices = input_state['edge_indices'].type(torch.int64) 
-        #print('edge_indices: ', edge_indices.shape)
-        #print('edge_indices: ', edge_indices[0].shape)
-
-        x = self.conv1(x, edge_indices[0])
-        x = self.relu(x)
-        x = self.conv2(x, edge_indices[0])
-        #mean pooling
-        #print('x: ', x.shape)
-        x = x.mean(1)
-        #print('x: ', x.shape)
-        x = torch.cat((x, input_state['energy_dist']), 1)
-        x = self.linear1(x)
-        #print('x: ', x.shape)
-        x = self.relu(x)
-        #x = self.linear2(x)
-
-        value = self._critic_head(x)
-        self._value = value.reshape(-1)
-        logits = self._actor_head(x)
-        return logits, state
-
-        #self.values = F.softmax(x, dim=1)
-        #return self.values, state
-    
-    def value_function(self):
-        #print(self.values)
-        #if self.batch_size == 1:
-        #    return torch.squeeze(self.values)
-        # https://griddly.readthedocs.io/en/latest/rllib/intro/index.html
-        return self._value
-    
-    def get_action(self, state):
-        probs = self.forward(state)
-        highest_prob_action = np.random.choice(self.num_actions, p=np.squeeze(probs.detach().numpy()))
-        log_prob = torch.log(probs.squeeze(0)[highest_prob_action])
-        return highest_prob_action, log_prob
-
-    def set_adj_matrix_sparse(self, adj_matrix):
-        self.adj_matrix = dense_to_sparse(from_networkx(adj_matrix))
+        #right_nodes_action_mask = torch.zeros(data.num_graphs * self.num_nodes).to(self.cfg.device)
+        #action_mask = torch.cat((right_nodes_action_mask, data.action_mask), dim=0).to(torch.int32)
+        #print('action_mask: ', action_mask.shape)
         
+        x = torch.cat((self.nn1(data.selected_nodes), self.nn2(data.action_mask)), dim=1)
+        x = self.relu(x)
 
+        # pass the features to the GNN
+        x = self.conv1(x, data.edge_index)
 
-class TorchActionMaskModel(TorchModelV2, nn.Module):
-    """PyTorch version of ActionMaskingModel."""
+        graph_embedding = global_mean_pool(x, data.batch)
+ 
+        # pass to graph decoder
+        x = self.nn3(graph_embedding)
+        x = self.relu(x)
 
-    def __init__(
-        self,
-        obs_space,
-        action_space,
-        num_outputs,
-        model_config,
-        name,
-        **kwargs,
-    ):
-        #orig_space = getattr(obs_space, "original_space", obs_space)
-        #assert (
-        #    isinstance(orig_space, Dict)
-        #    and "action_mask" in orig_space.spaces
-        #    and "observations" in orig_space.spaces
-        #)
-        self.var_list = []
-        TorchModelV2.__init__(
-            self, obs_space, action_space, num_outputs, model_config, name, **kwargs
-        )
-        nn.Module.__init__(self)
-
-        self.internal_model = TorchFC(
-            obs_space,
-            action_space,
-            num_outputs,
-            model_config,
-            name + "_internal",
-        )
-
-        # disable action masking --> will likely lead to invalid actions
-        self.no_masking = False
-        if "no_masking" in model_config["custom_model_config"]:
-            self.no_masking = model_config["custom_model_config"]["no_masking"]
-
-    def forward(self, input_dict, state, seq_lens):
-        # Extract the available actions tensor from the observation.
-        action_mask = input_dict["obs"]["action_mask"]
-
-        # Compute the unmasked logits.
-        logits, _ = self.internal_model({"obs": input_dict["obs"]["observations"]})
-
-        # If action masking is disabled, directly return unmasked logits
-        if self.no_masking:
-            return logits, state
-
-        # Convert action_mask into a [0.0 || -inf]-type mask.
-        inf_mask = torch.clamp(torch.log(action_mask), min=FLOAT_MIN)
-        masked_logits = logits + inf_mask
-
-        # Return masked logits.
-        return masked_logits, state
-
-    def value_function(self):
-        return self.internal_model.value_function()
+        # include information about the energy distance
+        energy_norm = data.energy_dist / self.num_nodes
+        x = torch.cat((x, energy_norm), 1)
+ 
+        return x
