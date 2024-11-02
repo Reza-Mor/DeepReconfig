@@ -56,10 +56,10 @@ def parse_fie(file):
 
 def get_dic(CNF):
     """
-    get a dictionary of form {literal: [(clause in which the literal appears in, index of the literal in the clause)]}
+    get a dictionary of form {variable: [(clause in which the variable appears in, index of the variable in the clause)]}
     """
     dic = {}
-    J = int(max(abs(np.min(CNF)), np.max(CNF))) # number of literals in the CNF
+    J = int(max(abs(np.min(CNF)), np.max(CNF))) # number of variables in the CNF
     for j in range(1, J + 1):
         dic[j] = []  
     for c in range(CNF.shape[0]):
@@ -68,6 +68,22 @@ def get_dic(CNF):
             dic[abs(literal)].append((c, index))
             index += 1
     return dic
+
+
+def get_biadj_matrix(CNF):
+    """
+    returns A_ and A+ , two |variables| x |clauses| biadjancncy matrices. The former only stores positive edges and the later stores negative edges. 
+    """
+    V = int(max(abs(np.min(CNF)), np.max(CNF))) # number of variables in the CNF
+    C = CNF.shape[0]                            # number of clauses in the CNF
+    A_plus, A_minus = np.zeros((V,C)), np.zeros((V,C))
+    for c in range(CNF.shape[0]):
+        for v in CNF[c]:
+            if v > 0:
+                A_plus[v-1,c] = 1
+            elif v < 0:
+                A_minus[abs(v)-1,c] = 1
+    return A_plus, A_minus
 
 def find_reconfig_path(CNF, init, target, T=10):
     # Create a new model
@@ -168,12 +184,12 @@ def remove_duplicate_consecutive_columns(A):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-    description="Generating the secondary structures dataset"
+    description=""
     )
     parser.add_argument(
-        "--SAT_dataset",
+        "--SAT_instance",
         type=str,
-        default= "../datasets/SAT/CBS_k3_n100_m403_b10", #"../datasets/SAT/uf20-91",
+        default= "../datasets/SAT/CBS_k3_n100_m403_b10/CBS_k3_n100_m403_b10_0.cnf", #"../datasets/SAT/uf20-91",
         help="the path to the file where the SAT instances are stored - refer to https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html",
     )
     parser.add_argument(
@@ -184,46 +200,50 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-isExist = os.path.exists('../datasets/SAT/reconfig')
-if not isExist:
+Exists = os.path.exists('../datasets/SAT/reconfig')
+if not Exists:
    # Create a new directory because it does not exist
    os.makedirs('../datasets/SAT/reconfig')
-db = shelve.open('../datasets/SAT/reconfig/Dataset')
+
+db = shelve.open('../datasets/SAT/reconfig/CBS_k3_n100_m403_b10_0')
 
 # open the SAT dataset
-dataset = os.listdir(args.SAT_dataset)
-size = len(dataset) if args.dataset_size == 0 else args.dataset_size
+sat_instance = args.SAT_instance
+CNF = parse_fie(sat_instance)
+size = args.dataset_size
 i = 0
-
+print(CNF)
+A_p, A_m = get_biadj_matrix(CNF)
+print(np.where(A_p > 0))
+print(A_p[39, 0])
+#d = get_dic(CNF)
+#print(d)
+"""
 print('Generating SAT Reconfiguration Dataset...')
 while i < size:
-    filename = dataset[i]
-    f = os.path.join(args.SAT_dataset, filename)
     # checking if it is a file
-    if os.path.isfile(f):
-        print(f)
-        CNF = parse_fie(f)
-        T = 10
-        start= timeit.default_timer()
-        # reconfig path is a numpy array with each i-th row and the j-th column represents
-        # the value for the i-the variable truth value at time j
-        path_length, reconfig_path_with_duplicates = generate_reconfig_path(CNF, T)
-        stop = timeit.default_timer()
-        if path_length != 0:
-            reconfig_path = remove_duplicate_consecutive_columns(reconfig_path_with_duplicates)
-            dict = {
-                    "time": stop - start,
-                    #"reconfig_path_with_duplicate": reconfig_path_with_duplicate,
-                    "path_length": path_length,
-                    "reconfig_path": reconfig_path,
-                    }
-            print(dict)
-            db[filename] = dict
+    T = 10
+    start= timeit.default_timer()
+    # reconfig path is a numpy array with each i-th row and the j-th column represents
+    # the value for the i-the variable truth value at time j
+    path_length, reconfig_path_with_duplicates = generate_reconfig_path(CNF, T)
+    stop = timeit.default_timer()
+    if path_length != 0:
+        reconfig_path = remove_duplicate_consecutive_columns(reconfig_path_with_duplicates)
+        dict = {
+                "time": stop - start,
+                #"reconfig_path_with_duplicate": reconfig_path_with_duplicate,
+                "path_length": path_length,
+                "reconfig_path": reconfig_path,
+                }
+        print(dict)
+        db[filename] = dict
 
-            start= timeit.default_timer()
-            find_reconfig_path(CNF, reconfig_path[:,0], reconfig_path[:,-1], T=10)
-            stop = timeit.default_timer()
-            print("time for finding: {}".format(stop - start))
+        start= timeit.default_timer()
+        find_reconfig_path(CNF, reconfig_path[:,0], reconfig_path[:,-1], T=10)
+        stop = timeit.default_timer()
+        print("time for finding: {}".format(stop - start))
     i += 1
+"""
 db.close()
 
